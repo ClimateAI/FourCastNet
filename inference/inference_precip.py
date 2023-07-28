@@ -71,6 +71,10 @@ import wandb
 import matplotlib.pyplot as plt
 import glob
 from datetime import datetime
+import s3fs  # added to handle S3 Bucket data retrieval
+
+# Set up S3 bucket file system
+s3 = s3fs.S3FileSystem()
 
 DECORRELATION_TIME = 8 # 2 days for preicp
 
@@ -80,15 +84,22 @@ def gaussian_perturb(x, level=0.01, device=0):
 
 def load_model(model, params, checkpoint_file):
     model.zero_grad()
-    checkpoint_fname = checkpoint_file
-    checkpoint = torch.load(checkpoint_fname)
+    # checkpoint_fname = checkpoint_file
+    # checkpoint = torch.load(checkpoint_fname)
+    print("checkpoint file = ", checkpoint_file)
+    if checkpoint_file.startswith("s3://"):
+        checkpoint_fname = checkpoint_file
+        checkpoint = torch.load(s3.open(checkpoint_fname, 'rb'), map_location=torch.device('cpu'))
+    else:
+        checkpoint_fname = checkpoint_file
+        checkpoint = torch.load(checkpoint_fname)
     try:
         new_state_dict = OrderedDict()
         for key, val in checkpoint['model_state'].items():
             name = key[7:]
             if name != 'ged':
                 new_state_dict[name] = val  
-        model.load_state_dict(new_state_dict)
+        model.load_state_dict(new_state_dict)  # TODO: address this error
     except:
         model.load_state_dict(checkpoint['model_state'])
     model.eval()
@@ -117,8 +128,16 @@ def setup(params):
     else:
       params['N_in_channels'] = n_in_channels
     params['N_out_channels'] = n_out_channels
-    params.means = np.load(params.global_means_path)[0, out_channels] # needed to standardize wind data
-    params.stds = np.load(params.global_stds_path)[0, out_channels]
+    # params.means = np.load(params.global_means_path)[0, out_channels] # needed to standardize wind data
+    # params.stds = np.load(params.global_stds_path)[0, out_channels]
+    if params.global_means_path.startswith("s3://"):
+        params.means = np.load(s3.open(params.global_means_path, 'rb'))[0, out_channels]
+    else:
+        params.means = np.load(params.global_means_path)[0, out_channels] # needed to standardize wind data
+    if params.global_stds_path.startswith("s3://"):
+        params.stds = np.load(s3.open(params.global_stds_path, 'rb'))[0, out_channels]
+    else:
+        params.stds = np.load(params.global_stds_path)[0, out_channels]
 
     # load wind model
     if params.nettype_wind == 'afno':
@@ -149,9 +168,14 @@ def setup(params):
     yr = 0
     if params.log_to_screen:
         logging.info('Loading validation data')
-        logging.info('Validation data from {}'.format(files_paths[yr]))
+        # logging.info('Validation data from {}'.format(files_paths[yr]))
+        print("Inference data from ", params.inf_data_path)
 
-    valid_data_full = h5py.File(files_paths[yr], 'r')['fields']
+    # valid_data_full = h5py.File(files_paths[yr], 'r')['fields']
+    if params.inf_data_path.startswith("s3://"):
+        valid_data_full = h5py.File(s3.open(params.inf_data_path, 'rb'), 'r')['fields']
+    else:
+        valid_data_full = h5py.File(files_paths[yr], 'r')['fields']
 
     # precip paths
     path = params.precip + '/out_of_sample'
@@ -159,8 +183,14 @@ def setup(params):
     precip_paths.sort()
     if params.log_to_screen:
       logging.info('Loading validation precip data')
-      logging.info('Validation data from {}'.format(precip_paths[0]))
-    valid_data_tp_full = h5py.File(precip_paths[0], 'r')['tp']
+      # logging.info('Validation data from {}'.format(precip_paths[0]))
+    
+    # valid_data_tp_full = h5py.File(precip_paths[0], 'r')['tp']
+    if params.inf_data_path.startswith("s3://"):
+        valid_data_tp_full = h5py.File(s3.open(params.precip, 'rb'), 'r')['tp']
+    else:
+        valid_data_tp_full = h5py.File(precip_paths[0], 'r')['tp']
+        
     return valid_data_full, valid_data_tp_full, model_wind, model
 
 
@@ -205,8 +235,10 @@ def autoregressive_inference(params, ic, valid_data_full, valid_data_tp_full, mo
     eps = params.precip_eps
     valid_data_tp = np.log1p(valid_data_tp/eps)
     valid_data_tp = torch.as_tensor(valid_data_tp).to(device, dtype=torch.float)
-
-    m = torch.as_tensor(np.load(params.time_means_path_tp)[0][out_channels])[:, 0:img_shape_x] # climatology
+    
+    
+    # m = torch.as_tensor(np.load(params.time_means_path_tp)[0][out_channels])[:, 0:img_shape_x] # climatology
+    m = torch.as_tensor(np.load(s3.open(params.time_means_path_tp, 'rb'))[0][out_channels])[:, 0:img_shape_x] # climatology
     m = torch.unsqueeze(m, 0)
     m = m.to(device, dtype=torch.float)
 
@@ -284,7 +316,7 @@ def autoregressive_inference(params, ic, valid_data_full, valid_data_tp_full, mo
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--run_num", default='00', type=str)
-    parser.add_argument("--yaml_config", default='./config/AFNO.yaml', type=str)
+    parser.add_argument("--yaml_config", default='FourCastNet/config/AFNO.yaml', type=str)
     parser.add_argument("--config", default='full_field', type=str)
     parser.add_argument("--vis", action='store_true')
     parser.add_argument("--override_dir", default=None, type = str, help = 'Path to store inference outputs; must also set --weights arg')
@@ -295,8 +327,8 @@ if __name__ == '__main__':
     params['world_size'] = 1
     params['global_batch_size'] = params.batch_size
 
-    torch.cuda.set_device(0)
-    torch.backends.cudnn.benchmark = True
+    # torch.cuda.set_device(0)  # commented out 7/17
+    # torch.backends.cudnn.benchmark = True  # commented out 7/17
     vis = args.vis
 
     # Set up directory
@@ -316,7 +348,7 @@ if __name__ == '__main__':
     params['local_rank'] = 0
 
     logging_utils.log_to_file(logger_name=None, log_filename=os.path.join(expDir, 'inference_out.log'))
-    logging_utils.log_versions()
+    # logging_utils.log_versions()  # commented out 7/14 to avoid errors
     params.log()
 
     n_ics = params['n_initial_conditions']

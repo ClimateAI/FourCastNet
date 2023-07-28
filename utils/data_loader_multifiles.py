@@ -55,8 +55,11 @@ from torch import Tensor
 import h5py
 import math
 #import cv2
+import s3fs
 from utils.img_utils import reshape_fields, reshape_precip
 
+# Set up S3 bucket file system
+s3 = s3fs.S3FileSystem()
 
 def get_data_loader(params, files_pattern, distributed, train):
 
@@ -110,10 +113,17 @@ class GetDataset(Dataset):
       self.orography_path = params.orography_path
 
   def _get_files_stats(self):
-    self.files_paths = glob.glob(self.location + "/*.h5")
+    if self.location.startswith("s3://"):
+        self.files_paths = [ s3.open(self.location, 'rb') ]
+    else:
+        self.files_paths = glob.glob(self.location + "/*.h5")
+
+    # self.files_paths = glob.glob(self.location + "/*.h5")
     self.files_paths.sort()
     self.n_years = len(self.files_paths)
-    with h5py.File(self.files_paths[0], 'r') as _f:
+    # with h5py.File(self.files_paths[0], 'r') as _f:
+    with h5py.File(s3.open(self.location, 'rb'), 'r') as _f:
+
         logging.info("Getting file stats from {}".format(self.files_paths[0]))
         self.n_samples_per_year = _f['fields'].shape[0]
         #original image shape (before padding)

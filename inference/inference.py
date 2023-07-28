@@ -71,9 +71,12 @@ import wandb
 import matplotlib.pyplot as plt
 import glob
 from datetime import datetime
+import s3fs  # added to handle S3 Bucket data retrieval
 
+# Set up S3 bucket file system
+s3 = s3fs.S3FileSystem()
 
-fld = "z500" # diff flds have diff decor times and hence differnt ics
+fld = "u10" # diff flds have diff decor times and hence differnt ics
 if fld == "z500" or fld == "2m_temperature" or fld == "t850":
     DECORRELATION_TIME = 36 # 9 days (36) for z500, 2 (8 steps) days for u10, v10
 else:
@@ -86,8 +89,16 @@ def gaussian_perturb(x, level=0.01, device=0):
 
 def load_model(model, params, checkpoint_file):
     model.zero_grad()
-    checkpoint_fname = checkpoint_file
-    checkpoint = torch.load(checkpoint_fname)
+    print("checkpoint file = ", checkpoint_file)
+    if checkpoint_file.startswith("s3://"):
+        checkpoint_fname = checkpoint_file
+        checkpoint = torch.load(s3.open(checkpoint_fname, 'rb'), map_location=torch.device('cpu'))
+    else:
+        checkpoint_fname = checkpoint_file
+        checkpoint = torch.load(checkpoint_fname)
+    
+    # checkpoint_fname = checkpoint_file
+    # checkpoint = torch.load(checkpoint_fname)
     try:
         new_state_dict = OrderedDict()
         for key, val in checkpoint['model_state'].items():
@@ -124,8 +135,16 @@ def setup(params):
     else:
       params['N_in_channels'] = n_in_channels
     params['N_out_channels'] = n_out_channels
-    params.means = np.load(params.global_means_path)[0, out_channels] # needed to standardize wind data
-    params.stds = np.load(params.global_stds_path)[0, out_channels]
+    # params.means = np.load(params.global_means_path)[0, out_channels] # needed to standardize wind data
+    # params.stds = np.load(params.global_stds_path)[0, out_channels]
+    if params.global_means_path.startswith("s3://"):
+        params.means = np.load(s3.open(params.global_means_path, 'rb'))[0, out_channels]
+    else:
+        params.means = np.load(params.global_means_path)[0, out_channels] # needed to standardize wind data
+    if params.global_stds_path.startswith("s3://"):
+        params.stds = np.load(s3.open(params.global_stds_path, 'rb'))[0, out_channels]
+    else:
+        params.stds = np.load(params.global_stds_path)[0, out_channels]
 
     # load the model
     if params.nettype == 'afno':
@@ -144,16 +163,22 @@ def setup(params):
     yr = 0
     if params.log_to_screen:
         logging.info('Loading inference data')
-        logging.info('Inference data from {}'.format(files_paths[yr]))
-
-    valid_data_full = h5py.File(files_paths[yr], 'r')['fields']
+        # logging.info('Inference data from {}'.format(files_paths[yr]))
+        print("Inference data from ", params.inf_data_path)
+    
+    if params.inf_data_path.startswith("s3://"):
+        valid_data_full = h5py.File(s3.open(params.inf_data_path, 'rb'), 'r')['fields']
+    else:
+        valid_data_full = h5py.File(files_paths[yr], 'r')['fields']
 
     return valid_data_full, model
 
 def autoregressive_inference(params, ic, valid_data_full, model): 
+    print("--- entering autoregressive inference 1 ---")
     ic = int(ic) 
     #initialize global variables
     device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
+    print("--- entering autoregressive inference 2 ---")
     exp_dir = params['experiment_dir'] 
     dt = int(params.dt)
     prediction_length = int(params.prediction_length/dt)
@@ -166,40 +191,63 @@ def autoregressive_inference(params, ic, valid_data_full, model):
     n_out_channels = len(out_channels)
     means = params.means
     stds = params.stds
+    print("--- entering autoregressive inference 2.1 ---")
 
     #initialize memory for image sequences and RMSE/ACC
     valid_loss = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
     acc = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
+    
+    print("--- entering autoregressive inference 2.2 ---")
 
     # compute metrics in a coarse resolution too if params.interp is nonzero
     valid_loss_coarse = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
     acc_coarse = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
     acc_coarse_unweighted = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
-    
+    print("--- entering autoregressive inference 2.3 ---")
+
     acc_unweighted = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
+    print("--- entering autoregressive inference 2.3.1 ---")
     seq_real = torch.zeros((prediction_length, n_in_channels, img_shape_x, img_shape_y)).to(device, dtype=torch.float)
+    print("--- entering autoregressive inference 2.3.2 ---")
     seq_pred = torch.zeros((prediction_length, n_in_channels, img_shape_x, img_shape_y)).to(device, dtype=torch.float)
+    print("--- entering autoregressive inference 2.4 ---")
 
     acc_land = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
     acc_sea = torch.zeros((prediction_length, n_out_channels)).to(device, dtype=torch.float)
-    if params.masked_acc:
-      maskarray = torch.as_tensor(np.load(params.maskpath)[0:720]).to(device, dtype=torch.float)
+    print("--- entering autoregressive inference 2.5 ---")
 
+    if params.masked_acc:
+        print("--- entering autoregressive inference 2.6 ---")
+        maskarray = torch.as_tensor(np.load(params.maskpath)[0:720]).to(device, dtype=torch.float)
+    
+    print("--- entering autoregressive inference 3 ---")
     valid_data = valid_data_full[ic:(ic+prediction_length*dt+n_history*dt):dt, in_channels, 0:720] #extract valid data from first year
     # standardize
+    print("--- entering autoregressive inference 3.1 ---")
     valid_data = (valid_data - means)/stds
+    print("--- entering autoregressive inference 3.2 ---")
     valid_data = torch.as_tensor(valid_data).to(device, dtype=torch.float)
-
+    print("--- entering autoregressive inference 3.3 ---")
+    
     #load time means
     if not params.use_daily_climatology:
-      m = torch.as_tensor((np.load(params.time_means_path)[0][out_channels] - means)/stds)[:, 0:img_shape_x] # climatology
-      m = torch.unsqueeze(m, 0)
+        print("--- entering autoregressive inference 3.4 ---")
+        if params.time_means_path.startswith("s3://"):
+            m = torch.as_tensor((np.load(s3.open(params.time_means_path, 'rb'))[0][out_channels] - means)/stds)[:, 0:img_shape_x] # climatology
+            m = torch.unsqueeze(m, 0)
+        else:
+            m = torch.as_tensor((np.load(params.time_means_path)[0][out_channels] - means)/stds)[:, 0:img_shape_x] # climatology
+            m = torch.unsqueeze(m, 0)
     else:
-      # use daily clim like weyn et al. (different from rasp)
-      dc_path = params.dc_path
-      with h5py.File(dc_path, 'r') as f:
-        dc = f['time_means_daily'][ic:ic+prediction_length*dt:dt] # 1460,21,721,1440
-      m = torch.as_tensor((dc[:,out_channels,0:img_shape_x,:] - means)/stds) 
+        # use daily clim like weyn et al. (different from rasp)
+        print("--- entering autoregressive inference 3.5 ---")
+        dc_path = params.dc_path
+        with h5py.File(s3.open(dc_path, 'rb'), 'r') as f:  # with h5py.File(dc_path, 'r') as f:
+            dc = f['time_means_daily'][ic:ic+prediction_length*dt:dt] # 1460,21,721,1440
+        print("--- entering autoregressive inference 3.6 ---")
+        m = torch.as_tensor((dc[:,out_channels,0:img_shape_x,:] - means)/stds) 
+    
+    print("--- entering autoregressive inference 4 ---")
 
     m = m.to(device, dtype=torch.float)
     if params.interp > 0:
@@ -301,7 +349,7 @@ def autoregressive_inference(params, ic, valid_data_full, model):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--run_num", default='00', type=str)
-    parser.add_argument("--yaml_config", default='./config/AFNO.yaml', type=str)
+    parser.add_argument("--yaml_config", default='FourCastNet/config/AFNO.yaml', type=str)
     parser.add_argument("--config", default='full_field', type=str)
     parser.add_argument("--use_daily_climatology", action='store_true')
     parser.add_argument("--vis", action='store_true')
@@ -316,8 +364,8 @@ if __name__ == '__main__':
     params['use_daily_climatology'] = args.use_daily_climatology
     params['global_batch_size'] = params.batch_size
 
-    torch.cuda.set_device(0)
-    torch.backends.cudnn.benchmark = True
+    # torch.cuda.set_device(0)  # commented out 7/14 to avoid errors
+    # torch.backends.cudnn.benchmark = True  # commented out 7/14 to avoid errors
     vis = args.vis
 
     # Set up directory
@@ -337,7 +385,7 @@ if __name__ == '__main__':
     params['local_rank'] = 0
 
     logging_utils.log_to_file(logger_name=None, log_filename=os.path.join(expDir, 'inference_out.log'))
-    logging_utils.log_versions()
+    # logging_utils.log_versions()  # commented out 7/14 to avoid errors
     params.log()
 
     n_ics = params['n_initial_conditions']
