@@ -1,0 +1,486 @@
+2023-07-25 00:45:19,533 - root - INFO - ------------------ Configuration ------------------
+2023-07-25 00:45:19,533 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-07-25 00:45:19,533 - root - INFO - Configuration name: afno_backbone
+2023-07-25 00:45:19,533 - root - INFO - log_to_wandb True
+2023-07-25 00:45:19,533 - root - INFO - lr 0.0005
+2023-07-25 00:45:19,534 - root - INFO - batch_size 64
+2023-07-25 00:45:19,534 - root - INFO - max_epochs 150
+2023-07-25 00:45:19,534 - root - INFO - scheduler CosineAnnealingLR
+2023-07-25 00:45:19,534 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:45:19,534 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:45:19,534 - root - INFO - orography False
+2023-07-25 00:45:19,534 - root - INFO - orography_path None
+2023-07-25 00:45:19,534 - root - INFO - exp_dir FourCastNet/results
+2023-07-25 00:45:19,534 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-07-25 00:45:19,534 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-07-25 00:45:19,534 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:45:19,534 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-07-25 00:45:19,534 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-07-25 00:45:19,534 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-07-25 00:45:19,534 - root - INFO - loss l2
+2023-07-25 00:45:19,534 - root - INFO - num_data_workers 4
+2023-07-25 00:45:19,534 - root - INFO - dt 1
+2023-07-25 00:45:19,534 - root - INFO - n_history 0
+2023-07-25 00:45:19,535 - root - INFO - prediction_type iterative
+2023-07-25 00:45:19,535 - root - INFO - prediction_length 3
+2023-07-25 00:45:19,535 - root - INFO - n_initial_conditions 5
+2023-07-25 00:45:19,535 - root - INFO - ics_type default
+2023-07-25 00:45:19,535 - root - INFO - save_raw_forecasts True
+2023-07-25 00:45:19,535 - root - INFO - save_channel False
+2023-07-25 00:45:19,535 - root - INFO - masked_acc False
+2023-07-25 00:45:19,535 - root - INFO - maskpath None
+2023-07-25 00:45:19,535 - root - INFO - perturb False
+2023-07-25 00:45:19,535 - root - INFO - add_grid False
+2023-07-25 00:45:19,535 - root - INFO - N_grid_channels 0
+2023-07-25 00:45:19,535 - root - INFO - gridtype sinusoidal
+2023-07-25 00:45:19,535 - root - INFO - roll False
+2023-07-25 00:45:19,535 - root - INFO - num_blocks 8
+2023-07-25 00:45:19,535 - root - INFO - nettype afno
+2023-07-25 00:45:19,535 - root - INFO - patch_size 8
+2023-07-25 00:45:19,535 - root - INFO - width 56
+2023-07-25 00:45:19,535 - root - INFO - modes 32
+2023-07-25 00:45:19,535 - root - INFO - target U10
+2023-07-25 00:45:19,536 - root - INFO - normalization zscore
+2023-07-25 00:45:19,536 - root - INFO - log_to_screen True
+2023-07-25 00:45:19,536 - root - INFO - save_checkpoint True
+2023-07-25 00:45:19,536 - root - INFO - enable_nhwc False
+2023-07-25 00:45:19,536 - root - INFO - optimizer_type FusedAdam
+2023-07-25 00:45:19,536 - root - INFO - crop_size_x None
+2023-07-25 00:45:19,536 - root - INFO - crop_size_y None
+2023-07-25 00:45:19,536 - root - INFO - two_step_training False
+2023-07-25 00:45:19,536 - root - INFO - plot_animations False
+2023-07-25 00:45:19,536 - root - INFO - add_noise False
+2023-07-25 00:45:19,536 - root - INFO - noise_std 0
+2023-07-25 00:45:19,536 - root - INFO - world_size 1
+2023-07-25 00:45:19,536 - root - INFO - interp 0
+2023-07-25 00:45:19,536 - root - INFO - use_daily_climatology False
+2023-07-25 00:45:19,536 - root - INFO - global_batch_size 64
+2023-07-25 00:45:19,536 - root - INFO - ablate V10
+2023-07-25 00:45:19,536 - root - INFO - experiment_dir /root/FourCastNet/override_dir/experiments
+2023-07-25 00:45:19,536 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:45:19,536 - root - INFO - resuming False
+2023-07-25 00:45:19,536 - root - INFO - local_rank 0
+2023-07-25 00:45:19,536 - root - INFO - ---------------------------------------------------
+2023-07-25 00:45:19,537 - root - INFO - Inference for 1 initial conditions
+2023-07-25 00:45:19,877 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-07-25 00:45:19,878 - root - INFO - Number of samples per year: 1460
+2023-07-25 00:45:19,878 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-07-25 00:45:19,878 - root - INFO - Delta t: 6 hours
+2023-07-25 00:45:19,878 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-07-25 00:45:19,878 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:46:33,517 - root - INFO - Loading inference data
+2023-07-25 00:46:33,518 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:46:33,819 - root - INFO - Initial condition 1 of 1
+2023-07-25 00:46:33,916 - root - INFO - Extracting valid data from the first year
+2023-07-25 00:46:49,475 - root - INFO - Standardizing data
+2023-07-25 00:46:49,959 - root - INFO - Loading time means
+2023-07-25 00:47:04,793 - root - INFO - Begin autoregressive inference
+2023-07-25 00:47:15,433 - root - INFO - Predicted timestep 0 of 3. U10 RMS Error: 0.0, ACC: 1.0
+2023-07-25 00:47:26,813 - root - INFO - Predicted timestep 1 of 3. U10 RMS Error: 1.015738844871521, ACC: 0.9675650596618652
+2023-07-25 00:47:38,695 - root - INFO - Predicted timestep 2 of 3. U10 RMS Error: 1.019405722618103, ACC: 0.9681703448295593
+2023-07-25 00:47:38,704 - root - INFO - Saving files at /root/FourCastNet/override_dir/experiments/predict-U10_ablate-V10_3-timesteps_vis.h5
+2023-07-25 00:47:47,657 - root - INFO - ------------------ Configuration ------------------
+2023-07-25 00:47:47,657 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-07-25 00:47:47,657 - root - INFO - Configuration name: afno_backbone
+2023-07-25 00:47:47,657 - root - INFO - log_to_wandb True
+2023-07-25 00:47:47,658 - root - INFO - lr 0.0005
+2023-07-25 00:47:47,658 - root - INFO - batch_size 64
+2023-07-25 00:47:47,658 - root - INFO - max_epochs 150
+2023-07-25 00:47:47,658 - root - INFO - scheduler CosineAnnealingLR
+2023-07-25 00:47:47,658 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:47:47,658 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:47:47,658 - root - INFO - orography False
+2023-07-25 00:47:47,658 - root - INFO - orography_path None
+2023-07-25 00:47:47,658 - root - INFO - exp_dir FourCastNet/results
+2023-07-25 00:47:47,658 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-07-25 00:47:47,658 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-07-25 00:47:47,658 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:47:47,658 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-07-25 00:47:47,658 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-07-25 00:47:47,658 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-07-25 00:47:47,658 - root - INFO - loss l2
+2023-07-25 00:47:47,658 - root - INFO - num_data_workers 4
+2023-07-25 00:47:47,658 - root - INFO - dt 1
+2023-07-25 00:47:47,658 - root - INFO - n_history 0
+2023-07-25 00:47:47,659 - root - INFO - prediction_type iterative
+2023-07-25 00:47:47,659 - root - INFO - prediction_length 3
+2023-07-25 00:47:47,659 - root - INFO - n_initial_conditions 5
+2023-07-25 00:47:47,659 - root - INFO - ics_type default
+2023-07-25 00:47:47,659 - root - INFO - save_raw_forecasts True
+2023-07-25 00:47:47,659 - root - INFO - save_channel False
+2023-07-25 00:47:47,659 - root - INFO - masked_acc False
+2023-07-25 00:47:47,659 - root - INFO - maskpath None
+2023-07-25 00:47:47,659 - root - INFO - perturb False
+2023-07-25 00:47:47,659 - root - INFO - add_grid False
+2023-07-25 00:47:47,659 - root - INFO - N_grid_channels 0
+2023-07-25 00:47:47,659 - root - INFO - gridtype sinusoidal
+2023-07-25 00:47:47,659 - root - INFO - roll False
+2023-07-25 00:47:47,659 - root - INFO - num_blocks 8
+2023-07-25 00:47:47,659 - root - INFO - nettype afno
+2023-07-25 00:47:47,659 - root - INFO - patch_size 8
+2023-07-25 00:47:47,659 - root - INFO - width 56
+2023-07-25 00:47:47,659 - root - INFO - modes 32
+2023-07-25 00:47:47,659 - root - INFO - target U10
+2023-07-25 00:47:47,659 - root - INFO - normalization zscore
+2023-07-25 00:47:47,659 - root - INFO - log_to_screen True
+2023-07-25 00:47:47,660 - root - INFO - save_checkpoint True
+2023-07-25 00:47:47,660 - root - INFO - enable_nhwc False
+2023-07-25 00:47:47,660 - root - INFO - optimizer_type FusedAdam
+2023-07-25 00:47:47,660 - root - INFO - crop_size_x None
+2023-07-25 00:47:47,660 - root - INFO - crop_size_y None
+2023-07-25 00:47:47,660 - root - INFO - two_step_training False
+2023-07-25 00:47:47,660 - root - INFO - plot_animations False
+2023-07-25 00:47:47,660 - root - INFO - add_noise False
+2023-07-25 00:47:47,660 - root - INFO - noise_std 0
+2023-07-25 00:47:47,660 - root - INFO - world_size 1
+2023-07-25 00:47:47,660 - root - INFO - interp 0
+2023-07-25 00:47:47,660 - root - INFO - use_daily_climatology False
+2023-07-25 00:47:47,660 - root - INFO - global_batch_size 64
+2023-07-25 00:47:47,660 - root - INFO - ablate T2m
+2023-07-25 00:47:47,660 - root - INFO - experiment_dir /root/FourCastNet/override_dir/experiments
+2023-07-25 00:47:47,660 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:47:47,660 - root - INFO - resuming False
+2023-07-25 00:47:47,660 - root - INFO - local_rank 0
+2023-07-25 00:47:47,660 - root - INFO - ---------------------------------------------------
+2023-07-25 00:47:47,660 - root - INFO - Inference for 1 initial conditions
+2023-07-25 00:47:47,988 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-07-25 00:47:47,989 - root - INFO - Number of samples per year: 1460
+2023-07-25 00:47:47,989 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-07-25 00:47:47,989 - root - INFO - Delta t: 6 hours
+2023-07-25 00:47:47,989 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-07-25 00:47:47,990 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:48:49,359 - root - INFO - Loading inference data
+2023-07-25 00:48:49,360 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:48:49,543 - root - INFO - Initial condition 1 of 1
+2023-07-25 00:48:49,635 - root - INFO - Extracting valid data from the first year
+2023-07-25 00:49:01,556 - root - INFO - Standardizing data
+2023-07-25 00:49:01,989 - root - INFO - Loading time means
+2023-07-25 00:49:13,671 - root - INFO - Begin autoregressive inference
+2023-07-25 00:49:23,685 - root - INFO - Predicted timestep 0 of 3. U10 RMS Error: 0.0, ACC: 1.0
+2023-07-25 00:49:34,472 - root - INFO - Predicted timestep 1 of 3. U10 RMS Error: 15.283706665039062, ACC: 0.15640325844287872
+2023-07-25 00:49:43,784 - root - INFO - Predicted timestep 2 of 3. U10 RMS Error: 116.04800415039062, ACC: 0.0399276502430439
+2023-07-25 00:49:43,794 - root - INFO - Saving files at /root/FourCastNet/override_dir/experiments/predict-U10_ablate-T2m_3-timesteps_vis.h5
+2023-07-25 00:49:52,866 - root - INFO - ------------------ Configuration ------------------
+2023-07-25 00:49:52,866 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-07-25 00:49:52,866 - root - INFO - Configuration name: afno_backbone
+2023-07-25 00:49:52,866 - root - INFO - log_to_wandb True
+2023-07-25 00:49:52,866 - root - INFO - lr 0.0005
+2023-07-25 00:49:52,866 - root - INFO - batch_size 64
+2023-07-25 00:49:52,866 - root - INFO - max_epochs 150
+2023-07-25 00:49:52,866 - root - INFO - scheduler CosineAnnealingLR
+2023-07-25 00:49:52,866 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:49:52,866 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:49:52,866 - root - INFO - orography False
+2023-07-25 00:49:52,866 - root - INFO - orography_path None
+2023-07-25 00:49:52,866 - root - INFO - exp_dir FourCastNet/results
+2023-07-25 00:49:52,866 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-07-25 00:49:52,866 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-07-25 00:49:52,867 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:49:52,867 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-07-25 00:49:52,867 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-07-25 00:49:52,867 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-07-25 00:49:52,867 - root - INFO - loss l2
+2023-07-25 00:49:52,867 - root - INFO - num_data_workers 4
+2023-07-25 00:49:52,867 - root - INFO - dt 1
+2023-07-25 00:49:52,867 - root - INFO - n_history 0
+2023-07-25 00:49:52,867 - root - INFO - prediction_type iterative
+2023-07-25 00:49:52,867 - root - INFO - prediction_length 3
+2023-07-25 00:49:52,867 - root - INFO - n_initial_conditions 5
+2023-07-25 00:49:52,867 - root - INFO - ics_type default
+2023-07-25 00:49:52,867 - root - INFO - save_raw_forecasts True
+2023-07-25 00:49:52,867 - root - INFO - save_channel False
+2023-07-25 00:49:52,867 - root - INFO - masked_acc False
+2023-07-25 00:49:52,867 - root - INFO - maskpath None
+2023-07-25 00:49:52,867 - root - INFO - perturb False
+2023-07-25 00:49:52,868 - root - INFO - add_grid False
+2023-07-25 00:49:52,868 - root - INFO - N_grid_channels 0
+2023-07-25 00:49:52,868 - root - INFO - gridtype sinusoidal
+2023-07-25 00:49:52,868 - root - INFO - roll False
+2023-07-25 00:49:52,868 - root - INFO - num_blocks 8
+2023-07-25 00:49:52,868 - root - INFO - nettype afno
+2023-07-25 00:49:52,868 - root - INFO - patch_size 8
+2023-07-25 00:49:52,868 - root - INFO - width 56
+2023-07-25 00:49:52,868 - root - INFO - modes 32
+2023-07-25 00:49:52,868 - root - INFO - target V10
+2023-07-25 00:49:52,868 - root - INFO - normalization zscore
+2023-07-25 00:49:52,868 - root - INFO - log_to_screen True
+2023-07-25 00:49:52,868 - root - INFO - save_checkpoint True
+2023-07-25 00:49:52,868 - root - INFO - enable_nhwc False
+2023-07-25 00:49:52,868 - root - INFO - optimizer_type FusedAdam
+2023-07-25 00:49:52,868 - root - INFO - crop_size_x None
+2023-07-25 00:49:52,868 - root - INFO - crop_size_y None
+2023-07-25 00:49:52,868 - root - INFO - two_step_training False
+2023-07-25 00:49:52,869 - root - INFO - plot_animations False
+2023-07-25 00:49:52,869 - root - INFO - add_noise False
+2023-07-25 00:49:52,869 - root - INFO - noise_std 0
+2023-07-25 00:49:52,869 - root - INFO - world_size 1
+2023-07-25 00:49:52,869 - root - INFO - interp 0
+2023-07-25 00:49:52,869 - root - INFO - use_daily_climatology False
+2023-07-25 00:49:52,869 - root - INFO - global_batch_size 64
+2023-07-25 00:49:52,869 - root - INFO - ablate U10
+2023-07-25 00:49:52,869 - root - INFO - experiment_dir /root/FourCastNet/override_dir/experiments
+2023-07-25 00:49:52,869 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:49:52,869 - root - INFO - resuming False
+2023-07-25 00:49:52,869 - root - INFO - local_rank 0
+2023-07-25 00:49:52,869 - root - INFO - ---------------------------------------------------
+2023-07-25 00:49:52,869 - root - INFO - Inference for 1 initial conditions
+2023-07-25 00:49:53,043 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-07-25 00:49:53,045 - root - INFO - Number of samples per year: 1460
+2023-07-25 00:49:53,045 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-07-25 00:49:53,045 - root - INFO - Delta t: 6 hours
+2023-07-25 00:49:53,045 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-07-25 00:49:53,045 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:50:40,355 - root - INFO - Loading inference data
+2023-07-25 00:50:40,356 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:50:40,499 - root - INFO - Initial condition 1 of 1
+2023-07-25 00:50:40,584 - root - INFO - Extracting valid data from the first year
+2023-07-25 00:50:50,217 - root - INFO - Standardizing data
+2023-07-25 00:50:50,657 - root - INFO - Loading time means
+2023-07-25 00:50:58,337 - root - INFO - Begin autoregressive inference
+2023-07-25 00:51:09,199 - root - INFO - Predicted timestep 0 of 3. V10 RMS Error: 0.0, ACC: 1.0
+2023-07-25 00:51:20,074 - root - INFO - Predicted timestep 1 of 3. V10 RMS Error: 1.6770613193511963, ACC: 0.9217802286148071
+2023-07-25 00:51:30,216 - root - INFO - Predicted timestep 2 of 3. V10 RMS Error: 1.8049620389938354, ACC: 0.9077807068824768
+2023-07-25 00:51:30,228 - root - INFO - Saving files at /root/FourCastNet/override_dir/experiments/predict-V10_ablate-U10_3-timesteps_vis.h5
+2023-07-25 00:51:39,654 - root - INFO - ------------------ Configuration ------------------
+2023-07-25 00:51:39,654 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-07-25 00:51:39,654 - root - INFO - Configuration name: afno_backbone
+2023-07-25 00:51:39,654 - root - INFO - log_to_wandb True
+2023-07-25 00:51:39,654 - root - INFO - lr 0.0005
+2023-07-25 00:51:39,654 - root - INFO - batch_size 64
+2023-07-25 00:51:39,654 - root - INFO - max_epochs 150
+2023-07-25 00:51:39,654 - root - INFO - scheduler CosineAnnealingLR
+2023-07-25 00:51:39,655 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:51:39,655 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:51:39,655 - root - INFO - orography False
+2023-07-25 00:51:39,655 - root - INFO - orography_path None
+2023-07-25 00:51:39,655 - root - INFO - exp_dir FourCastNet/results
+2023-07-25 00:51:39,655 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-07-25 00:51:39,655 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-07-25 00:51:39,655 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:51:39,655 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-07-25 00:51:39,655 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-07-25 00:51:39,655 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-07-25 00:51:39,655 - root - INFO - loss l2
+2023-07-25 00:51:39,655 - root - INFO - num_data_workers 4
+2023-07-25 00:51:39,655 - root - INFO - dt 1
+2023-07-25 00:51:39,655 - root - INFO - n_history 0
+2023-07-25 00:51:39,655 - root - INFO - prediction_type iterative
+2023-07-25 00:51:39,655 - root - INFO - prediction_length 3
+2023-07-25 00:51:39,655 - root - INFO - n_initial_conditions 5
+2023-07-25 00:51:39,655 - root - INFO - ics_type default
+2023-07-25 00:51:39,655 - root - INFO - save_raw_forecasts True
+2023-07-25 00:51:39,656 - root - INFO - save_channel False
+2023-07-25 00:51:39,656 - root - INFO - masked_acc False
+2023-07-25 00:51:39,656 - root - INFO - maskpath None
+2023-07-25 00:51:39,656 - root - INFO - perturb False
+2023-07-25 00:51:39,656 - root - INFO - add_grid False
+2023-07-25 00:51:39,656 - root - INFO - N_grid_channels 0
+2023-07-25 00:51:39,656 - root - INFO - gridtype sinusoidal
+2023-07-25 00:51:39,656 - root - INFO - roll False
+2023-07-25 00:51:39,656 - root - INFO - num_blocks 8
+2023-07-25 00:51:39,656 - root - INFO - nettype afno
+2023-07-25 00:51:39,656 - root - INFO - patch_size 8
+2023-07-25 00:51:39,656 - root - INFO - width 56
+2023-07-25 00:51:39,656 - root - INFO - modes 32
+2023-07-25 00:51:39,656 - root - INFO - target V10
+2023-07-25 00:51:39,656 - root - INFO - normalization zscore
+2023-07-25 00:51:39,656 - root - INFO - log_to_screen True
+2023-07-25 00:51:39,656 - root - INFO - save_checkpoint True
+2023-07-25 00:51:39,656 - root - INFO - enable_nhwc False
+2023-07-25 00:51:39,656 - root - INFO - optimizer_type FusedAdam
+2023-07-25 00:51:39,656 - root - INFO - crop_size_x None
+2023-07-25 00:51:39,656 - root - INFO - crop_size_y None
+2023-07-25 00:51:39,657 - root - INFO - two_step_training False
+2023-07-25 00:51:39,657 - root - INFO - plot_animations False
+2023-07-25 00:51:39,657 - root - INFO - add_noise False
+2023-07-25 00:51:39,657 - root - INFO - noise_std 0
+2023-07-25 00:51:39,657 - root - INFO - world_size 1
+2023-07-25 00:51:39,657 - root - INFO - interp 0
+2023-07-25 00:51:39,657 - root - INFO - use_daily_climatology False
+2023-07-25 00:51:39,657 - root - INFO - global_batch_size 64
+2023-07-25 00:51:39,657 - root - INFO - ablate T2m
+2023-07-25 00:51:39,657 - root - INFO - experiment_dir /root/FourCastNet/override_dir/experiments
+2023-07-25 00:51:39,657 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:51:39,657 - root - INFO - resuming False
+2023-07-25 00:51:39,657 - root - INFO - local_rank 0
+2023-07-25 00:51:39,657 - root - INFO - ---------------------------------------------------
+2023-07-25 00:51:39,657 - root - INFO - Inference for 1 initial conditions
+2023-07-25 00:51:39,813 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-07-25 00:51:39,813 - root - INFO - Number of samples per year: 1460
+2023-07-25 00:51:39,814 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-07-25 00:51:39,814 - root - INFO - Delta t: 6 hours
+2023-07-25 00:51:39,814 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-07-25 00:51:39,815 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:52:15,477 - root - INFO - Loading inference data
+2023-07-25 00:52:15,478 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:52:15,590 - root - INFO - Initial condition 1 of 1
+2023-07-25 00:52:15,647 - root - INFO - Extracting valid data from the first year
+2023-07-25 00:52:23,701 - root - INFO - Standardizing data
+2023-07-25 00:52:24,130 - root - INFO - Loading time means
+2023-07-25 00:52:31,399 - root - INFO - Begin autoregressive inference
+2023-07-25 00:52:42,039 - root - INFO - Predicted timestep 0 of 3. V10 RMS Error: 0.0, ACC: 1.0
+2023-07-25 00:52:52,749 - root - INFO - Predicted timestep 1 of 3. V10 RMS Error: 15.850045204162598, ACC: 0.18932154774665833
+2023-07-25 00:53:02,947 - root - INFO - Predicted timestep 2 of 3. V10 RMS Error: 88.66856384277344, ACC: 0.07776319980621338
+2023-07-25 00:53:02,959 - root - INFO - Saving files at /root/FourCastNet/override_dir/experiments/predict-V10_ablate-T2m_3-timesteps_vis.h5
+2023-07-25 00:53:12,006 - root - INFO - ------------------ Configuration ------------------
+2023-07-25 00:53:12,006 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-07-25 00:53:12,006 - root - INFO - Configuration name: afno_backbone
+2023-07-25 00:53:12,006 - root - INFO - log_to_wandb True
+2023-07-25 00:53:12,006 - root - INFO - lr 0.0005
+2023-07-25 00:53:12,006 - root - INFO - batch_size 64
+2023-07-25 00:53:12,006 - root - INFO - max_epochs 150
+2023-07-25 00:53:12,006 - root - INFO - scheduler CosineAnnealingLR
+2023-07-25 00:53:12,006 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:53:12,006 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:53:12,007 - root - INFO - orography False
+2023-07-25 00:53:12,007 - root - INFO - orography_path None
+2023-07-25 00:53:12,007 - root - INFO - exp_dir FourCastNet/results
+2023-07-25 00:53:12,007 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-07-25 00:53:12,007 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-07-25 00:53:12,007 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:53:12,007 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-07-25 00:53:12,007 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-07-25 00:53:12,007 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-07-25 00:53:12,007 - root - INFO - loss l2
+2023-07-25 00:53:12,007 - root - INFO - num_data_workers 4
+2023-07-25 00:53:12,007 - root - INFO - dt 1
+2023-07-25 00:53:12,007 - root - INFO - n_history 0
+2023-07-25 00:53:12,007 - root - INFO - prediction_type iterative
+2023-07-25 00:53:12,007 - root - INFO - prediction_length 3
+2023-07-25 00:53:12,007 - root - INFO - n_initial_conditions 5
+2023-07-25 00:53:12,007 - root - INFO - ics_type default
+2023-07-25 00:53:12,007 - root - INFO - save_raw_forecasts True
+2023-07-25 00:53:12,007 - root - INFO - save_channel False
+2023-07-25 00:53:12,008 - root - INFO - masked_acc False
+2023-07-25 00:53:12,008 - root - INFO - maskpath None
+2023-07-25 00:53:12,008 - root - INFO - perturb False
+2023-07-25 00:53:12,008 - root - INFO - add_grid False
+2023-07-25 00:53:12,008 - root - INFO - N_grid_channels 0
+2023-07-25 00:53:12,008 - root - INFO - gridtype sinusoidal
+2023-07-25 00:53:12,008 - root - INFO - roll False
+2023-07-25 00:53:12,008 - root - INFO - num_blocks 8
+2023-07-25 00:53:12,008 - root - INFO - nettype afno
+2023-07-25 00:53:12,008 - root - INFO - patch_size 8
+2023-07-25 00:53:12,008 - root - INFO - width 56
+2023-07-25 00:53:12,008 - root - INFO - modes 32
+2023-07-25 00:53:12,008 - root - INFO - target T2m
+2023-07-25 00:53:12,008 - root - INFO - normalization zscore
+2023-07-25 00:53:12,008 - root - INFO - log_to_screen True
+2023-07-25 00:53:12,008 - root - INFO - save_checkpoint True
+2023-07-25 00:53:12,009 - root - INFO - enable_nhwc False
+2023-07-25 00:53:12,009 - root - INFO - optimizer_type FusedAdam
+2023-07-25 00:53:12,009 - root - INFO - crop_size_x None
+2023-07-25 00:53:12,009 - root - INFO - crop_size_y None
+2023-07-25 00:53:12,009 - root - INFO - two_step_training False
+2023-07-25 00:53:12,009 - root - INFO - plot_animations False
+2023-07-25 00:53:12,009 - root - INFO - add_noise False
+2023-07-25 00:53:12,009 - root - INFO - noise_std 0
+2023-07-25 00:53:12,009 - root - INFO - world_size 1
+2023-07-25 00:53:12,009 - root - INFO - interp 0
+2023-07-25 00:53:12,009 - root - INFO - use_daily_climatology False
+2023-07-25 00:53:12,009 - root - INFO - global_batch_size 64
+2023-07-25 00:53:12,009 - root - INFO - ablate U10
+2023-07-25 00:53:12,009 - root - INFO - experiment_dir /root/FourCastNet/override_dir/experiments
+2023-07-25 00:53:12,009 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:53:12,009 - root - INFO - resuming False
+2023-07-25 00:53:12,009 - root - INFO - local_rank 0
+2023-07-25 00:53:12,009 - root - INFO - ---------------------------------------------------
+2023-07-25 00:53:12,009 - root - INFO - Inference for 1 initial conditions
+2023-07-25 00:53:12,154 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-07-25 00:53:12,155 - root - INFO - Number of samples per year: 1460
+2023-07-25 00:53:12,155 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-07-25 00:53:12,155 - root - INFO - Delta t: 6 hours
+2023-07-25 00:53:12,155 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-07-25 00:53:12,155 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:53:39,276 - root - INFO - Loading inference data
+2023-07-25 00:53:39,277 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:53:39,410 - root - INFO - Initial condition 1 of 1
+2023-07-25 00:53:39,474 - root - INFO - Extracting valid data from the first year
+2023-07-25 00:53:45,709 - root - INFO - Standardizing data
+2023-07-25 00:53:46,120 - root - INFO - Loading time means
+2023-07-25 00:53:50,399 - root - INFO - Begin autoregressive inference
+2023-07-25 00:54:01,903 - root - INFO - Predicted timestep 0 of 3. T2m RMS Error: 0.0, ACC: 1.0
+2023-07-25 00:54:13,680 - root - INFO - Predicted timestep 1 of 3. T2m RMS Error: 1.8580023050308228, ACC: 0.9812412261962891
+2023-07-25 00:54:24,972 - root - INFO - Predicted timestep 2 of 3. T2m RMS Error: 6.982386112213135, ACC: 0.7978302240371704
+2023-07-25 00:54:24,981 - root - INFO - Saving files at /root/FourCastNet/override_dir/experiments/predict-T2m_ablate-U10_3-timesteps_vis.h5
+2023-07-25 00:54:34,130 - root - INFO - ------------------ Configuration ------------------
+2023-07-25 00:54:34,130 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-07-25 00:54:34,130 - root - INFO - Configuration name: afno_backbone
+2023-07-25 00:54:34,130 - root - INFO - log_to_wandb True
+2023-07-25 00:54:34,130 - root - INFO - lr 0.0005
+2023-07-25 00:54:34,130 - root - INFO - batch_size 64
+2023-07-25 00:54:34,130 - root - INFO - max_epochs 150
+2023-07-25 00:54:34,130 - root - INFO - scheduler CosineAnnealingLR
+2023-07-25 00:54:34,130 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:54:34,131 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-07-25 00:54:34,131 - root - INFO - orography False
+2023-07-25 00:54:34,131 - root - INFO - orography_path None
+2023-07-25 00:54:34,131 - root - INFO - exp_dir FourCastNet/results
+2023-07-25 00:54:34,131 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-07-25 00:54:34,131 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-07-25 00:54:34,131 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:54:34,131 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-07-25 00:54:34,131 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-07-25 00:54:34,131 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-07-25 00:54:34,131 - root - INFO - loss l2
+2023-07-25 00:54:34,131 - root - INFO - num_data_workers 4
+2023-07-25 00:54:34,131 - root - INFO - dt 1
+2023-07-25 00:54:34,131 - root - INFO - n_history 0
+2023-07-25 00:54:34,131 - root - INFO - prediction_type iterative
+2023-07-25 00:54:34,131 - root - INFO - prediction_length 3
+2023-07-25 00:54:34,131 - root - INFO - n_initial_conditions 5
+2023-07-25 00:54:34,131 - root - INFO - ics_type default
+2023-07-25 00:54:34,131 - root - INFO - save_raw_forecasts True
+2023-07-25 00:54:34,132 - root - INFO - save_channel False
+2023-07-25 00:54:34,132 - root - INFO - masked_acc False
+2023-07-25 00:54:34,132 - root - INFO - maskpath None
+2023-07-25 00:54:34,132 - root - INFO - perturb False
+2023-07-25 00:54:34,132 - root - INFO - add_grid False
+2023-07-25 00:54:34,132 - root - INFO - N_grid_channels 0
+2023-07-25 00:54:34,132 - root - INFO - gridtype sinusoidal
+2023-07-25 00:54:34,132 - root - INFO - roll False
+2023-07-25 00:54:34,132 - root - INFO - num_blocks 8
+2023-07-25 00:54:34,132 - root - INFO - nettype afno
+2023-07-25 00:54:34,132 - root - INFO - patch_size 8
+2023-07-25 00:54:34,132 - root - INFO - width 56
+2023-07-25 00:54:34,132 - root - INFO - modes 32
+2023-07-25 00:54:34,132 - root - INFO - target T2m
+2023-07-25 00:54:34,132 - root - INFO - normalization zscore
+2023-07-25 00:54:34,132 - root - INFO - log_to_screen True
+2023-07-25 00:54:34,132 - root - INFO - save_checkpoint True
+2023-07-25 00:54:34,132 - root - INFO - enable_nhwc False
+2023-07-25 00:54:34,132 - root - INFO - optimizer_type FusedAdam
+2023-07-25 00:54:34,132 - root - INFO - crop_size_x None
+2023-07-25 00:54:34,132 - root - INFO - crop_size_y None
+2023-07-25 00:54:34,133 - root - INFO - two_step_training False
+2023-07-25 00:54:34,133 - root - INFO - plot_animations False
+2023-07-25 00:54:34,133 - root - INFO - add_noise False
+2023-07-25 00:54:34,133 - root - INFO - noise_std 0
+2023-07-25 00:54:34,133 - root - INFO - world_size 1
+2023-07-25 00:54:34,133 - root - INFO - interp 0
+2023-07-25 00:54:34,133 - root - INFO - use_daily_climatology False
+2023-07-25 00:54:34,133 - root - INFO - global_batch_size 64
+2023-07-25 00:54:34,133 - root - INFO - ablate V10
+2023-07-25 00:54:34,133 - root - INFO - experiment_dir /root/FourCastNet/override_dir/experiments
+2023-07-25 00:54:34,133 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:54:34,133 - root - INFO - resuming False
+2023-07-25 00:54:34,133 - root - INFO - local_rank 0
+2023-07-25 00:54:34,133 - root - INFO - ---------------------------------------------------
+2023-07-25 00:54:34,133 - root - INFO - Inference for 1 initial conditions
+2023-07-25 00:54:34,271 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-07-25 00:54:34,272 - root - INFO - Number of samples per year: 1460
+2023-07-25 00:54:34,272 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-07-25 00:54:34,272 - root - INFO - Delta t: 6 hours
+2023-07-25 00:54:34,273 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-07-25 00:54:34,273 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-07-25 00:54:57,695 - root - INFO - Loading inference data
+2023-07-25 00:54:57,696 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-07-25 00:54:57,801 - root - INFO - Initial condition 1 of 1
+2023-07-25 00:54:57,863 - root - INFO - Extracting valid data from the first year
+2023-07-25 00:55:02,911 - root - INFO - Standardizing data
+2023-07-25 00:55:03,328 - root - INFO - Loading time means
+2023-07-25 00:55:06,273 - root - INFO - Begin autoregressive inference
+2023-07-25 00:55:17,755 - root - INFO - Predicted timestep 0 of 3. T2m RMS Error: 0.0, ACC: 1.0
+2023-07-25 00:55:30,400 - root - INFO - Predicted timestep 1 of 3. T2m RMS Error: 1.021877408027649, ACC: 0.9943052530288696
+2023-07-25 00:55:41,970 - root - INFO - Predicted timestep 2 of 3. T2m RMS Error: 1.1974375247955322, ACC: 0.9919472336769104
+2023-07-25 00:55:41,981 - root - INFO - Saving files at /root/FourCastNet/override_dir/experiments/predict-T2m_ablate-V10_3-timesteps_vis.h5
