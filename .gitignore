@@ -1,6 +1,5 @@
 *.h5
 *.out
-*.ipynb
 expts/
 wandb/
 data_process/.ipynb_checkpoints/*
