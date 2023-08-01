@@ -70,7 +70,7 @@ afno_backbone: &backbone
   out_channels: [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
   orography: !!bool False
   orography_path: None 
-  exp_dir: 'FourCastNet/results'  # '/pscratch/sd/s/shas1693/results/era5_wind'
+  exp_dir: '../results'  # '/pscratch/sd/s/shas1693/results/era5_wind'
   train_data_path: '/pscratch/sd/s/shas1693/data/era5/train'
   valid_data_path: '/pscratch/sd/s/shas1693/data/era5/test'
   inf_data_path:   's3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5' # TODO: Should change this later to not be a specific year AND precip vs. not precip '/pscratch/sd/s/shas1693/data/era5/out_of_sample' 
