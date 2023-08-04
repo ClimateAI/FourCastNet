@@ -349,7 +349,7 @@ def autoregressive_inference(params, ic, valid_data_full, model):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--run_num", default='00', type=str)
-    parser.add_argument("--yaml_config", default='FourCastNet/config/AFNO.yaml', type=str)
+    parser.add_argument("--yaml_config", default='../config/AFNO.yaml', type=str)
     parser.add_argument("--config", default='full_field', type=str)
     parser.add_argument("--use_daily_climatology", action='store_true')
     parser.add_argument("--vis", action='store_true')
