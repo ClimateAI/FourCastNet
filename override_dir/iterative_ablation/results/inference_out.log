@@ -1,0 +1,2160 @@
+2023-08-07 23:52:38,114 - root - INFO - ------------------ Configuration ------------------
+2023-08-07 23:52:38,115 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-07 23:52:38,115 - root - INFO - Configuration name: afno_backbone
+2023-08-07 23:52:38,115 - root - INFO - log_to_wandb True
+2023-08-07 23:52:38,115 - root - INFO - lr 0.0005
+2023-08-07 23:52:38,115 - root - INFO - batch_size 64
+2023-08-07 23:52:38,115 - root - INFO - max_epochs 150
+2023-08-07 23:52:38,115 - root - INFO - scheduler CosineAnnealingLR
+2023-08-07 23:52:38,115 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-07 23:52:38,115 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-07 23:52:38,115 - root - INFO - orography False
+2023-08-07 23:52:38,115 - root - INFO - orography_path None
+2023-08-07 23:52:38,115 - root - INFO - exp_dir ../results
+2023-08-07 23:52:38,115 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-07 23:52:38,115 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-07 23:52:38,115 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-07 23:52:38,115 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-07 23:52:38,115 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-07 23:52:38,115 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-07 23:52:38,115 - root - INFO - loss l2
+2023-08-07 23:52:38,115 - root - INFO - num_data_workers 4
+2023-08-07 23:52:38,115 - root - INFO - dt 1
+2023-08-07 23:52:38,115 - root - INFO - n_history 0
+2023-08-07 23:52:38,115 - root - INFO - prediction_type iterative
+2023-08-07 23:52:38,115 - root - INFO - prediction_length 30
+2023-08-07 23:52:38,116 - root - INFO - n_initial_conditions 5
+2023-08-07 23:52:38,116 - root - INFO - ics_type default
+2023-08-07 23:52:38,116 - root - INFO - save_raw_forecasts True
+2023-08-07 23:52:38,116 - root - INFO - save_channel False
+2023-08-07 23:52:38,116 - root - INFO - masked_acc False
+2023-08-07 23:52:38,116 - root - INFO - maskpath None
+2023-08-07 23:52:38,116 - root - INFO - perturb False
+2023-08-07 23:52:38,116 - root - INFO - add_grid False
+2023-08-07 23:52:38,116 - root - INFO - N_grid_channels 0
+2023-08-07 23:52:38,116 - root - INFO - gridtype sinusoidal
+2023-08-07 23:52:38,116 - root - INFO - roll False
+2023-08-07 23:52:38,116 - root - INFO - num_blocks 8
+2023-08-07 23:52:38,116 - root - INFO - nettype afno
+2023-08-07 23:52:38,116 - root - INFO - patch_size 8
+2023-08-07 23:52:38,116 - root - INFO - width 56
+2023-08-07 23:52:38,116 - root - INFO - modes 32
+2023-08-07 23:52:38,116 - root - INFO - target V10
+2023-08-07 23:52:38,116 - root - INFO - normalization zscore
+2023-08-07 23:52:38,116 - root - INFO - log_to_screen True
+2023-08-07 23:52:38,116 - root - INFO - save_checkpoint True
+2023-08-07 23:52:38,116 - root - INFO - enable_nhwc False
+2023-08-07 23:52:38,117 - root - INFO - optimizer_type FusedAdam
+2023-08-07 23:52:38,117 - root - INFO - crop_size_x None
+2023-08-07 23:52:38,117 - root - INFO - crop_size_y None
+2023-08-07 23:52:38,117 - root - INFO - two_step_training False
+2023-08-07 23:52:38,117 - root - INFO - plot_animations False
+2023-08-07 23:52:38,117 - root - INFO - add_noise False
+2023-08-07 23:52:38,117 - root - INFO - noise_std 0
+2023-08-07 23:52:38,117 - root - INFO - world_size 1
+2023-08-07 23:52:38,117 - root - INFO - interp 0
+2023-08-07 23:52:38,117 - root - INFO - use_daily_climatology False
+2023-08-07 23:52:38,117 - root - INFO - global_batch_size 64
+2023-08-07 23:52:38,117 - root - INFO - ablate U10
+2023-08-07 23:52:38,117 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-07 23:52:38,117 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-07 23:52:38,117 - root - INFO - resuming False
+2023-08-07 23:52:38,117 - root - INFO - local_rank 0
+2023-08-07 23:52:38,117 - root - INFO - ---------------------------------------------------
+2023-08-07 23:52:38,117 - root - INFO - Inference for 1 initial conditions
+2023-08-07 23:52:38,374 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-07 23:52:38,376 - root - INFO - Number of samples per year: 1460
+2023-08-07 23:52:38,376 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-07 23:52:38,376 - root - INFO - Delta t: 6 hours
+2023-08-07 23:52:38,376 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-07 23:52:38,376 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-07 23:53:27,923 - root - INFO - Loading inference data
+2023-08-07 23:53:27,924 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-07 23:53:28,092 - root - INFO - Initial condition 1 of 1
+2023-08-07 23:53:28,969 - root - INFO - Extracting valid data from the first year
+2023-08-07 23:55:20,057 - root - INFO - Standardizing data
+2023-08-07 23:55:26,169 - root - INFO - Loading time means
+2023-08-07 23:55:35,993 - root - INFO - Begin autoregressive inference
+2023-08-07 23:55:47,577 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-07 23:55:59,331 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 1.6770613193511963, ACC: 0.9217802286148071
+2023-08-07 23:56:12,755 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 2.203432559967041, ACC: 0.8640267848968506
+2023-08-07 23:56:26,136 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 6.078402996063232, ACC: 0.47036707401275635
+2023-08-07 23:56:38,104 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 10.691182136535645, ACC: 0.24961556494235992
+2023-08-07 23:56:50,382 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 13.918069839477539, ACC: 0.16946329176425934
+2023-08-07 23:57:02,332 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 16.09003448486328, ACC: 0.1306769996881485
+2023-08-07 23:57:14,687 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 18.659971237182617, ACC: 0.10289350152015686
+2023-08-07 23:57:26,906 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 21.232196807861328, ACC: 0.08162909746170044
+2023-08-07 23:57:38,882 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 23.891921997070312, ACC: 0.052436068654060364
+2023-08-07 23:57:51,547 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 26.69597625732422, ACC: 0.02116287685930729
+2023-08-07 23:58:04,976 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 29.800216674804688, ACC: 0.019691815599799156
+2023-08-07 23:58:18,453 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 33.105369567871094, ACC: 0.02604040689766407
+2023-08-07 23:58:30,983 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 36.25892639160156, ACC: 0.02954231947660446
+2023-08-07 23:58:43,509 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 39.44922637939453, ACC: 0.0336211659014225
+2023-08-07 23:58:54,163 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 42.71219253540039, ACC: 0.026723066344857216
+2023-08-07 23:59:07,517 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 46.12705993652344, ACC: 0.017105426639318466
+2023-08-07 23:59:19,140 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 49.64418029785156, ACC: 0.01722947508096695
+2023-08-07 23:59:31,477 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 53.3050651550293, ACC: 0.010207105427980423
+2023-08-07 23:59:42,468 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 57.1884880065918, ACC: 0.014236013405025005
+2023-08-07 23:59:54,392 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 61.60483169555664, ACC: -0.0027684252709150314
+2023-08-08 00:00:07,123 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 66.09500122070312, ACC: -0.004202219191938639
+2023-08-08 00:00:20,442 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 71.60893249511719, ACC: -0.01802355796098709
+2023-08-08 00:00:32,890 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 78.28218078613281, ACC: -0.01677495799958706
+2023-08-08 00:00:45,635 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 86.4954605102539, ACC: -0.010792044922709465
+2023-08-08 00:00:59,056 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 97.58134460449219, ACC: 0.005569492466747761
+2023-08-08 00:01:12,439 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 120.82178497314453, ACC: -0.0011769456323236227
+2023-08-08 00:01:24,693 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 162.9720916748047, ACC: 0.02496957965195179
+2023-08-08 00:01:38,204 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 197.8766632080078, ACC: 0.03840434178709984
+2023-08-08 00:01:50,331 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 214.6851348876953, ACC: 0.056720901280641556
+2023-08-08 00:01:50,431 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-U10_30-timesteps_vis.h5
+2023-08-08 00:02:43,881 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 00:02:43,881 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 00:02:43,881 - root - INFO - Configuration name: afno_backbone
+2023-08-08 00:02:43,881 - root - INFO - log_to_wandb True
+2023-08-08 00:02:43,881 - root - INFO - lr 0.0005
+2023-08-08 00:02:43,881 - root - INFO - batch_size 64
+2023-08-08 00:02:43,881 - root - INFO - max_epochs 150
+2023-08-08 00:02:43,882 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 00:02:43,882 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:02:43,882 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:02:43,882 - root - INFO - orography False
+2023-08-08 00:02:43,882 - root - INFO - orography_path None
+2023-08-08 00:02:43,882 - root - INFO - exp_dir ../results
+2023-08-08 00:02:43,882 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 00:02:43,882 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 00:02:43,882 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:02:43,882 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 00:02:43,882 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 00:02:43,882 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 00:02:43,882 - root - INFO - loss l2
+2023-08-08 00:02:43,883 - root - INFO - num_data_workers 4
+2023-08-08 00:02:43,883 - root - INFO - dt 1
+2023-08-08 00:02:43,883 - root - INFO - n_history 0
+2023-08-08 00:02:43,883 - root - INFO - prediction_type iterative
+2023-08-08 00:02:43,883 - root - INFO - prediction_length 30
+2023-08-08 00:02:43,883 - root - INFO - n_initial_conditions 5
+2023-08-08 00:02:43,883 - root - INFO - ics_type default
+2023-08-08 00:02:43,883 - root - INFO - save_raw_forecasts True
+2023-08-08 00:02:43,883 - root - INFO - save_channel False
+2023-08-08 00:02:43,883 - root - INFO - masked_acc False
+2023-08-08 00:02:43,883 - root - INFO - maskpath None
+2023-08-08 00:02:43,883 - root - INFO - perturb False
+2023-08-08 00:02:43,883 - root - INFO - add_grid False
+2023-08-08 00:02:43,883 - root - INFO - N_grid_channels 0
+2023-08-08 00:02:43,883 - root - INFO - gridtype sinusoidal
+2023-08-08 00:02:43,884 - root - INFO - roll False
+2023-08-08 00:02:43,884 - root - INFO - num_blocks 8
+2023-08-08 00:02:43,884 - root - INFO - nettype afno
+2023-08-08 00:02:43,884 - root - INFO - patch_size 8
+2023-08-08 00:02:43,884 - root - INFO - width 56
+2023-08-08 00:02:43,884 - root - INFO - modes 32
+2023-08-08 00:02:43,884 - root - INFO - target V10
+2023-08-08 00:02:43,884 - root - INFO - normalization zscore
+2023-08-08 00:02:43,884 - root - INFO - log_to_screen True
+2023-08-08 00:02:43,884 - root - INFO - save_checkpoint True
+2023-08-08 00:02:43,884 - root - INFO - enable_nhwc False
+2023-08-08 00:02:43,884 - root - INFO - optimizer_type FusedAdam
+2023-08-08 00:02:43,884 - root - INFO - crop_size_x None
+2023-08-08 00:02:43,884 - root - INFO - crop_size_y None
+2023-08-08 00:02:43,884 - root - INFO - two_step_training False
+2023-08-08 00:02:43,885 - root - INFO - plot_animations False
+2023-08-08 00:02:43,885 - root - INFO - add_noise False
+2023-08-08 00:02:43,885 - root - INFO - noise_std 0
+2023-08-08 00:02:43,885 - root - INFO - world_size 1
+2023-08-08 00:02:43,885 - root - INFO - interp 0
+2023-08-08 00:02:43,885 - root - INFO - use_daily_climatology False
+2023-08-08 00:02:43,885 - root - INFO - global_batch_size 64
+2023-08-08 00:02:43,885 - root - INFO - ablate V10
+2023-08-08 00:02:43,885 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 00:02:43,885 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:02:43,885 - root - INFO - resuming False
+2023-08-08 00:02:43,885 - root - INFO - local_rank 0
+2023-08-08 00:02:43,885 - root - INFO - ---------------------------------------------------
+2023-08-08 00:02:43,885 - root - INFO - Inference for 1 initial conditions
+2023-08-08 00:02:44,089 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 00:02:44,090 - root - INFO - Number of samples per year: 1460
+2023-08-08 00:02:44,090 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 00:02:44,090 - root - INFO - Delta t: 6 hours
+2023-08-08 00:02:44,090 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 00:02:44,090 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:03:30,094 - root - INFO - Loading inference data
+2023-08-08 00:03:30,095 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:03:30,250 - root - INFO - Initial condition 1 of 1
+2023-08-08 00:03:31,200 - root - INFO - Extracting valid data from the first year
+2023-08-08 00:05:12,644 - root - INFO - Standardizing data
+2023-08-08 00:05:18,673 - root - INFO - Loading time means
+2023-08-08 00:05:28,327 - root - INFO - Begin autoregressive inference
+2023-08-08 00:05:39,367 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:05:50,806 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:06:03,494 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:06:15,103 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:06:26,035 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:06:37,599 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:06:48,171 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:07:00,880 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:07:14,337 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:07:25,718 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:07:38,746 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:07:50,793 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:08:03,399 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:08:14,892 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:08:28,041 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:08:39,838 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:08:50,621 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:09:02,740 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:09:14,566 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:09:25,507 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:09:37,731 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:09:49,175 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:10:00,127 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:10:14,091 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:10:26,541 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:10:38,090 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:10:50,018 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:11:00,880 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:11:12,781 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:11:24,765 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:11:24,856 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-V10_30-timesteps_vis.h5
+2023-08-08 00:12:18,511 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 00:12:18,511 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 00:12:18,511 - root - INFO - Configuration name: afno_backbone
+2023-08-08 00:12:18,511 - root - INFO - log_to_wandb True
+2023-08-08 00:12:18,511 - root - INFO - lr 0.0005
+2023-08-08 00:12:18,512 - root - INFO - batch_size 64
+2023-08-08 00:12:18,512 - root - INFO - max_epochs 150
+2023-08-08 00:12:18,512 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 00:12:18,512 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:12:18,512 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:12:18,512 - root - INFO - orography False
+2023-08-08 00:12:18,512 - root - INFO - orography_path None
+2023-08-08 00:12:18,512 - root - INFO - exp_dir ../results
+2023-08-08 00:12:18,513 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 00:12:18,513 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 00:12:18,513 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:12:18,513 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 00:12:18,513 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 00:12:18,513 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 00:12:18,513 - root - INFO - loss l2
+2023-08-08 00:12:18,513 - root - INFO - num_data_workers 4
+2023-08-08 00:12:18,513 - root - INFO - dt 1
+2023-08-08 00:12:18,513 - root - INFO - n_history 0
+2023-08-08 00:12:18,513 - root - INFO - prediction_type iterative
+2023-08-08 00:12:18,513 - root - INFO - prediction_length 30
+2023-08-08 00:12:18,513 - root - INFO - n_initial_conditions 5
+2023-08-08 00:12:18,514 - root - INFO - ics_type default
+2023-08-08 00:12:18,514 - root - INFO - save_raw_forecasts True
+2023-08-08 00:12:18,514 - root - INFO - save_channel False
+2023-08-08 00:12:18,514 - root - INFO - masked_acc False
+2023-08-08 00:12:18,514 - root - INFO - maskpath None
+2023-08-08 00:12:18,514 - root - INFO - perturb False
+2023-08-08 00:12:18,514 - root - INFO - add_grid False
+2023-08-08 00:12:18,514 - root - INFO - N_grid_channels 0
+2023-08-08 00:12:18,514 - root - INFO - gridtype sinusoidal
+2023-08-08 00:12:18,514 - root - INFO - roll False
+2023-08-08 00:12:18,514 - root - INFO - num_blocks 8
+2023-08-08 00:12:18,514 - root - INFO - nettype afno
+2023-08-08 00:12:18,514 - root - INFO - patch_size 8
+2023-08-08 00:12:18,514 - root - INFO - width 56
+2023-08-08 00:12:18,515 - root - INFO - modes 32
+2023-08-08 00:12:18,515 - root - INFO - target V10
+2023-08-08 00:12:18,515 - root - INFO - normalization zscore
+2023-08-08 00:12:18,515 - root - INFO - log_to_screen True
+2023-08-08 00:12:18,515 - root - INFO - save_checkpoint True
+2023-08-08 00:12:18,515 - root - INFO - enable_nhwc False
+2023-08-08 00:12:18,515 - root - INFO - optimizer_type FusedAdam
+2023-08-08 00:12:18,515 - root - INFO - crop_size_x None
+2023-08-08 00:12:18,515 - root - INFO - crop_size_y None
+2023-08-08 00:12:18,515 - root - INFO - two_step_training False
+2023-08-08 00:12:18,515 - root - INFO - plot_animations False
+2023-08-08 00:12:18,516 - root - INFO - add_noise False
+2023-08-08 00:12:18,516 - root - INFO - noise_std 0
+2023-08-08 00:12:18,516 - root - INFO - world_size 1
+2023-08-08 00:12:18,516 - root - INFO - interp 0
+2023-08-08 00:12:18,516 - root - INFO - use_daily_climatology False
+2023-08-08 00:12:18,516 - root - INFO - global_batch_size 64
+2023-08-08 00:12:18,516 - root - INFO - ablate T2m
+2023-08-08 00:12:18,516 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 00:12:18,516 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:12:18,516 - root - INFO - resuming False
+2023-08-08 00:12:18,516 - root - INFO - local_rank 0
+2023-08-08 00:12:18,516 - root - INFO - ---------------------------------------------------
+2023-08-08 00:12:18,516 - root - INFO - Inference for 1 initial conditions
+2023-08-08 00:12:18,828 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 00:12:18,829 - root - INFO - Number of samples per year: 1460
+2023-08-08 00:12:18,829 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 00:12:18,829 - root - INFO - Delta t: 6 hours
+2023-08-08 00:12:18,829 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 00:12:18,829 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:13:09,105 - root - INFO - Loading inference data
+2023-08-08 00:13:09,106 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:13:09,232 - root - INFO - Initial condition 1 of 1
+2023-08-08 00:13:10,210 - root - INFO - Extracting valid data from the first year
+2023-08-08 00:15:01,006 - root - INFO - Standardizing data
+2023-08-08 00:15:08,523 - root - INFO - Loading time means
+2023-08-08 00:15:17,018 - root - INFO - Begin autoregressive inference
+2023-08-08 00:15:29,540 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:15:41,345 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 15.850045204162598, ACC: 0.18932154774665833
+2023-08-08 00:15:53,223 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 79.15074920654297, ACC: 0.10183092206716537
+2023-08-08 00:16:04,938 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 159.2637176513672, ACC: 0.13546207547187805
+2023-08-08 00:16:16,816 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 175.53201293945312, ACC: 0.12287619709968567
+2023-08-08 00:16:29,076 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 163.42953491210938, ACC: 0.10166068375110626
+2023-08-08 00:16:41,128 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 148.8616943359375, ACC: 0.0674048513174057
+2023-08-08 00:16:52,945 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 142.09341430664062, ACC: 0.03161955997347832
+2023-08-08 00:17:04,649 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 142.42547607421875, ACC: 0.00679231621325016
+2023-08-08 00:17:16,868 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 146.1741943359375, ACC: -0.012256824411451817
+2023-08-08 00:17:28,565 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 150.74267578125, ACC: -0.02516321651637554
+2023-08-08 00:17:40,980 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 154.860595703125, ACC: -0.030599113553762436
+2023-08-08 00:17:52,723 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 158.0999298095703, ACC: -0.0338776558637619
+2023-08-08 00:18:05,703 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 160.4936981201172, ACC: -0.035979386419057846
+2023-08-08 00:18:17,965 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 162.17648315429688, ACC: -0.03530286252498627
+2023-08-08 00:18:30,016 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 163.305419921875, ACC: -0.034181658178567886
+2023-08-08 00:18:41,533 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 164.05072021484375, ACC: -0.03321912884712219
+2023-08-08 00:18:53,883 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 164.5674285888672, ACC: -0.036064110696315765
+2023-08-08 00:19:06,069 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 164.91744995117188, ACC: -0.03791756555438042
+2023-08-08 00:19:17,744 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 165.16111755371094, ACC: -0.03919098898768425
+2023-08-08 00:19:28,504 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 165.29324340820312, ACC: -0.033621057868003845
+2023-08-08 00:19:38,581 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 165.42306518554688, ACC: -0.038884229958057404
+2023-08-08 00:19:50,756 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 165.4701385498047, ACC: -0.03328169882297516
+2023-08-08 00:20:03,142 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 165.52041625976562, ACC: -0.03404617682099342
+2023-08-08 00:20:14,971 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 165.55136108398438, ACC: -0.03367029130458832
+2023-08-08 00:20:26,242 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 165.58782958984375, ACC: -0.035909611731767654
+2023-08-08 00:20:37,444 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 165.60206604003906, ACC: -0.0345618762075901
+2023-08-08 00:20:48,799 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 165.62069702148438, ACC: -0.03609152510762215
+2023-08-08 00:21:00,902 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 165.60679626464844, ACC: -0.03249349817633629
+2023-08-08 00:21:13,258 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 165.6091766357422, ACC: -0.03236333653330803
+2023-08-08 00:21:13,393 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-T2m_30-timesteps_vis.h5
+2023-08-08 00:22:07,090 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 00:22:07,090 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 00:22:07,090 - root - INFO - Configuration name: afno_backbone
+2023-08-08 00:22:07,090 - root - INFO - log_to_wandb True
+2023-08-08 00:22:07,091 - root - INFO - lr 0.0005
+2023-08-08 00:22:07,091 - root - INFO - batch_size 64
+2023-08-08 00:22:07,091 - root - INFO - max_epochs 150
+2023-08-08 00:22:07,091 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 00:22:07,091 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:22:07,091 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:22:07,091 - root - INFO - orography False
+2023-08-08 00:22:07,091 - root - INFO - orography_path None
+2023-08-08 00:22:07,091 - root - INFO - exp_dir ../results
+2023-08-08 00:22:07,091 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 00:22:07,091 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 00:22:07,091 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:22:07,091 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 00:22:07,091 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 00:22:07,091 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 00:22:07,091 - root - INFO - loss l2
+2023-08-08 00:22:07,091 - root - INFO - num_data_workers 4
+2023-08-08 00:22:07,091 - root - INFO - dt 1
+2023-08-08 00:22:07,091 - root - INFO - n_history 0
+2023-08-08 00:22:07,091 - root - INFO - prediction_type iterative
+2023-08-08 00:22:07,091 - root - INFO - prediction_length 30
+2023-08-08 00:22:07,091 - root - INFO - n_initial_conditions 5
+2023-08-08 00:22:07,091 - root - INFO - ics_type default
+2023-08-08 00:22:07,091 - root - INFO - save_raw_forecasts True
+2023-08-08 00:22:07,091 - root - INFO - save_channel False
+2023-08-08 00:22:07,091 - root - INFO - masked_acc False
+2023-08-08 00:22:07,091 - root - INFO - maskpath None
+2023-08-08 00:22:07,091 - root - INFO - perturb False
+2023-08-08 00:22:07,091 - root - INFO - add_grid False
+2023-08-08 00:22:07,091 - root - INFO - N_grid_channels 0
+2023-08-08 00:22:07,092 - root - INFO - gridtype sinusoidal
+2023-08-08 00:22:07,092 - root - INFO - roll False
+2023-08-08 00:22:07,092 - root - INFO - num_blocks 8
+2023-08-08 00:22:07,092 - root - INFO - nettype afno
+2023-08-08 00:22:07,092 - root - INFO - patch_size 8
+2023-08-08 00:22:07,092 - root - INFO - width 56
+2023-08-08 00:22:07,092 - root - INFO - modes 32
+2023-08-08 00:22:07,092 - root - INFO - target V10
+2023-08-08 00:22:07,092 - root - INFO - normalization zscore
+2023-08-08 00:22:07,092 - root - INFO - log_to_screen True
+2023-08-08 00:22:07,092 - root - INFO - save_checkpoint True
+2023-08-08 00:22:07,092 - root - INFO - enable_nhwc False
+2023-08-08 00:22:07,092 - root - INFO - optimizer_type FusedAdam
+2023-08-08 00:22:07,092 - root - INFO - crop_size_x None
+2023-08-08 00:22:07,092 - root - INFO - crop_size_y None
+2023-08-08 00:22:07,092 - root - INFO - two_step_training False
+2023-08-08 00:22:07,092 - root - INFO - plot_animations False
+2023-08-08 00:22:07,092 - root - INFO - add_noise False
+2023-08-08 00:22:07,092 - root - INFO - noise_std 0
+2023-08-08 00:22:07,092 - root - INFO - world_size 1
+2023-08-08 00:22:07,092 - root - INFO - interp 0
+2023-08-08 00:22:07,092 - root - INFO - use_daily_climatology False
+2023-08-08 00:22:07,092 - root - INFO - global_batch_size 64
+2023-08-08 00:22:07,092 - root - INFO - ablate sp
+2023-08-08 00:22:07,092 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 00:22:07,092 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:22:07,092 - root - INFO - resuming False
+2023-08-08 00:22:07,092 - root - INFO - local_rank 0
+2023-08-08 00:22:07,092 - root - INFO - ---------------------------------------------------
+2023-08-08 00:22:07,092 - root - INFO - Inference for 1 initial conditions
+2023-08-08 00:22:07,311 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 00:22:07,312 - root - INFO - Number of samples per year: 1460
+2023-08-08 00:22:07,312 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 00:22:07,312 - root - INFO - Delta t: 6 hours
+2023-08-08 00:22:07,312 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 00:22:07,312 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:22:57,236 - root - INFO - Loading inference data
+2023-08-08 00:22:57,237 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:22:57,487 - root - INFO - Initial condition 1 of 1
+2023-08-08 00:22:58,368 - root - INFO - Extracting valid data from the first year
+2023-08-08 00:24:51,081 - root - INFO - Standardizing data
+2023-08-08 00:24:58,676 - root - INFO - Loading time means
+2023-08-08 00:25:09,655 - root - INFO - Begin autoregressive inference
+2023-08-08 00:25:20,850 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:25:33,194 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 1.4249557256698608, ACC: 0.9447878003120422
+2023-08-08 00:25:44,861 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 2.0118417739868164, ACC: 0.8809641599655151
+2023-08-08 00:25:56,983 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 3.138289451599121, ACC: 0.7037752270698547
+2023-08-08 00:26:08,761 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 4.157985210418701, ACC: 0.545846164226532
+2023-08-08 00:26:20,307 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 4.6138482093811035, ACC: 0.4581730365753174
+2023-08-08 00:26:31,729 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 4.867183208465576, ACC: 0.40359917283058167
+2023-08-08 00:26:43,614 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 5.172664642333984, ACC: 0.34270909428596497
+2023-08-08 00:26:55,945 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 5.480844020843506, ACC: 0.2898178994655609
+2023-08-08 00:27:08,545 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 5.682007312774658, ACC: 0.25339359045028687
+2023-08-08 00:27:20,429 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 6.023326396942139, ACC: 0.21925844252109528
+2023-08-08 00:27:32,624 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 6.5188140869140625, ACC: 0.1653062403202057
+2023-08-08 00:27:43,680 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 6.907180309295654, ACC: 0.13580921292304993
+2023-08-08 00:27:56,368 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 7.187864303588867, ACC: 0.11737504601478577
+2023-08-08 00:28:10,910 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 7.438625335693359, ACC: 0.10051046311855316
+2023-08-08 00:28:23,373 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 7.753245830535889, ACC: 0.06652339547872543
+2023-08-08 00:28:36,340 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 8.060524940490723, ACC: 0.046926457434892654
+2023-08-08 00:28:47,790 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 8.341620445251465, ACC: 0.03592853620648384
+2023-08-08 00:28:59,426 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 8.553686141967773, ACC: 0.037699777632951736
+2023-08-08 00:29:11,465 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 8.867364883422852, ACC: 0.030235959216952324
+2023-08-08 00:29:23,752 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 9.107932090759277, ACC: 0.03137737140059471
+2023-08-08 00:29:37,100 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 9.390750885009766, ACC: 0.0388035885989666
+2023-08-08 00:29:48,981 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 9.592146873474121, ACC: 0.044164590537548065
+2023-08-08 00:30:01,510 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 9.738985061645508, ACC: 0.05108625069260597
+2023-08-08 00:30:14,306 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 9.926183700561523, ACC: 0.05548318102955818
+2023-08-08 00:30:26,487 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 10.200867652893066, ACC: 0.05763529613614082
+2023-08-08 00:30:39,354 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 10.689635276794434, ACC: 0.055958155542612076
+2023-08-08 00:30:51,083 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 11.19882869720459, ACC: 0.0482332818210125
+2023-08-08 00:31:02,747 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 11.474350929260254, ACC: 0.0435611717402935
+2023-08-08 00:31:14,800 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 11.666656494140625, ACC: 0.04452323168516159
+2023-08-08 00:31:14,897 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-sp_30-timesteps_vis.h5
+2023-08-08 00:32:09,353 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 00:32:09,353 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 00:32:09,353 - root - INFO - Configuration name: afno_backbone
+2023-08-08 00:32:09,353 - root - INFO - log_to_wandb True
+2023-08-08 00:32:09,353 - root - INFO - lr 0.0005
+2023-08-08 00:32:09,353 - root - INFO - batch_size 64
+2023-08-08 00:32:09,353 - root - INFO - max_epochs 150
+2023-08-08 00:32:09,353 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 00:32:09,353 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:32:09,354 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:32:09,354 - root - INFO - orography False
+2023-08-08 00:32:09,354 - root - INFO - orography_path None
+2023-08-08 00:32:09,354 - root - INFO - exp_dir ../results
+2023-08-08 00:32:09,354 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 00:32:09,354 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 00:32:09,354 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:32:09,354 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 00:32:09,354 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 00:32:09,354 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 00:32:09,354 - root - INFO - loss l2
+2023-08-08 00:32:09,354 - root - INFO - num_data_workers 4
+2023-08-08 00:32:09,354 - root - INFO - dt 1
+2023-08-08 00:32:09,354 - root - INFO - n_history 0
+2023-08-08 00:32:09,354 - root - INFO - prediction_type iterative
+2023-08-08 00:32:09,354 - root - INFO - prediction_length 30
+2023-08-08 00:32:09,354 - root - INFO - n_initial_conditions 5
+2023-08-08 00:32:09,354 - root - INFO - ics_type default
+2023-08-08 00:32:09,355 - root - INFO - save_raw_forecasts True
+2023-08-08 00:32:09,355 - root - INFO - save_channel False
+2023-08-08 00:32:09,355 - root - INFO - masked_acc False
+2023-08-08 00:32:09,355 - root - INFO - maskpath None
+2023-08-08 00:32:09,355 - root - INFO - perturb False
+2023-08-08 00:32:09,355 - root - INFO - add_grid False
+2023-08-08 00:32:09,355 - root - INFO - N_grid_channels 0
+2023-08-08 00:32:09,355 - root - INFO - gridtype sinusoidal
+2023-08-08 00:32:09,355 - root - INFO - roll False
+2023-08-08 00:32:09,355 - root - INFO - num_blocks 8
+2023-08-08 00:32:09,355 - root - INFO - nettype afno
+2023-08-08 00:32:09,355 - root - INFO - patch_size 8
+2023-08-08 00:32:09,355 - root - INFO - width 56
+2023-08-08 00:32:09,355 - root - INFO - modes 32
+2023-08-08 00:32:09,355 - root - INFO - target V10
+2023-08-08 00:32:09,355 - root - INFO - normalization zscore
+2023-08-08 00:32:09,355 - root - INFO - log_to_screen True
+2023-08-08 00:32:09,355 - root - INFO - save_checkpoint True
+2023-08-08 00:32:09,356 - root - INFO - enable_nhwc False
+2023-08-08 00:32:09,356 - root - INFO - optimizer_type FusedAdam
+2023-08-08 00:32:09,356 - root - INFO - crop_size_x None
+2023-08-08 00:32:09,356 - root - INFO - crop_size_y None
+2023-08-08 00:32:09,356 - root - INFO - two_step_training False
+2023-08-08 00:32:09,356 - root - INFO - plot_animations False
+2023-08-08 00:32:09,356 - root - INFO - add_noise False
+2023-08-08 00:32:09,356 - root - INFO - noise_std 0
+2023-08-08 00:32:09,356 - root - INFO - world_size 1
+2023-08-08 00:32:09,356 - root - INFO - interp 0
+2023-08-08 00:32:09,356 - root - INFO - use_daily_climatology False
+2023-08-08 00:32:09,356 - root - INFO - global_batch_size 64
+2023-08-08 00:32:09,356 - root - INFO - ablate mslp
+2023-08-08 00:32:09,356 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 00:32:09,356 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:32:09,356 - root - INFO - resuming False
+2023-08-08 00:32:09,356 - root - INFO - local_rank 0
+2023-08-08 00:32:09,356 - root - INFO - ---------------------------------------------------
+2023-08-08 00:32:09,356 - root - INFO - Inference for 1 initial conditions
+2023-08-08 00:32:09,549 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 00:32:09,549 - root - INFO - Number of samples per year: 1460
+2023-08-08 00:32:09,550 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 00:32:09,550 - root - INFO - Delta t: 6 hours
+2023-08-08 00:32:09,550 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 00:32:09,550 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:32:54,664 - root - INFO - Loading inference data
+2023-08-08 00:32:54,665 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:32:54,768 - root - INFO - Initial condition 1 of 1
+2023-08-08 00:32:55,672 - root - INFO - Extracting valid data from the first year
+2023-08-08 00:34:35,176 - root - INFO - Standardizing data
+2023-08-08 00:34:42,923 - root - INFO - Loading time means
+2023-08-08 00:34:51,889 - root - INFO - Begin autoregressive inference
+2023-08-08 00:35:05,649 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:35:20,541 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 2.523615837097168, ACC: 0.8093684911727905
+2023-08-08 00:35:33,044 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 8.647315979003906, ACC: 0.2871306240558624
+2023-08-08 00:35:44,263 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 24.396451950073242, ACC: 0.07093354314565659
+2023-08-08 00:35:56,328 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 33.61977767944336, ACC: 0.031919874250888824
+2023-08-08 00:36:07,425 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 40.069156646728516, ACC: 0.019204463809728622
+2023-08-08 00:36:18,368 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 45.49079895019531, ACC: 0.012767313979566097
+2023-08-08 00:36:30,872 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 50.78260040283203, ACC: 0.016977019608020782
+2023-08-08 00:36:42,609 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 55.39841079711914, ACC: 0.020853672176599503
+2023-08-08 00:36:53,306 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 60.33829879760742, ACC: 0.024866702035069466
+2023-08-08 00:37:04,497 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 65.6100082397461, ACC: 0.039006009697914124
+2023-08-08 00:37:16,630 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 71.81047821044922, ACC: 0.04259295016527176
+2023-08-08 00:37:29,765 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 78.70085906982422, ACC: 0.04862445592880249
+2023-08-08 00:37:41,782 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 87.26678466796875, ACC: 0.05431279167532921
+2023-08-08 00:37:54,870 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 100.02523803710938, ACC: 0.06114920228719711
+2023-08-08 00:38:10,471 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 124.70402526855469, ACC: 0.06729026138782501
+2023-08-08 00:38:21,637 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 163.8126678466797, ACC: 0.09126736223697662
+2023-08-08 00:38:36,281 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 200.2493896484375, ACC: 0.10799595713615417
+2023-08-08 00:38:48,122 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 226.87559509277344, ACC: 0.11383877694606781
+2023-08-08 00:39:00,877 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 246.56741333007812, ACC: 0.11617118865251541
+2023-08-08 00:39:13,501 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 261.9031677246094, ACC: 0.1084802895784378
+2023-08-08 00:39:26,214 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 273.9521789550781, ACC: 0.11980989575386047
+2023-08-08 00:39:38,071 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 283.2909851074219, ACC: 0.10152933746576309
+2023-08-08 00:39:50,180 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 289.9168395996094, ACC: 0.10620958358049393
+2023-08-08 00:40:02,408 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 294.4947814941406, ACC: 0.1028822660446167
+2023-08-08 00:40:16,644 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 297.2454833984375, ACC: 0.11019298434257507
+2023-08-08 00:40:29,819 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 298.9383544921875, ACC: 0.10560768097639084
+2023-08-08 00:40:42,147 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 299.95458984375, ACC: 0.11068413406610489
+2023-08-08 00:40:54,222 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 300.6700744628906, ACC: 0.10071857273578644
+2023-08-08 00:41:06,673 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 301.0920715332031, ACC: 0.10270426422357559
+2023-08-08 00:41:06,780 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-mslp_30-timesteps_vis.h5
+2023-08-08 00:42:00,550 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 00:42:00,550 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 00:42:00,550 - root - INFO - Configuration name: afno_backbone
+2023-08-08 00:42:00,550 - root - INFO - log_to_wandb True
+2023-08-08 00:42:00,550 - root - INFO - lr 0.0005
+2023-08-08 00:42:00,550 - root - INFO - batch_size 64
+2023-08-08 00:42:00,550 - root - INFO - max_epochs 150
+2023-08-08 00:42:00,550 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 00:42:00,550 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:42:00,551 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:42:00,551 - root - INFO - orography False
+2023-08-08 00:42:00,551 - root - INFO - orography_path None
+2023-08-08 00:42:00,551 - root - INFO - exp_dir ../results
+2023-08-08 00:42:00,551 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 00:42:00,551 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 00:42:00,551 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:42:00,551 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 00:42:00,551 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 00:42:00,551 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 00:42:00,551 - root - INFO - loss l2
+2023-08-08 00:42:00,551 - root - INFO - num_data_workers 4
+2023-08-08 00:42:00,551 - root - INFO - dt 1
+2023-08-08 00:42:00,551 - root - INFO - n_history 0
+2023-08-08 00:42:00,551 - root - INFO - prediction_type iterative
+2023-08-08 00:42:00,551 - root - INFO - prediction_length 30
+2023-08-08 00:42:00,552 - root - INFO - n_initial_conditions 5
+2023-08-08 00:42:00,552 - root - INFO - ics_type default
+2023-08-08 00:42:00,552 - root - INFO - save_raw_forecasts True
+2023-08-08 00:42:00,552 - root - INFO - save_channel False
+2023-08-08 00:42:00,552 - root - INFO - masked_acc False
+2023-08-08 00:42:00,552 - root - INFO - maskpath None
+2023-08-08 00:42:00,552 - root - INFO - perturb False
+2023-08-08 00:42:00,552 - root - INFO - add_grid False
+2023-08-08 00:42:00,552 - root - INFO - N_grid_channels 0
+2023-08-08 00:42:00,552 - root - INFO - gridtype sinusoidal
+2023-08-08 00:42:00,552 - root - INFO - roll False
+2023-08-08 00:42:00,552 - root - INFO - num_blocks 8
+2023-08-08 00:42:00,552 - root - INFO - nettype afno
+2023-08-08 00:42:00,552 - root - INFO - patch_size 8
+2023-08-08 00:42:00,552 - root - INFO - width 56
+2023-08-08 00:42:00,552 - root - INFO - modes 32
+2023-08-08 00:42:00,552 - root - INFO - target V10
+2023-08-08 00:42:00,552 - root - INFO - normalization zscore
+2023-08-08 00:42:00,552 - root - INFO - log_to_screen True
+2023-08-08 00:42:00,553 - root - INFO - save_checkpoint True
+2023-08-08 00:42:00,553 - root - INFO - enable_nhwc False
+2023-08-08 00:42:00,553 - root - INFO - optimizer_type FusedAdam
+2023-08-08 00:42:00,553 - root - INFO - crop_size_x None
+2023-08-08 00:42:00,553 - root - INFO - crop_size_y None
+2023-08-08 00:42:00,553 - root - INFO - two_step_training False
+2023-08-08 00:42:00,553 - root - INFO - plot_animations False
+2023-08-08 00:42:00,553 - root - INFO - add_noise False
+2023-08-08 00:42:00,553 - root - INFO - noise_std 0
+2023-08-08 00:42:00,553 - root - INFO - world_size 1
+2023-08-08 00:42:00,553 - root - INFO - interp 0
+2023-08-08 00:42:00,553 - root - INFO - use_daily_climatology False
+2023-08-08 00:42:00,553 - root - INFO - global_batch_size 64
+2023-08-08 00:42:00,553 - root - INFO - ablate U1000
+2023-08-08 00:42:00,553 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 00:42:00,553 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:42:00,553 - root - INFO - resuming False
+2023-08-08 00:42:00,553 - root - INFO - local_rank 0
+2023-08-08 00:42:00,553 - root - INFO - ---------------------------------------------------
+2023-08-08 00:42:00,553 - root - INFO - Inference for 1 initial conditions
+2023-08-08 00:42:00,699 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 00:42:00,700 - root - INFO - Number of samples per year: 1460
+2023-08-08 00:42:00,700 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 00:42:00,700 - root - INFO - Delta t: 6 hours
+2023-08-08 00:42:00,700 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 00:42:00,701 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:42:44,099 - root - INFO - Loading inference data
+2023-08-08 00:42:44,102 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:42:44,260 - root - INFO - Initial condition 1 of 1
+2023-08-08 00:42:45,180 - root - INFO - Extracting valid data from the first year
+2023-08-08 00:44:18,983 - root - INFO - Standardizing data
+2023-08-08 00:44:25,987 - root - INFO - Loading time means
+2023-08-08 00:44:34,624 - root - INFO - Begin autoregressive inference
+2023-08-08 00:44:47,130 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:44:59,671 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 4.624812126159668, ACC: 0.5952394008636475
+2023-08-08 00:45:11,614 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 24.325490951538086, ACC: 0.10742709785699844
+2023-08-08 00:45:23,556 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 57.72307205200195, ACC: 0.08509917557239532
+2023-08-08 00:45:36,067 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 108.44794464111328, ACC: 0.1284409612417221
+2023-08-08 00:45:49,755 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 179.0040283203125, ACC: 0.1417296826839447
+2023-08-08 00:46:02,853 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 211.1263885498047, ACC: 0.12769244611263275
+2023-08-08 00:46:15,013 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 220.6573944091797, ACC: 0.11210811138153076
+2023-08-08 00:46:26,935 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 227.64183044433594, ACC: 0.09344174712896347
+2023-08-08 00:46:39,682 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 237.21182250976562, ACC: 0.07431645691394806
+2023-08-08 00:46:51,808 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 246.28347778320312, ACC: 0.05950447544455528
+2023-08-08 00:47:04,677 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 252.67559814453125, ACC: 0.05156464874744415
+2023-08-08 00:47:16,911 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 256.6377258300781, ACC: 0.0525040477514267
+2023-08-08 00:47:29,462 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 258.7779541015625, ACC: 0.055109571665525436
+2023-08-08 00:47:41,399 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 259.7831115722656, ACC: 0.053881529718637466
+2023-08-08 00:47:53,147 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 260.0008544921875, ACC: 0.05264214798808098
+2023-08-08 00:48:07,633 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 259.8447570800781, ACC: 0.054658640176057816
+2023-08-08 00:48:20,879 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 259.6153259277344, ACC: 0.05764240399003029
+2023-08-08 00:48:33,175 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 259.41802978515625, ACC: 0.058026883751153946
+2023-08-08 00:48:44,900 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 259.23626708984375, ACC: 0.05973329767584801
+2023-08-08 00:48:57,694 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 259.1156921386719, ACC: 0.05405348166823387
+2023-08-08 00:49:09,798 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 258.97113037109375, ACC: 0.0595991387963295
+2023-08-08 00:49:22,376 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 258.9120788574219, ACC: 0.05202959477901459
+2023-08-08 00:49:33,768 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 258.835205078125, ACC: 0.05427464097738266
+2023-08-08 00:49:44,909 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 258.7966003417969, ACC: 0.0521865151822567
+2023-08-08 00:49:56,594 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 258.7431640625, ACC: 0.056287724524736404
+2023-08-08 00:50:09,361 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 258.7289123535156, ACC: 0.053990915417671204
+2023-08-08 00:50:22,260 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 258.70330810546875, ACC: 0.05634431168437004
+2023-08-08 00:50:34,565 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 258.7200012207031, ACC: 0.05129965394735336
+2023-08-08 00:50:45,891 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 258.7097473144531, ACC: 0.0525071881711483
+2023-08-08 00:50:46,003 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-U1000_30-timesteps_vis.h5
+2023-08-08 00:51:39,726 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 00:51:39,726 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 00:51:39,726 - root - INFO - Configuration name: afno_backbone
+2023-08-08 00:51:39,726 - root - INFO - log_to_wandb True
+2023-08-08 00:51:39,727 - root - INFO - lr 0.0005
+2023-08-08 00:51:39,727 - root - INFO - batch_size 64
+2023-08-08 00:51:39,727 - root - INFO - max_epochs 150
+2023-08-08 00:51:39,727 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 00:51:39,727 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:51:39,727 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 00:51:39,727 - root - INFO - orography False
+2023-08-08 00:51:39,727 - root - INFO - orography_path None
+2023-08-08 00:51:39,727 - root - INFO - exp_dir ../results
+2023-08-08 00:51:39,727 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 00:51:39,727 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 00:51:39,727 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:51:39,727 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 00:51:39,727 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 00:51:39,727 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 00:51:39,728 - root - INFO - loss l2
+2023-08-08 00:51:39,728 - root - INFO - num_data_workers 4
+2023-08-08 00:51:39,728 - root - INFO - dt 1
+2023-08-08 00:51:39,728 - root - INFO - n_history 0
+2023-08-08 00:51:39,728 - root - INFO - prediction_type iterative
+2023-08-08 00:51:39,728 - root - INFO - prediction_length 30
+2023-08-08 00:51:39,728 - root - INFO - n_initial_conditions 5
+2023-08-08 00:51:39,728 - root - INFO - ics_type default
+2023-08-08 00:51:39,728 - root - INFO - save_raw_forecasts True
+2023-08-08 00:51:39,728 - root - INFO - save_channel False
+2023-08-08 00:51:39,728 - root - INFO - masked_acc False
+2023-08-08 00:51:39,728 - root - INFO - maskpath None
+2023-08-08 00:51:39,728 - root - INFO - perturb False
+2023-08-08 00:51:39,728 - root - INFO - add_grid False
+2023-08-08 00:51:39,728 - root - INFO - N_grid_channels 0
+2023-08-08 00:51:39,729 - root - INFO - gridtype sinusoidal
+2023-08-08 00:51:39,729 - root - INFO - roll False
+2023-08-08 00:51:39,729 - root - INFO - num_blocks 8
+2023-08-08 00:51:39,729 - root - INFO - nettype afno
+2023-08-08 00:51:39,729 - root - INFO - patch_size 8
+2023-08-08 00:51:39,729 - root - INFO - width 56
+2023-08-08 00:51:39,729 - root - INFO - modes 32
+2023-08-08 00:51:39,729 - root - INFO - target V10
+2023-08-08 00:51:39,729 - root - INFO - normalization zscore
+2023-08-08 00:51:39,729 - root - INFO - log_to_screen True
+2023-08-08 00:51:39,729 - root - INFO - save_checkpoint True
+2023-08-08 00:51:39,729 - root - INFO - enable_nhwc False
+2023-08-08 00:51:39,729 - root - INFO - optimizer_type FusedAdam
+2023-08-08 00:51:39,729 - root - INFO - crop_size_x None
+2023-08-08 00:51:39,729 - root - INFO - crop_size_y None
+2023-08-08 00:51:39,729 - root - INFO - two_step_training False
+2023-08-08 00:51:39,730 - root - INFO - plot_animations False
+2023-08-08 00:51:39,730 - root - INFO - add_noise False
+2023-08-08 00:51:39,730 - root - INFO - noise_std 0
+2023-08-08 00:51:39,730 - root - INFO - world_size 1
+2023-08-08 00:51:39,730 - root - INFO - interp 0
+2023-08-08 00:51:39,730 - root - INFO - use_daily_climatology False
+2023-08-08 00:51:39,730 - root - INFO - global_batch_size 64
+2023-08-08 00:51:39,730 - root - INFO - ablate V1000
+2023-08-08 00:51:39,730 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 00:51:39,730 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:51:39,730 - root - INFO - resuming False
+2023-08-08 00:51:39,730 - root - INFO - local_rank 0
+2023-08-08 00:51:39,730 - root - INFO - ---------------------------------------------------
+2023-08-08 00:51:39,730 - root - INFO - Inference for 1 initial conditions
+2023-08-08 00:51:39,908 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 00:51:39,909 - root - INFO - Number of samples per year: 1460
+2023-08-08 00:51:39,909 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 00:51:39,909 - root - INFO - Delta t: 6 hours
+2023-08-08 00:51:39,909 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 00:51:39,910 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 00:52:20,189 - root - INFO - Loading inference data
+2023-08-08 00:52:20,190 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 00:52:20,315 - root - INFO - Initial condition 1 of 1
+2023-08-08 00:52:21,229 - root - INFO - Extracting valid data from the first year
+2023-08-08 00:53:49,088 - root - INFO - Standardizing data
+2023-08-08 00:53:56,650 - root - INFO - Loading time means
+2023-08-08 00:54:04,979 - root - INFO - Begin autoregressive inference
+2023-08-08 00:54:16,699 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 00:54:28,891 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 1.3386014699935913, ACC: 0.9490554332733154
+2023-08-08 00:54:39,532 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 1.8167424201965332, ACC: 0.9069435596466064
+2023-08-08 00:54:52,270 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 2.3415889739990234, ACC: 0.8464803099632263
+2023-08-08 00:55:05,022 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 4.514420509338379, ACC: 0.6043248772621155
+2023-08-08 00:55:17,474 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 5.949376583099365, ACC: 0.4848000407218933
+2023-08-08 00:55:30,535 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 7.283335208892822, ACC: 0.37325406074523926
+2023-08-08 00:55:41,765 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 7.825070381164551, ACC: 0.3310162425041199
+2023-08-08 00:55:53,662 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 8.02612018585205, ACC: 0.31985563039779663
+2023-08-08 00:56:04,242 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 8.780895233154297, ACC: 0.2931444048881531
+2023-08-08 00:56:15,552 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 10.369686126708984, ACC: 0.24352720379829407
+2023-08-08 00:56:26,379 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 12.451178550720215, ACC: 0.18734820187091827
+2023-08-08 00:56:38,427 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 14.134236335754395, ACC: 0.15674012899398804
+2023-08-08 00:56:50,713 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 15.710078239440918, ACC: 0.14848794043064117
+2023-08-08 00:57:02,488 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 16.910690307617188, ACC: 0.13404813408851624
+2023-08-08 00:57:14,463 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 18.009124755859375, ACC: 0.11826853454113007
+2023-08-08 00:57:25,242 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 19.735937118530273, ACC: 0.11290445923805237
+2023-08-08 00:57:37,690 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 21.53113555908203, ACC: 0.11803929507732391
+2023-08-08 00:57:48,665 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 23.18613624572754, ACC: 0.0951744094491005
+2023-08-08 00:58:01,691 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 25.020597457885742, ACC: 0.09185440838336945
+2023-08-08 00:58:14,401 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 27.120145797729492, ACC: 0.08304078131914139
+2023-08-08 00:58:27,568 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 29.671907424926758, ACC: 0.08205079287290573
+2023-08-08 00:58:39,125 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 32.38964080810547, ACC: 0.05629359185695648
+2023-08-08 00:58:51,121 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 35.469512939453125, ACC: 0.04812781512737274
+2023-08-08 00:59:03,539 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 38.34267044067383, ACC: 0.03017931990325451
+2023-08-08 00:59:15,042 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 41.326744079589844, ACC: 0.030286718159914017
+2023-08-08 00:59:27,036 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 44.85367202758789, ACC: 0.018920255824923515
+2023-08-08 00:59:38,166 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 48.725616455078125, ACC: 0.009389819577336311
+2023-08-08 00:59:50,107 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 52.880638122558594, ACC: -0.0060966117307543755
+2023-08-08 01:00:03,373 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 57.171958923339844, ACC: 0.003179095918312669
+2023-08-08 01:00:03,469 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-V1000_30-timesteps_vis.h5
+2023-08-08 01:00:57,672 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 01:00:57,672 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 01:00:57,672 - root - INFO - Configuration name: afno_backbone
+2023-08-08 01:00:57,672 - root - INFO - log_to_wandb True
+2023-08-08 01:00:57,673 - root - INFO - lr 0.0005
+2023-08-08 01:00:57,673 - root - INFO - batch_size 64
+2023-08-08 01:00:57,673 - root - INFO - max_epochs 150
+2023-08-08 01:00:57,673 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 01:00:57,673 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:00:57,673 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:00:57,673 - root - INFO - orography False
+2023-08-08 01:00:57,673 - root - INFO - orography_path None
+2023-08-08 01:00:57,673 - root - INFO - exp_dir ../results
+2023-08-08 01:00:57,673 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 01:00:57,673 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 01:00:57,673 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:00:57,673 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 01:00:57,673 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 01:00:57,673 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 01:00:57,674 - root - INFO - loss l2
+2023-08-08 01:00:57,674 - root - INFO - num_data_workers 4
+2023-08-08 01:00:57,674 - root - INFO - dt 1
+2023-08-08 01:00:57,674 - root - INFO - n_history 0
+2023-08-08 01:00:57,674 - root - INFO - prediction_type iterative
+2023-08-08 01:00:57,674 - root - INFO - prediction_length 30
+2023-08-08 01:00:57,674 - root - INFO - n_initial_conditions 5
+2023-08-08 01:00:57,674 - root - INFO - ics_type default
+2023-08-08 01:00:57,674 - root - INFO - save_raw_forecasts True
+2023-08-08 01:00:57,674 - root - INFO - save_channel False
+2023-08-08 01:00:57,674 - root - INFO - masked_acc False
+2023-08-08 01:00:57,674 - root - INFO - maskpath None
+2023-08-08 01:00:57,674 - root - INFO - perturb False
+2023-08-08 01:00:57,674 - root - INFO - add_grid False
+2023-08-08 01:00:57,675 - root - INFO - N_grid_channels 0
+2023-08-08 01:00:57,675 - root - INFO - gridtype sinusoidal
+2023-08-08 01:00:57,675 - root - INFO - roll False
+2023-08-08 01:00:57,675 - root - INFO - num_blocks 8
+2023-08-08 01:00:57,675 - root - INFO - nettype afno
+2023-08-08 01:00:57,675 - root - INFO - patch_size 8
+2023-08-08 01:00:57,675 - root - INFO - width 56
+2023-08-08 01:00:57,675 - root - INFO - modes 32
+2023-08-08 01:00:57,675 - root - INFO - target V10
+2023-08-08 01:00:57,675 - root - INFO - normalization zscore
+2023-08-08 01:00:57,675 - root - INFO - log_to_screen True
+2023-08-08 01:00:57,675 - root - INFO - save_checkpoint True
+2023-08-08 01:00:57,675 - root - INFO - enable_nhwc False
+2023-08-08 01:00:57,675 - root - INFO - optimizer_type FusedAdam
+2023-08-08 01:00:57,675 - root - INFO - crop_size_x None
+2023-08-08 01:00:57,675 - root - INFO - crop_size_y None
+2023-08-08 01:00:57,676 - root - INFO - two_step_training False
+2023-08-08 01:00:57,676 - root - INFO - plot_animations False
+2023-08-08 01:00:57,676 - root - INFO - add_noise False
+2023-08-08 01:00:57,676 - root - INFO - noise_std 0
+2023-08-08 01:00:57,676 - root - INFO - world_size 1
+2023-08-08 01:00:57,676 - root - INFO - interp 0
+2023-08-08 01:00:57,676 - root - INFO - use_daily_climatology False
+2023-08-08 01:00:57,676 - root - INFO - global_batch_size 64
+2023-08-08 01:00:57,676 - root - INFO - ablate Z1000
+2023-08-08 01:00:57,676 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 01:00:57,676 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:00:57,676 - root - INFO - resuming False
+2023-08-08 01:00:57,676 - root - INFO - local_rank 0
+2023-08-08 01:00:57,676 - root - INFO - ---------------------------------------------------
+2023-08-08 01:00:57,676 - root - INFO - Inference for 1 initial conditions
+2023-08-08 01:00:57,900 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 01:00:57,903 - root - INFO - Number of samples per year: 1460
+2023-08-08 01:00:57,904 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 01:00:57,904 - root - INFO - Delta t: 6 hours
+2023-08-08 01:00:57,904 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 01:00:57,904 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:01:41,824 - root - INFO - Loading inference data
+2023-08-08 01:01:41,825 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:01:41,946 - root - INFO - Initial condition 1 of 1
+2023-08-08 01:01:42,719 - root - INFO - Extracting valid data from the first year
+2023-08-08 01:03:15,471 - root - INFO - Standardizing data
+2023-08-08 01:03:23,273 - root - INFO - Loading time means
+2023-08-08 01:03:32,575 - root - INFO - Begin autoregressive inference
+2023-08-08 01:03:46,564 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 01:03:59,858 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 1.0460785627365112, ACC: 0.9704331755638123
+2023-08-08 01:04:14,563 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 1.3856621980667114, ACC: 0.9475760459899902
+2023-08-08 01:04:27,554 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 1.550026774406433, ACC: 0.9330101609230042
+2023-08-08 01:04:40,337 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 1.7142678499221802, ACC: 0.9167040586471558
+2023-08-08 01:04:52,470 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 1.9305084943771362, ACC: 0.8922017216682434
+2023-08-08 01:05:02,839 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 2.1137990951538086, ACC: 0.8694620132446289
+2023-08-08 01:05:15,489 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 2.332301616668701, ACC: 0.8408157825469971
+2023-08-08 01:05:27,635 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 2.5570287704467773, ACC: 0.8134797215461731
+2023-08-08 01:05:40,508 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 2.7580344676971436, ACC: 0.7885971665382385
+2023-08-08 01:05:52,486 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 2.9609060287475586, ACC: 0.768664538860321
+2023-08-08 01:06:04,995 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 3.2197775840759277, ACC: 0.7338399291038513
+2023-08-08 01:06:17,162 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 3.4007976055145264, ACC: 0.7070921063423157
+2023-08-08 01:06:28,522 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 3.567734956741333, ACC: 0.6848832964897156
+2023-08-08 01:06:41,519 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 3.688997745513916, ACC: 0.6648222804069519
+2023-08-08 01:06:54,158 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 3.9414055347442627, ACC: 0.6128737926483154
+2023-08-08 01:07:07,826 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 4.197853088378906, ACC: 0.5561279654502869
+2023-08-08 01:07:20,960 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 4.452129364013672, ACC: 0.49591752886772156
+2023-08-08 01:07:33,381 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 4.592531681060791, ACC: 0.4529777467250824
+2023-08-08 01:07:45,320 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 4.849368572235107, ACC: 0.38867127895355225
+2023-08-08 01:07:56,081 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 5.042479038238525, ACC: 0.3261474370956421
+2023-08-08 01:08:09,802 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 5.211853981018066, ACC: 0.28685685992240906
+2023-08-08 01:08:23,154 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 5.374870777130127, ACC: 0.2468709796667099
+2023-08-08 01:08:36,073 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 5.5444865226745605, ACC: 0.2207389771938324
+2023-08-08 01:08:47,169 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 5.687137603759766, ACC: 0.2043278068304062
+2023-08-08 01:08:59,748 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 5.797077178955078, ACC: 0.1980573982000351
+2023-08-08 01:09:11,596 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 5.9313483238220215, ACC: 0.1704028993844986
+2023-08-08 01:09:23,345 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 6.0678181648254395, ACC: 0.15404047071933746
+2023-08-08 01:09:35,340 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 6.159830570220947, ACC: 0.1470736861228943
+2023-08-08 01:09:47,059 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 6.3183817863464355, ACC: 0.15891210734844208
+2023-08-08 01:09:47,149 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-Z1000_30-timesteps_vis.h5
+2023-08-08 01:10:40,708 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 01:10:40,708 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 01:10:40,708 - root - INFO - Configuration name: afno_backbone
+2023-08-08 01:10:40,708 - root - INFO - log_to_wandb True
+2023-08-08 01:10:40,709 - root - INFO - lr 0.0005
+2023-08-08 01:10:40,709 - root - INFO - batch_size 64
+2023-08-08 01:10:40,709 - root - INFO - max_epochs 150
+2023-08-08 01:10:40,709 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 01:10:40,709 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:10:40,709 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:10:40,709 - root - INFO - orography False
+2023-08-08 01:10:40,709 - root - INFO - orography_path None
+2023-08-08 01:10:40,709 - root - INFO - exp_dir ../results
+2023-08-08 01:10:40,709 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 01:10:40,709 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 01:10:40,709 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:10:40,709 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 01:10:40,709 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 01:10:40,709 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 01:10:40,710 - root - INFO - loss l2
+2023-08-08 01:10:40,710 - root - INFO - num_data_workers 4
+2023-08-08 01:10:40,710 - root - INFO - dt 1
+2023-08-08 01:10:40,710 - root - INFO - n_history 0
+2023-08-08 01:10:40,710 - root - INFO - prediction_type iterative
+2023-08-08 01:10:40,710 - root - INFO - prediction_length 30
+2023-08-08 01:10:40,710 - root - INFO - n_initial_conditions 5
+2023-08-08 01:10:40,710 - root - INFO - ics_type default
+2023-08-08 01:10:40,710 - root - INFO - save_raw_forecasts True
+2023-08-08 01:10:40,710 - root - INFO - save_channel False
+2023-08-08 01:10:40,710 - root - INFO - masked_acc False
+2023-08-08 01:10:40,710 - root - INFO - maskpath None
+2023-08-08 01:10:40,710 - root - INFO - perturb False
+2023-08-08 01:10:40,710 - root - INFO - add_grid False
+2023-08-08 01:10:40,710 - root - INFO - N_grid_channels 0
+2023-08-08 01:10:40,710 - root - INFO - gridtype sinusoidal
+2023-08-08 01:10:40,710 - root - INFO - roll False
+2023-08-08 01:10:40,710 - root - INFO - num_blocks 8
+2023-08-08 01:10:40,710 - root - INFO - nettype afno
+2023-08-08 01:10:40,710 - root - INFO - patch_size 8
+2023-08-08 01:10:40,711 - root - INFO - width 56
+2023-08-08 01:10:40,711 - root - INFO - modes 32
+2023-08-08 01:10:40,711 - root - INFO - target V10
+2023-08-08 01:10:40,711 - root - INFO - normalization zscore
+2023-08-08 01:10:40,711 - root - INFO - log_to_screen True
+2023-08-08 01:10:40,711 - root - INFO - save_checkpoint True
+2023-08-08 01:10:40,711 - root - INFO - enable_nhwc False
+2023-08-08 01:10:40,711 - root - INFO - optimizer_type FusedAdam
+2023-08-08 01:10:40,711 - root - INFO - crop_size_x None
+2023-08-08 01:10:40,711 - root - INFO - crop_size_y None
+2023-08-08 01:10:40,711 - root - INFO - two_step_training False
+2023-08-08 01:10:40,711 - root - INFO - plot_animations False
+2023-08-08 01:10:40,711 - root - INFO - add_noise False
+2023-08-08 01:10:40,711 - root - INFO - noise_std 0
+2023-08-08 01:10:40,711 - root - INFO - world_size 1
+2023-08-08 01:10:40,711 - root - INFO - interp 0
+2023-08-08 01:10:40,711 - root - INFO - use_daily_climatology False
+2023-08-08 01:10:40,711 - root - INFO - global_batch_size 64
+2023-08-08 01:10:40,711 - root - INFO - ablate T850
+2023-08-08 01:10:40,711 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 01:10:40,711 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:10:40,711 - root - INFO - resuming False
+2023-08-08 01:10:40,711 - root - INFO - local_rank 0
+2023-08-08 01:10:40,711 - root - INFO - ---------------------------------------------------
+2023-08-08 01:10:40,711 - root - INFO - Inference for 1 initial conditions
+2023-08-08 01:10:40,897 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 01:10:40,898 - root - INFO - Number of samples per year: 1460
+2023-08-08 01:10:40,898 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 01:10:40,898 - root - INFO - Delta t: 6 hours
+2023-08-08 01:10:40,898 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 01:10:40,898 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:11:25,705 - root - INFO - Loading inference data
+2023-08-08 01:11:25,707 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:11:25,835 - root - INFO - Initial condition 1 of 1
+2023-08-08 01:11:26,777 - root - INFO - Extracting valid data from the first year
+2023-08-08 01:13:12,418 - root - INFO - Standardizing data
+2023-08-08 01:13:20,202 - root - INFO - Loading time means
+2023-08-08 01:13:29,859 - root - INFO - Begin autoregressive inference
+2023-08-08 01:13:43,317 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 01:13:55,846 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 13.365243911743164, ACC: 0.2059343308210373
+2023-08-08 01:14:09,218 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 60.291168212890625, ACC: 0.03258071839809418
+2023-08-08 01:14:22,688 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 107.2761001586914, ACC: 0.02112080156803131
+2023-08-08 01:14:35,664 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 167.761474609375, ACC: 0.08438872545957565
+2023-08-08 01:14:47,879 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 216.72140502929688, ACC: 0.13717791438102722
+2023-08-08 01:15:00,253 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 245.62928771972656, ACC: 0.1450132131576538
+2023-08-08 01:15:13,819 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 263.6028747558594, ACC: 0.1347719430923462
+2023-08-08 01:15:27,019 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 276.5928039550781, ACC: 0.1325352042913437
+2023-08-08 01:15:40,181 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 285.95361328125, ACC: 0.12889131903648376
+2023-08-08 01:15:52,820 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 292.2187805175781, ACC: 0.12245252728462219
+2023-08-08 01:16:05,096 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 296.200439453125, ACC: 0.11243563145399094
+2023-08-08 01:16:19,185 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 298.6895751953125, ACC: 0.1112542375922203
+2023-08-08 01:16:33,222 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 300.26177978515625, ACC: 0.11223848909139633
+2023-08-08 01:16:46,414 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 301.29974365234375, ACC: 0.10749586671590805
+2023-08-08 01:16:59,066 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 301.9849853515625, ACC: 0.10300850123167038
+2023-08-08 01:17:13,147 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 302.42041015625, ACC: 0.10368441045284271
+2023-08-08 01:17:27,563 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 302.6961364746094, ACC: 0.10767480731010437
+2023-08-08 01:17:41,560 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 302.8999938964844, ACC: 0.10749418288469315
+2023-08-08 01:17:54,913 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 303.02398681640625, ACC: 0.10906121134757996
+2023-08-08 01:18:09,551 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 303.16925048828125, ACC: 0.09767910093069077
+2023-08-08 01:18:22,365 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 303.19146728515625, ACC: 0.10695936530828476
+2023-08-08 01:18:35,540 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 303.2967224121094, ACC: 0.0928841158747673
+2023-08-08 01:18:48,949 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 303.3109130859375, ACC: 0.09693737328052521
+2023-08-08 01:19:01,457 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 303.34832763671875, ACC: 0.09327305108308792
+2023-08-08 01:19:14,893 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 303.32861328125, ACC: 0.09982113540172577
+2023-08-08 01:19:27,465 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 303.3517150878906, ACC: 0.09563761204481125
+2023-08-08 01:19:39,721 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 303.3375549316406, ACC: 0.10013628005981445
+2023-08-08 01:19:51,374 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 303.3910827636719, ACC: 0.09108372777700424
+2023-08-08 01:20:04,449 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 303.39013671875, ACC: 0.09287306666374207
+2023-08-08 01:20:04,573 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-T850_30-timesteps_vis.h5
+2023-08-08 01:20:58,472 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 01:20:58,472 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 01:20:58,472 - root - INFO - Configuration name: afno_backbone
+2023-08-08 01:20:58,472 - root - INFO - log_to_wandb True
+2023-08-08 01:20:58,472 - root - INFO - lr 0.0005
+2023-08-08 01:20:58,472 - root - INFO - batch_size 64
+2023-08-08 01:20:58,472 - root - INFO - max_epochs 150
+2023-08-08 01:20:58,473 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 01:20:58,473 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:20:58,473 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:20:58,473 - root - INFO - orography False
+2023-08-08 01:20:58,473 - root - INFO - orography_path None
+2023-08-08 01:20:58,473 - root - INFO - exp_dir ../results
+2023-08-08 01:20:58,473 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 01:20:58,473 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 01:20:58,473 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:20:58,473 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 01:20:58,473 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 01:20:58,473 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 01:20:58,473 - root - INFO - loss l2
+2023-08-08 01:20:58,473 - root - INFO - num_data_workers 4
+2023-08-08 01:20:58,474 - root - INFO - dt 1
+2023-08-08 01:20:58,474 - root - INFO - n_history 0
+2023-08-08 01:20:58,474 - root - INFO - prediction_type iterative
+2023-08-08 01:20:58,474 - root - INFO - prediction_length 30
+2023-08-08 01:20:58,474 - root - INFO - n_initial_conditions 5
+2023-08-08 01:20:58,474 - root - INFO - ics_type default
+2023-08-08 01:20:58,474 - root - INFO - save_raw_forecasts True
+2023-08-08 01:20:58,474 - root - INFO - save_channel False
+2023-08-08 01:20:58,474 - root - INFO - masked_acc False
+2023-08-08 01:20:58,474 - root - INFO - maskpath None
+2023-08-08 01:20:58,474 - root - INFO - perturb False
+2023-08-08 01:20:58,474 - root - INFO - add_grid False
+2023-08-08 01:20:58,474 - root - INFO - N_grid_channels 0
+2023-08-08 01:20:58,474 - root - INFO - gridtype sinusoidal
+2023-08-08 01:20:58,474 - root - INFO - roll False
+2023-08-08 01:20:58,474 - root - INFO - num_blocks 8
+2023-08-08 01:20:58,474 - root - INFO - nettype afno
+2023-08-08 01:20:58,474 - root - INFO - patch_size 8
+2023-08-08 01:20:58,474 - root - INFO - width 56
+2023-08-08 01:20:58,474 - root - INFO - modes 32
+2023-08-08 01:20:58,474 - root - INFO - target V10
+2023-08-08 01:20:58,474 - root - INFO - normalization zscore
+2023-08-08 01:20:58,474 - root - INFO - log_to_screen True
+2023-08-08 01:20:58,474 - root - INFO - save_checkpoint True
+2023-08-08 01:20:58,474 - root - INFO - enable_nhwc False
+2023-08-08 01:20:58,474 - root - INFO - optimizer_type FusedAdam
+2023-08-08 01:20:58,474 - root - INFO - crop_size_x None
+2023-08-08 01:20:58,475 - root - INFO - crop_size_y None
+2023-08-08 01:20:58,475 - root - INFO - two_step_training False
+2023-08-08 01:20:58,475 - root - INFO - plot_animations False
+2023-08-08 01:20:58,475 - root - INFO - add_noise False
+2023-08-08 01:20:58,475 - root - INFO - noise_std 0
+2023-08-08 01:20:58,475 - root - INFO - world_size 1
+2023-08-08 01:20:58,475 - root - INFO - interp 0
+2023-08-08 01:20:58,475 - root - INFO - use_daily_climatology False
+2023-08-08 01:20:58,475 - root - INFO - global_batch_size 64
+2023-08-08 01:20:58,475 - root - INFO - ablate U850
+2023-08-08 01:20:58,475 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 01:20:58,475 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:20:58,475 - root - INFO - resuming False
+2023-08-08 01:20:58,475 - root - INFO - local_rank 0
+2023-08-08 01:20:58,475 - root - INFO - ---------------------------------------------------
+2023-08-08 01:20:58,475 - root - INFO - Inference for 1 initial conditions
+2023-08-08 01:20:58,648 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 01:20:58,649 - root - INFO - Number of samples per year: 1460
+2023-08-08 01:20:58,649 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 01:20:58,649 - root - INFO - Delta t: 6 hours
+2023-08-08 01:20:58,649 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 01:20:58,649 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:21:49,035 - root - INFO - Loading inference data
+2023-08-08 01:21:49,037 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:21:49,235 - root - INFO - Initial condition 1 of 1
+2023-08-08 01:21:50,208 - root - INFO - Extracting valid data from the first year
+2023-08-08 01:23:40,139 - root - INFO - Standardizing data
+2023-08-08 01:23:48,386 - root - INFO - Loading time means
+2023-08-08 01:23:56,798 - root - INFO - Begin autoregressive inference
+2023-08-08 01:24:09,156 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 01:24:21,624 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 1.1422325372695923, ACC: 0.9625422358512878
+2023-08-08 01:24:33,188 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 1.8020075559616089, ACC: 0.9054755568504333
+2023-08-08 01:24:45,441 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 2.1762893199920654, ACC: 0.8589229583740234
+2023-08-08 01:24:58,543 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 2.545301914215088, ACC: 0.805293619632721
+2023-08-08 01:25:13,052 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 2.8494749069213867, ACC: 0.7517781257629395
+2023-08-08 01:25:25,651 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 3.1401984691619873, ACC: 0.6973094940185547
+2023-08-08 01:25:37,978 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 3.424313545227051, ACC: 0.6335993409156799
+2023-08-08 01:25:49,648 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 3.7049126625061035, ACC: 0.5762325525283813
+2023-08-08 01:26:02,865 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 3.9444262981414795, ACC: 0.521287202835083
+2023-08-08 01:26:14,127 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 4.184455394744873, ACC: 0.4826011657714844
+2023-08-08 01:26:25,639 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 4.4745683670043945, ACC: 0.41973915696144104
+2023-08-08 01:26:37,681 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 4.6345624923706055, ACC: 0.38253578543663025
+2023-08-08 01:26:51,110 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 4.813577175140381, ACC: 0.34800973534584045
+2023-08-08 01:27:02,562 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 4.844442367553711, ACC: 0.35321590304374695
+2023-08-08 01:27:13,810 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 4.9590325355529785, ACC: 0.3190705478191376
+2023-08-08 01:27:25,626 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 5.005605697631836, ACC: 0.3050448000431061
+2023-08-08 01:27:37,684 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 4.9944047927856445, ACC: 0.30434754490852356
+2023-08-08 01:27:49,394 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 4.954477787017822, ACC: 0.30932214856147766
+2023-08-08 01:28:01,891 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 5.055286884307861, ACC: 0.283442884683609
+2023-08-08 01:28:14,377 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 5.086438179016113, ACC: 0.26622071862220764
+2023-08-08 01:28:26,850 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 5.116386413574219, ACC: 0.2632581889629364
+2023-08-08 01:28:38,659 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 5.160769462585449, ACC: 0.26034262776374817
+2023-08-08 01:28:50,029 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 5.229160308837891, ACC: 0.24269182980060577
+2023-08-08 01:29:01,461 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 5.3146185874938965, ACC: 0.22781974077224731
+2023-08-08 01:29:14,216 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 5.476813793182373, ACC: 0.20936903357505798
+2023-08-08 01:29:24,859 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 5.641439914703369, ACC: 0.18900594115257263
+2023-08-08 01:29:35,912 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 5.84663200378418, ACC: 0.1429019719362259
+2023-08-08 01:29:48,175 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 6.012554168701172, ACC: 0.08643390238285065
+2023-08-08 01:30:00,547 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 6.099470615386963, ACC: 0.061752792447805405
+2023-08-08 01:30:00,671 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-U850_30-timesteps_vis.h5
+2023-08-08 01:30:54,523 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 01:30:54,523 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 01:30:54,523 - root - INFO - Configuration name: afno_backbone
+2023-08-08 01:30:54,523 - root - INFO - log_to_wandb True
+2023-08-08 01:30:54,523 - root - INFO - lr 0.0005
+2023-08-08 01:30:54,523 - root - INFO - batch_size 64
+2023-08-08 01:30:54,523 - root - INFO - max_epochs 150
+2023-08-08 01:30:54,523 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 01:30:54,523 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:30:54,524 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:30:54,524 - root - INFO - orography False
+2023-08-08 01:30:54,524 - root - INFO - orography_path None
+2023-08-08 01:30:54,524 - root - INFO - exp_dir ../results
+2023-08-08 01:30:54,524 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 01:30:54,524 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 01:30:54,524 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:30:54,524 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 01:30:54,524 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 01:30:54,524 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 01:30:54,524 - root - INFO - loss l2
+2023-08-08 01:30:54,524 - root - INFO - num_data_workers 4
+2023-08-08 01:30:54,524 - root - INFO - dt 1
+2023-08-08 01:30:54,524 - root - INFO - n_history 0
+2023-08-08 01:30:54,524 - root - INFO - prediction_type iterative
+2023-08-08 01:30:54,524 - root - INFO - prediction_length 30
+2023-08-08 01:30:54,524 - root - INFO - n_initial_conditions 5
+2023-08-08 01:30:54,524 - root - INFO - ics_type default
+2023-08-08 01:30:54,524 - root - INFO - save_raw_forecasts True
+2023-08-08 01:30:54,524 - root - INFO - save_channel False
+2023-08-08 01:30:54,524 - root - INFO - masked_acc False
+2023-08-08 01:30:54,524 - root - INFO - maskpath None
+2023-08-08 01:30:54,524 - root - INFO - perturb False
+2023-08-08 01:30:54,524 - root - INFO - add_grid False
+2023-08-08 01:30:54,524 - root - INFO - N_grid_channels 0
+2023-08-08 01:30:54,524 - root - INFO - gridtype sinusoidal
+2023-08-08 01:30:54,524 - root - INFO - roll False
+2023-08-08 01:30:54,525 - root - INFO - num_blocks 8
+2023-08-08 01:30:54,525 - root - INFO - nettype afno
+2023-08-08 01:30:54,525 - root - INFO - patch_size 8
+2023-08-08 01:30:54,525 - root - INFO - width 56
+2023-08-08 01:30:54,525 - root - INFO - modes 32
+2023-08-08 01:30:54,525 - root - INFO - target V10
+2023-08-08 01:30:54,525 - root - INFO - normalization zscore
+2023-08-08 01:30:54,525 - root - INFO - log_to_screen True
+2023-08-08 01:30:54,525 - root - INFO - save_checkpoint True
+2023-08-08 01:30:54,525 - root - INFO - enable_nhwc False
+2023-08-08 01:30:54,525 - root - INFO - optimizer_type FusedAdam
+2023-08-08 01:30:54,525 - root - INFO - crop_size_x None
+2023-08-08 01:30:54,525 - root - INFO - crop_size_y None
+2023-08-08 01:30:54,525 - root - INFO - two_step_training False
+2023-08-08 01:30:54,525 - root - INFO - plot_animations False
+2023-08-08 01:30:54,525 - root - INFO - add_noise False
+2023-08-08 01:30:54,525 - root - INFO - noise_std 0
+2023-08-08 01:30:54,525 - root - INFO - world_size 1
+2023-08-08 01:30:54,525 - root - INFO - interp 0
+2023-08-08 01:30:54,525 - root - INFO - use_daily_climatology False
+2023-08-08 01:30:54,525 - root - INFO - global_batch_size 64
+2023-08-08 01:30:54,525 - root - INFO - ablate V850
+2023-08-08 01:30:54,525 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 01:30:54,525 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:30:54,525 - root - INFO - resuming False
+2023-08-08 01:30:54,525 - root - INFO - local_rank 0
+2023-08-08 01:30:54,525 - root - INFO - ---------------------------------------------------
+2023-08-08 01:30:54,525 - root - INFO - Inference for 1 initial conditions
+2023-08-08 01:30:54,793 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 01:30:54,795 - root - INFO - Number of samples per year: 1460
+2023-08-08 01:30:54,795 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 01:30:54,795 - root - INFO - Delta t: 6 hours
+2023-08-08 01:30:54,795 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 01:30:54,795 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:31:42,958 - root - INFO - Loading inference data
+2023-08-08 01:31:42,960 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:31:43,162 - root - INFO - Initial condition 1 of 1
+2023-08-08 01:31:43,989 - root - INFO - Extracting valid data from the first year
+2023-08-08 01:33:27,623 - root - INFO - Standardizing data
+2023-08-08 01:33:35,040 - root - INFO - Loading time means
+2023-08-08 01:33:44,343 - root - INFO - Begin autoregressive inference
+2023-08-08 01:33:55,122 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 01:34:07,454 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.8430825471878052, ACC: 0.9798194766044617
+2023-08-08 01:34:19,139 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 1.3565798997879028, ACC: 0.9489248991012573
+2023-08-08 01:34:30,754 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 1.7204585075378418, ACC: 0.9151432514190674
+2023-08-08 01:34:43,268 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 2.014373779296875, ACC: 0.8789212107658386
+2023-08-08 01:34:55,570 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 2.2444167137145996, ACC: 0.8410637378692627
+2023-08-08 01:35:08,844 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 2.405277967453003, ACC: 0.812642514705658
+2023-08-08 01:35:22,354 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 2.541473865509033, ACC: 0.7867560386657715
+2023-08-08 01:35:34,988 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 2.6846046447753906, ACC: 0.7679506540298462
+2023-08-08 01:35:47,004 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 2.76544451713562, ACC: 0.7564589977264404
+2023-08-08 01:35:58,430 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 2.9014105796813965, ACC: 0.7448040246963501
+2023-08-08 01:36:10,688 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 3.0729146003723145, ACC: 0.7200558185577393
+2023-08-08 01:36:21,053 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 3.1661531925201416, ACC: 0.7029435038566589
+2023-08-08 01:36:32,331 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 3.2646238803863525, ACC: 0.6915535926818848
+2023-08-08 01:36:43,485 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 3.412592887878418, ACC: 0.664260983467102
+2023-08-08 01:36:55,294 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 3.61751389503479, ACC: 0.6155350804328918
+2023-08-08 01:37:06,787 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 3.853130578994751, ACC: 0.5549240708351135
+2023-08-08 01:37:17,684 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 4.0129852294921875, ACC: 0.5087683796882629
+2023-08-08 01:37:28,990 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 4.135992527008057, ACC: 0.4634629487991333
+2023-08-08 01:37:40,937 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 4.2567667961120605, ACC: 0.4313824772834778
+2023-08-08 01:37:52,561 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 4.314242362976074, ACC: 0.40193867683410645
+2023-08-08 01:38:05,455 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 4.42074728012085, ACC: 0.37123480439186096
+2023-08-08 01:38:17,873 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 4.570428371429443, ACC: 0.32626429200172424
+2023-08-08 01:38:30,241 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 4.644028186798096, ACC: 0.2972741723060608
+2023-08-08 01:38:42,671 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 4.673079967498779, ACC: 0.28551825881004333
+2023-08-08 01:38:55,220 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 4.764925479888916, ACC: 0.2737189829349518
+2023-08-08 01:39:08,853 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 4.863467216491699, ACC: 0.26549601554870605
+2023-08-08 01:39:22,450 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 4.8229146003723145, ACC: 0.27642199397087097
+2023-08-08 01:39:35,436 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 4.75181245803833, ACC: 0.2717662453651428
+2023-08-08 01:39:46,391 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 4.74381160736084, ACC: 0.2571924328804016
+2023-08-08 01:39:46,501 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-V850_30-timesteps_vis.h5
+2023-08-08 01:40:40,286 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 01:40:40,286 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 01:40:40,286 - root - INFO - Configuration name: afno_backbone
+2023-08-08 01:40:40,286 - root - INFO - log_to_wandb True
+2023-08-08 01:40:40,286 - root - INFO - lr 0.0005
+2023-08-08 01:40:40,287 - root - INFO - batch_size 64
+2023-08-08 01:40:40,287 - root - INFO - max_epochs 150
+2023-08-08 01:40:40,287 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 01:40:40,287 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:40:40,287 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:40:40,287 - root - INFO - orography False
+2023-08-08 01:40:40,287 - root - INFO - orography_path None
+2023-08-08 01:40:40,287 - root - INFO - exp_dir ../results
+2023-08-08 01:40:40,288 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 01:40:40,288 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 01:40:40,288 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:40:40,288 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 01:40:40,288 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 01:40:40,288 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 01:40:40,288 - root - INFO - loss l2
+2023-08-08 01:40:40,288 - root - INFO - num_data_workers 4
+2023-08-08 01:40:40,288 - root - INFO - dt 1
+2023-08-08 01:40:40,288 - root - INFO - n_history 0
+2023-08-08 01:40:40,288 - root - INFO - prediction_type iterative
+2023-08-08 01:40:40,288 - root - INFO - prediction_length 30
+2023-08-08 01:40:40,289 - root - INFO - n_initial_conditions 5
+2023-08-08 01:40:40,289 - root - INFO - ics_type default
+2023-08-08 01:40:40,289 - root - INFO - save_raw_forecasts True
+2023-08-08 01:40:40,289 - root - INFO - save_channel False
+2023-08-08 01:40:40,289 - root - INFO - masked_acc False
+2023-08-08 01:40:40,289 - root - INFO - maskpath None
+2023-08-08 01:40:40,289 - root - INFO - perturb False
+2023-08-08 01:40:40,289 - root - INFO - add_grid False
+2023-08-08 01:40:40,289 - root - INFO - N_grid_channels 0
+2023-08-08 01:40:40,289 - root - INFO - gridtype sinusoidal
+2023-08-08 01:40:40,289 - root - INFO - roll False
+2023-08-08 01:40:40,289 - root - INFO - num_blocks 8
+2023-08-08 01:40:40,289 - root - INFO - nettype afno
+2023-08-08 01:40:40,289 - root - INFO - patch_size 8
+2023-08-08 01:40:40,289 - root - INFO - width 56
+2023-08-08 01:40:40,289 - root - INFO - modes 32
+2023-08-08 01:40:40,289 - root - INFO - target V10
+2023-08-08 01:40:40,289 - root - INFO - normalization zscore
+2023-08-08 01:40:40,289 - root - INFO - log_to_screen True
+2023-08-08 01:40:40,289 - root - INFO - save_checkpoint True
+2023-08-08 01:40:40,289 - root - INFO - enable_nhwc False
+2023-08-08 01:40:40,289 - root - INFO - optimizer_type FusedAdam
+2023-08-08 01:40:40,290 - root - INFO - crop_size_x None
+2023-08-08 01:40:40,290 - root - INFO - crop_size_y None
+2023-08-08 01:40:40,290 - root - INFO - two_step_training False
+2023-08-08 01:40:40,290 - root - INFO - plot_animations False
+2023-08-08 01:40:40,290 - root - INFO - add_noise False
+2023-08-08 01:40:40,290 - root - INFO - noise_std 0
+2023-08-08 01:40:40,290 - root - INFO - world_size 1
+2023-08-08 01:40:40,290 - root - INFO - interp 0
+2023-08-08 01:40:40,290 - root - INFO - use_daily_climatology False
+2023-08-08 01:40:40,290 - root - INFO - global_batch_size 64
+2023-08-08 01:40:40,290 - root - INFO - ablate Z850
+2023-08-08 01:40:40,290 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 01:40:40,290 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:40:40,291 - root - INFO - resuming False
+2023-08-08 01:40:40,291 - root - INFO - local_rank 0
+2023-08-08 01:40:40,291 - root - INFO - ---------------------------------------------------
+2023-08-08 01:40:40,291 - root - INFO - Inference for 1 initial conditions
+2023-08-08 01:40:40,460 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 01:40:40,462 - root - INFO - Number of samples per year: 1460
+2023-08-08 01:40:40,463 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 01:40:40,463 - root - INFO - Delta t: 6 hours
+2023-08-08 01:40:40,463 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 01:40:40,464 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:41:23,153 - root - INFO - Loading inference data
+2023-08-08 01:41:23,158 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:41:23,283 - root - INFO - Initial condition 1 of 1
+2023-08-08 01:41:24,121 - root - INFO - Extracting valid data from the first year
+2023-08-08 01:42:56,146 - root - INFO - Standardizing data
+2023-08-08 01:43:04,495 - root - INFO - Loading time means
+2023-08-08 01:43:12,725 - root - INFO - Begin autoregressive inference
+2023-08-08 01:43:25,680 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 01:43:38,052 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 17.3544864654541, ACC: 0.10227498412132263
+2023-08-08 01:43:49,213 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 121.73456573486328, ACC: 0.08444032818078995
+2023-08-08 01:44:01,473 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 203.50213623046875, ACC: 0.12593422830104828
+2023-08-08 01:44:14,473 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 232.07908630371094, ACC: 0.1291835755109787
+2023-08-08 01:44:27,432 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 238.37506103515625, ACC: 0.13165505230426788
+2023-08-08 01:44:39,750 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 243.26104736328125, ACC: 0.1151919737458229
+2023-08-08 01:44:50,962 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 250.59307861328125, ACC: 0.09323020279407501
+2023-08-08 01:45:04,870 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 257.0408020019531, ACC: 0.08136987686157227
+2023-08-08 01:45:17,123 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 261.4975280761719, ACC: 0.0724426805973053
+2023-08-08 01:45:30,518 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 264.5504150390625, ACC: 0.06552005559206009
+2023-08-08 01:45:43,340 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 266.7261047363281, ACC: 0.05839308351278305
+2023-08-08 01:45:55,794 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 268.25970458984375, ACC: 0.05642194300889969
+2023-08-08 01:46:07,296 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 269.3211669921875, ACC: 0.0560014434158802
+2023-08-08 01:46:18,780 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 270.0600891113281, ACC: 0.05283157899975777
+2023-08-08 01:46:30,615 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 270.56201171875, ACC: 0.05034072697162628
+2023-08-08 01:46:42,146 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 270.887939453125, ACC: 0.05095982179045677
+2023-08-08 01:46:53,817 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 271.0991516113281, ACC: 0.05269002914428711
+2023-08-08 01:47:05,543 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 271.2479248046875, ACC: 0.05206252634525299
+2023-08-08 01:47:17,503 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 271.3363952636719, ACC: 0.05292990803718567
+2023-08-08 01:47:28,807 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 271.4206848144531, ACC: 0.047736313194036484
+2023-08-08 01:47:40,779 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 271.4393310546875, ACC: 0.052186641842126846
+2023-08-08 01:47:53,108 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 271.49346923828125, ACC: 0.04528398439288139
+2023-08-08 01:48:06,204 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 271.50103759765625, ACC: 0.047074105590581894
+2023-08-08 01:48:18,541 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 271.5186767578125, ACC: 0.04512140527367592
+2023-08-08 01:48:31,476 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 271.506591796875, ACC: 0.04857470840215683
+2023-08-08 01:48:43,821 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 271.51702880859375, ACC: 0.04643220454454422
+2023-08-08 01:48:56,043 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 271.50909423828125, ACC: 0.048453476279973984
+2023-08-08 01:49:10,645 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 271.5320739746094, ACC: 0.044155776500701904
+2023-08-08 01:49:22,370 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 271.5289611816406, ACC: 0.04521496221423149
+2023-08-08 01:49:22,470 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-Z850_30-timesteps_vis.h5
+2023-08-08 01:50:16,204 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 01:50:16,205 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 01:50:16,205 - root - INFO - Configuration name: afno_backbone
+2023-08-08 01:50:16,205 - root - INFO - log_to_wandb True
+2023-08-08 01:50:16,205 - root - INFO - lr 0.0005
+2023-08-08 01:50:16,205 - root - INFO - batch_size 64
+2023-08-08 01:50:16,205 - root - INFO - max_epochs 150
+2023-08-08 01:50:16,205 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 01:50:16,205 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:50:16,205 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 01:50:16,205 - root - INFO - orography False
+2023-08-08 01:50:16,205 - root - INFO - orography_path None
+2023-08-08 01:50:16,205 - root - INFO - exp_dir ../results
+2023-08-08 01:50:16,205 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 01:50:16,205 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 01:50:16,205 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:50:16,206 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 01:50:16,206 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 01:50:16,206 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 01:50:16,206 - root - INFO - loss l2
+2023-08-08 01:50:16,206 - root - INFO - num_data_workers 4
+2023-08-08 01:50:16,206 - root - INFO - dt 1
+2023-08-08 01:50:16,206 - root - INFO - n_history 0
+2023-08-08 01:50:16,206 - root - INFO - prediction_type iterative
+2023-08-08 01:50:16,206 - root - INFO - prediction_length 30
+2023-08-08 01:50:16,206 - root - INFO - n_initial_conditions 5
+2023-08-08 01:50:16,206 - root - INFO - ics_type default
+2023-08-08 01:50:16,206 - root - INFO - save_raw_forecasts True
+2023-08-08 01:50:16,206 - root - INFO - save_channel False
+2023-08-08 01:50:16,206 - root - INFO - masked_acc False
+2023-08-08 01:50:16,206 - root - INFO - maskpath None
+2023-08-08 01:50:16,206 - root - INFO - perturb False
+2023-08-08 01:50:16,206 - root - INFO - add_grid False
+2023-08-08 01:50:16,206 - root - INFO - N_grid_channels 0
+2023-08-08 01:50:16,206 - root - INFO - gridtype sinusoidal
+2023-08-08 01:50:16,206 - root - INFO - roll False
+2023-08-08 01:50:16,206 - root - INFO - num_blocks 8
+2023-08-08 01:50:16,206 - root - INFO - nettype afno
+2023-08-08 01:50:16,206 - root - INFO - patch_size 8
+2023-08-08 01:50:16,207 - root - INFO - width 56
+2023-08-08 01:50:16,207 - root - INFO - modes 32
+2023-08-08 01:50:16,207 - root - INFO - target V10
+2023-08-08 01:50:16,207 - root - INFO - normalization zscore
+2023-08-08 01:50:16,207 - root - INFO - log_to_screen True
+2023-08-08 01:50:16,207 - root - INFO - save_checkpoint True
+2023-08-08 01:50:16,207 - root - INFO - enable_nhwc False
+2023-08-08 01:50:16,207 - root - INFO - optimizer_type FusedAdam
+2023-08-08 01:50:16,207 - root - INFO - crop_size_x None
+2023-08-08 01:50:16,207 - root - INFO - crop_size_y None
+2023-08-08 01:50:16,207 - root - INFO - two_step_training False
+2023-08-08 01:50:16,207 - root - INFO - plot_animations False
+2023-08-08 01:50:16,207 - root - INFO - add_noise False
+2023-08-08 01:50:16,207 - root - INFO - noise_std 0
+2023-08-08 01:50:16,207 - root - INFO - world_size 1
+2023-08-08 01:50:16,207 - root - INFO - interp 0
+2023-08-08 01:50:16,207 - root - INFO - use_daily_climatology False
+2023-08-08 01:50:16,207 - root - INFO - global_batch_size 64
+2023-08-08 01:50:16,207 - root - INFO - ablate RH850
+2023-08-08 01:50:16,207 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 01:50:16,207 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:50:16,207 - root - INFO - resuming False
+2023-08-08 01:50:16,207 - root - INFO - local_rank 0
+2023-08-08 01:50:16,208 - root - INFO - ---------------------------------------------------
+2023-08-08 01:50:16,208 - root - INFO - Inference for 1 initial conditions
+2023-08-08 01:50:16,402 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 01:50:16,403 - root - INFO - Number of samples per year: 1460
+2023-08-08 01:50:16,403 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 01:50:16,403 - root - INFO - Delta t: 6 hours
+2023-08-08 01:50:16,403 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 01:50:16,404 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 01:50:59,719 - root - INFO - Loading inference data
+2023-08-08 01:50:59,720 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 01:50:59,877 - root - INFO - Initial condition 1 of 1
+2023-08-08 01:51:00,844 - root - INFO - Extracting valid data from the first year
+2023-08-08 01:52:34,009 - root - INFO - Standardizing data
+2023-08-08 01:52:41,601 - root - INFO - Loading time means
+2023-08-08 01:52:52,397 - root - INFO - Begin autoregressive inference
+2023-08-08 01:53:04,801 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 01:53:18,245 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.9990012645721436, ACC: 0.9717313647270203
+2023-08-08 01:53:31,296 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 1.523676872253418, ACC: 0.9328877329826355
+2023-08-08 01:53:43,490 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 2.0737035274505615, ACC: 0.8723061084747314
+2023-08-08 01:53:55,789 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 2.5182931423187256, ACC: 0.8075650930404663
+2023-08-08 01:54:07,540 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 2.9329209327697754, ACC: 0.731334924697876
+2023-08-08 01:54:20,173 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 3.2621631622314453, ACC: 0.6625806093215942
+2023-08-08 01:54:32,866 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 3.61323618888855, ACC: 0.58151775598526
+2023-08-08 01:54:45,011 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 3.9895269870758057, ACC: 0.49881136417388916
+2023-08-08 01:54:57,483 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 4.330180644989014, ACC: 0.4211248755455017
+2023-08-08 01:55:11,715 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 4.655832290649414, ACC: 0.3596334159374237
+2023-08-08 01:55:23,997 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 4.968838214874268, ACC: 0.29718202352523804
+2023-08-08 01:55:36,686 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 5.243793487548828, ACC: 0.2318919450044632
+2023-08-08 01:55:48,958 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 5.618593692779541, ACC: 0.16000136733055115
+2023-08-08 01:56:01,707 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 5.79791259765625, ACC: 0.12792159616947174
+2023-08-08 01:56:14,181 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 5.97160005569458, ACC: 0.08609536290168762
+2023-08-08 01:56:26,383 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 6.078664779663086, ACC: 0.05673526972532272
+2023-08-08 01:56:39,306 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 6.212949752807617, ACC: 0.03463868424296379
+2023-08-08 01:56:50,975 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 6.191991806030273, ACC: 0.042096879333257675
+2023-08-08 01:57:03,613 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 6.278019428253174, ACC: 0.028794627636671066
+2023-08-08 01:57:16,866 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 6.226306438446045, ACC: 0.03580894321203232
+2023-08-08 01:57:29,489 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 6.2455949783325195, ACC: 0.05165107175707817
+2023-08-08 01:57:42,189 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 6.267893314361572, ACC: 0.06763982772827148
+2023-08-08 01:57:54,631 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 6.25871467590332, ACC: 0.08390367031097412
+2023-08-08 01:58:07,889 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 6.196026802062988, ACC: 0.12214868515729904
+2023-08-08 01:58:22,126 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 6.719376564025879, ACC: 0.13279230892658234
+2023-08-08 01:58:35,686 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 8.236812591552734, ACC: 0.11515143513679504
+2023-08-08 01:58:47,413 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 10.14340591430664, ACC: 0.09256027638912201
+2023-08-08 01:58:59,093 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 12.743250846862793, ACC: 0.05537760257720947
+2023-08-08 01:59:11,198 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 15.462231636047363, ACC: 0.048492129892110825
+2023-08-08 01:59:11,284 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-RH850_30-timesteps_vis.h5
+2023-08-08 02:00:05,113 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:00:05,113 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:00:05,113 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:00:05,113 - root - INFO - log_to_wandb True
+2023-08-08 02:00:05,113 - root - INFO - lr 0.0005
+2023-08-08 02:00:05,113 - root - INFO - batch_size 64
+2023-08-08 02:00:05,113 - root - INFO - max_epochs 150
+2023-08-08 02:00:05,113 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:00:05,113 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:00:05,113 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:00:05,113 - root - INFO - orography False
+2023-08-08 02:00:05,113 - root - INFO - orography_path None
+2023-08-08 02:00:05,113 - root - INFO - exp_dir ../results
+2023-08-08 02:00:05,113 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:00:05,113 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:00:05,113 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:00:05,113 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:00:05,113 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:00:05,114 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:00:05,114 - root - INFO - loss l2
+2023-08-08 02:00:05,114 - root - INFO - num_data_workers 4
+2023-08-08 02:00:05,114 - root - INFO - dt 1
+2023-08-08 02:00:05,114 - root - INFO - n_history 0
+2023-08-08 02:00:05,114 - root - INFO - prediction_type iterative
+2023-08-08 02:00:05,114 - root - INFO - prediction_length 30
+2023-08-08 02:00:05,114 - root - INFO - n_initial_conditions 5
+2023-08-08 02:00:05,114 - root - INFO - ics_type default
+2023-08-08 02:00:05,114 - root - INFO - save_raw_forecasts True
+2023-08-08 02:00:05,114 - root - INFO - save_channel False
+2023-08-08 02:00:05,114 - root - INFO - masked_acc False
+2023-08-08 02:00:05,114 - root - INFO - maskpath None
+2023-08-08 02:00:05,114 - root - INFO - perturb False
+2023-08-08 02:00:05,114 - root - INFO - add_grid False
+2023-08-08 02:00:05,114 - root - INFO - N_grid_channels 0
+2023-08-08 02:00:05,114 - root - INFO - gridtype sinusoidal
+2023-08-08 02:00:05,114 - root - INFO - roll False
+2023-08-08 02:00:05,114 - root - INFO - num_blocks 8
+2023-08-08 02:00:05,114 - root - INFO - nettype afno
+2023-08-08 02:00:05,114 - root - INFO - patch_size 8
+2023-08-08 02:00:05,114 - root - INFO - width 56
+2023-08-08 02:00:05,114 - root - INFO - modes 32
+2023-08-08 02:00:05,114 - root - INFO - target V10
+2023-08-08 02:00:05,114 - root - INFO - normalization zscore
+2023-08-08 02:00:05,114 - root - INFO - log_to_screen True
+2023-08-08 02:00:05,114 - root - INFO - save_checkpoint True
+2023-08-08 02:00:05,114 - root - INFO - enable_nhwc False
+2023-08-08 02:00:05,114 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:00:05,114 - root - INFO - crop_size_x None
+2023-08-08 02:00:05,115 - root - INFO - crop_size_y None
+2023-08-08 02:00:05,115 - root - INFO - two_step_training False
+2023-08-08 02:00:05,115 - root - INFO - plot_animations False
+2023-08-08 02:00:05,115 - root - INFO - add_noise False
+2023-08-08 02:00:05,115 - root - INFO - noise_std 0
+2023-08-08 02:00:05,115 - root - INFO - world_size 1
+2023-08-08 02:00:05,115 - root - INFO - interp 0
+2023-08-08 02:00:05,115 - root - INFO - use_daily_climatology False
+2023-08-08 02:00:05,115 - root - INFO - global_batch_size 64
+2023-08-08 02:00:05,115 - root - INFO - ablate T500
+2023-08-08 02:00:05,115 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:00:05,115 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:00:05,115 - root - INFO - resuming False
+2023-08-08 02:00:05,115 - root - INFO - local_rank 0
+2023-08-08 02:00:05,115 - root - INFO - ---------------------------------------------------
+2023-08-08 02:00:05,115 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:00:05,330 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:00:05,331 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:00:05,333 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:00:05,334 - root - INFO - Delta t: 6 hours
+2023-08-08 02:00:05,334 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:00:05,334 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:00:50,987 - root - INFO - Loading inference data
+2023-08-08 02:00:50,988 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:00:51,180 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:00:52,097 - root - INFO - Extracting valid data from the first year
+2023-08-08 02:02:30,279 - root - INFO - Standardizing data
+2023-08-08 02:02:38,610 - root - INFO - Loading time means
+2023-08-08 02:02:45,911 - root - INFO - Begin autoregressive inference
+2023-08-08 02:02:57,621 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 02:03:10,280 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.9075331687927246, ACC: 0.977760374546051
+2023-08-08 02:03:23,215 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 1.338874340057373, ACC: 0.9501665234565735
+2023-08-08 02:03:36,012 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 1.72684645652771, ACC: 0.9125398397445679
+2023-08-08 02:03:47,736 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 2.036677360534668, ACC: 0.8740368485450745
+2023-08-08 02:03:59,994 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 2.364448070526123, ACC: 0.8224313855171204
+2023-08-08 02:04:12,478 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 2.6246073246002197, ACC: 0.7785654067993164
+2023-08-08 02:04:24,034 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 2.87809157371521, ACC: 0.7322148084640503
+2023-08-08 02:04:36,051 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 3.1051125526428223, ACC: 0.6971468925476074
+2023-08-08 02:04:47,762 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 3.2973475456237793, ACC: 0.6665966510772705
+2023-08-08 02:05:00,342 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 3.5430521965026855, ACC: 0.6369818449020386
+2023-08-08 02:05:12,742 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 3.8026058673858643, ACC: 0.5980694890022278
+2023-08-08 02:05:25,240 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 3.9636621475219727, ACC: 0.5721514821052551
+2023-08-08 02:05:37,611 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 4.110448837280273, ACC: 0.5547279715538025
+2023-08-08 02:05:51,594 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 4.241313457489014, ACC: 0.538921594619751
+2023-08-08 02:06:04,219 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 4.4533233642578125, ACC: 0.49579793214797974
+2023-08-08 02:06:16,967 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 4.631242752075195, ACC: 0.4567364454269409
+2023-08-08 02:06:28,347 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 4.876593589782715, ACC: 0.40313541889190674
+2023-08-08 02:06:38,805 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 5.150327682495117, ACC: 0.3425372540950775
+2023-08-08 02:06:51,012 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 5.8240132331848145, ACC: 0.26875507831573486
+2023-08-08 02:07:03,779 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 7.880831241607666, ACC: 0.15747787058353424
+2023-08-08 02:07:15,674 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 10.93022632598877, ACC: 0.08979587256908417
+2023-08-08 02:07:27,945 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 14.731671333312988, ACC: 0.04638902097940445
+2023-08-08 02:07:41,090 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 18.825273513793945, ACC: 0.032644275575876236
+2023-08-08 02:07:53,487 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 22.771726608276367, ACC: 0.028236128389835358
+2023-08-08 02:08:06,730 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 26.673913955688477, ACC: 0.027023544535040855
+2023-08-08 02:08:20,316 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 30.827224731445312, ACC: 0.015060692094266415
+2023-08-08 02:08:32,571 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 34.712066650390625, ACC: 0.0217415951192379
+2023-08-08 02:08:44,140 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 38.541847229003906, ACC: 0.017295049503445625
+2023-08-08 02:08:55,461 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 42.29728317260742, ACC: 0.0174393467605114
+2023-08-08 02:08:55,591 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-T500_30-timesteps_vis.h5
+2023-08-08 02:09:49,278 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:09:49,278 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:09:49,278 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:09:49,278 - root - INFO - log_to_wandb True
+2023-08-08 02:09:49,278 - root - INFO - lr 0.0005
+2023-08-08 02:09:49,278 - root - INFO - batch_size 64
+2023-08-08 02:09:49,278 - root - INFO - max_epochs 150
+2023-08-08 02:09:49,278 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:09:49,279 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:09:49,279 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:09:49,279 - root - INFO - orography False
+2023-08-08 02:09:49,279 - root - INFO - orography_path None
+2023-08-08 02:09:49,279 - root - INFO - exp_dir ../results
+2023-08-08 02:09:49,279 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:09:49,279 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:09:49,279 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:09:49,279 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:09:49,279 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:09:49,279 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:09:49,279 - root - INFO - loss l2
+2023-08-08 02:09:49,279 - root - INFO - num_data_workers 4
+2023-08-08 02:09:49,279 - root - INFO - dt 1
+2023-08-08 02:09:49,279 - root - INFO - n_history 0
+2023-08-08 02:09:49,280 - root - INFO - prediction_type iterative
+2023-08-08 02:09:49,280 - root - INFO - prediction_length 30
+2023-08-08 02:09:49,280 - root - INFO - n_initial_conditions 5
+2023-08-08 02:09:49,280 - root - INFO - ics_type default
+2023-08-08 02:09:49,280 - root - INFO - save_raw_forecasts True
+2023-08-08 02:09:49,280 - root - INFO - save_channel False
+2023-08-08 02:09:49,280 - root - INFO - masked_acc False
+2023-08-08 02:09:49,280 - root - INFO - maskpath None
+2023-08-08 02:09:49,280 - root - INFO - perturb False
+2023-08-08 02:09:49,280 - root - INFO - add_grid False
+2023-08-08 02:09:49,280 - root - INFO - N_grid_channels 0
+2023-08-08 02:09:49,280 - root - INFO - gridtype sinusoidal
+2023-08-08 02:09:49,280 - root - INFO - roll False
+2023-08-08 02:09:49,280 - root - INFO - num_blocks 8
+2023-08-08 02:09:49,280 - root - INFO - nettype afno
+2023-08-08 02:09:49,280 - root - INFO - patch_size 8
+2023-08-08 02:09:49,280 - root - INFO - width 56
+2023-08-08 02:09:49,281 - root - INFO - modes 32
+2023-08-08 02:09:49,281 - root - INFO - target V10
+2023-08-08 02:09:49,281 - root - INFO - normalization zscore
+2023-08-08 02:09:49,281 - root - INFO - log_to_screen True
+2023-08-08 02:09:49,281 - root - INFO - save_checkpoint True
+2023-08-08 02:09:49,281 - root - INFO - enable_nhwc False
+2023-08-08 02:09:49,281 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:09:49,281 - root - INFO - crop_size_x None
+2023-08-08 02:09:49,281 - root - INFO - crop_size_y None
+2023-08-08 02:09:49,281 - root - INFO - two_step_training False
+2023-08-08 02:09:49,281 - root - INFO - plot_animations False
+2023-08-08 02:09:49,281 - root - INFO - add_noise False
+2023-08-08 02:09:49,281 - root - INFO - noise_std 0
+2023-08-08 02:09:49,281 - root - INFO - world_size 1
+2023-08-08 02:09:49,281 - root - INFO - interp 0
+2023-08-08 02:09:49,281 - root - INFO - use_daily_climatology False
+2023-08-08 02:09:49,281 - root - INFO - global_batch_size 64
+2023-08-08 02:09:49,281 - root - INFO - ablate U500
+2023-08-08 02:09:49,281 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:09:49,281 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:09:49,281 - root - INFO - resuming False
+2023-08-08 02:09:49,281 - root - INFO - local_rank 0
+2023-08-08 02:09:49,282 - root - INFO - ---------------------------------------------------
+2023-08-08 02:09:49,282 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:09:49,531 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:09:49,533 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:09:49,533 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:09:49,533 - root - INFO - Delta t: 6 hours
+2023-08-08 02:09:49,533 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:09:49,533 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:10:35,910 - root - INFO - Loading inference data
+2023-08-08 02:10:35,912 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:10:36,109 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:10:37,142 - root - INFO - Extracting valid data from the first year
+2023-08-08 02:12:19,039 - root - INFO - Standardizing data
+2023-08-08 02:12:26,565 - root - INFO - Loading time means
+2023-08-08 02:12:35,445 - root - INFO - Begin autoregressive inference
+2023-08-08 02:12:47,052 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 02:12:59,172 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 15.938969612121582, ACC: 0.1064453274011612
+2023-08-08 02:13:11,731 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 133.82199096679688, ACC: 0.15625746548175812
+2023-08-08 02:13:24,231 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 220.73626708984375, ACC: 0.15462733805179596
+2023-08-08 02:13:36,205 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 243.0153350830078, ACC: 0.13916997611522675
+2023-08-08 02:13:48,307 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 239.41036987304688, ACC: 0.12465348094701767
+2023-08-08 02:14:00,849 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 237.41285705566406, ACC: 0.09883524477481842
+2023-08-08 02:14:13,790 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 241.37985229492188, ACC: 0.07171634584665298
+2023-08-08 02:14:24,868 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 246.70858764648438, ACC: 0.05518967658281326
+2023-08-08 02:14:36,610 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 250.55905151367188, ACC: 0.04302073270082474
+2023-08-08 02:14:49,022 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 252.7509002685547, ACC: 0.03561939299106598
+2023-08-08 02:15:01,682 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 254.0283660888672, ACC: 0.030802134424448013
+2023-08-08 02:15:16,461 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 254.8042755126953, ACC: 0.030060650780797005
+2023-08-08 02:15:29,751 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 255.26365661621094, ACC: 0.030052606016397476
+2023-08-08 02:15:42,443 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 255.51925659179688, ACC: 0.028437599539756775
+2023-08-08 02:15:55,033 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 255.64088439941406, ACC: 0.02741657756268978
+2023-08-08 02:16:07,445 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 255.67874145507812, ACC: 0.028530621901154518
+2023-08-08 02:16:18,662 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 255.67857360839844, ACC: 0.029813911765813828
+2023-08-08 02:16:30,037 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 255.6700439453125, ACC: 0.029408084228634834
+2023-08-08 02:16:40,775 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 255.64903259277344, ACC: 0.03029162436723709
+2023-08-08 02:16:52,066 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 255.64462280273438, ACC: 0.02751002088189125
+2023-08-08 02:17:02,816 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 255.617431640625, ACC: 0.030249420553445816
+2023-08-08 02:17:14,150 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 255.6217803955078, ACC: 0.026360664516687393
+2023-08-08 02:17:25,088 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 255.60775756835938, ACC: 0.027300992980599403
+2023-08-08 02:17:36,651 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 255.60513305664062, ACC: 0.02609790675342083
+2023-08-08 02:17:47,231 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 255.5879364013672, ACC: 0.02844875492155552
+2023-08-08 02:17:58,000 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 255.5879669189453, ACC: 0.027240486815571785
+2023-08-08 02:18:10,394 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 255.579833984375, ACC: 0.028225310146808624
+2023-08-08 02:18:21,975 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 255.5892791748047, ACC: 0.025741923600435257
+2023-08-08 02:18:33,090 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 255.5841827392578, ACC: 0.026519345119595528
+2023-08-08 02:18:33,185 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-U500_30-timesteps_vis.h5
+2023-08-08 02:19:26,907 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:19:26,907 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:19:26,907 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:19:26,907 - root - INFO - log_to_wandb True
+2023-08-08 02:19:26,907 - root - INFO - lr 0.0005
+2023-08-08 02:19:26,908 - root - INFO - batch_size 64
+2023-08-08 02:19:26,908 - root - INFO - max_epochs 150
+2023-08-08 02:19:26,908 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:19:26,908 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:19:26,908 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:19:26,908 - root - INFO - orography False
+2023-08-08 02:19:26,908 - root - INFO - orography_path None
+2023-08-08 02:19:26,908 - root - INFO - exp_dir ../results
+2023-08-08 02:19:26,908 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:19:26,908 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:19:26,908 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:19:26,908 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:19:26,908 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:19:26,908 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:19:26,908 - root - INFO - loss l2
+2023-08-08 02:19:26,908 - root - INFO - num_data_workers 4
+2023-08-08 02:19:26,908 - root - INFO - dt 1
+2023-08-08 02:19:26,908 - root - INFO - n_history 0
+2023-08-08 02:19:26,908 - root - INFO - prediction_type iterative
+2023-08-08 02:19:26,908 - root - INFO - prediction_length 30
+2023-08-08 02:19:26,908 - root - INFO - n_initial_conditions 5
+2023-08-08 02:19:26,909 - root - INFO - ics_type default
+2023-08-08 02:19:26,909 - root - INFO - save_raw_forecasts True
+2023-08-08 02:19:26,909 - root - INFO - save_channel False
+2023-08-08 02:19:26,909 - root - INFO - masked_acc False
+2023-08-08 02:19:26,909 - root - INFO - maskpath None
+2023-08-08 02:19:26,909 - root - INFO - perturb False
+2023-08-08 02:19:26,909 - root - INFO - add_grid False
+2023-08-08 02:19:26,909 - root - INFO - N_grid_channels 0
+2023-08-08 02:19:26,909 - root - INFO - gridtype sinusoidal
+2023-08-08 02:19:26,909 - root - INFO - roll False
+2023-08-08 02:19:26,909 - root - INFO - num_blocks 8
+2023-08-08 02:19:26,909 - root - INFO - nettype afno
+2023-08-08 02:19:26,909 - root - INFO - patch_size 8
+2023-08-08 02:19:26,909 - root - INFO - width 56
+2023-08-08 02:19:26,909 - root - INFO - modes 32
+2023-08-08 02:19:26,909 - root - INFO - target V10
+2023-08-08 02:19:26,909 - root - INFO - normalization zscore
+2023-08-08 02:19:26,909 - root - INFO - log_to_screen True
+2023-08-08 02:19:26,909 - root - INFO - save_checkpoint True
+2023-08-08 02:19:26,909 - root - INFO - enable_nhwc False
+2023-08-08 02:19:26,909 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:19:26,910 - root - INFO - crop_size_x None
+2023-08-08 02:19:26,910 - root - INFO - crop_size_y None
+2023-08-08 02:19:26,910 - root - INFO - two_step_training False
+2023-08-08 02:19:26,910 - root - INFO - plot_animations False
+2023-08-08 02:19:26,910 - root - INFO - add_noise False
+2023-08-08 02:19:26,910 - root - INFO - noise_std 0
+2023-08-08 02:19:26,910 - root - INFO - world_size 1
+2023-08-08 02:19:26,910 - root - INFO - interp 0
+2023-08-08 02:19:26,910 - root - INFO - use_daily_climatology False
+2023-08-08 02:19:26,910 - root - INFO - global_batch_size 64
+2023-08-08 02:19:26,910 - root - INFO - ablate V500
+2023-08-08 02:19:26,910 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:19:26,910 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:19:26,910 - root - INFO - resuming False
+2023-08-08 02:19:26,910 - root - INFO - local_rank 0
+2023-08-08 02:19:26,911 - root - INFO - ---------------------------------------------------
+2023-08-08 02:19:26,911 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:19:27,100 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:19:27,101 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:19:27,101 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:19:27,101 - root - INFO - Delta t: 6 hours
+2023-08-08 02:19:27,101 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:19:27,101 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:20:14,495 - root - INFO - Loading inference data
+2023-08-08 02:20:14,496 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:20:14,666 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:20:15,546 - root - INFO - Extracting valid data from the first year
+2023-08-08 02:22:05,152 - root - INFO - Standardizing data
+2023-08-08 02:22:12,993 - root - INFO - Loading time means
+2023-08-08 02:22:23,846 - root - INFO - Begin autoregressive inference
+2023-08-08 02:22:34,409 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 02:22:45,772 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 106.39519500732422, ACC: 0.11320342868566513
+2023-08-08 02:22:57,242 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 196.23216247558594, ACC: 0.1117774024605751
+2023-08-08 02:23:09,636 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 222.93505859375, ACC: 0.1188972070813179
+2023-08-08 02:23:21,907 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 217.0337677001953, ACC: 0.12155929207801819
+2023-08-08 02:23:34,266 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 210.940185546875, ACC: 0.11556854099035263
+2023-08-08 02:23:45,703 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 211.53944396972656, ACC: 0.09792500734329224
+2023-08-08 02:23:56,754 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 215.36097717285156, ACC: 0.07681149244308472
+2023-08-08 02:24:08,784 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 219.39097595214844, ACC: 0.06681759655475616
+2023-08-08 02:24:19,627 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 222.58872985839844, ACC: 0.056992337107658386
+2023-08-08 02:24:31,678 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 224.82115173339844, ACC: 0.049966566264629364
+2023-08-08 02:24:42,621 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 226.33151245117188, ACC: 0.043573442846536636
+2023-08-08 02:24:54,173 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 227.3286895751953, ACC: 0.04157405346632004
+2023-08-08 02:25:07,214 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 227.98777770996094, ACC: 0.040792129933834076
+2023-08-08 02:25:20,199 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 228.43687438964844, ACC: 0.038164734840393066
+2023-08-08 02:25:33,113 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 228.73890686035156, ACC: 0.036342695355415344
+2023-08-08 02:25:43,897 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 228.93495178222656, ACC: 0.03692776709794998
+2023-08-08 02:25:55,997 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 229.0648956298828, ACC: 0.038159262388944626
+2023-08-08 02:26:07,333 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 229.1611785888672, ACC: 0.03759022802114487
+2023-08-08 02:26:19,702 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 229.22076416015625, ACC: 0.0384061262011528
+2023-08-08 02:26:30,732 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 229.2821502685547, ACC: 0.03462325781583786
+2023-08-08 02:26:42,147 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 229.29812622070312, ACC: 0.03798108920454979
+2023-08-08 02:26:53,976 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 229.34115600585938, ACC: 0.03304392844438553
+2023-08-08 02:27:05,595 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 229.3513641357422, ACC: 0.03421129286289215
+2023-08-08 02:27:17,116 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 229.36851501464844, ACC: 0.03273336961865425
+2023-08-08 02:27:28,366 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 229.36268615722656, ACC: 0.03551606088876724
+2023-08-08 02:27:39,902 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 229.37368774414062, ACC: 0.03401073440909386
+2023-08-08 02:27:51,936 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 229.3713836669922, ACC: 0.03530336543917656
+2023-08-08 02:28:03,548 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 229.38955688476562, ACC: 0.03217795863747597
+2023-08-08 02:28:16,449 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 229.3881072998047, ACC: 0.033059172332286835
+2023-08-08 02:28:16,556 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-V500_30-timesteps_vis.h5
+2023-08-08 02:29:09,906 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:29:09,906 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:29:09,906 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:29:09,906 - root - INFO - log_to_wandb True
+2023-08-08 02:29:09,906 - root - INFO - lr 0.0005
+2023-08-08 02:29:09,906 - root - INFO - batch_size 64
+2023-08-08 02:29:09,907 - root - INFO - max_epochs 150
+2023-08-08 02:29:09,907 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:29:09,907 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:29:09,907 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:29:09,907 - root - INFO - orography False
+2023-08-08 02:29:09,907 - root - INFO - orography_path None
+2023-08-08 02:29:09,907 - root - INFO - exp_dir ../results
+2023-08-08 02:29:09,907 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:29:09,907 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:29:09,907 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:29:09,907 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:29:09,907 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:29:09,907 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:29:09,907 - root - INFO - loss l2
+2023-08-08 02:29:09,907 - root - INFO - num_data_workers 4
+2023-08-08 02:29:09,908 - root - INFO - dt 1
+2023-08-08 02:29:09,908 - root - INFO - n_history 0
+2023-08-08 02:29:09,908 - root - INFO - prediction_type iterative
+2023-08-08 02:29:09,908 - root - INFO - prediction_length 30
+2023-08-08 02:29:09,908 - root - INFO - n_initial_conditions 5
+2023-08-08 02:29:09,908 - root - INFO - ics_type default
+2023-08-08 02:29:09,908 - root - INFO - save_raw_forecasts True
+2023-08-08 02:29:09,908 - root - INFO - save_channel False
+2023-08-08 02:29:09,908 - root - INFO - masked_acc False
+2023-08-08 02:29:09,908 - root - INFO - maskpath None
+2023-08-08 02:29:09,908 - root - INFO - perturb False
+2023-08-08 02:29:09,908 - root - INFO - add_grid False
+2023-08-08 02:29:09,908 - root - INFO - N_grid_channels 0
+2023-08-08 02:29:09,908 - root - INFO - gridtype sinusoidal
+2023-08-08 02:29:09,908 - root - INFO - roll False
+2023-08-08 02:29:09,908 - root - INFO - num_blocks 8
+2023-08-08 02:29:09,908 - root - INFO - nettype afno
+2023-08-08 02:29:09,909 - root - INFO - patch_size 8
+2023-08-08 02:29:09,909 - root - INFO - width 56
+2023-08-08 02:29:09,909 - root - INFO - modes 32
+2023-08-08 02:29:09,909 - root - INFO - target V10
+2023-08-08 02:29:09,909 - root - INFO - normalization zscore
+2023-08-08 02:29:09,909 - root - INFO - log_to_screen True
+2023-08-08 02:29:09,909 - root - INFO - save_checkpoint True
+2023-08-08 02:29:09,909 - root - INFO - enable_nhwc False
+2023-08-08 02:29:09,909 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:29:09,909 - root - INFO - crop_size_x None
+2023-08-08 02:29:09,909 - root - INFO - crop_size_y None
+2023-08-08 02:29:09,909 - root - INFO - two_step_training False
+2023-08-08 02:29:09,909 - root - INFO - plot_animations False
+2023-08-08 02:29:09,909 - root - INFO - add_noise False
+2023-08-08 02:29:09,909 - root - INFO - noise_std 0
+2023-08-08 02:29:09,909 - root - INFO - world_size 1
+2023-08-08 02:29:09,909 - root - INFO - interp 0
+2023-08-08 02:29:09,909 - root - INFO - use_daily_climatology False
+2023-08-08 02:29:09,909 - root - INFO - global_batch_size 64
+2023-08-08 02:29:09,909 - root - INFO - ablate Z500
+2023-08-08 02:29:09,909 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:29:09,910 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:29:09,910 - root - INFO - resuming False
+2023-08-08 02:29:09,910 - root - INFO - local_rank 0
+2023-08-08 02:29:09,910 - root - INFO - ---------------------------------------------------
+2023-08-08 02:29:09,910 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:29:10,105 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:29:10,106 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:29:10,107 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:29:10,107 - root - INFO - Delta t: 6 hours
+2023-08-08 02:29:10,107 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:29:10,107 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:30:00,226 - root - INFO - Loading inference data
+2023-08-08 02:30:00,228 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:30:00,415 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:30:01,476 - root - INFO - Extracting valid data from the first year
+2023-08-08 02:31:49,036 - root - INFO - Standardizing data
+2023-08-08 02:31:56,620 - root - INFO - Loading time means
+2023-08-08 02:32:04,703 - root - INFO - Begin autoregressive inference
+2023-08-08 02:32:16,102 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 02:32:29,508 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.5683211088180542, ACC: 0.9908562898635864
+2023-08-08 02:32:41,946 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 0.813510537147522, ACC: 0.9812706112861633
+2023-08-08 02:32:54,123 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 0.9460976719856262, ACC: 0.9745092988014221
+2023-08-08 02:33:07,890 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 1.1008319854736328, ACC: 0.965164065361023
+2023-08-08 02:33:21,636 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 1.1978864669799805, ACC: 0.9582474827766418
+2023-08-08 02:33:34,677 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 1.3513097763061523, ACC: 0.9460490942001343
+2023-08-08 02:33:46,459 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 1.5030391216278076, ACC: 0.9332987666130066
+2023-08-08 02:33:59,764 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 1.6886502504348755, ACC: 0.9172989130020142
+2023-08-08 02:34:11,734 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 1.8892101049423218, ACC: 0.898196816444397
+2023-08-08 02:34:24,301 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 2.039499044418335, ACC: 0.8863879442214966
+2023-08-08 02:34:36,846 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 2.2333662509918213, ACC: 0.8686800599098206
+2023-08-08 02:34:49,257 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 2.4225828647613525, ACC: 0.8466402292251587
+2023-08-08 02:35:01,782 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 2.5769410133361816, ACC: 0.8312041163444519
+2023-08-08 02:35:14,399 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 2.69256591796875, ACC: 0.8158132433891296
+2023-08-08 02:35:27,156 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 2.8668718338012695, ACC: 0.7887113094329834
+2023-08-08 02:35:38,891 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 3.029376268386841, ACC: 0.7578755617141724
+2023-08-08 02:35:51,066 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 3.2040247917175293, ACC: 0.7247130870819092
+2023-08-08 02:36:02,504 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 3.3261795043945312, ACC: 0.690841794013977
+2023-08-08 02:36:14,256 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 3.442167043685913, ACC: 0.67066890001297
+2023-08-08 02:36:26,744 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 3.572734832763672, ACC: 0.6384362578392029
+2023-08-08 02:36:38,588 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 3.774963617324829, ACC: 0.5997323393821716
+2023-08-08 02:36:50,454 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 3.978095054626465, ACC: 0.5549691319465637
+2023-08-08 02:37:02,789 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 4.209980010986328, ACC: 0.5026368498802185
+2023-08-08 02:37:15,527 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 4.430412769317627, ACC: 0.44782859086990356
+2023-08-08 02:37:28,060 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 4.673694610595703, ACC: 0.4015008211135864
+2023-08-08 02:37:41,930 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 4.844498157501221, ACC: 0.37490084767341614
+2023-08-08 02:37:55,663 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 4.936624050140381, ACC: 0.3576812744140625
+2023-08-08 02:38:09,966 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 4.995181560516357, ACC: 0.3138308525085449
+2023-08-08 02:38:24,236 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 5.048430919647217, ACC: 0.2809917628765106
+2023-08-08 02:38:24,329 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-Z500_30-timesteps_vis.h5
+2023-08-08 02:39:18,493 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:39:18,493 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:39:18,493 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:39:18,493 - root - INFO - log_to_wandb True
+2023-08-08 02:39:18,493 - root - INFO - lr 0.0005
+2023-08-08 02:39:18,493 - root - INFO - batch_size 64
+2023-08-08 02:39:18,494 - root - INFO - max_epochs 150
+2023-08-08 02:39:18,494 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:39:18,494 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:39:18,494 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:39:18,494 - root - INFO - orography False
+2023-08-08 02:39:18,494 - root - INFO - orography_path None
+2023-08-08 02:39:18,494 - root - INFO - exp_dir ../results
+2023-08-08 02:39:18,494 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:39:18,494 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:39:18,494 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:39:18,494 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:39:18,494 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:39:18,494 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:39:18,494 - root - INFO - loss l2
+2023-08-08 02:39:18,495 - root - INFO - num_data_workers 4
+2023-08-08 02:39:18,495 - root - INFO - dt 1
+2023-08-08 02:39:18,495 - root - INFO - n_history 0
+2023-08-08 02:39:18,495 - root - INFO - prediction_type iterative
+2023-08-08 02:39:18,495 - root - INFO - prediction_length 30
+2023-08-08 02:39:18,495 - root - INFO - n_initial_conditions 5
+2023-08-08 02:39:18,495 - root - INFO - ics_type default
+2023-08-08 02:39:18,495 - root - INFO - save_raw_forecasts True
+2023-08-08 02:39:18,495 - root - INFO - save_channel False
+2023-08-08 02:39:18,495 - root - INFO - masked_acc False
+2023-08-08 02:39:18,495 - root - INFO - maskpath None
+2023-08-08 02:39:18,495 - root - INFO - perturb False
+2023-08-08 02:39:18,495 - root - INFO - add_grid False
+2023-08-08 02:39:18,495 - root - INFO - N_grid_channels 0
+2023-08-08 02:39:18,495 - root - INFO - gridtype sinusoidal
+2023-08-08 02:39:18,495 - root - INFO - roll False
+2023-08-08 02:39:18,495 - root - INFO - num_blocks 8
+2023-08-08 02:39:18,495 - root - INFO - nettype afno
+2023-08-08 02:39:18,495 - root - INFO - patch_size 8
+2023-08-08 02:39:18,495 - root - INFO - width 56
+2023-08-08 02:39:18,495 - root - INFO - modes 32
+2023-08-08 02:39:18,495 - root - INFO - target V10
+2023-08-08 02:39:18,495 - root - INFO - normalization zscore
+2023-08-08 02:39:18,495 - root - INFO - log_to_screen True
+2023-08-08 02:39:18,495 - root - INFO - save_checkpoint True
+2023-08-08 02:39:18,495 - root - INFO - enable_nhwc False
+2023-08-08 02:39:18,496 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:39:18,496 - root - INFO - crop_size_x None
+2023-08-08 02:39:18,496 - root - INFO - crop_size_y None
+2023-08-08 02:39:18,496 - root - INFO - two_step_training False
+2023-08-08 02:39:18,496 - root - INFO - plot_animations False
+2023-08-08 02:39:18,496 - root - INFO - add_noise False
+2023-08-08 02:39:18,496 - root - INFO - noise_std 0
+2023-08-08 02:39:18,496 - root - INFO - world_size 1
+2023-08-08 02:39:18,496 - root - INFO - interp 0
+2023-08-08 02:39:18,496 - root - INFO - use_daily_climatology False
+2023-08-08 02:39:18,496 - root - INFO - global_batch_size 64
+2023-08-08 02:39:18,496 - root - INFO - ablate RH500
+2023-08-08 02:39:18,496 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:39:18,496 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:39:18,496 - root - INFO - resuming False
+2023-08-08 02:39:18,496 - root - INFO - local_rank 0
+2023-08-08 02:39:18,496 - root - INFO - ---------------------------------------------------
+2023-08-08 02:39:18,497 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:39:18,722 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:39:18,723 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:39:18,724 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:39:18,724 - root - INFO - Delta t: 6 hours
+2023-08-08 02:39:18,724 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:39:18,724 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:40:10,446 - root - INFO - Loading inference data
+2023-08-08 02:40:10,447 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:40:10,625 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:40:11,604 - root - INFO - Extracting valid data from the first year
+2023-08-08 02:42:04,043 - root - INFO - Standardizing data
+2023-08-08 02:42:12,123 - root - INFO - Loading time means
+2023-08-08 02:42:21,258 - root - INFO - Begin autoregressive inference
+2023-08-08 02:42:32,886 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 02:42:44,102 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.5839934945106506, ACC: 0.9903440475463867
+2023-08-08 02:42:56,601 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 0.8281470537185669, ACC: 0.9805775284767151
+2023-08-08 02:43:09,915 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 0.9527722001075745, ACC: 0.974003255367279
+2023-08-08 02:43:24,637 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 1.1118946075439453, ACC: 0.9642149806022644
+2023-08-08 02:43:38,348 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 1.1996841430664062, ACC: 0.9575570821762085
+2023-08-08 02:43:50,485 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 1.3500943183898926, ACC: 0.9457087516784668
+2023-08-08 02:44:02,895 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 1.5196802616119385, ACC: 0.9315134882926941
+2023-08-08 02:44:15,376 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 1.694034218788147, ACC: 0.9165232181549072
+2023-08-08 02:44:27,144 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 1.873836636543274, ACC: 0.9000625014305115
+2023-08-08 02:44:41,285 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 2.0063955783843994, ACC: 0.8912580013275146
+2023-08-08 02:44:52,610 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 2.250838279724121, ACC: 0.8691632747650146
+2023-08-08 02:45:05,590 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 2.5342891216278076, ACC: 0.8357431292533875
+2023-08-08 02:45:18,417 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 2.7481203079223633, ACC: 0.8133460879325867
+2023-08-08 02:45:30,550 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 2.890718698501587, ACC: 0.7933387756347656
+2023-08-08 02:45:45,305 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 3.044053554534912, ACC: 0.7694955468177795
+2023-08-08 02:45:57,640 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 3.2613141536712646, ACC: 0.7273862957954407
+2023-08-08 02:46:07,934 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 3.3869283199310303, ACC: 0.7020342946052551
+2023-08-08 02:46:20,992 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 3.476714611053467, ACC: 0.6731578707695007
+2023-08-08 02:46:33,662 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 3.6102917194366455, ACC: 0.6496849656105042
+2023-08-08 02:46:46,601 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 3.762214422225952, ACC: 0.6085968613624573
+2023-08-08 02:46:58,995 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 3.928122043609619, ACC: 0.5763918161392212
+2023-08-08 02:47:12,172 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 4.036594867706299, ACC: 0.5520697236061096
+2023-08-08 02:47:23,136 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 4.151371955871582, ACC: 0.533890962600708
+2023-08-08 02:47:33,908 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 4.184525489807129, ACC: 0.5298232436180115
+2023-08-08 02:47:44,905 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 4.208296775817871, ACC: 0.5399136543273926
+2023-08-08 02:47:55,642 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 4.27623176574707, ACC: 0.5364888310432434
+2023-08-08 02:48:08,779 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 4.344733715057373, ACC: 0.5248888731002808
+2023-08-08 02:48:19,188 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 4.378337860107422, ACC: 0.5010239481925964
+2023-08-08 02:48:30,309 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 4.401761054992676, ACC: 0.4898504912853241
+2023-08-08 02:48:30,410 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-RH500_30-timesteps_vis.h5
+2023-08-08 02:49:23,814 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:49:23,814 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:49:23,814 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:49:23,815 - root - INFO - log_to_wandb True
+2023-08-08 02:49:23,815 - root - INFO - lr 0.0005
+2023-08-08 02:49:23,815 - root - INFO - batch_size 64
+2023-08-08 02:49:23,815 - root - INFO - max_epochs 150
+2023-08-08 02:49:23,815 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:49:23,815 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:49:23,815 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:49:23,816 - root - INFO - orography False
+2023-08-08 02:49:23,816 - root - INFO - orography_path None
+2023-08-08 02:49:23,817 - root - INFO - exp_dir ../results
+2023-08-08 02:49:23,817 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:49:23,817 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:49:23,817 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:49:23,817 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:49:23,817 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:49:23,817 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:49:23,817 - root - INFO - loss l2
+2023-08-08 02:49:23,817 - root - INFO - num_data_workers 4
+2023-08-08 02:49:23,817 - root - INFO - dt 1
+2023-08-08 02:49:23,817 - root - INFO - n_history 0
+2023-08-08 02:49:23,817 - root - INFO - prediction_type iterative
+2023-08-08 02:49:23,817 - root - INFO - prediction_length 30
+2023-08-08 02:49:23,817 - root - INFO - n_initial_conditions 5
+2023-08-08 02:49:23,817 - root - INFO - ics_type default
+2023-08-08 02:49:23,817 - root - INFO - save_raw_forecasts True
+2023-08-08 02:49:23,817 - root - INFO - save_channel False
+2023-08-08 02:49:23,817 - root - INFO - masked_acc False
+2023-08-08 02:49:23,818 - root - INFO - maskpath None
+2023-08-08 02:49:23,818 - root - INFO - perturb False
+2023-08-08 02:49:23,818 - root - INFO - add_grid False
+2023-08-08 02:49:23,818 - root - INFO - N_grid_channels 0
+2023-08-08 02:49:23,818 - root - INFO - gridtype sinusoidal
+2023-08-08 02:49:23,818 - root - INFO - roll False
+2023-08-08 02:49:23,818 - root - INFO - num_blocks 8
+2023-08-08 02:49:23,818 - root - INFO - nettype afno
+2023-08-08 02:49:23,818 - root - INFO - patch_size 8
+2023-08-08 02:49:23,818 - root - INFO - width 56
+2023-08-08 02:49:23,818 - root - INFO - modes 32
+2023-08-08 02:49:23,818 - root - INFO - target V10
+2023-08-08 02:49:23,818 - root - INFO - normalization zscore
+2023-08-08 02:49:23,819 - root - INFO - log_to_screen True
+2023-08-08 02:49:23,819 - root - INFO - save_checkpoint True
+2023-08-08 02:49:23,819 - root - INFO - enable_nhwc False
+2023-08-08 02:49:23,819 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:49:23,819 - root - INFO - crop_size_x None
+2023-08-08 02:49:23,819 - root - INFO - crop_size_y None
+2023-08-08 02:49:23,819 - root - INFO - two_step_training False
+2023-08-08 02:49:23,820 - root - INFO - plot_animations False
+2023-08-08 02:49:23,820 - root - INFO - add_noise False
+2023-08-08 02:49:23,820 - root - INFO - noise_std 0
+2023-08-08 02:49:23,820 - root - INFO - world_size 1
+2023-08-08 02:49:23,820 - root - INFO - interp 0
+2023-08-08 02:49:23,820 - root - INFO - use_daily_climatology False
+2023-08-08 02:49:23,820 - root - INFO - global_batch_size 64
+2023-08-08 02:49:23,820 - root - INFO - ablate Z50
+2023-08-08 02:49:23,820 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:49:23,820 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:49:23,820 - root - INFO - resuming False
+2023-08-08 02:49:23,820 - root - INFO - local_rank 0
+2023-08-08 02:49:23,821 - root - INFO - ---------------------------------------------------
+2023-08-08 02:49:23,821 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:49:24,048 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:49:24,049 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:49:24,049 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:49:24,049 - root - INFO - Delta t: 6 hours
+2023-08-08 02:49:24,049 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:49:24,050 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:50:10,020 - root - INFO - Loading inference data
+2023-08-08 02:50:10,021 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:50:10,214 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:50:11,105 - root - INFO - Extracting valid data from the first year
+2023-08-08 02:51:50,796 - root - INFO - Standardizing data
+2023-08-08 02:51:58,618 - root - INFO - Loading time means
+2023-08-08 02:52:05,667 - root - INFO - Begin autoregressive inference
+2023-08-08 02:52:18,611 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 02:52:30,442 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 0.6722252368927002, ACC: 0.9871830344200134
+2023-08-08 02:52:42,243 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 0.9753735065460205, ACC: 0.9729785919189453
+2023-08-08 02:52:53,744 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 1.1449847221374512, ACC: 0.9623958468437195
+2023-08-08 02:53:05,146 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 1.2845818996429443, ACC: 0.9523193836212158
+2023-08-08 02:53:17,231 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 1.4108682870864868, ACC: 0.9415121674537659
+2023-08-08 02:53:29,951 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 1.5215076208114624, ACC: 0.9311284422874451
+2023-08-08 02:53:42,181 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 1.6736223697662354, ACC: 0.9160821437835693
+2023-08-08 02:53:54,921 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 1.8757232427597046, ACC: 0.8964187502861023
+2023-08-08 02:54:07,202 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 2.049640655517578, ACC: 0.8785754442214966
+2023-08-08 02:54:18,033 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 2.2005598545074463, ACC: 0.8664590120315552
+2023-08-08 02:54:30,448 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 2.393216848373413, ACC: 0.8462918400764465
+2023-08-08 02:54:42,027 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 2.562551736831665, ACC: 0.8240804076194763
+2023-08-08 02:54:53,035 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 2.75237774848938, ACC: 0.8024617433547974
+2023-08-08 02:55:05,190 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 2.8848469257354736, ACC: 0.7844061851501465
+2023-08-08 02:55:17,688 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 3.1040987968444824, ACC: 0.747450590133667
+2023-08-08 02:55:29,384 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 3.2304739952087402, ACC: 0.721511960029602
+2023-08-08 02:55:40,094 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 3.2637405395507812, ACC: 0.7116207480430603
+2023-08-08 02:55:51,583 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 3.2888481616973877, ACC: 0.6968011856079102
+2023-08-08 02:56:04,324 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 3.388498067855835, ACC: 0.677838921546936
+2023-08-08 02:56:15,104 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 3.529935121536255, ACC: 0.6430473923683167
+2023-08-08 02:56:25,923 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 3.6779935359954834, ACC: 0.618212103843689
+2023-08-08 02:56:37,131 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 3.8561062812805176, ACC: 0.5855369567871094
+2023-08-08 02:56:48,646 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 3.992157459259033, ACC: 0.5568884015083313
+2023-08-08 02:57:00,932 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 4.067763328552246, ACC: 0.5380983352661133
+2023-08-08 02:57:13,207 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 4.237903594970703, ACC: 0.5101348757743835
+2023-08-08 02:57:25,304 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 4.28141975402832, ACC: 0.5098142623901367
+2023-08-08 02:57:36,944 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 4.376781463623047, ACC: 0.4841839373111725
+2023-08-08 02:57:49,642 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 4.446591377258301, ACC: 0.4501836895942688
+2023-08-08 02:58:02,180 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 4.571515083312988, ACC: 0.41760337352752686
+2023-08-08 02:58:02,276 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-Z50_30-timesteps_vis.h5
+2023-08-08 02:58:56,071 - root - INFO - ------------------ Configuration ------------------
+2023-08-08 02:58:56,072 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-08 02:58:56,072 - root - INFO - Configuration name: afno_backbone
+2023-08-08 02:58:56,074 - root - INFO - log_to_wandb True
+2023-08-08 02:58:56,074 - root - INFO - lr 0.0005
+2023-08-08 02:58:56,074 - root - INFO - batch_size 64
+2023-08-08 02:58:56,074 - root - INFO - max_epochs 150
+2023-08-08 02:58:56,074 - root - INFO - scheduler CosineAnnealingLR
+2023-08-08 02:58:56,074 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:58:56,074 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-08 02:58:56,074 - root - INFO - orography False
+2023-08-08 02:58:56,074 - root - INFO - orography_path None
+2023-08-08 02:58:56,074 - root - INFO - exp_dir ../results
+2023-08-08 02:58:56,074 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-08 02:58:56,074 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-08 02:58:56,074 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:58:56,074 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-08 02:58:56,075 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-08 02:58:56,075 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-08 02:58:56,075 - root - INFO - loss l2
+2023-08-08 02:58:56,075 - root - INFO - num_data_workers 4
+2023-08-08 02:58:56,075 - root - INFO - dt 1
+2023-08-08 02:58:56,075 - root - INFO - n_history 0
+2023-08-08 02:58:56,075 - root - INFO - prediction_type iterative
+2023-08-08 02:58:56,075 - root - INFO - prediction_length 30
+2023-08-08 02:58:56,075 - root - INFO - n_initial_conditions 5
+2023-08-08 02:58:56,075 - root - INFO - ics_type default
+2023-08-08 02:58:56,075 - root - INFO - save_raw_forecasts True
+2023-08-08 02:58:56,075 - root - INFO - save_channel False
+2023-08-08 02:58:56,075 - root - INFO - masked_acc False
+2023-08-08 02:58:56,075 - root - INFO - maskpath None
+2023-08-08 02:58:56,075 - root - INFO - perturb False
+2023-08-08 02:58:56,075 - root - INFO - add_grid False
+2023-08-08 02:58:56,075 - root - INFO - N_grid_channels 0
+2023-08-08 02:58:56,075 - root - INFO - gridtype sinusoidal
+2023-08-08 02:58:56,075 - root - INFO - roll False
+2023-08-08 02:58:56,075 - root - INFO - num_blocks 8
+2023-08-08 02:58:56,075 - root - INFO - nettype afno
+2023-08-08 02:58:56,075 - root - INFO - patch_size 8
+2023-08-08 02:58:56,075 - root - INFO - width 56
+2023-08-08 02:58:56,075 - root - INFO - modes 32
+2023-08-08 02:58:56,075 - root - INFO - target V10
+2023-08-08 02:58:56,075 - root - INFO - normalization zscore
+2023-08-08 02:58:56,075 - root - INFO - log_to_screen True
+2023-08-08 02:58:56,075 - root - INFO - save_checkpoint True
+2023-08-08 02:58:56,075 - root - INFO - enable_nhwc False
+2023-08-08 02:58:56,075 - root - INFO - optimizer_type FusedAdam
+2023-08-08 02:58:56,075 - root - INFO - crop_size_x None
+2023-08-08 02:58:56,076 - root - INFO - crop_size_y None
+2023-08-08 02:58:56,076 - root - INFO - two_step_training False
+2023-08-08 02:58:56,076 - root - INFO - plot_animations False
+2023-08-08 02:58:56,076 - root - INFO - add_noise False
+2023-08-08 02:58:56,076 - root - INFO - noise_std 0
+2023-08-08 02:58:56,076 - root - INFO - world_size 1
+2023-08-08 02:58:56,076 - root - INFO - interp 0
+2023-08-08 02:58:56,076 - root - INFO - use_daily_climatology False
+2023-08-08 02:58:56,076 - root - INFO - global_batch_size 64
+2023-08-08 02:58:56,076 - root - INFO - ablate TCWV
+2023-08-08 02:58:56,076 - root - INFO - experiment_dir /root/FourCastNet/override_dir/iterative_ablation/results
+2023-08-08 02:58:56,076 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:58:56,076 - root - INFO - resuming False
+2023-08-08 02:58:56,076 - root - INFO - local_rank 0
+2023-08-08 02:58:56,076 - root - INFO - ---------------------------------------------------
+2023-08-08 02:58:56,076 - root - INFO - Inference for 1 initial conditions
+2023-08-08 02:58:56,290 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-08 02:58:56,292 - root - INFO - Number of samples per year: 1460
+2023-08-08 02:58:56,293 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-08 02:58:56,294 - root - INFO - Delta t: 6 hours
+2023-08-08 02:58:56,294 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-08 02:58:56,294 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-08 02:59:36,082 - root - INFO - Loading inference data
+2023-08-08 02:59:36,084 - root - INFO - Inference data from s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-08 02:59:36,196 - root - INFO - Initial condition 1 of 1
+2023-08-08 02:59:37,075 - root - INFO - Extracting valid data from the first year
+2023-08-08 03:01:09,166 - root - INFO - Standardizing data
+2023-08-08 03:01:17,260 - root - INFO - Loading time means
+2023-08-08 03:01:25,396 - root - INFO - Begin autoregressive inference
+2023-08-08 03:01:38,870 - root - INFO - Predicted timestep 0 of 30. V10 RMS Error: 0.0, ACC: 1.0
+2023-08-08 03:01:51,409 - root - INFO - Predicted timestep 1 of 30. V10 RMS Error: 1.9586238861083984, ACC: 0.8872028589248657
+2023-08-08 03:02:02,064 - root - INFO - Predicted timestep 2 of 30. V10 RMS Error: 3.3294742107391357, ACC: 0.7032226920127869
+2023-08-08 03:02:13,716 - root - INFO - Predicted timestep 3 of 30. V10 RMS Error: 13.14535903930664, ACC: 0.22980132699012756
+2023-08-08 03:02:25,228 - root - INFO - Predicted timestep 4 of 30. V10 RMS Error: 24.292543411254883, ACC: 0.12043321132659912
+2023-08-08 03:02:37,294 - root - INFO - Predicted timestep 5 of 30. V10 RMS Error: 33.1695442199707, ACC: 0.0777118057012558
+2023-08-08 03:02:51,322 - root - INFO - Predicted timestep 6 of 30. V10 RMS Error: 39.956172943115234, ACC: 0.051816120743751526
+2023-08-08 03:03:04,081 - root - INFO - Predicted timestep 7 of 30. V10 RMS Error: 47.05339813232422, ACC: 0.016130831092596054
+2023-08-08 03:03:16,871 - root - INFO - Predicted timestep 8 of 30. V10 RMS Error: 56.51447677612305, ACC: 0.007154549937695265
+2023-08-08 03:03:30,728 - root - INFO - Predicted timestep 9 of 30. V10 RMS Error: 67.75296783447266, ACC: 0.006780560594052076
+2023-08-08 03:03:43,093 - root - INFO - Predicted timestep 10 of 30. V10 RMS Error: 102.14459991455078, ACC: 0.08597400784492493
+2023-08-08 03:03:55,338 - root - INFO - Predicted timestep 11 of 30. V10 RMS Error: 176.94940185546875, ACC: 0.14198452234268188
+2023-08-08 03:04:06,623 - root - INFO - Predicted timestep 12 of 30. V10 RMS Error: 228.44207763671875, ACC: 0.14676685631275177
+2023-08-08 03:04:19,000 - root - INFO - Predicted timestep 13 of 30. V10 RMS Error: 244.39141845703125, ACC: 0.13907437026500702
+2023-08-08 03:04:31,336 - root - INFO - Predicted timestep 14 of 30. V10 RMS Error: 241.5634307861328, ACC: 0.11909695714712143
+2023-08-08 03:04:42,440 - root - INFO - Predicted timestep 15 of 30. V10 RMS Error: 236.52980041503906, ACC: 0.09873765707015991
+2023-08-08 03:04:54,290 - root - INFO - Predicted timestep 16 of 30. V10 RMS Error: 234.77589416503906, ACC: 0.08085077255964279
+2023-08-08 03:05:07,110 - root - INFO - Predicted timestep 17 of 30. V10 RMS Error: 235.15086364746094, ACC: 0.06825648993253708
+2023-08-08 03:05:19,845 - root - INFO - Predicted timestep 18 of 30. V10 RMS Error: 235.7371063232422, ACC: 0.05723525583744049
+2023-08-08 03:05:32,872 - root - INFO - Predicted timestep 19 of 30. V10 RMS Error: 236.15042114257812, ACC: 0.05236266180872917
+2023-08-08 03:05:44,977 - root - INFO - Predicted timestep 20 of 30. V10 RMS Error: 236.5325164794922, ACC: 0.04362747073173523
+2023-08-08 03:05:57,681 - root - INFO - Predicted timestep 21 of 30. V10 RMS Error: 236.84194946289062, ACC: 0.04506775736808777
+2023-08-08 03:06:10,838 - root - INFO - Predicted timestep 22 of 30. V10 RMS Error: 237.1261749267578, ACC: 0.03770549222826958
+2023-08-08 03:06:24,073 - root - INFO - Predicted timestep 23 of 30. V10 RMS Error: 237.29461669921875, ACC: 0.038669321686029434
+2023-08-08 03:06:37,345 - root - INFO - Predicted timestep 24 of 30. V10 RMS Error: 237.40768432617188, ACC: 0.03653143718838692
+2023-08-08 03:06:48,689 - root - INFO - Predicted timestep 25 of 30. V10 RMS Error: 237.4506072998047, ACC: 0.03911875933408737
+2023-08-08 03:07:01,675 - root - INFO - Predicted timestep 26 of 30. V10 RMS Error: 237.48382568359375, ACC: 0.03730493783950806
+2023-08-08 03:07:13,444 - root - INFO - Predicted timestep 27 of 30. V10 RMS Error: 237.48764038085938, ACC: 0.03867746889591217
+2023-08-08 03:07:25,725 - root - INFO - Predicted timestep 28 of 30. V10 RMS Error: 237.5076141357422, ACC: 0.03515159338712692
+2023-08-08 03:07:39,058 - root - INFO - Predicted timestep 29 of 30. V10 RMS Error: 237.5032196044922, ACC: 0.036050260066986084
+2023-08-08 03:07:39,153 - root - INFO - Saving files at /root/FourCastNet/override_dir/iterative_ablation/results/iter_ablate-TCWV_30-timesteps_vis.h5

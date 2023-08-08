@@ -256,8 +256,8 @@ def autoregressive_inference(params, ic, valid_data_full, model):
 
                 # Ablate channel by replacing it with zeros
                 # print(f"first shape = {first.shape}, future shape = {future.shape}")
-                # first[0, abl_idx, :, :] = torch.zeros_like(first[0, abl_idx, :, :])
-                # future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
+                first[0, abl_idx, :, :] = torch.zeros_like(first[0, abl_idx, :, :])
+                future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
 
                 for h in range(n_history+1):
                     seq_real[h] = first[h*n_in_channels : (h+1)*n_in_channels][0:n_out_channels] #extract history from 1st 
@@ -271,21 +271,21 @@ def autoregressive_inference(params, ic, valid_data_full, model):
 
                     # # zero out the future_pred channel
                     # print(f"future_pred shape = {future_pred.shape}")
-                    # future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
+                    future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
             else:
                 if i < prediction_length-1:
                     future = valid_data[n_history+i+1]
 
                     # # Ablate channel by replacing it with zeros
                     # print(f"future shape = {future.shape}")
-                    # future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
+                    future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
 
                 if orography:
                     future_pred = model(torch.cat((future_pred, orog), axis=1)) #autoregressive step
 
                     # # zero out the future_pred channel
                     # print(f"future_pred shape = {future_pred.shape}")
-                    # future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
+                    future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
 
 
                 else:
@@ -293,7 +293,7 @@ def autoregressive_inference(params, ic, valid_data_full, model):
 
                     # # zero out the future_pred channel
                     # print(f"future_pred shape = {future_pred.shape}")
-                    # future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
+                    future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
 
 
             if i < prediction_length-1: #not on the last step
@@ -467,9 +467,9 @@ if __name__ == '__main__':
     if params.ablate == '':
         ablate_filetag = ''
     else: 
-        ablate_filetag = '_ablate-' + params.ablate
+        ablate_filetag = 'iter_ablate-' + params.ablate
 
-    autoregressive_inference_filetag += "-" + fld + ablate_filetag + "_" + str(params.prediction_length) + "-timesteps" + "" 
+    autoregressive_inference_filetag += ablate_filetag + "_" + str(params.prediction_length) + "-timesteps" + "" 
     if vis:
         autoregressive_inference_filetag += "_vis"
     # get data and models
@@ -522,8 +522,8 @@ if __name__ == '__main__':
 
     #save predictions and loss
     if params.log_to_screen:
-      logging.info("Saving files at {}".format(os.path.join(params['experiment_dir'], 'predict' + autoregressive_inference_filetag + '.h5')))
-    with h5py.File(os.path.join(params['experiment_dir'], 'predict'+ autoregressive_inference_filetag +'.h5'), 'a') as f:
+      logging.info("Saving files at {}".format(os.path.join(params['experiment_dir'], autoregressive_inference_filetag + '.h5')))
+    with h5py.File(os.path.join(params['experiment_dir'], autoregressive_inference_filetag +'.h5'), 'a') as f:
       if vis:
         try:
             f.create_dataset("ground_truth", data = seq_real, shape = (n_ics, prediction_length, n_out_channels, img_shape_x, img_shape_y), dtype = np.float32)
