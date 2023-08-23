@@ -255,7 +255,6 @@ def autoregressive_inference(params, ic, valid_data_full, model):
                 future = valid_data[n_history+1]
 
                 # Ablate channel by replacing it with zeros
-                # print(f"first shape = {first.shape}, future shape = {future.shape}")
                 first[0, abl_idx, :, :] = torch.zeros_like(first[0, abl_idx, :, :])
                 future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
 
@@ -269,30 +268,25 @@ def autoregressive_inference(params, ic, valid_data_full, model):
                 else:
                     future_pred = model(first)
 
-                    # # zero out the future_pred channel
-                    # print(f"future_pred shape = {future_pred.shape}")
+                    # zero out the future_pred channel
                     future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
             else:
                 if i < prediction_length-1:
                     future = valid_data[n_history+i+1]
 
-                    # # Ablate channel by replacing it with zeros
-                    # print(f"future shape = {future.shape}")
+                    # Ablate channel by replacing it with zeros
                     future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
 
                 if orography:
                     future_pred = model(torch.cat((future_pred, orog), axis=1)) #autoregressive step
 
-                    # # zero out the future_pred channel
-                    # print(f"future_pred shape = {future_pred.shape}")
+                    # zero out the future_pred channel
                     future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
-
 
                 else:
                     future_pred = model(future_pred) #autoregressive step
 
-                    # # zero out the future_pred channel
-                    # print(f"future_pred shape = {future_pred.shape}")
+                    # zero out the future_pred channel
                     future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
 
 

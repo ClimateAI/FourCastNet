@@ -76,6 +76,9 @@ import s3fs  # added to handle S3 Bucket data retrieval
 # Set up S3 bucket file system
 s3 = s3fs.S3FileSystem()
 
+# Define dictionaries to swap between variable indices and names
+idxes = {'U10': 0, 'V10': 1, 'T2m': 2, 'sp': 3, 'mslp': 4, 'U1000': 5, 'V1000': 6, 'Z1000': 7, 'T850': 8, 'U850': 9, 'V850': 10, 'Z850': 11, 'RH850': 12, 'T500': 13, 'U500': 14, 'V500': 15, 'Z500': 16, 'RH500': 17, 'Z50': 18, 'TCWV': 19}
+
 DECORRELATION_TIME = 8 # 2 days for preicp
 
 def gaussian_perturb(x, level=0.01, device=0):
@@ -254,54 +257,124 @@ def autoregressive_inference(params, ic, valid_data_full, valid_data_tp_full, mo
     if params.log_to_screen:
       logging.info('Begin autoregressive inference')
     
-    with torch.no_grad():
-      for i in range(valid_data.shape[0]): 
-        if i==0: #start of sequence
-          first = valid_data[0:n_history+1]
-          first_tp = valid_data_tp[0:1]
-          future = valid_data[n_history+1]
-          future_tp = valid_data_tp[1]
-          for h in range(n_history+1):
-            seq_real[h] = first[h*n_in_channels:(h+1)*n_in_channels][0:n_in_channels] #extract history from 1st 
-            seq_pred[h] = seq_real[h]
-          seq_real_tp[0] = unlog_tp_torch(first_tp)
-          seq_pred_tp[0] = unlog_tp_torch(first_tp)
-          if params.perturb:
-            first = gaussian_perturb(first, level=params.n_level, device=device) # perturb the ic
-          if orography:
-            future_pred = model_wind(torch.cat((first, orog), axis=1))
-          else:
-            future_pred = model_wind(first)
-          future_pred_tp = model(future_pred)
-        else:
-          if i < prediction_length-1:
-            future = valid_data[n_history+i+1]
-            future_tp = valid_data_tp[i+1]
-          if orography:
-            future_pred = model_wind(torch.cat((future_pred, orog), axis=1)) #autoregressive step
-          else:
-            future_pred = model_wind(future_pred) #autoregressive step
-          future_pred_tp = model(future_pred) # tp diagnosis
+    # NO ABLATION
+    if abl == '':
+        with torch.no_grad():
+          for i in range(valid_data.shape[0]): 
+            if i==0: #start of sequence
+              first = valid_data[0:n_history+1]
+              first_tp = valid_data_tp[0:1]
+              future = valid_data[n_history+1]
+              future_tp = valid_data_tp[1]
+              for h in range(n_history+1):
+                seq_real[h] = first[h*n_in_channels:(h+1)*n_in_channels][0:n_in_channels] #extract history from 1st 
+                seq_pred[h] = seq_real[h]
+              seq_real_tp[0] = unlog_tp_torch(first_tp)
+              seq_pred_tp[0] = unlog_tp_torch(first_tp)
+              if params.perturb:
+                first = gaussian_perturb(first, level=params.n_level, device=device) # perturb the ic
+              if orography:
+                future_pred = model_wind(torch.cat((first, orog), axis=1))
+              else:
+                future_pred = model_wind(first)
+              future_pred_tp = model(future_pred)
+            else:
+              if i < prediction_length-1:
+                future = valid_data[n_history+i+1]
+                future_tp = valid_data_tp[i+1]
+              if orography:
+                future_pred = model_wind(torch.cat((future_pred, orog), axis=1)) #autoregressive step
+              else:
+                future_pred = model_wind(future_pred) #autoregressive step
+              future_pred_tp = model(future_pred) # tp diagnosis
 
-        if i < prediction_length-1: #not on the last step
-          seq_pred[n_history+i+1] = future_pred
-          seq_real[n_history+i+1] = future
-          seq_pred_tp[i+1] = unlog_tp_torch(future_pred_tp) # this predicts 6-12 precip: 0 -> 6 (afno) -> 6-12 precip 
-          seq_real_tp[i+1] = unlog_tp_torch(future_tp) # which is the i+1th validation data
-          #collect history
-          history_stack = seq_pred[i+1:i+2+n_history]
+            if i < prediction_length-1: #not on the last step
+              seq_pred[n_history+i+1] = future_pred
+              seq_real[n_history+i+1] = future
+              seq_pred_tp[i+1] = unlog_tp_torch(future_pred_tp) # this predicts 6-12 precip: 0 -> 6 (afno) -> 6-12 precip 
+              seq_real_tp[i+1] = unlog_tp_torch(future_tp) # which is the i+1th validation data
+              #collect history
+              history_stack = seq_pred[i+1:i+2+n_history]
 
-        # ic for next wind step
-        future_pred = history_stack
-      
-        pred = torch.unsqueeze(seq_pred_tp[i], 0)
-        tar = torch.unsqueeze(seq_real_tp[i], 0)
-        valid_loss[i] = weighted_rmse_torch_channels(pred, tar)
-        acc[i] = weighted_acc_torch_channels(pred-m, tar-m)
-        tqe[i] = top_quantiles_error_torch(pred, tar)
+            # ic for next wind step
+            future_pred = history_stack
+
+            pred = torch.unsqueeze(seq_pred_tp[i], 0)
+            tar = torch.unsqueeze(seq_real_tp[i], 0)
+            valid_loss[i] = weighted_rmse_torch_channels(pred, tar)
+            acc[i] = weighted_acc_torch_channels(pred-m, tar-m)
+            tqe[i] = top_quantiles_error_torch(pred, tar)
+
+            if params.log_to_screen:
+              logging.info('Timestep {} of {}. TP RMS Error: {}, ACC: {}'.format((i), prediction_length, valid_loss[i,0], acc[i,0]))
         
-        if params.log_to_screen:
-          logging.info('Timestep {} of {}. TP RMS Error: {}, ACC: {}'.format((i), prediction_length, valid_loss[i,0], acc[i,0]))
+    # WITH ABLATION    
+    else:
+        abl_idx = idxes[abl]  # define index for ablation variable, used to access proper channel 
+        with torch.no_grad():
+          for i in range(valid_data.shape[0]): 
+            if i==0: #start of sequence
+              first = valid_data[0:n_history+1]
+              first_tp = valid_data_tp[0:1]
+              future = valid_data[n_history+1]
+              future_tp = valid_data_tp[1]
+                
+              # Ablate channel by replacing it with zeros
+              first[0, abl_idx, :, :] = torch.zeros_like(first[0, abl_idx, :, :])
+              future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
+            
+              for h in range(n_history+1):
+                seq_real[h] = first[h*n_in_channels:(h+1)*n_in_channels][0:n_in_channels] #extract history from 1st 
+                seq_pred[h] = seq_real[h]
+              seq_real_tp[0] = unlog_tp_torch(first_tp)
+              seq_pred_tp[0] = unlog_tp_torch(first_tp)
+              if params.perturb:
+                first = gaussian_perturb(first, level=params.n_level, device=device) # perturb the ic
+              if orography:
+                future_pred = model_wind(torch.cat((first, orog), axis=1))
+              else:
+                future_pred = model_wind(first)
+                
+              # zero out the future_pred channel
+              future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
+                
+              future_pred_tp = model(future_pred)
+            else:
+              if i < prediction_length-1:
+                future = valid_data[n_history+i+1]
+                # Ablate channel by replacing it with zeros
+                future[abl_idx, :, :] = torch.zeros_like(future[abl_idx, :, :])
+                    
+                future_tp = valid_data_tp[i+1]
+              if orography:
+                future_pred = model_wind(torch.cat((future_pred, orog), axis=1)) #autoregressive step
+              else:
+                future_pred = model_wind(future_pred) #autoregressive step
+              
+              # zero out the future_pred channel, regardless of orography conditional
+              future_pred[0, abl_idx, :, :] = torch.zeros_like(future_pred[0, abl_idx, :, :])
+            
+              future_pred_tp = model(future_pred) # tp diagnosis
+
+            if i < prediction_length-1: #not on the last step
+              seq_pred[n_history+i+1] = future_pred
+              seq_real[n_history+i+1] = future
+              seq_pred_tp[i+1] = unlog_tp_torch(future_pred_tp) # this predicts 6-12 precip: 0 -> 6 (afno) -> 6-12 precip 
+              seq_real_tp[i+1] = unlog_tp_torch(future_tp) # which is the i+1th validation data
+              #collect history
+              history_stack = seq_pred[i+1:i+2+n_history]
+
+            # ic for next wind step
+            future_pred = history_stack
+
+            pred = torch.unsqueeze(seq_pred_tp[i], 0)
+            tar = torch.unsqueeze(seq_real_tp[i], 0)
+            valid_loss[i] = weighted_rmse_torch_channels(pred, tar)
+            acc[i] = weighted_acc_torch_channels(pred-m, tar-m)
+            tqe[i] = top_quantiles_error_torch(pred, tar)
+
+            if params.log_to_screen:
+              logging.info('Timestep {} of {}. {} ablated. TP RMS Error: {}, ACC: {}'.format((i), prediction_length, abl, valid_loss[i,0], acc[i,0]))
 
     seq_real_tp = seq_real_tp.cpu().numpy()
     seq_pred_tp = seq_pred_tp.cpu().numpy()
@@ -316,16 +389,22 @@ def autoregressive_inference(params, ic, valid_data_full, valid_data_tp_full, mo
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--run_num", default='00', type=str)
-    parser.add_argument("--yaml_config", default='FourCastNet/config/AFNO.yaml', type=str)
+    parser.add_argument("--yaml_config", default='../config/AFNO.yaml', type=str)
     parser.add_argument("--config", default='full_field', type=str)
     parser.add_argument("--vis", action='store_true')
     parser.add_argument("--override_dir", default=None, type = str, help = 'Path to store inference outputs; must also set --weights arg')
     parser.add_argument("--weights", default=None, type=str, help = 'Path to model weights, for use with override_dir option')
+    parser.add_argument("--timesteps", default=4, type=int, help = 'Specify the number of timesteps (defaults to 4 timesteps)')
+    parser.add_argument("--ablate", default='', type=str, help = 'Specify which variable will be ablated (defaults to no ablation)')
     
     args = parser.parse_args()
     params = YParams(os.path.abspath(args.yaml_config), args.config)
     params['world_size'] = 1
     params['global_batch_size'] = params.batch_size
+    
+    # Add custom arguments for prediction length, target and ablated variables
+    params['prediction_length'] = args.timesteps
+    params['ablate'] = args.ablate
 
     # torch.cuda.set_device(0)  # commented out 7/17
     # torch.backends.cudnn.benchmark = True  # commented out 7/17
@@ -350,7 +429,10 @@ if __name__ == '__main__':
     logging_utils.log_to_file(logger_name=None, log_filename=os.path.join(expDir, 'inference_out.log'))
     # logging_utils.log_versions()  # commented out 7/14 to avoid errors
     params.log()
-
+    
+    # Set ablated variable
+    abl = params.ablate
+    
     n_ics = params['n_initial_conditions']
     ics = [1066, 1050, 1034]
 
@@ -389,9 +471,15 @@ if __name__ == '__main__':
       autoregressive_inference_filetag = params["inference_file_tag"]
     except:
       autoregressive_inference_filetag = ""
+    
+    if params.ablate == '':
+        ablate_filetag = 'tp_baseline'
+    else: 
+        ablate_filetag = 'tp_ablate-' + params.ablate
 
-
-    autoregressive_inference_filetag += "_tp"
+    autoregressive_inference_filetag += ablate_filetag + "_" + str(params.prediction_length) + "-timesteps" + "" 
+    # autoregressive_inference_filetag += "_tp"
+    
     # get data and models
     valid_data_full, valid_data_tp_full, model_wind, model = setup(params)
 
@@ -432,8 +520,8 @@ if __name__ == '__main__':
 
     #save predictions and loss
     if params.log_to_screen:
-      logging.info("Saving files at {}".format(os.path.join(params['experiment_dir'], 'autoregressive_predictions' + autoregressive_inference_filetag + '.h5')))
-    with h5py.File(os.path.join(params['experiment_dir'], 'autoregressive_predictions'+ autoregressive_inference_filetag +'.h5'), 'a') as f:
+      logging.info("Saving files at {}".format(os.path.join(params['experiment_dir'], autoregressive_inference_filetag + '.h5')))
+    with h5py.File(os.path.join(params['experiment_dir'], autoregressive_inference_filetag +'.h5'), 'a') as f:
       if vis:
         try:
           f.create_dataset("ground_truth", data = seq_real, shape = (n_ics, prediction_length, n_out_channels, img_shape_x, img_shape_y), dtype = np.float32)

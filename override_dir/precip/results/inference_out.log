@@ -1,0 +1,2160 @@
+2023-08-11 21:26:21,501 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 21:26:21,501 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 21:26:21,501 - root - INFO - Configuration name: precip
+2023-08-11 21:26:21,501 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 21:26:21,501 - root - INFO - out_channels [0]
+2023-08-11 21:26:21,501 - root - INFO - nettype afno
+2023-08-11 21:26:21,501 - root - INFO - nettype_wind afno
+2023-08-11 21:26:21,501 - root - INFO - log_to_wandb True
+2023-08-11 21:26:21,501 - root - INFO - lr 0.00025
+2023-08-11 21:26:21,501 - root - INFO - batch_size 64
+2023-08-11 21:26:21,501 - root - INFO - max_epochs 25
+2023-08-11 21:26:21,501 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 21:26:21,501 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 21:26:21,501 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 21:26:21,502 - root - INFO - precip_eps 1e-05
+2023-08-11 21:26:21,502 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 21:26:21,502 - root - INFO - orography False
+2023-08-11 21:26:21,505 - root - INFO - orography_path None
+2023-08-11 21:26:21,505 - root - INFO - exp_dir ../results
+2023-08-11 21:26:21,505 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 21:26:21,505 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 21:26:21,511 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 21:26:21,511 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 21:26:21,511 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 21:26:21,513 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 21:26:21,513 - root - INFO - loss l2
+2023-08-11 21:26:21,513 - root - INFO - num_data_workers 4
+2023-08-11 21:26:21,513 - root - INFO - dt 1
+2023-08-11 21:26:21,513 - root - INFO - n_history 0
+2023-08-11 21:26:21,513 - root - INFO - prediction_type iterative
+2023-08-11 21:26:21,514 - root - INFO - prediction_length 30
+2023-08-11 21:26:21,515 - root - INFO - n_initial_conditions 5
+2023-08-11 21:26:21,515 - root - INFO - ics_type default
+2023-08-11 21:26:21,515 - root - INFO - save_raw_forecasts True
+2023-08-11 21:26:21,515 - root - INFO - save_channel False
+2023-08-11 21:26:21,516 - root - INFO - masked_acc False
+2023-08-11 21:26:21,516 - root - INFO - maskpath None
+2023-08-11 21:26:21,517 - root - INFO - perturb False
+2023-08-11 21:26:21,517 - root - INFO - add_grid False
+2023-08-11 21:26:21,517 - root - INFO - N_grid_channels 0
+2023-08-11 21:26:21,517 - root - INFO - gridtype sinusoidal
+2023-08-11 21:26:21,517 - root - INFO - roll False
+2023-08-11 21:26:21,518 - root - INFO - num_blocks 8
+2023-08-11 21:26:21,519 - root - INFO - patch_size 8
+2023-08-11 21:26:21,519 - root - INFO - width 56
+2023-08-11 21:26:21,519 - root - INFO - modes 32
+2023-08-11 21:26:21,521 - root - INFO - target default
+2023-08-11 21:26:21,521 - root - INFO - normalization zscore
+2023-08-11 21:26:21,521 - root - INFO - log_to_screen True
+2023-08-11 21:26:21,521 - root - INFO - save_checkpoint True
+2023-08-11 21:26:21,521 - root - INFO - enable_nhwc False
+2023-08-11 21:26:21,521 - root - INFO - optimizer_type FusedAdam
+2023-08-11 21:26:21,521 - root - INFO - crop_size_x None
+2023-08-11 21:26:21,521 - root - INFO - crop_size_y None
+2023-08-11 21:26:21,521 - root - INFO - two_step_training False
+2023-08-11 21:26:21,521 - root - INFO - plot_animations False
+2023-08-11 21:26:21,521 - root - INFO - add_noise False
+2023-08-11 21:26:21,521 - root - INFO - noise_std 0
+2023-08-11 21:26:21,521 - root - INFO - world_size 1
+2023-08-11 21:26:21,521 - root - INFO - global_batch_size 64
+2023-08-11 21:26:21,521 - root - INFO - ablate U10
+2023-08-11 21:26:21,521 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 21:26:21,521 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 21:26:21,525 - root - INFO - resuming False
+2023-08-11 21:26:21,525 - root - INFO - local_rank 0
+2023-08-11 21:26:21,525 - root - INFO - ---------------------------------------------------
+2023-08-11 21:26:21,527 - root - INFO - Inference for 1 initial conditions
+2023-08-11 21:26:21,730 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 21:26:21,731 - root - INFO - Number of samples per year: 1460
+2023-08-11 21:26:21,731 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 21:26:21,731 - root - INFO - Delta t: 6 hours
+2023-08-11 21:26:21,731 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 21:26:21,733 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 21:28:02,107 - root - INFO - Loading validation data
+2023-08-11 21:28:02,256 - root - INFO - Loading validation precip data
+2023-08-11 21:28:02,470 - root - INFO - Initial condition 1 of 1
+2023-08-11 21:30:10,331 - root - INFO - Begin autoregressive inference
+2023-08-11 21:30:40,398 - root - INFO - Timestep 0 of 30. U10 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 21:31:09,755 - root - INFO - Timestep 1 of 30. U10 ablated. TP RMS Error: 0.0019305208697915077, ACC: 0.6543241739273071
+2023-08-11 21:31:35,771 - root - INFO - Timestep 2 of 30. U10 ablated. TP RMS Error: 0.002150669228285551, ACC: 0.4715879559516907
+2023-08-11 21:32:01,253 - root - INFO - Timestep 3 of 30. U10 ablated. TP RMS Error: 0.0024262815713882446, ACC: 0.3531631827354431
+2023-08-11 21:32:26,771 - root - INFO - Timestep 4 of 30. U10 ablated. TP RMS Error: 0.004636397119611502, ACC: 0.11054106056690216
+2023-08-11 21:32:54,775 - root - INFO - Timestep 5 of 30. U10 ablated. TP RMS Error: 1.2150731086730957, ACC: 0.00023267949291039258
+2023-08-11 21:33:23,665 - root - INFO - Timestep 6 of 30. U10 ablated. TP RMS Error: 41.83396911621094, ACC: 0.009245087392628193
+2023-08-11 21:33:52,553 - root - INFO - Timestep 7 of 30. U10 ablated. TP RMS Error: 2147.151611328125, ACC: 0.0007887522224336863
+2023-08-11 21:34:19,498 - root - INFO - Timestep 8 of 30. U10 ablated. TP RMS Error: 36302.54296875, ACC: 0.005434083286672831
+2023-08-11 21:34:46,766 - root - INFO - Timestep 9 of 30. U10 ablated. TP RMS Error: 471346.03125, ACC: 0.00019498947949614376
+2023-08-11 21:35:14,222 - root - INFO - Timestep 10 of 30. U10 ablated. TP RMS Error: 353478.78125, ACC: -0.00028151716105639935
+2023-08-11 21:35:41,246 - root - INFO - Timestep 11 of 30. U10 ablated. TP RMS Error: 142987.90625, ACC: 0.0017284649657085538
+2023-08-11 21:36:09,847 - root - INFO - Timestep 12 of 30. U10 ablated. TP RMS Error: 174198.203125, ACC: 0.010225591249763966
+2023-08-11 21:36:37,232 - root - INFO - Timestep 13 of 30. U10 ablated. TP RMS Error: 55916.15625, ACC: 0.0023495317436754704
+2023-08-11 21:37:03,834 - root - INFO - Timestep 14 of 30. U10 ablated. TP RMS Error: 211789.125, ACC: -0.000541220884770155
+2023-08-11 21:37:29,174 - root - INFO - Timestep 15 of 30. U10 ablated. TP RMS Error: 137555.671875, ACC: -0.0007684570155106485
+2023-08-11 21:37:56,449 - root - INFO - Timestep 16 of 30. U10 ablated. TP RMS Error: 60439.43359375, ACC: -0.0007714455132372677
+2023-08-11 21:38:22,746 - root - INFO - Timestep 17 of 30. U10 ablated. TP RMS Error: 37914.5078125, ACC: -0.0021475888788700104
+2023-08-11 21:38:48,221 - root - INFO - Timestep 18 of 30. U10 ablated. TP RMS Error: 364113.3125, ACC: -0.0002524600422475487
+2023-08-11 21:39:16,123 - root - INFO - Timestep 19 of 30. U10 ablated. TP RMS Error: 207487.46875, ACC: -0.0002166582562495023
+2023-08-11 21:39:43,035 - root - INFO - Timestep 20 of 30. U10 ablated. TP RMS Error: 66607.390625, ACC: 0.0014935903018340468
+2023-08-11 21:40:09,692 - root - INFO - Timestep 21 of 30. U10 ablated. TP RMS Error: 49349.8671875, ACC: -0.0004180815885774791
+2023-08-11 21:40:38,728 - root - INFO - Timestep 22 of 30. U10 ablated. TP RMS Error: 31008.89453125, ACC: -0.0009929508669301867
+2023-08-11 21:41:05,153 - root - INFO - Timestep 23 of 30. U10 ablated. TP RMS Error: 112904.8359375, ACC: -0.0006210774881765246
+2023-08-11 21:41:32,471 - root - INFO - Timestep 24 of 30. U10 ablated. TP RMS Error: 19687.650390625, ACC: 0.00017880633822642267
+2023-08-11 21:42:01,046 - root - INFO - Timestep 25 of 30. U10 ablated. TP RMS Error: 33988.07421875, ACC: -0.0006846350734122097
+2023-08-11 21:42:26,550 - root - INFO - Timestep 26 of 30. U10 ablated. TP RMS Error: 32360.498046875, ACC: -0.0009463381138630211
+2023-08-11 21:42:54,368 - root - INFO - Timestep 27 of 30. U10 ablated. TP RMS Error: 42212.53515625, ACC: -0.0004999535740353167
+2023-08-11 21:43:22,592 - root - INFO - Timestep 28 of 30. U10 ablated. TP RMS Error: 71957.34375, ACC: -0.0005149771459400654
+2023-08-11 21:43:48,827 - root - INFO - Timestep 29 of 30. U10 ablated. TP RMS Error: 80242.5, ACC: -0.0002930012997239828
+2023-08-11 21:43:49,172 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-U10_30-timesteps.h5
+2023-08-11 21:43:56,643 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 21:43:56,643 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 21:43:56,643 - root - INFO - Configuration name: precip
+2023-08-11 21:43:56,643 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 21:43:56,643 - root - INFO - out_channels [0]
+2023-08-11 21:43:56,643 - root - INFO - nettype afno
+2023-08-11 21:43:56,643 - root - INFO - nettype_wind afno
+2023-08-11 21:43:56,643 - root - INFO - log_to_wandb True
+2023-08-11 21:43:56,644 - root - INFO - lr 0.00025
+2023-08-11 21:43:56,644 - root - INFO - batch_size 64
+2023-08-11 21:43:56,644 - root - INFO - max_epochs 25
+2023-08-11 21:43:56,644 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 21:43:56,644 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 21:43:56,644 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 21:43:56,644 - root - INFO - precip_eps 1e-05
+2023-08-11 21:43:56,644 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 21:43:56,644 - root - INFO - orography False
+2023-08-11 21:43:56,644 - root - INFO - orography_path None
+2023-08-11 21:43:56,644 - root - INFO - exp_dir ../results
+2023-08-11 21:43:56,644 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 21:43:56,644 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 21:43:56,644 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 21:43:56,644 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 21:43:56,644 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 21:43:56,644 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 21:43:56,644 - root - INFO - loss l2
+2023-08-11 21:43:56,644 - root - INFO - num_data_workers 4
+2023-08-11 21:43:56,644 - root - INFO - dt 1
+2023-08-11 21:43:56,644 - root - INFO - n_history 0
+2023-08-11 21:43:56,644 - root - INFO - prediction_type iterative
+2023-08-11 21:43:56,644 - root - INFO - prediction_length 30
+2023-08-11 21:43:56,644 - root - INFO - n_initial_conditions 5
+2023-08-11 21:43:56,644 - root - INFO - ics_type default
+2023-08-11 21:43:56,644 - root - INFO - save_raw_forecasts True
+2023-08-11 21:43:56,644 - root - INFO - save_channel False
+2023-08-11 21:43:56,644 - root - INFO - masked_acc False
+2023-08-11 21:43:56,644 - root - INFO - maskpath None
+2023-08-11 21:43:56,644 - root - INFO - perturb False
+2023-08-11 21:43:56,645 - root - INFO - add_grid False
+2023-08-11 21:43:56,645 - root - INFO - N_grid_channels 0
+2023-08-11 21:43:56,645 - root - INFO - gridtype sinusoidal
+2023-08-11 21:43:56,645 - root - INFO - roll False
+2023-08-11 21:43:56,645 - root - INFO - num_blocks 8
+2023-08-11 21:43:56,645 - root - INFO - patch_size 8
+2023-08-11 21:43:56,645 - root - INFO - width 56
+2023-08-11 21:43:56,645 - root - INFO - modes 32
+2023-08-11 21:43:56,645 - root - INFO - target default
+2023-08-11 21:43:56,645 - root - INFO - normalization zscore
+2023-08-11 21:43:56,645 - root - INFO - log_to_screen True
+2023-08-11 21:43:56,645 - root - INFO - save_checkpoint True
+2023-08-11 21:43:56,645 - root - INFO - enable_nhwc False
+2023-08-11 21:43:56,645 - root - INFO - optimizer_type FusedAdam
+2023-08-11 21:43:56,645 - root - INFO - crop_size_x None
+2023-08-11 21:43:56,645 - root - INFO - crop_size_y None
+2023-08-11 21:43:56,645 - root - INFO - two_step_training False
+2023-08-11 21:43:56,645 - root - INFO - plot_animations False
+2023-08-11 21:43:56,645 - root - INFO - add_noise False
+2023-08-11 21:43:56,645 - root - INFO - noise_std 0
+2023-08-11 21:43:56,645 - root - INFO - world_size 1
+2023-08-11 21:43:56,645 - root - INFO - global_batch_size 64
+2023-08-11 21:43:56,645 - root - INFO - ablate V10
+2023-08-11 21:43:56,645 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 21:43:56,645 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 21:43:56,645 - root - INFO - resuming False
+2023-08-11 21:43:56,645 - root - INFO - local_rank 0
+2023-08-11 21:43:56,645 - root - INFO - ---------------------------------------------------
+2023-08-11 21:43:56,645 - root - INFO - Inference for 1 initial conditions
+2023-08-11 21:43:56,915 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 21:43:56,916 - root - INFO - Number of samples per year: 1460
+2023-08-11 21:43:56,916 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 21:43:56,916 - root - INFO - Delta t: 6 hours
+2023-08-11 21:43:56,916 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 21:43:56,918 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 21:45:42,569 - root - INFO - Loading validation data
+2023-08-11 21:45:42,787 - root - INFO - Loading validation precip data
+2023-08-11 21:45:43,077 - root - INFO - Initial condition 1 of 1
+2023-08-11 21:47:46,249 - root - INFO - Begin autoregressive inference
+2023-08-11 21:48:16,965 - root - INFO - Timestep 0 of 30. V10 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 21:48:47,059 - root - INFO - Timestep 1 of 30. V10 ablated. TP RMS Error: 0.0018074449617415667, ACC: 0.7334174513816833
+2023-08-11 21:49:16,063 - root - INFO - Timestep 2 of 30. V10 ablated. TP RMS Error: 0.0019445266807451844, ACC: 0.6128053069114685
+2023-08-11 21:49:45,369 - root - INFO - Timestep 3 of 30. V10 ablated. TP RMS Error: 0.0022203722037374973, ACC: 0.49541157484054565
+2023-08-11 21:50:15,445 - root - INFO - Timestep 4 of 30. V10 ablated. TP RMS Error: 0.0019780355505645275, ACC: 0.5016835927963257
+2023-08-11 21:50:44,099 - root - INFO - Timestep 5 of 30. V10 ablated. TP RMS Error: 0.002192756161093712, ACC: 0.40128588676452637
+2023-08-11 21:51:13,702 - root - INFO - Timestep 6 of 30. V10 ablated. TP RMS Error: 0.002210223115980625, ACC: 0.41684454679489136
+2023-08-11 21:51:40,270 - root - INFO - Timestep 7 of 30. V10 ablated. TP RMS Error: 0.0022277862299233675, ACC: 0.3874014616012573
+2023-08-11 21:52:08,725 - root - INFO - Timestep 8 of 30. V10 ablated. TP RMS Error: 0.0021023915614932775, ACC: 0.34952038526535034
+2023-08-11 21:52:37,102 - root - INFO - Timestep 9 of 30. V10 ablated. TP RMS Error: 0.0021352723706513643, ACC: 0.328041672706604
+2023-08-11 21:53:07,487 - root - INFO - Timestep 10 of 30. V10 ablated. TP RMS Error: 0.002393884351477027, ACC: 0.26876676082611084
+2023-08-11 21:53:36,117 - root - INFO - Timestep 11 of 30. V10 ablated. TP RMS Error: 0.002794874832034111, ACC: 0.18859583139419556
+2023-08-11 21:54:04,749 - root - INFO - Timestep 12 of 30. V10 ablated. TP RMS Error: 0.0027356520295143127, ACC: 0.16307097673416138
+2023-08-11 21:54:32,769 - root - INFO - Timestep 13 of 30. V10 ablated. TP RMS Error: 0.0026115744840353727, ACC: 0.18609385192394257
+2023-08-11 21:55:01,957 - root - INFO - Timestep 14 of 30. V10 ablated. TP RMS Error: 0.0025370463263243437, ACC: 0.20979028940200806
+2023-08-11 21:55:31,769 - root - INFO - Timestep 15 of 30. V10 ablated. TP RMS Error: 0.002617808524519205, ACC: 0.2190220057964325
+2023-08-11 21:55:59,122 - root - INFO - Timestep 16 of 30. V10 ablated. TP RMS Error: 0.003056218381971121, ACC: 0.12126912921667099
+2023-08-11 21:56:27,270 - root - INFO - Timestep 17 of 30. V10 ablated. TP RMS Error: 0.013304314576089382, ACC: 0.016326921060681343
+2023-08-11 21:56:52,166 - root - INFO - Timestep 18 of 30. V10 ablated. TP RMS Error: 0.02082149311900139, ACC: 0.010237663052976131
+2023-08-11 21:57:21,171 - root - INFO - Timestep 19 of 30. V10 ablated. TP RMS Error: 0.07322142273187637, ACC: 0.002738477196544409
+2023-08-11 21:57:48,152 - root - INFO - Timestep 20 of 30. V10 ablated. TP RMS Error: 0.33496540784835815, ACC: 0.0005250149988569319
+2023-08-11 21:58:19,061 - root - INFO - Timestep 21 of 30. V10 ablated. TP RMS Error: 0.5686593651771545, ACC: 0.00030728912679478526
+2023-08-11 21:58:45,628 - root - INFO - Timestep 22 of 30. V10 ablated. TP RMS Error: 11.92894458770752, ACC: 1.3155552551324945e-05
+2023-08-11 21:59:13,475 - root - INFO - Timestep 23 of 30. V10 ablated. TP RMS Error: 24.181400299072266, ACC: 1.990929149542353e-06
+2023-08-11 21:59:41,773 - root - INFO - Timestep 24 of 30. V10 ablated. TP RMS Error: 9.58077335357666, ACC: 1.2697925740212668e-05
+2023-08-11 22:00:12,661 - root - INFO - Timestep 25 of 30. V10 ablated. TP RMS Error: 47.119022369384766, ACC: 1.8795677533489652e-05
+2023-08-11 22:00:44,441 - root - INFO - Timestep 26 of 30. V10 ablated. TP RMS Error: 35.73149490356445, ACC: 1.0919171472778544e-05
+2023-08-11 22:01:15,279 - root - INFO - Timestep 27 of 30. V10 ablated. TP RMS Error: 19.346342086791992, ACC: 2.7287414923193865e-05
+2023-08-11 22:01:45,477 - root - INFO - Timestep 28 of 30. V10 ablated. TP RMS Error: 19.303993225097656, ACC: 2.1258067135931924e-05
+2023-08-11 22:02:15,675 - root - INFO - Timestep 29 of 30. V10 ablated. TP RMS Error: 21.726078033447266, ACC: 1.1694581189658493e-05
+2023-08-11 22:02:15,956 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-V10_30-timesteps.h5
+2023-08-11 22:02:23,152 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 22:02:23,152 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 22:02:23,152 - root - INFO - Configuration name: precip
+2023-08-11 22:02:23,152 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 22:02:23,152 - root - INFO - out_channels [0]
+2023-08-11 22:02:23,152 - root - INFO - nettype afno
+2023-08-11 22:02:23,152 - root - INFO - nettype_wind afno
+2023-08-11 22:02:23,152 - root - INFO - log_to_wandb True
+2023-08-11 22:02:23,152 - root - INFO - lr 0.00025
+2023-08-11 22:02:23,152 - root - INFO - batch_size 64
+2023-08-11 22:02:23,153 - root - INFO - max_epochs 25
+2023-08-11 22:02:23,153 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 22:02:23,153 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 22:02:23,153 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 22:02:23,153 - root - INFO - precip_eps 1e-05
+2023-08-11 22:02:23,153 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 22:02:23,153 - root - INFO - orography False
+2023-08-11 22:02:23,153 - root - INFO - orography_path None
+2023-08-11 22:02:23,153 - root - INFO - exp_dir ../results
+2023-08-11 22:02:23,153 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 22:02:23,153 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 22:02:23,153 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 22:02:23,153 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 22:02:23,153 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 22:02:23,153 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 22:02:23,154 - root - INFO - loss l2
+2023-08-11 22:02:23,154 - root - INFO - num_data_workers 4
+2023-08-11 22:02:23,154 - root - INFO - dt 1
+2023-08-11 22:02:23,154 - root - INFO - n_history 0
+2023-08-11 22:02:23,154 - root - INFO - prediction_type iterative
+2023-08-11 22:02:23,154 - root - INFO - prediction_length 30
+2023-08-11 22:02:23,154 - root - INFO - n_initial_conditions 5
+2023-08-11 22:02:23,154 - root - INFO - ics_type default
+2023-08-11 22:02:23,154 - root - INFO - save_raw_forecasts True
+2023-08-11 22:02:23,154 - root - INFO - save_channel False
+2023-08-11 22:02:23,154 - root - INFO - masked_acc False
+2023-08-11 22:02:23,154 - root - INFO - maskpath None
+2023-08-11 22:02:23,154 - root - INFO - perturb False
+2023-08-11 22:02:23,154 - root - INFO - add_grid False
+2023-08-11 22:02:23,154 - root - INFO - N_grid_channels 0
+2023-08-11 22:02:23,154 - root - INFO - gridtype sinusoidal
+2023-08-11 22:02:23,154 - root - INFO - roll False
+2023-08-11 22:02:23,155 - root - INFO - num_blocks 8
+2023-08-11 22:02:23,155 - root - INFO - patch_size 8
+2023-08-11 22:02:23,155 - root - INFO - width 56
+2023-08-11 22:02:23,155 - root - INFO - modes 32
+2023-08-11 22:02:23,155 - root - INFO - target default
+2023-08-11 22:02:23,155 - root - INFO - normalization zscore
+2023-08-11 22:02:23,155 - root - INFO - log_to_screen True
+2023-08-11 22:02:23,155 - root - INFO - save_checkpoint True
+2023-08-11 22:02:23,155 - root - INFO - enable_nhwc False
+2023-08-11 22:02:23,155 - root - INFO - optimizer_type FusedAdam
+2023-08-11 22:02:23,155 - root - INFO - crop_size_x None
+2023-08-11 22:02:23,155 - root - INFO - crop_size_y None
+2023-08-11 22:02:23,155 - root - INFO - two_step_training False
+2023-08-11 22:02:23,155 - root - INFO - plot_animations False
+2023-08-11 22:02:23,155 - root - INFO - add_noise False
+2023-08-11 22:02:23,155 - root - INFO - noise_std 0
+2023-08-11 22:02:23,155 - root - INFO - world_size 1
+2023-08-11 22:02:23,155 - root - INFO - global_batch_size 64
+2023-08-11 22:02:23,155 - root - INFO - ablate T2m
+2023-08-11 22:02:23,155 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 22:02:23,156 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:02:23,156 - root - INFO - resuming False
+2023-08-11 22:02:23,156 - root - INFO - local_rank 0
+2023-08-11 22:02:23,156 - root - INFO - ---------------------------------------------------
+2023-08-11 22:02:23,156 - root - INFO - Inference for 1 initial conditions
+2023-08-11 22:02:23,397 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 22:02:23,398 - root - INFO - Number of samples per year: 1460
+2023-08-11 22:02:23,398 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 22:02:23,398 - root - INFO - Delta t: 6 hours
+2023-08-11 22:02:23,398 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 22:02:23,399 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:04:07,677 - root - INFO - Loading validation data
+2023-08-11 22:04:07,895 - root - INFO - Loading validation precip data
+2023-08-11 22:04:08,230 - root - INFO - Initial condition 1 of 1
+2023-08-11 22:06:11,355 - root - INFO - Begin autoregressive inference
+2023-08-11 22:06:35,405 - root - INFO - Timestep 0 of 30. T2m ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 22:07:01,055 - root - INFO - Timestep 1 of 30. T2m ablated. TP RMS Error: 0.0025576173793524504, ACC: 0.1318168193101883
+2023-08-11 22:07:26,033 - root - INFO - Timestep 2 of 30. T2m ablated. TP RMS Error: 0.0030682876240462065, ACC: 0.0012952934484928846
+2023-08-11 22:07:52,280 - root - INFO - Timestep 3 of 30. T2m ablated. TP RMS Error: 0.004319134633988142, ACC: 0.00619578966870904
+2023-08-11 22:08:16,851 - root - INFO - Timestep 4 of 30. T2m ablated. TP RMS Error: 0.036582496017217636, ACC: 0.030488593503832817
+2023-08-11 22:08:41,414 - root - INFO - Timestep 5 of 30. T2m ablated. TP RMS Error: 5.273850440979004, ACC: 0.019305715337395668
+2023-08-11 22:09:05,909 - root - INFO - Timestep 6 of 30. T2m ablated. TP RMS Error: 199.64642333984375, ACC: 0.023725368082523346
+2023-08-11 22:09:29,826 - root - INFO - Timestep 7 of 30. T2m ablated. TP RMS Error: 1758.800537109375, ACC: 0.023611417040228844
+2023-08-11 22:09:54,011 - root - INFO - Timestep 8 of 30. T2m ablated. TP RMS Error: 5958.56103515625, ACC: 0.0042759720236063
+2023-08-11 22:10:19,668 - root - INFO - Timestep 9 of 30. T2m ablated. TP RMS Error: 12791.6640625, ACC: 0.006187182851135731
+2023-08-11 22:10:44,631 - root - INFO - Timestep 10 of 30. T2m ablated. TP RMS Error: 20595.990234375, ACC: 0.011095596477389336
+2023-08-11 22:11:08,197 - root - INFO - Timestep 11 of 30. T2m ablated. TP RMS Error: 26469.841796875, ACC: 0.009743315167725086
+2023-08-11 22:11:33,165 - root - INFO - Timestep 12 of 30. T2m ablated. TP RMS Error: 29194.548828125, ACC: 0.006160882767289877
+2023-08-11 22:11:57,759 - root - INFO - Timestep 13 of 30. T2m ablated. TP RMS Error: 29363.869140625, ACC: 0.003943773917853832
+2023-08-11 22:12:25,421 - root - INFO - Timestep 14 of 30. T2m ablated. TP RMS Error: 28348.21484375, ACC: 0.007751379162073135
+2023-08-11 22:12:51,393 - root - INFO - Timestep 15 of 30. T2m ablated. TP RMS Error: 26990.83984375, ACC: 0.00478782132267952
+2023-08-11 22:13:19,214 - root - INFO - Timestep 16 of 30. T2m ablated. TP RMS Error: 25715.64453125, ACC: 0.0010543433018028736
+2023-08-11 22:13:45,214 - root - INFO - Timestep 17 of 30. T2m ablated. TP RMS Error: 24674.16796875, ACC: 0.0017268044175580144
+2023-08-11 22:14:12,520 - root - INFO - Timestep 18 of 30. T2m ablated. TP RMS Error: 23893.142578125, ACC: 0.005400880705565214
+2023-08-11 22:14:37,793 - root - INFO - Timestep 19 of 30. T2m ablated. TP RMS Error: 23341.896484375, ACC: 0.001479697646573186
+2023-08-11 22:15:02,479 - root - INFO - Timestep 20 of 30. T2m ablated. TP RMS Error: 22968.939453125, ACC: -0.0029057736974209547
+2023-08-11 22:15:29,018 - root - INFO - Timestep 21 of 30. T2m ablated. TP RMS Error: 22726.44140625, ACC: -0.0006432222435250878
+2023-08-11 22:15:53,586 - root - INFO - Timestep 22 of 30. T2m ablated. TP RMS Error: 22577.9453125, ACC: 0.0068885525688529015
+2023-08-11 22:16:18,409 - root - INFO - Timestep 23 of 30. T2m ablated. TP RMS Error: 22493.740234375, ACC: 0.0033434927463531494
+2023-08-11 22:16:42,480 - root - INFO - Timestep 24 of 30. T2m ablated. TP RMS Error: 22448.791015625, ACC: -0.004412752576172352
+2023-08-11 22:17:07,179 - root - INFO - Timestep 25 of 30. T2m ablated. TP RMS Error: 22426.783203125, ACC: -0.0006848382763564587
+2023-08-11 22:17:33,609 - root - INFO - Timestep 26 of 30. T2m ablated. TP RMS Error: 22417.99609375, ACC: 0.005142330192029476
+2023-08-11 22:18:00,001 - root - INFO - Timestep 27 of 30. T2m ablated. TP RMS Error: 22416.451171875, ACC: 0.005079454276710749
+2023-08-11 22:18:26,682 - root - INFO - Timestep 28 of 30. T2m ablated. TP RMS Error: 22418.416015625, ACC: 0.0016583880642428994
+2023-08-11 22:18:51,936 - root - INFO - Timestep 29 of 30. T2m ablated. TP RMS Error: 22421.712890625, ACC: 0.0016549675492569804
+2023-08-11 22:18:52,208 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-T2m_30-timesteps.h5
+2023-08-11 22:18:59,032 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 22:18:59,032 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 22:18:59,032 - root - INFO - Configuration name: precip
+2023-08-11 22:18:59,032 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 22:18:59,032 - root - INFO - out_channels [0]
+2023-08-11 22:18:59,032 - root - INFO - nettype afno
+2023-08-11 22:18:59,033 - root - INFO - nettype_wind afno
+2023-08-11 22:18:59,033 - root - INFO - log_to_wandb True
+2023-08-11 22:18:59,033 - root - INFO - lr 0.00025
+2023-08-11 22:18:59,033 - root - INFO - batch_size 64
+2023-08-11 22:18:59,033 - root - INFO - max_epochs 25
+2023-08-11 22:18:59,033 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 22:18:59,033 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 22:18:59,033 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 22:18:59,033 - root - INFO - precip_eps 1e-05
+2023-08-11 22:18:59,033 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 22:18:59,033 - root - INFO - orography False
+2023-08-11 22:18:59,033 - root - INFO - orography_path None
+2023-08-11 22:18:59,033 - root - INFO - exp_dir ../results
+2023-08-11 22:18:59,033 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 22:18:59,033 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 22:18:59,033 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 22:18:59,033 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 22:18:59,033 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 22:18:59,034 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 22:18:59,034 - root - INFO - loss l2
+2023-08-11 22:18:59,034 - root - INFO - num_data_workers 4
+2023-08-11 22:18:59,034 - root - INFO - dt 1
+2023-08-11 22:18:59,034 - root - INFO - n_history 0
+2023-08-11 22:18:59,034 - root - INFO - prediction_type iterative
+2023-08-11 22:18:59,034 - root - INFO - prediction_length 30
+2023-08-11 22:18:59,034 - root - INFO - n_initial_conditions 5
+2023-08-11 22:18:59,034 - root - INFO - ics_type default
+2023-08-11 22:18:59,034 - root - INFO - save_raw_forecasts True
+2023-08-11 22:18:59,034 - root - INFO - save_channel False
+2023-08-11 22:18:59,034 - root - INFO - masked_acc False
+2023-08-11 22:18:59,034 - root - INFO - maskpath None
+2023-08-11 22:18:59,034 - root - INFO - perturb False
+2023-08-11 22:18:59,034 - root - INFO - add_grid False
+2023-08-11 22:18:59,034 - root - INFO - N_grid_channels 0
+2023-08-11 22:18:59,035 - root - INFO - gridtype sinusoidal
+2023-08-11 22:18:59,035 - root - INFO - roll False
+2023-08-11 22:18:59,035 - root - INFO - num_blocks 8
+2023-08-11 22:18:59,035 - root - INFO - patch_size 8
+2023-08-11 22:18:59,035 - root - INFO - width 56
+2023-08-11 22:18:59,035 - root - INFO - modes 32
+2023-08-11 22:18:59,035 - root - INFO - target default
+2023-08-11 22:18:59,035 - root - INFO - normalization zscore
+2023-08-11 22:18:59,035 - root - INFO - log_to_screen True
+2023-08-11 22:18:59,035 - root - INFO - save_checkpoint True
+2023-08-11 22:18:59,035 - root - INFO - enable_nhwc False
+2023-08-11 22:18:59,035 - root - INFO - optimizer_type FusedAdam
+2023-08-11 22:18:59,035 - root - INFO - crop_size_x None
+2023-08-11 22:18:59,035 - root - INFO - crop_size_y None
+2023-08-11 22:18:59,035 - root - INFO - two_step_training False
+2023-08-11 22:18:59,035 - root - INFO - plot_animations False
+2023-08-11 22:18:59,035 - root - INFO - add_noise False
+2023-08-11 22:18:59,035 - root - INFO - noise_std 0
+2023-08-11 22:18:59,035 - root - INFO - world_size 1
+2023-08-11 22:18:59,035 - root - INFO - global_batch_size 64
+2023-08-11 22:18:59,036 - root - INFO - ablate sp
+2023-08-11 22:18:59,036 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 22:18:59,036 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:18:59,036 - root - INFO - resuming False
+2023-08-11 22:18:59,036 - root - INFO - local_rank 0
+2023-08-11 22:18:59,036 - root - INFO - ---------------------------------------------------
+2023-08-11 22:18:59,036 - root - INFO - Inference for 1 initial conditions
+2023-08-11 22:18:59,369 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 22:18:59,370 - root - INFO - Number of samples per year: 1460
+2023-08-11 22:18:59,371 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 22:18:59,371 - root - INFO - Delta t: 6 hours
+2023-08-11 22:18:59,371 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 22:18:59,373 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:21:02,860 - root - INFO - Loading validation data
+2023-08-11 22:21:03,091 - root - INFO - Loading validation precip data
+2023-08-11 22:21:03,433 - root - INFO - Initial condition 1 of 1
+2023-08-11 22:23:15,501 - root - INFO - Begin autoregressive inference
+2023-08-11 22:23:41,452 - root - INFO - Timestep 0 of 30. sp ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 22:24:07,120 - root - INFO - Timestep 1 of 30. sp ablated. TP RMS Error: 0.0018237328622490168, ACC: 0.7032175064086914
+2023-08-11 22:24:31,986 - root - INFO - Timestep 2 of 30. sp ablated. TP RMS Error: 0.002054097130894661, ACC: 0.53703373670578
+2023-08-11 22:24:56,298 - root - INFO - Timestep 3 of 30. sp ablated. TP RMS Error: 0.0023160031996667385, ACC: 0.42224982380867004
+2023-08-11 22:25:21,949 - root - INFO - Timestep 4 of 30. sp ablated. TP RMS Error: 0.002249718876555562, ACC: 0.2888651192188263
+2023-08-11 22:25:47,431 - root - INFO - Timestep 5 of 30. sp ablated. TP RMS Error: 17.106685638427734, ACC: -0.00014489008754026145
+2023-08-11 22:26:12,765 - root - INFO - Timestep 6 of 30. sp ablated. TP RMS Error: 2414.55908203125, ACC: -1.2941419299750123e-05
+2023-08-11 22:26:38,575 - root - INFO - Timestep 7 of 30. sp ablated. TP RMS Error: 11395.7490234375, ACC: -3.3531225795968567e-08
+2023-08-11 22:27:02,855 - root - INFO - Timestep 8 of 30. sp ablated. TP RMS Error: 6156.05078125, ACC: -0.0002478217938914895
+2023-08-11 22:27:28,668 - root - INFO - Timestep 9 of 30. sp ablated. TP RMS Error: 2367.4169921875, ACC: -0.00019656444783322513
+2023-08-11 22:27:57,077 - root - INFO - Timestep 10 of 30. sp ablated. TP RMS Error: 2739.064697265625, ACC: -4.358652586233802e-05
+2023-08-11 22:28:24,605 - root - INFO - Timestep 11 of 30. sp ablated. TP RMS Error: 9030.990234375, ACC: -9.363694516650867e-06
+2023-08-11 22:28:51,382 - root - INFO - Timestep 12 of 30. sp ablated. TP RMS Error: 9438.9130859375, ACC: -4.010099655715749e-05
+2023-08-11 22:29:15,825 - root - INFO - Timestep 13 of 30. sp ablated. TP RMS Error: 11761.2646484375, ACC: -0.0001755125995259732
+2023-08-11 22:29:40,701 - root - INFO - Timestep 14 of 30. sp ablated. TP RMS Error: 10506.4150390625, ACC: -0.0002726840029936284
+2023-08-11 22:30:05,294 - root - INFO - Timestep 15 of 30. sp ablated. TP RMS Error: 11171.443359375, ACC: -0.00022893486311659217
+2023-08-11 22:30:32,276 - root - INFO - Timestep 16 of 30. sp ablated. TP RMS Error: 5299.35791015625, ACC: -0.00016117829363793135
+2023-08-11 22:30:57,452 - root - INFO - Timestep 17 of 30. sp ablated. TP RMS Error: 5907.93408203125, ACC: -7.823742635082453e-05
+2023-08-11 22:31:23,192 - root - INFO - Timestep 18 of 30. sp ablated. TP RMS Error: 13605.5537109375, ACC: -3.091498001595028e-05
+2023-08-11 22:31:48,309 - root - INFO - Timestep 19 of 30. sp ablated. TP RMS Error: 23121.0859375, ACC: -7.542358071077615e-05
+2023-08-11 22:32:12,325 - root - INFO - Timestep 20 of 30. sp ablated. TP RMS Error: 21910.583984375, ACC: -0.00011683439515763894
+2023-08-11 22:32:37,845 - root - INFO - Timestep 21 of 30. sp ablated. TP RMS Error: 14214.21484375, ACC: -0.00013931735884398222
+2023-08-11 22:33:04,442 - root - INFO - Timestep 22 of 30. sp ablated. TP RMS Error: 13400.287109375, ACC: -0.00013892729475628585
+2023-08-11 22:33:30,883 - root - INFO - Timestep 23 of 30. sp ablated. TP RMS Error: 37365.79296875, ACC: -0.0003724082780536264
+2023-08-11 22:33:55,921 - root - INFO - Timestep 24 of 30. sp ablated. TP RMS Error: 65381.953125, ACC: -0.0003917542635463178
+2023-08-11 22:34:20,602 - root - INFO - Timestep 25 of 30. sp ablated. TP RMS Error: 22385.35546875, ACC: -0.0003251690068282187
+2023-08-11 22:34:47,501 - root - INFO - Timestep 26 of 30. sp ablated. TP RMS Error: 18756.78125, ACC: -0.00017297305748797953
+2023-08-11 22:35:13,633 - root - INFO - Timestep 27 of 30. sp ablated. TP RMS Error: 16524.958984375, ACC: -0.0002176308335037902
+2023-08-11 22:35:39,605 - root - INFO - Timestep 28 of 30. sp ablated. TP RMS Error: 17463.17578125, ACC: -0.00024661378120072186
+2023-08-11 22:36:06,656 - root - INFO - Timestep 29 of 30. sp ablated. TP RMS Error: 16998.6875, ACC: -0.0005501799751073122
+2023-08-11 22:36:06,940 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-sp_30-timesteps.h5
+2023-08-11 22:36:13,683 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 22:36:13,684 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 22:36:13,684 - root - INFO - Configuration name: precip
+2023-08-11 22:36:13,684 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 22:36:13,684 - root - INFO - out_channels [0]
+2023-08-11 22:36:13,684 - root - INFO - nettype afno
+2023-08-11 22:36:13,684 - root - INFO - nettype_wind afno
+2023-08-11 22:36:13,684 - root - INFO - log_to_wandb True
+2023-08-11 22:36:13,684 - root - INFO - lr 0.00025
+2023-08-11 22:36:13,684 - root - INFO - batch_size 64
+2023-08-11 22:36:13,684 - root - INFO - max_epochs 25
+2023-08-11 22:36:13,684 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 22:36:13,684 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 22:36:13,684 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 22:36:13,684 - root - INFO - precip_eps 1e-05
+2023-08-11 22:36:13,684 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 22:36:13,684 - root - INFO - orography False
+2023-08-11 22:36:13,685 - root - INFO - orography_path None
+2023-08-11 22:36:13,685 - root - INFO - exp_dir ../results
+2023-08-11 22:36:13,685 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 22:36:13,685 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 22:36:13,685 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 22:36:13,685 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 22:36:13,685 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 22:36:13,685 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 22:36:13,685 - root - INFO - loss l2
+2023-08-11 22:36:13,685 - root - INFO - num_data_workers 4
+2023-08-11 22:36:13,685 - root - INFO - dt 1
+2023-08-11 22:36:13,685 - root - INFO - n_history 0
+2023-08-11 22:36:13,685 - root - INFO - prediction_type iterative
+2023-08-11 22:36:13,685 - root - INFO - prediction_length 30
+2023-08-11 22:36:13,685 - root - INFO - n_initial_conditions 5
+2023-08-11 22:36:13,685 - root - INFO - ics_type default
+2023-08-11 22:36:13,685 - root - INFO - save_raw_forecasts True
+2023-08-11 22:36:13,685 - root - INFO - save_channel False
+2023-08-11 22:36:13,685 - root - INFO - masked_acc False
+2023-08-11 22:36:13,685 - root - INFO - maskpath None
+2023-08-11 22:36:13,686 - root - INFO - perturb False
+2023-08-11 22:36:13,686 - root - INFO - add_grid False
+2023-08-11 22:36:13,686 - root - INFO - N_grid_channels 0
+2023-08-11 22:36:13,686 - root - INFO - gridtype sinusoidal
+2023-08-11 22:36:13,686 - root - INFO - roll False
+2023-08-11 22:36:13,686 - root - INFO - num_blocks 8
+2023-08-11 22:36:13,686 - root - INFO - patch_size 8
+2023-08-11 22:36:13,686 - root - INFO - width 56
+2023-08-11 22:36:13,686 - root - INFO - modes 32
+2023-08-11 22:36:13,686 - root - INFO - target default
+2023-08-11 22:36:13,686 - root - INFO - normalization zscore
+2023-08-11 22:36:13,686 - root - INFO - log_to_screen True
+2023-08-11 22:36:13,686 - root - INFO - save_checkpoint True
+2023-08-11 22:36:13,690 - root - INFO - enable_nhwc False
+2023-08-11 22:36:13,690 - root - INFO - optimizer_type FusedAdam
+2023-08-11 22:36:13,690 - root - INFO - crop_size_x None
+2023-08-11 22:36:13,690 - root - INFO - crop_size_y None
+2023-08-11 22:36:13,690 - root - INFO - two_step_training False
+2023-08-11 22:36:13,690 - root - INFO - plot_animations False
+2023-08-11 22:36:13,691 - root - INFO - add_noise False
+2023-08-11 22:36:13,691 - root - INFO - noise_std 0
+2023-08-11 22:36:13,691 - root - INFO - world_size 1
+2023-08-11 22:36:13,691 - root - INFO - global_batch_size 64
+2023-08-11 22:36:13,691 - root - INFO - ablate mslp
+2023-08-11 22:36:13,691 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 22:36:13,691 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:36:13,691 - root - INFO - resuming False
+2023-08-11 22:36:13,691 - root - INFO - local_rank 0
+2023-08-11 22:36:13,691 - root - INFO - ---------------------------------------------------
+2023-08-11 22:36:13,691 - root - INFO - Inference for 1 initial conditions
+2023-08-11 22:36:13,974 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 22:36:13,975 - root - INFO - Number of samples per year: 1460
+2023-08-11 22:36:13,975 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 22:36:13,975 - root - INFO - Delta t: 6 hours
+2023-08-11 22:36:13,975 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 22:36:13,976 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:38:16,626 - root - INFO - Loading validation data
+2023-08-11 22:38:16,826 - root - INFO - Loading validation precip data
+2023-08-11 22:38:17,274 - root - INFO - Initial condition 1 of 1
+2023-08-11 22:40:40,090 - root - INFO - Begin autoregressive inference
+2023-08-11 22:41:04,565 - root - INFO - Timestep 0 of 30. mslp ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 22:41:29,748 - root - INFO - Timestep 1 of 30. mslp ablated. TP RMS Error: 0.0020874706096947193, ACC: 0.5722335577011108
+2023-08-11 22:41:57,718 - root - INFO - Timestep 2 of 30. mslp ablated. TP RMS Error: 0.00219910335727036, ACC: 0.4327196478843689
+2023-08-11 22:42:26,560 - root - INFO - Timestep 3 of 30. mslp ablated. TP RMS Error: 0.002586526330560446, ACC: 0.24115699529647827
+2023-08-11 22:42:54,536 - root - INFO - Timestep 4 of 30. mslp ablated. TP RMS Error: 1.3475940227508545, ACC: -0.0005775801255367696
+2023-08-11 22:43:22,571 - root - INFO - Timestep 5 of 30. mslp ablated. TP RMS Error: 4278.2060546875, ACC: -0.0011630239896476269
+2023-08-11 22:43:49,788 - root - INFO - Timestep 6 of 30. mslp ablated. TP RMS Error: 172841.421875, ACC: -0.002472584368661046
+2023-08-11 22:44:15,903 - root - INFO - Timestep 7 of 30. mslp ablated. TP RMS Error: 1984858.75, ACC: -0.0016677704406902194
+2023-08-11 22:44:42,646 - root - INFO - Timestep 8 of 30. mslp ablated. TP RMS Error: 2453525.25, ACC: -0.0015785573050379753
+2023-08-11 22:45:09,370 - root - INFO - Timestep 9 of 30. mslp ablated. TP RMS Error: 1641501.75, ACC: -0.0013214998180046678
+2023-08-11 22:45:36,443 - root - INFO - Timestep 10 of 30. mslp ablated. TP RMS Error: 2197161.25, ACC: -0.0008168307249434292
+2023-08-11 22:46:04,681 - root - INFO - Timestep 11 of 30. mslp ablated. TP RMS Error: 2313597.75, ACC: -0.0009428693447262049
+2023-08-11 22:46:31,335 - root - INFO - Timestep 12 of 30. mslp ablated. TP RMS Error: 2374202.5, ACC: -0.0014207843923941255
+2023-08-11 22:46:57,581 - root - INFO - Timestep 13 of 30. mslp ablated. TP RMS Error: 2466072.75, ACC: -0.0017000535735860467
+2023-08-11 22:47:25,217 - root - INFO - Timestep 14 of 30. mslp ablated. TP RMS Error: 2218391.25, ACC: -0.0015469740610569715
+2023-08-11 22:47:53,933 - root - INFO - Timestep 15 of 30. mslp ablated. TP RMS Error: 4294093.0, ACC: -0.0009638981427997351
+2023-08-11 22:48:22,093 - root - INFO - Timestep 16 of 30. mslp ablated. TP RMS Error: 3283347.5, ACC: -0.0018184944055974483
+2023-08-11 22:48:49,376 - root - INFO - Timestep 17 of 30. mslp ablated. TP RMS Error: 2655129.0, ACC: -0.0015438456321135163
+2023-08-11 22:49:17,878 - root - INFO - Timestep 18 of 30. mslp ablated. TP RMS Error: 3651254.75, ACC: -0.0007377910660579801
+2023-08-11 22:49:45,470 - root - INFO - Timestep 19 of 30. mslp ablated. TP RMS Error: 6962823.0, ACC: 0.0030341758392751217
+2023-08-11 22:50:15,090 - root - INFO - Timestep 20 of 30. mslp ablated. TP RMS Error: 8003046.5, ACC: 0.003709758399054408
+2023-08-11 22:50:42,259 - root - INFO - Timestep 21 of 30. mslp ablated. TP RMS Error: 5889740.5, ACC: 0.0030226910021156073
+2023-08-11 22:51:09,884 - root - INFO - Timestep 22 of 30. mslp ablated. TP RMS Error: 2984270.25, ACC: 0.0047118947841227055
+2023-08-11 22:51:37,527 - root - INFO - Timestep 23 of 30. mslp ablated. TP RMS Error: 1270586.0, ACC: 0.0018956727581098676
+2023-08-11 22:52:05,769 - root - INFO - Timestep 24 of 30. mslp ablated. TP RMS Error: 576656.5, ACC: 0.0025567058473825455
+2023-08-11 22:52:32,540 - root - INFO - Timestep 25 of 30. mslp ablated. TP RMS Error: 268126.09375, ACC: 0.0027543248143047094
+2023-08-11 22:52:59,024 - root - INFO - Timestep 26 of 30. mslp ablated. TP RMS Error: 191458.515625, ACC: 0.0011712131090462208
+2023-08-11 22:53:27,681 - root - INFO - Timestep 27 of 30. mslp ablated. TP RMS Error: 87840.828125, ACC: 0.0009934662375599146
+2023-08-11 22:53:55,992 - root - INFO - Timestep 28 of 30. mslp ablated. TP RMS Error: 29092.662109375, ACC: 0.0009208654519170523
+2023-08-11 22:54:23,057 - root - INFO - Timestep 29 of 30. mslp ablated. TP RMS Error: 10427.94921875, ACC: 0.0020691005047410727
+2023-08-11 22:54:23,342 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-mslp_30-timesteps.h5
+2023-08-11 22:54:30,239 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 22:54:30,239 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 22:54:30,239 - root - INFO - Configuration name: precip
+2023-08-11 22:54:30,239 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 22:54:30,239 - root - INFO - out_channels [0]
+2023-08-11 22:54:30,239 - root - INFO - nettype afno
+2023-08-11 22:54:30,239 - root - INFO - nettype_wind afno
+2023-08-11 22:54:30,239 - root - INFO - log_to_wandb True
+2023-08-11 22:54:30,239 - root - INFO - lr 0.00025
+2023-08-11 22:54:30,239 - root - INFO - batch_size 64
+2023-08-11 22:54:30,239 - root - INFO - max_epochs 25
+2023-08-11 22:54:30,239 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 22:54:30,240 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 22:54:30,240 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 22:54:30,240 - root - INFO - precip_eps 1e-05
+2023-08-11 22:54:30,240 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 22:54:30,240 - root - INFO - orography False
+2023-08-11 22:54:30,240 - root - INFO - orography_path None
+2023-08-11 22:54:30,240 - root - INFO - exp_dir ../results
+2023-08-11 22:54:30,240 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 22:54:30,240 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 22:54:30,240 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 22:54:30,240 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 22:54:30,240 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 22:54:30,240 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 22:54:30,240 - root - INFO - loss l2
+2023-08-11 22:54:30,240 - root - INFO - num_data_workers 4
+2023-08-11 22:54:30,240 - root - INFO - dt 1
+2023-08-11 22:54:30,240 - root - INFO - n_history 0
+2023-08-11 22:54:30,240 - root - INFO - prediction_type iterative
+2023-08-11 22:54:30,240 - root - INFO - prediction_length 30
+2023-08-11 22:54:30,240 - root - INFO - n_initial_conditions 5
+2023-08-11 22:54:30,240 - root - INFO - ics_type default
+2023-08-11 22:54:30,240 - root - INFO - save_raw_forecasts True
+2023-08-11 22:54:30,240 - root - INFO - save_channel False
+2023-08-11 22:54:30,241 - root - INFO - masked_acc False
+2023-08-11 22:54:30,241 - root - INFO - maskpath None
+2023-08-11 22:54:30,241 - root - INFO - perturb False
+2023-08-11 22:54:30,241 - root - INFO - add_grid False
+2023-08-11 22:54:30,241 - root - INFO - N_grid_channels 0
+2023-08-11 22:54:30,241 - root - INFO - gridtype sinusoidal
+2023-08-11 22:54:30,241 - root - INFO - roll False
+2023-08-11 22:54:30,241 - root - INFO - num_blocks 8
+2023-08-11 22:54:30,241 - root - INFO - patch_size 8
+2023-08-11 22:54:30,241 - root - INFO - width 56
+2023-08-11 22:54:30,241 - root - INFO - modes 32
+2023-08-11 22:54:30,241 - root - INFO - target default
+2023-08-11 22:54:30,241 - root - INFO - normalization zscore
+2023-08-11 22:54:30,241 - root - INFO - log_to_screen True
+2023-08-11 22:54:30,241 - root - INFO - save_checkpoint True
+2023-08-11 22:54:30,241 - root - INFO - enable_nhwc False
+2023-08-11 22:54:30,241 - root - INFO - optimizer_type FusedAdam
+2023-08-11 22:54:30,241 - root - INFO - crop_size_x None
+2023-08-11 22:54:30,241 - root - INFO - crop_size_y None
+2023-08-11 22:54:30,241 - root - INFO - two_step_training False
+2023-08-11 22:54:30,241 - root - INFO - plot_animations False
+2023-08-11 22:54:30,241 - root - INFO - add_noise False
+2023-08-11 22:54:30,242 - root - INFO - noise_std 0
+2023-08-11 22:54:30,242 - root - INFO - world_size 1
+2023-08-11 22:54:30,242 - root - INFO - global_batch_size 64
+2023-08-11 22:54:30,242 - root - INFO - ablate U1000
+2023-08-11 22:54:30,242 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 22:54:30,242 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:54:30,242 - root - INFO - resuming False
+2023-08-11 22:54:30,242 - root - INFO - local_rank 0
+2023-08-11 22:54:30,242 - root - INFO - ---------------------------------------------------
+2023-08-11 22:54:30,242 - root - INFO - Inference for 1 initial conditions
+2023-08-11 22:54:30,559 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 22:54:30,560 - root - INFO - Number of samples per year: 1460
+2023-08-11 22:54:30,560 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 22:54:30,560 - root - INFO - Delta t: 6 hours
+2023-08-11 22:54:30,560 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 22:54:30,561 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 22:56:09,277 - root - INFO - Loading validation data
+2023-08-11 22:56:09,462 - root - INFO - Loading validation precip data
+2023-08-11 22:56:09,699 - root - INFO - Initial condition 1 of 1
+2023-08-11 22:58:10,862 - root - INFO - Begin autoregressive inference
+2023-08-11 22:58:36,960 - root - INFO - Timestep 0 of 30. U1000 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 22:59:02,985 - root - INFO - Timestep 1 of 30. U1000 ablated. TP RMS Error: 0.0031517064198851585, ACC: 0.03243916109204292
+2023-08-11 22:59:29,095 - root - INFO - Timestep 2 of 30. U1000 ablated. TP RMS Error: 0.004384483210742474, ACC: 0.028045134618878365
+2023-08-11 22:59:55,526 - root - INFO - Timestep 3 of 30. U1000 ablated. TP RMS Error: 0.006148644257336855, ACC: 0.02683698944747448
+2023-08-11 23:00:24,648 - root - INFO - Timestep 4 of 30. U1000 ablated. TP RMS Error: 19.1859130859375, ACC: -0.0006119863246567547
+2023-08-11 23:00:51,869 - root - INFO - Timestep 5 of 30. U1000 ablated. TP RMS Error: 4748.9208984375, ACC: -0.0010028149699792266
+2023-08-11 23:01:20,732 - root - INFO - Timestep 6 of 30. U1000 ablated. TP RMS Error: 335553.09375, ACC: 0.0019274704391136765
+2023-08-11 23:01:47,940 - root - INFO - Timestep 7 of 30. U1000 ablated. TP RMS Error: 5619796.5, ACC: 0.002639469224959612
+2023-08-11 23:02:12,868 - root - INFO - Timestep 8 of 30. U1000 ablated. TP RMS Error: 23712660.0, ACC: 0.005891887471079826
+2023-08-11 23:02:37,716 - root - INFO - Timestep 9 of 30. U1000 ablated. TP RMS Error: 39955744.0, ACC: 0.005423758644610643
+2023-08-11 23:03:05,486 - root - INFO - Timestep 10 of 30. U1000 ablated. TP RMS Error: 21001672.0, ACC: 0.005495420657098293
+2023-08-11 23:03:31,397 - root - INFO - Timestep 11 of 30. U1000 ablated. TP RMS Error: 3825492.25, ACC: 0.00231626583263278
+2023-08-11 23:03:57,114 - root - INFO - Timestep 12 of 30. U1000 ablated. TP RMS Error: 786091.6875, ACC: 0.0014182209270074964
+2023-08-11 23:04:23,840 - root - INFO - Timestep 13 of 30. U1000 ablated. TP RMS Error: 357758.9375, ACC: 0.00031057390151545405
+2023-08-11 23:04:51,104 - root - INFO - Timestep 14 of 30. U1000 ablated. TP RMS Error: 120017.4375, ACC: -0.00040782816358841956
+2023-08-11 23:05:17,924 - root - INFO - Timestep 15 of 30. U1000 ablated. TP RMS Error: 56517.37109375, ACC: -0.0001877492031781003
+2023-08-11 23:05:43,513 - root - INFO - Timestep 16 of 30. U1000 ablated. TP RMS Error: 64155.25390625, ACC: -0.0002342514635529369
+2023-08-11 23:06:08,341 - root - INFO - Timestep 17 of 30. U1000 ablated. TP RMS Error: 88592.296875, ACC: -5.7325665693497285e-05
+2023-08-11 23:06:33,604 - root - INFO - Timestep 18 of 30. U1000 ablated. TP RMS Error: 46141.3203125, ACC: 6.90407250658609e-05
+2023-08-11 23:06:58,649 - root - INFO - Timestep 19 of 30. U1000 ablated. TP RMS Error: 7226.25634765625, ACC: -2.368500099692028e-05
+2023-08-11 23:07:25,000 - root - INFO - Timestep 20 of 30. U1000 ablated. TP RMS Error: 1671.2127685546875, ACC: -8.235868881456554e-05
+2023-08-11 23:07:49,119 - root - INFO - Timestep 21 of 30. U1000 ablated. TP RMS Error: 158.54510498046875, ACC: -0.00010819992166943848
+2023-08-11 23:08:15,375 - root - INFO - Timestep 22 of 30. U1000 ablated. TP RMS Error: 7.6003947257995605, ACC: -9.699996735434979e-05
+2023-08-11 23:08:42,295 - root - INFO - Timestep 23 of 30. U1000 ablated. TP RMS Error: 1.2702209949493408, ACC: -1.419328782503726e-05
+2023-08-11 23:09:08,403 - root - INFO - Timestep 24 of 30. U1000 ablated. TP RMS Error: 2.0812418460845947, ACC: 1.5018033082014881e-05
+2023-08-11 23:09:33,896 - root - INFO - Timestep 25 of 30. U1000 ablated. TP RMS Error: 0.4948066771030426, ACC: 5.074736327514984e-05
+2023-08-11 23:10:00,581 - root - INFO - Timestep 26 of 30. U1000 ablated. TP RMS Error: 0.04647671431303024, ACC: -8.87590431375429e-05
+2023-08-11 23:10:29,393 - root - INFO - Timestep 27 of 30. U1000 ablated. TP RMS Error: 0.005550475791096687, ACC: -0.002057247096672654
+2023-08-11 23:10:55,822 - root - INFO - Timestep 28 of 30. U1000 ablated. TP RMS Error: 0.003588529769331217, ACC: 0.00296351732686162
+2023-08-11 23:11:20,479 - root - INFO - Timestep 29 of 30. U1000 ablated. TP RMS Error: 0.003448718460276723, ACC: 0.0038081880193203688
+2023-08-11 23:11:20,783 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-U1000_30-timesteps.h5
+2023-08-11 23:11:27,912 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 23:11:27,914 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 23:11:27,914 - root - INFO - Configuration name: precip
+2023-08-11 23:11:27,915 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 23:11:27,915 - root - INFO - out_channels [0]
+2023-08-11 23:11:27,915 - root - INFO - nettype afno
+2023-08-11 23:11:27,915 - root - INFO - nettype_wind afno
+2023-08-11 23:11:27,915 - root - INFO - log_to_wandb True
+2023-08-11 23:11:27,915 - root - INFO - lr 0.00025
+2023-08-11 23:11:27,915 - root - INFO - batch_size 64
+2023-08-11 23:11:27,915 - root - INFO - max_epochs 25
+2023-08-11 23:11:27,915 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 23:11:27,915 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 23:11:27,915 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 23:11:27,915 - root - INFO - precip_eps 1e-05
+2023-08-11 23:11:27,915 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 23:11:27,915 - root - INFO - orography False
+2023-08-11 23:11:27,915 - root - INFO - orography_path None
+2023-08-11 23:11:27,915 - root - INFO - exp_dir ../results
+2023-08-11 23:11:27,915 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 23:11:27,915 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 23:11:27,915 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 23:11:27,918 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 23:11:27,918 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 23:11:27,918 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 23:11:27,918 - root - INFO - loss l2
+2023-08-11 23:11:27,918 - root - INFO - num_data_workers 4
+2023-08-11 23:11:27,918 - root - INFO - dt 1
+2023-08-11 23:11:27,918 - root - INFO - n_history 0
+2023-08-11 23:11:27,918 - root - INFO - prediction_type iterative
+2023-08-11 23:11:27,918 - root - INFO - prediction_length 30
+2023-08-11 23:11:27,918 - root - INFO - n_initial_conditions 5
+2023-08-11 23:11:27,918 - root - INFO - ics_type default
+2023-08-11 23:11:27,918 - root - INFO - save_raw_forecasts True
+2023-08-11 23:11:27,918 - root - INFO - save_channel False
+2023-08-11 23:11:27,918 - root - INFO - masked_acc False
+2023-08-11 23:11:27,918 - root - INFO - maskpath None
+2023-08-11 23:11:27,918 - root - INFO - perturb False
+2023-08-11 23:11:27,918 - root - INFO - add_grid False
+2023-08-11 23:11:27,919 - root - INFO - N_grid_channels 0
+2023-08-11 23:11:27,919 - root - INFO - gridtype sinusoidal
+2023-08-11 23:11:27,919 - root - INFO - roll False
+2023-08-11 23:11:27,919 - root - INFO - num_blocks 8
+2023-08-11 23:11:27,919 - root - INFO - patch_size 8
+2023-08-11 23:11:27,919 - root - INFO - width 56
+2023-08-11 23:11:27,919 - root - INFO - modes 32
+2023-08-11 23:11:27,919 - root - INFO - target default
+2023-08-11 23:11:27,919 - root - INFO - normalization zscore
+2023-08-11 23:11:27,919 - root - INFO - log_to_screen True
+2023-08-11 23:11:27,919 - root - INFO - save_checkpoint True
+2023-08-11 23:11:27,919 - root - INFO - enable_nhwc False
+2023-08-11 23:11:27,919 - root - INFO - optimizer_type FusedAdam
+2023-08-11 23:11:27,919 - root - INFO - crop_size_x None
+2023-08-11 23:11:27,919 - root - INFO - crop_size_y None
+2023-08-11 23:11:27,919 - root - INFO - two_step_training False
+2023-08-11 23:11:27,919 - root - INFO - plot_animations False
+2023-08-11 23:11:27,919 - root - INFO - add_noise False
+2023-08-11 23:11:27,919 - root - INFO - noise_std 0
+2023-08-11 23:11:27,919 - root - INFO - world_size 1
+2023-08-11 23:11:27,919 - root - INFO - global_batch_size 64
+2023-08-11 23:11:27,919 - root - INFO - ablate V1000
+2023-08-11 23:11:27,920 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 23:11:27,920 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 23:11:27,920 - root - INFO - resuming False
+2023-08-11 23:11:27,920 - root - INFO - local_rank 0
+2023-08-11 23:11:27,920 - root - INFO - ---------------------------------------------------
+2023-08-11 23:11:27,920 - root - INFO - Inference for 1 initial conditions
+2023-08-11 23:11:28,168 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 23:11:28,169 - root - INFO - Number of samples per year: 1460
+2023-08-11 23:11:28,169 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 23:11:28,169 - root - INFO - Delta t: 6 hours
+2023-08-11 23:11:28,169 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 23:11:28,170 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 23:13:13,291 - root - INFO - Loading validation data
+2023-08-11 23:13:13,450 - root - INFO - Loading validation precip data
+2023-08-11 23:13:13,719 - root - INFO - Initial condition 1 of 1
+2023-08-11 23:15:13,736 - root - INFO - Begin autoregressive inference
+2023-08-11 23:15:39,631 - root - INFO - Timestep 0 of 30. V1000 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 23:16:05,958 - root - INFO - Timestep 1 of 30. V1000 ablated. TP RMS Error: 0.0020680634770542383, ACC: 0.5891221165657043
+2023-08-11 23:16:31,239 - root - INFO - Timestep 2 of 30. V1000 ablated. TP RMS Error: 0.0021711038425564766, ACC: 0.45175379514694214
+2023-08-11 23:16:56,538 - root - INFO - Timestep 3 of 30. V1000 ablated. TP RMS Error: 0.002404525177553296, ACC: 0.35446271300315857
+2023-08-11 23:17:21,282 - root - INFO - Timestep 4 of 30. V1000 ablated. TP RMS Error: 0.0021806706208735704, ACC: 0.35030993819236755
+2023-08-11 23:17:48,337 - root - INFO - Timestep 5 of 30. V1000 ablated. TP RMS Error: 0.0023601080756634474, ACC: 0.29093673825263977
+2023-08-11 23:18:14,210 - root - INFO - Timestep 6 of 30. V1000 ablated. TP RMS Error: 0.002871170872822404, ACC: 0.16713875532150269
+2023-08-11 23:18:38,577 - root - INFO - Timestep 7 of 30. V1000 ablated. TP RMS Error: 0.07614659518003464, ACC: 0.0037780343554913998
+2023-08-11 23:19:03,667 - root - INFO - Timestep 8 of 30. V1000 ablated. TP RMS Error: 0.32749176025390625, ACC: 0.0009371348423883319
+2023-08-11 23:19:29,374 - root - INFO - Timestep 9 of 30. V1000 ablated. TP RMS Error: 0.5466300249099731, ACC: 0.0011108549078926444
+2023-08-11 23:19:53,297 - root - INFO - Timestep 10 of 30. V1000 ablated. TP RMS Error: 0.4718592166900635, ACC: 0.0010207300074398518
+2023-08-11 23:20:19,822 - root - INFO - Timestep 11 of 30. V1000 ablated. TP RMS Error: 0.8300459980964661, ACC: 0.0008391283336095512
+2023-08-11 23:20:45,885 - root - INFO - Timestep 12 of 30. V1000 ablated. TP RMS Error: 5.508326530456543, ACC: 0.00041551110916770995
+2023-08-11 23:21:11,540 - root - INFO - Timestep 13 of 30. V1000 ablated. TP RMS Error: 54.084285736083984, ACC: 0.001164402230642736
+2023-08-11 23:21:37,044 - root - INFO - Timestep 14 of 30. V1000 ablated. TP RMS Error: 147.36627197265625, ACC: 0.0006097968434914947
+2023-08-11 23:22:01,729 - root - INFO - Timestep 15 of 30. V1000 ablated. TP RMS Error: 78.56171417236328, ACC: -1.793543378880713e-05
+2023-08-11 23:22:27,989 - root - INFO - Timestep 16 of 30. V1000 ablated. TP RMS Error: 34.16672897338867, ACC: -0.00013303056766744703
+2023-08-11 23:22:55,323 - root - INFO - Timestep 17 of 30. V1000 ablated. TP RMS Error: 65.59921264648438, ACC: -4.2529671191005036e-05
+2023-08-11 23:23:20,819 - root - INFO - Timestep 18 of 30. V1000 ablated. TP RMS Error: 126.00045776367188, ACC: 0.002203107811510563
+2023-08-11 23:23:46,645 - root - INFO - Timestep 19 of 30. V1000 ablated. TP RMS Error: 325.087646484375, ACC: -0.00019058299949392676
+2023-08-11 23:24:10,579 - root - INFO - Timestep 20 of 30. V1000 ablated. TP RMS Error: 291.0675354003906, ACC: -0.0003387579054106027
+2023-08-11 23:24:36,085 - root - INFO - Timestep 21 of 30. V1000 ablated. TP RMS Error: 170.27081298828125, ACC: 0.0010271264472976327
+2023-08-11 23:25:01,600 - root - INFO - Timestep 22 of 30. V1000 ablated. TP RMS Error: 198.5062255859375, ACC: -0.0004217975656501949
+2023-08-11 23:25:26,541 - root - INFO - Timestep 23 of 30. V1000 ablated. TP RMS Error: 301.3190002441406, ACC: -0.00042051405762322247
+2023-08-11 23:25:52,187 - root - INFO - Timestep 24 of 30. V1000 ablated. TP RMS Error: 258.9075622558594, ACC: 0.0011727564269676805
+2023-08-11 23:26:17,037 - root - INFO - Timestep 25 of 30. V1000 ablated. TP RMS Error: 239.50563049316406, ACC: -0.0005545460735447705
+2023-08-11 23:26:41,678 - root - INFO - Timestep 26 of 30. V1000 ablated. TP RMS Error: 198.15464782714844, ACC: 0.0016114988829940557
+2023-08-11 23:27:08,458 - root - INFO - Timestep 27 of 30. V1000 ablated. TP RMS Error: 257.6954040527344, ACC: 0.002236679894849658
+2023-08-11 23:27:31,944 - root - INFO - Timestep 28 of 30. V1000 ablated. TP RMS Error: 626.0991821289062, ACC: 0.0005915330839343369
+2023-08-11 23:27:56,795 - root - INFO - Timestep 29 of 30. V1000 ablated. TP RMS Error: 3408.670654296875, ACC: -0.0004158291849307716
+2023-08-11 23:27:57,108 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-V1000_30-timesteps.h5
+2023-08-11 23:28:04,217 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 23:28:04,217 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 23:28:04,217 - root - INFO - Configuration name: precip
+2023-08-11 23:28:04,217 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 23:28:04,218 - root - INFO - out_channels [0]
+2023-08-11 23:28:04,220 - root - INFO - nettype afno
+2023-08-11 23:28:04,220 - root - INFO - nettype_wind afno
+2023-08-11 23:28:04,220 - root - INFO - log_to_wandb True
+2023-08-11 23:28:04,221 - root - INFO - lr 0.00025
+2023-08-11 23:28:04,221 - root - INFO - batch_size 64
+2023-08-11 23:28:04,221 - root - INFO - max_epochs 25
+2023-08-11 23:28:04,222 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 23:28:04,222 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 23:28:04,222 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 23:28:04,223 - root - INFO - precip_eps 1e-05
+2023-08-11 23:28:04,223 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 23:28:04,223 - root - INFO - orography False
+2023-08-11 23:28:04,223 - root - INFO - orography_path None
+2023-08-11 23:28:04,224 - root - INFO - exp_dir ../results
+2023-08-11 23:28:04,224 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 23:28:04,224 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 23:28:04,226 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 23:28:04,226 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 23:28:04,226 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 23:28:04,226 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 23:28:04,226 - root - INFO - loss l2
+2023-08-11 23:28:04,226 - root - INFO - num_data_workers 4
+2023-08-11 23:28:04,227 - root - INFO - dt 1
+2023-08-11 23:28:04,227 - root - INFO - n_history 0
+2023-08-11 23:28:04,227 - root - INFO - prediction_type iterative
+2023-08-11 23:28:04,227 - root - INFO - prediction_length 30
+2023-08-11 23:28:04,227 - root - INFO - n_initial_conditions 5
+2023-08-11 23:28:04,227 - root - INFO - ics_type default
+2023-08-11 23:28:04,227 - root - INFO - save_raw_forecasts True
+2023-08-11 23:28:04,227 - root - INFO - save_channel False
+2023-08-11 23:28:04,227 - root - INFO - masked_acc False
+2023-08-11 23:28:04,227 - root - INFO - maskpath None
+2023-08-11 23:28:04,227 - root - INFO - perturb False
+2023-08-11 23:28:04,227 - root - INFO - add_grid False
+2023-08-11 23:28:04,227 - root - INFO - N_grid_channels 0
+2023-08-11 23:28:04,227 - root - INFO - gridtype sinusoidal
+2023-08-11 23:28:04,227 - root - INFO - roll False
+2023-08-11 23:28:04,227 - root - INFO - num_blocks 8
+2023-08-11 23:28:04,227 - root - INFO - patch_size 8
+2023-08-11 23:28:04,227 - root - INFO - width 56
+2023-08-11 23:28:04,227 - root - INFO - modes 32
+2023-08-11 23:28:04,227 - root - INFO - target default
+2023-08-11 23:28:04,227 - root - INFO - normalization zscore
+2023-08-11 23:28:04,227 - root - INFO - log_to_screen True
+2023-08-11 23:28:04,227 - root - INFO - save_checkpoint True
+2023-08-11 23:28:04,227 - root - INFO - enable_nhwc False
+2023-08-11 23:28:04,228 - root - INFO - optimizer_type FusedAdam
+2023-08-11 23:28:04,228 - root - INFO - crop_size_x None
+2023-08-11 23:28:04,228 - root - INFO - crop_size_y None
+2023-08-11 23:28:04,228 - root - INFO - two_step_training False
+2023-08-11 23:28:04,228 - root - INFO - plot_animations False
+2023-08-11 23:28:04,228 - root - INFO - add_noise False
+2023-08-11 23:28:04,228 - root - INFO - noise_std 0
+2023-08-11 23:28:04,228 - root - INFO - world_size 1
+2023-08-11 23:28:04,228 - root - INFO - global_batch_size 64
+2023-08-11 23:28:04,228 - root - INFO - ablate Z1000
+2023-08-11 23:28:04,228 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 23:28:04,228 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 23:28:04,228 - root - INFO - resuming False
+2023-08-11 23:28:04,228 - root - INFO - local_rank 0
+2023-08-11 23:28:04,228 - root - INFO - ---------------------------------------------------
+2023-08-11 23:28:04,228 - root - INFO - Inference for 1 initial conditions
+2023-08-11 23:28:04,458 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 23:28:04,459 - root - INFO - Number of samples per year: 1460
+2023-08-11 23:28:04,459 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 23:28:04,459 - root - INFO - Delta t: 6 hours
+2023-08-11 23:28:04,459 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 23:28:04,459 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 23:29:44,267 - root - INFO - Loading validation data
+2023-08-11 23:29:44,392 - root - INFO - Loading validation precip data
+2023-08-11 23:29:44,789 - root - INFO - Initial condition 1 of 1
+2023-08-11 23:31:47,414 - root - INFO - Begin autoregressive inference
+2023-08-11 23:32:12,894 - root - INFO - Timestep 0 of 30. Z1000 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 23:32:40,162 - root - INFO - Timestep 1 of 30. Z1000 ablated. TP RMS Error: 0.0020002995152026415, ACC: 0.6285235285758972
+2023-08-11 23:33:07,799 - root - INFO - Timestep 2 of 30. Z1000 ablated. TP RMS Error: 0.002053379314020276, ACC: 0.5381987690925598
+2023-08-11 23:33:32,613 - root - INFO - Timestep 3 of 30. Z1000 ablated. TP RMS Error: 0.002252272330224514, ACC: 0.4720613956451416
+2023-08-11 23:33:58,852 - root - INFO - Timestep 4 of 30. Z1000 ablated. TP RMS Error: 0.0020110963378101587, ACC: 0.48617950081825256
+2023-08-11 23:34:26,616 - root - INFO - Timestep 5 of 30. Z1000 ablated. TP RMS Error: 0.0021360828541219234, ACC: 0.45829829573631287
+2023-08-11 23:34:52,396 - root - INFO - Timestep 6 of 30. Z1000 ablated. TP RMS Error: 0.002157346811145544, ACC: 0.46938571333885193
+2023-08-11 23:35:18,343 - root - INFO - Timestep 7 of 30. Z1000 ablated. TP RMS Error: 0.002193815540522337, ACC: 0.4329432547092438
+2023-08-11 23:35:44,738 - root - INFO - Timestep 8 of 30. Z1000 ablated. TP RMS Error: 0.002087509259581566, ACC: 0.410350501537323
+2023-08-11 23:36:10,362 - root - INFO - Timestep 9 of 30. Z1000 ablated. TP RMS Error: 0.0021398102398961782, ACC: 0.3895008862018585
+2023-08-11 23:36:36,246 - root - INFO - Timestep 10 of 30. Z1000 ablated. TP RMS Error: 0.0024313582107424736, ACC: 0.3066747486591339
+2023-08-11 23:37:04,213 - root - INFO - Timestep 11 of 30. Z1000 ablated. TP RMS Error: 0.0028294159565120935, ACC: 0.2126978486776352
+2023-08-11 23:37:31,237 - root - INFO - Timestep 12 of 30. Z1000 ablated. TP RMS Error: 0.002792980521917343, ACC: 0.17696215212345123
+2023-08-11 23:37:58,587 - root - INFO - Timestep 13 of 30. Z1000 ablated. TP RMS Error: 0.0026469549629837275, ACC: 0.1992797702550888
+2023-08-11 23:38:24,601 - root - INFO - Timestep 14 of 30. Z1000 ablated. TP RMS Error: 0.002590762684121728, ACC: 0.20183280110359192
+2023-08-11 23:38:49,685 - root - INFO - Timestep 15 of 30. Z1000 ablated. TP RMS Error: 0.002713444409891963, ACC: 0.1753627359867096
+2023-08-11 23:39:15,763 - root - INFO - Timestep 16 of 30. Z1000 ablated. TP RMS Error: 0.0026418387424200773, ACC: 0.1707065850496292
+2023-08-11 23:39:41,030 - root - INFO - Timestep 17 of 30. Z1000 ablated. TP RMS Error: 0.002717874478548765, ACC: 0.15794134140014648
+2023-08-11 23:40:07,485 - root - INFO - Timestep 18 of 30. Z1000 ablated. TP RMS Error: 0.002672899980098009, ACC: 0.133729487657547
+2023-08-11 23:40:34,534 - root - INFO - Timestep 19 of 30. Z1000 ablated. TP RMS Error: 0.0026642759330570698, ACC: 0.09333409368991852
+2023-08-11 23:41:01,350 - root - INFO - Timestep 20 of 30. Z1000 ablated. TP RMS Error: 0.0024960185401141644, ACC: 0.106990285217762
+2023-08-11 23:41:26,740 - root - INFO - Timestep 21 of 30. Z1000 ablated. TP RMS Error: 0.002405358012765646, ACC: 0.11268988251686096
+2023-08-11 23:41:52,307 - root - INFO - Timestep 22 of 30. Z1000 ablated. TP RMS Error: 0.0024780449457466602, ACC: 0.09695011377334595
+2023-08-11 23:42:18,772 - root - INFO - Timestep 23 of 30. Z1000 ablated. TP RMS Error: 0.002470431150868535, ACC: 0.08659417927265167
+2023-08-11 23:42:47,678 - root - INFO - Timestep 24 of 30. Z1000 ablated. TP RMS Error: 0.002188823651522398, ACC: 0.12339503318071365
+2023-08-11 23:43:19,115 - root - INFO - Timestep 25 of 30. Z1000 ablated. TP RMS Error: 0.04284835606813431, ACC: 0.0023924754932522774
+2023-08-11 23:43:45,807 - root - INFO - Timestep 26 of 30. Z1000 ablated. TP RMS Error: 3.5734500885009766, ACC: 5.049274113844149e-05
+2023-08-11 23:44:11,140 - root - INFO - Timestep 27 of 30. Z1000 ablated. TP RMS Error: 14.778560638427734, ACC: 8.393463758693542e-06
+2023-08-11 23:44:38,104 - root - INFO - Timestep 28 of 30. Z1000 ablated. TP RMS Error: 17.099365234375, ACC: -5.7258089327660855e-06
+2023-08-11 23:45:05,279 - root - INFO - Timestep 29 of 30. Z1000 ablated. TP RMS Error: 1.2542678117752075, ACC: -2.4584884158684872e-05
+2023-08-11 23:45:05,650 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-Z1000_30-timesteps.h5
+2023-08-11 23:45:12,749 - root - INFO - ------------------ Configuration ------------------
+2023-08-11 23:45:12,749 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-11 23:45:12,749 - root - INFO - Configuration name: precip
+2023-08-11 23:45:12,749 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-11 23:45:12,749 - root - INFO - out_channels [0]
+2023-08-11 23:45:12,749 - root - INFO - nettype afno
+2023-08-11 23:45:12,749 - root - INFO - nettype_wind afno
+2023-08-11 23:45:12,749 - root - INFO - log_to_wandb True
+2023-08-11 23:45:12,749 - root - INFO - lr 0.00025
+2023-08-11 23:45:12,749 - root - INFO - batch_size 64
+2023-08-11 23:45:12,749 - root - INFO - max_epochs 25
+2023-08-11 23:45:12,749 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-11 23:45:12,749 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-11 23:45:12,750 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-11 23:45:12,750 - root - INFO - precip_eps 1e-05
+2023-08-11 23:45:12,750 - root - INFO - scheduler CosineAnnealingLR
+2023-08-11 23:45:12,750 - root - INFO - orography False
+2023-08-11 23:45:12,750 - root - INFO - orography_path None
+2023-08-11 23:45:12,750 - root - INFO - exp_dir ../results
+2023-08-11 23:45:12,750 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-11 23:45:12,750 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-11 23:45:12,750 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-11 23:45:12,750 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-11 23:45:12,750 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-11 23:45:12,750 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-11 23:45:12,750 - root - INFO - loss l2
+2023-08-11 23:45:12,750 - root - INFO - num_data_workers 4
+2023-08-11 23:45:12,750 - root - INFO - dt 1
+2023-08-11 23:45:12,751 - root - INFO - n_history 0
+2023-08-11 23:45:12,751 - root - INFO - prediction_type iterative
+2023-08-11 23:45:12,751 - root - INFO - prediction_length 30
+2023-08-11 23:45:12,751 - root - INFO - n_initial_conditions 5
+2023-08-11 23:45:12,751 - root - INFO - ics_type default
+2023-08-11 23:45:12,751 - root - INFO - save_raw_forecasts True
+2023-08-11 23:45:12,751 - root - INFO - save_channel False
+2023-08-11 23:45:12,751 - root - INFO - masked_acc False
+2023-08-11 23:45:12,751 - root - INFO - maskpath None
+2023-08-11 23:45:12,751 - root - INFO - perturb False
+2023-08-11 23:45:12,751 - root - INFO - add_grid False
+2023-08-11 23:45:12,751 - root - INFO - N_grid_channels 0
+2023-08-11 23:45:12,751 - root - INFO - gridtype sinusoidal
+2023-08-11 23:45:12,751 - root - INFO - roll False
+2023-08-11 23:45:12,751 - root - INFO - num_blocks 8
+2023-08-11 23:45:12,751 - root - INFO - patch_size 8
+2023-08-11 23:45:12,751 - root - INFO - width 56
+2023-08-11 23:45:12,751 - root - INFO - modes 32
+2023-08-11 23:45:12,751 - root - INFO - target default
+2023-08-11 23:45:12,751 - root - INFO - normalization zscore
+2023-08-11 23:45:12,751 - root - INFO - log_to_screen True
+2023-08-11 23:45:12,751 - root - INFO - save_checkpoint True
+2023-08-11 23:45:12,751 - root - INFO - enable_nhwc False
+2023-08-11 23:45:12,751 - root - INFO - optimizer_type FusedAdam
+2023-08-11 23:45:12,751 - root - INFO - crop_size_x None
+2023-08-11 23:45:12,751 - root - INFO - crop_size_y None
+2023-08-11 23:45:12,752 - root - INFO - two_step_training False
+2023-08-11 23:45:12,752 - root - INFO - plot_animations False
+2023-08-11 23:45:12,752 - root - INFO - add_noise False
+2023-08-11 23:45:12,752 - root - INFO - noise_std 0
+2023-08-11 23:45:12,752 - root - INFO - world_size 1
+2023-08-11 23:45:12,752 - root - INFO - global_batch_size 64
+2023-08-11 23:45:12,752 - root - INFO - ablate T850
+2023-08-11 23:45:12,752 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-11 23:45:12,752 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 23:45:12,752 - root - INFO - resuming False
+2023-08-11 23:45:12,752 - root - INFO - local_rank 0
+2023-08-11 23:45:12,752 - root - INFO - ---------------------------------------------------
+2023-08-11 23:45:12,752 - root - INFO - Inference for 1 initial conditions
+2023-08-11 23:45:12,975 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-11 23:45:12,977 - root - INFO - Number of samples per year: 1460
+2023-08-11 23:45:12,977 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-11 23:45:12,977 - root - INFO - Delta t: 6 hours
+2023-08-11 23:45:12,977 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-11 23:45:12,978 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-11 23:46:58,568 - root - INFO - Loading validation data
+2023-08-11 23:46:58,753 - root - INFO - Loading validation precip data
+2023-08-11 23:46:59,144 - root - INFO - Initial condition 1 of 1
+2023-08-11 23:48:55,907 - root - INFO - Begin autoregressive inference
+2023-08-11 23:49:20,584 - root - INFO - Timestep 0 of 30. T850 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-11 23:49:45,983 - root - INFO - Timestep 1 of 30. T850 ablated. TP RMS Error: 0.002480956492945552, ACC: 0.23857881128787994
+2023-08-11 23:50:13,103 - root - INFO - Timestep 2 of 30. T850 ablated. TP RMS Error: 0.002693797694519162, ACC: 0.11299943923950195
+2023-08-11 23:50:38,049 - root - INFO - Timestep 3 of 30. T850 ablated. TP RMS Error: 0.0029767064843326807, ACC: 0.015844330191612244
+2023-08-11 23:51:05,413 - root - INFO - Timestep 4 of 30. T850 ablated. TP RMS Error: 2.0544350147247314, ACC: -0.00029065244598314166
+2023-08-11 23:51:28,058 - root - INFO - Timestep 5 of 30. T850 ablated. TP RMS Error: 193.97076416015625, ACC: 0.00855278130620718
+2023-08-11 23:51:53,360 - root - INFO - Timestep 6 of 30. T850 ablated. TP RMS Error: 9161.6904296875, ACC: 0.014054586179554462
+2023-08-11 23:52:18,175 - root - INFO - Timestep 7 of 30. T850 ablated. TP RMS Error: 93113.0703125, ACC: 0.011456131935119629
+2023-08-11 23:52:41,871 - root - INFO - Timestep 8 of 30. T850 ablated. TP RMS Error: 201613.984375, ACC: -0.0003165717935189605
+2023-08-11 23:53:07,224 - root - INFO - Timestep 9 of 30. T850 ablated. TP RMS Error: 206832.90625, ACC: 7.375360291916877e-05
+2023-08-11 23:53:30,482 - root - INFO - Timestep 10 of 30. T850 ablated. TP RMS Error: 149518.546875, ACC: 0.0046075573191046715
+2023-08-11 23:53:54,632 - root - INFO - Timestep 11 of 30. T850 ablated. TP RMS Error: 85136.9609375, ACC: 0.004724165424704552
+2023-08-11 23:54:17,854 - root - INFO - Timestep 12 of 30. T850 ablated. TP RMS Error: 41960.73046875, ACC: 0.006860830821096897
+2023-08-11 23:54:42,106 - root - INFO - Timestep 13 of 30. T850 ablated. TP RMS Error: 19676.017578125, ACC: 0.006082374602556229
+2023-08-11 23:55:06,939 - root - INFO - Timestep 14 of 30. T850 ablated. TP RMS Error: 10304.49609375, ACC: 0.006023448891937733
+2023-08-11 23:55:31,478 - root - INFO - Timestep 15 of 30. T850 ablated. TP RMS Error: 5502.14990234375, ACC: 0.004739060997962952
+2023-08-11 23:55:56,507 - root - INFO - Timestep 16 of 30. T850 ablated. TP RMS Error: 3031.711181640625, ACC: 0.000750915554817766
+2023-08-11 23:56:20,547 - root - INFO - Timestep 17 of 30. T850 ablated. TP RMS Error: 2031.8780517578125, ACC: 0.001340332324616611
+2023-08-11 23:56:44,427 - root - INFO - Timestep 18 of 30. T850 ablated. TP RMS Error: 1638.3310546875, ACC: 0.006618781480938196
+2023-08-11 23:57:08,508 - root - INFO - Timestep 19 of 30. T850 ablated. TP RMS Error: 1446.467529296875, ACC: 0.0034072205889970064
+2023-08-11 23:57:33,064 - root - INFO - Timestep 20 of 30. T850 ablated. TP RMS Error: 1335.7969970703125, ACC: -0.0019060383783653378
+2023-08-11 23:57:57,235 - root - INFO - Timestep 21 of 30. T850 ablated. TP RMS Error: 1266.11181640625, ACC: -0.00027195923030376434
+2023-08-11 23:58:26,254 - root - INFO - Timestep 22 of 30. T850 ablated. TP RMS Error: 1220.110107421875, ACC: 0.006903121713548899
+2023-08-11 23:58:49,771 - root - INFO - Timestep 23 of 30. T850 ablated. TP RMS Error: 1188.8721923828125, ACC: 0.0030247315298765898
+2023-08-11 23:59:14,582 - root - INFO - Timestep 24 of 30. T850 ablated. TP RMS Error: 1167.2738037109375, ACC: -0.004160050768405199
+2023-08-11 23:59:38,463 - root - INFO - Timestep 25 of 30. T850 ablated. TP RMS Error: 1152.1575927734375, ACC: 0.0001447299146093428
+2023-08-12 00:00:02,943 - root - INFO - Timestep 26 of 30. T850 ablated. TP RMS Error: 1141.489013671875, ACC: 0.005361606366932392
+2023-08-12 00:00:31,198 - root - INFO - Timestep 27 of 30. T850 ablated. TP RMS Error: 1133.916748046875, ACC: 0.004081454128026962
+2023-08-12 00:00:57,528 - root - INFO - Timestep 28 of 30. T850 ablated. TP RMS Error: 1128.5198974609375, ACC: 0.0009072916582226753
+2023-08-12 00:01:25,312 - root - INFO - Timestep 29 of 30. T850 ablated. TP RMS Error: 1124.6627197265625, ACC: 0.0012631765566766262
+2023-08-12 00:01:25,636 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-T850_30-timesteps.h5
+2023-08-12 00:01:32,664 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 00:01:32,664 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 00:01:32,664 - root - INFO - Configuration name: precip
+2023-08-12 00:01:32,664 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 00:01:32,665 - root - INFO - out_channels [0]
+2023-08-12 00:01:32,665 - root - INFO - nettype afno
+2023-08-12 00:01:32,665 - root - INFO - nettype_wind afno
+2023-08-12 00:01:32,665 - root - INFO - log_to_wandb True
+2023-08-12 00:01:32,665 - root - INFO - lr 0.00025
+2023-08-12 00:01:32,666 - root - INFO - batch_size 64
+2023-08-12 00:01:32,666 - root - INFO - max_epochs 25
+2023-08-12 00:01:32,666 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 00:01:32,666 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 00:01:32,667 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 00:01:32,667 - root - INFO - precip_eps 1e-05
+2023-08-12 00:01:32,667 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 00:01:32,667 - root - INFO - orography False
+2023-08-12 00:01:32,667 - root - INFO - orography_path None
+2023-08-12 00:01:32,668 - root - INFO - exp_dir ../results
+2023-08-12 00:01:32,668 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 00:01:32,668 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 00:01:32,668 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 00:01:32,668 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 00:01:32,669 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 00:01:32,669 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 00:01:32,669 - root - INFO - loss l2
+2023-08-12 00:01:32,669 - root - INFO - num_data_workers 4
+2023-08-12 00:01:32,670 - root - INFO - dt 1
+2023-08-12 00:01:32,670 - root - INFO - n_history 0
+2023-08-12 00:01:32,670 - root - INFO - prediction_type iterative
+2023-08-12 00:01:32,670 - root - INFO - prediction_length 30
+2023-08-12 00:01:32,670 - root - INFO - n_initial_conditions 5
+2023-08-12 00:01:32,670 - root - INFO - ics_type default
+2023-08-12 00:01:32,671 - root - INFO - save_raw_forecasts True
+2023-08-12 00:01:32,671 - root - INFO - save_channel False
+2023-08-12 00:01:32,671 - root - INFO - masked_acc False
+2023-08-12 00:01:32,684 - root - INFO - maskpath None
+2023-08-12 00:01:32,684 - root - INFO - perturb False
+2023-08-12 00:01:32,684 - root - INFO - add_grid False
+2023-08-12 00:01:32,684 - root - INFO - N_grid_channels 0
+2023-08-12 00:01:32,684 - root - INFO - gridtype sinusoidal
+2023-08-12 00:01:32,684 - root - INFO - roll False
+2023-08-12 00:01:32,684 - root - INFO - num_blocks 8
+2023-08-12 00:01:32,684 - root - INFO - patch_size 8
+2023-08-12 00:01:32,684 - root - INFO - width 56
+2023-08-12 00:01:32,684 - root - INFO - modes 32
+2023-08-12 00:01:32,684 - root - INFO - target default
+2023-08-12 00:01:32,684 - root - INFO - normalization zscore
+2023-08-12 00:01:32,684 - root - INFO - log_to_screen True
+2023-08-12 00:01:32,684 - root - INFO - save_checkpoint True
+2023-08-12 00:01:32,684 - root - INFO - enable_nhwc False
+2023-08-12 00:01:32,684 - root - INFO - optimizer_type FusedAdam
+2023-08-12 00:01:32,684 - root - INFO - crop_size_x None
+2023-08-12 00:01:32,684 - root - INFO - crop_size_y None
+2023-08-12 00:01:32,684 - root - INFO - two_step_training False
+2023-08-12 00:01:32,684 - root - INFO - plot_animations False
+2023-08-12 00:01:32,685 - root - INFO - add_noise False
+2023-08-12 00:01:32,685 - root - INFO - noise_std 0
+2023-08-12 00:01:32,685 - root - INFO - world_size 1
+2023-08-12 00:01:32,685 - root - INFO - global_batch_size 64
+2023-08-12 00:01:32,685 - root - INFO - ablate U850
+2023-08-12 00:01:32,685 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 00:01:32,685 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:01:32,685 - root - INFO - resuming False
+2023-08-12 00:01:32,685 - root - INFO - local_rank 0
+2023-08-12 00:01:32,685 - root - INFO - ---------------------------------------------------
+2023-08-12 00:01:32,685 - root - INFO - Inference for 1 initial conditions
+2023-08-12 00:01:32,967 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 00:01:32,970 - root - INFO - Number of samples per year: 1460
+2023-08-12 00:01:32,970 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 00:01:32,970 - root - INFO - Delta t: 6 hours
+2023-08-12 00:01:32,970 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 00:01:32,972 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:03:22,436 - root - INFO - Loading validation data
+2023-08-12 00:03:22,639 - root - INFO - Loading validation precip data
+2023-08-12 00:03:23,010 - root - INFO - Initial condition 1 of 1
+2023-08-12 00:05:41,138 - root - INFO - Begin autoregressive inference
+2023-08-12 00:06:07,104 - root - INFO - Timestep 0 of 30. U850 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 00:06:35,441 - root - INFO - Timestep 1 of 30. U850 ablated. TP RMS Error: 0.0020221073646098375, ACC: 0.6084623336791992
+2023-08-12 00:07:02,230 - root - INFO - Timestep 2 of 30. U850 ablated. TP RMS Error: 0.002262837952002883, ACC: 0.43834301829338074
+2023-08-12 00:07:28,167 - root - INFO - Timestep 3 of 30. U850 ablated. TP RMS Error: 0.0025465518701821566, ACC: 0.3052280843257904
+2023-08-12 00:07:52,913 - root - INFO - Timestep 4 of 30. U850 ablated. TP RMS Error: 0.002343876054510474, ACC: 0.2847009301185608
+2023-08-12 00:08:19,543 - root - INFO - Timestep 5 of 30. U850 ablated. TP RMS Error: 0.002502170857042074, ACC: 0.22342674434185028
+2023-08-12 00:08:44,781 - root - INFO - Timestep 6 of 30. U850 ablated. TP RMS Error: 0.002556249499320984, ACC: 0.21172472834587097
+2023-08-12 00:09:11,208 - root - INFO - Timestep 7 of 30. U850 ablated. TP RMS Error: 0.0025897175073623657, ACC: 0.15601058304309845
+2023-08-12 00:09:35,843 - root - INFO - Timestep 8 of 30. U850 ablated. TP RMS Error: 0.002453065011650324, ACC: 0.13834241032600403
+2023-08-12 00:10:02,445 - root - INFO - Timestep 9 of 30. U850 ablated. TP RMS Error: 0.002484031720086932, ACC: 0.12917298078536987
+2023-08-12 00:10:28,618 - root - INFO - Timestep 10 of 30. U850 ablated. TP RMS Error: 0.002671742346137762, ACC: 0.11974571645259857
+2023-08-12 00:10:53,390 - root - INFO - Timestep 11 of 30. U850 ablated. TP RMS Error: 0.0029920688830316067, ACC: 0.08943479508161545
+2023-08-12 00:11:19,307 - root - INFO - Timestep 12 of 30. U850 ablated. TP RMS Error: 0.002931780880317092, ACC: 0.08417737483978271
+2023-08-12 00:11:45,096 - root - INFO - Timestep 13 of 30. U850 ablated. TP RMS Error: 0.0028154978062957525, ACC: 0.10770246386528015
+2023-08-12 00:12:10,499 - root - INFO - Timestep 14 of 30. U850 ablated. TP RMS Error: 0.0027966462075710297, ACC: 0.10701126605272293
+2023-08-12 00:12:34,530 - root - INFO - Timestep 15 of 30. U850 ablated. TP RMS Error: 0.0028922175988554955, ACC: 0.10309005528688431
+2023-08-12 00:13:00,573 - root - INFO - Timestep 16 of 30. U850 ablated. TP RMS Error: 0.0028568583074957132, ACC: 0.08807878941297531
+2023-08-12 00:13:27,037 - root - INFO - Timestep 17 of 30. U850 ablated. TP RMS Error: 0.0029440964572131634, ACC: 0.0855380967259407
+2023-08-12 00:13:51,404 - root - INFO - Timestep 18 of 30. U850 ablated. TP RMS Error: 0.0028701359406113625, ACC: 0.09205853193998337
+2023-08-12 00:14:18,470 - root - INFO - Timestep 19 of 30. U850 ablated. TP RMS Error: 0.002806600881740451, ACC: 0.07259823381900787
+2023-08-12 00:14:43,717 - root - INFO - Timestep 20 of 30. U850 ablated. TP RMS Error: 0.0026104410644620657, ACC: 0.06876649707555771
+2023-08-12 00:15:10,148 - root - INFO - Timestep 21 of 30. U850 ablated. TP RMS Error: 0.0024969209916889668, ACC: 0.08383377641439438
+2023-08-12 00:15:36,921 - root - INFO - Timestep 22 of 30. U850 ablated. TP RMS Error: 0.002513438230380416, ACC: 0.10099327564239502
+2023-08-12 00:16:00,635 - root - INFO - Timestep 23 of 30. U850 ablated. TP RMS Error: 0.00253853527829051, ACC: 0.09383603930473328
+2023-08-12 00:16:25,498 - root - INFO - Timestep 24 of 30. U850 ablated. TP RMS Error: 0.0023302058689296246, ACC: 0.08722029626369476
+2023-08-12 00:16:50,405 - root - INFO - Timestep 25 of 30. U850 ablated. TP RMS Error: 0.0025897833984345198, ACC: 0.0691211000084877
+2023-08-12 00:17:15,200 - root - INFO - Timestep 26 of 30. U850 ablated. TP RMS Error: 0.002751430496573448, ACC: 0.06663169711828232
+2023-08-12 00:17:40,158 - root - INFO - Timestep 27 of 30. U850 ablated. TP RMS Error: 0.0028772533405572176, ACC: 0.04246092215180397
+2023-08-12 00:18:07,439 - root - INFO - Timestep 28 of 30. U850 ablated. TP RMS Error: 0.002710489323362708, ACC: 0.019812678918242455
+2023-08-12 00:18:33,074 - root - INFO - Timestep 29 of 30. U850 ablated. TP RMS Error: 0.002554991515353322, ACC: 0.058650583028793335
+2023-08-12 00:18:33,339 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-U850_30-timesteps.h5
+2023-08-12 00:18:40,567 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 00:18:40,567 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 00:18:40,567 - root - INFO - Configuration name: precip
+2023-08-12 00:18:40,567 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 00:18:40,567 - root - INFO - out_channels [0]
+2023-08-12 00:18:40,567 - root - INFO - nettype afno
+2023-08-12 00:18:40,567 - root - INFO - nettype_wind afno
+2023-08-12 00:18:40,567 - root - INFO - log_to_wandb True
+2023-08-12 00:18:40,567 - root - INFO - lr 0.00025
+2023-08-12 00:18:40,567 - root - INFO - batch_size 64
+2023-08-12 00:18:40,567 - root - INFO - max_epochs 25
+2023-08-12 00:18:40,567 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 00:18:40,567 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 00:18:40,567 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 00:18:40,567 - root - INFO - precip_eps 1e-05
+2023-08-12 00:18:40,567 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 00:18:40,568 - root - INFO - orography False
+2023-08-12 00:18:40,568 - root - INFO - orography_path None
+2023-08-12 00:18:40,568 - root - INFO - exp_dir ../results
+2023-08-12 00:18:40,568 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 00:18:40,568 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 00:18:40,568 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 00:18:40,568 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 00:18:40,568 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 00:18:40,568 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 00:18:40,568 - root - INFO - loss l2
+2023-08-12 00:18:40,568 - root - INFO - num_data_workers 4
+2023-08-12 00:18:40,568 - root - INFO - dt 1
+2023-08-12 00:18:40,568 - root - INFO - n_history 0
+2023-08-12 00:18:40,568 - root - INFO - prediction_type iterative
+2023-08-12 00:18:40,568 - root - INFO - prediction_length 30
+2023-08-12 00:18:40,568 - root - INFO - n_initial_conditions 5
+2023-08-12 00:18:40,568 - root - INFO - ics_type default
+2023-08-12 00:18:40,568 - root - INFO - save_raw_forecasts True
+2023-08-12 00:18:40,568 - root - INFO - save_channel False
+2023-08-12 00:18:40,568 - root - INFO - masked_acc False
+2023-08-12 00:18:40,569 - root - INFO - maskpath None
+2023-08-12 00:18:40,569 - root - INFO - perturb False
+2023-08-12 00:18:40,569 - root - INFO - add_grid False
+2023-08-12 00:18:40,569 - root - INFO - N_grid_channels 0
+2023-08-12 00:18:40,569 - root - INFO - gridtype sinusoidal
+2023-08-12 00:18:40,569 - root - INFO - roll False
+2023-08-12 00:18:40,569 - root - INFO - num_blocks 8
+2023-08-12 00:18:40,569 - root - INFO - patch_size 8
+2023-08-12 00:18:40,569 - root - INFO - width 56
+2023-08-12 00:18:40,569 - root - INFO - modes 32
+2023-08-12 00:18:40,569 - root - INFO - target default
+2023-08-12 00:18:40,569 - root - INFO - normalization zscore
+2023-08-12 00:18:40,569 - root - INFO - log_to_screen True
+2023-08-12 00:18:40,569 - root - INFO - save_checkpoint True
+2023-08-12 00:18:40,569 - root - INFO - enable_nhwc False
+2023-08-12 00:18:40,569 - root - INFO - optimizer_type FusedAdam
+2023-08-12 00:18:40,569 - root - INFO - crop_size_x None
+2023-08-12 00:18:40,569 - root - INFO - crop_size_y None
+2023-08-12 00:18:40,570 - root - INFO - two_step_training False
+2023-08-12 00:18:40,570 - root - INFO - plot_animations False
+2023-08-12 00:18:40,570 - root - INFO - add_noise False
+2023-08-12 00:18:40,570 - root - INFO - noise_std 0
+2023-08-12 00:18:40,570 - root - INFO - world_size 1
+2023-08-12 00:18:40,570 - root - INFO - global_batch_size 64
+2023-08-12 00:18:40,570 - root - INFO - ablate V850
+2023-08-12 00:18:40,570 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 00:18:40,570 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:18:40,570 - root - INFO - resuming False
+2023-08-12 00:18:40,570 - root - INFO - local_rank 0
+2023-08-12 00:18:40,570 - root - INFO - ---------------------------------------------------
+2023-08-12 00:18:40,570 - root - INFO - Inference for 1 initial conditions
+2023-08-12 00:18:40,841 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 00:18:40,841 - root - INFO - Number of samples per year: 1460
+2023-08-12 00:18:40,841 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 00:18:40,841 - root - INFO - Delta t: 6 hours
+2023-08-12 00:18:40,842 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 00:18:40,842 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:20:30,134 - root - INFO - Loading validation data
+2023-08-12 00:20:30,318 - root - INFO - Loading validation precip data
+2023-08-12 00:20:30,647 - root - INFO - Initial condition 1 of 1
+2023-08-12 00:22:49,183 - root - INFO - Begin autoregressive inference
+2023-08-12 00:23:18,946 - root - INFO - Timestep 0 of 30. V850 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 00:23:44,631 - root - INFO - Timestep 1 of 30. V850 ablated. TP RMS Error: 0.0018924166215583682, ACC: 0.6705231070518494
+2023-08-12 00:24:09,940 - root - INFO - Timestep 2 of 30. V850 ablated. TP RMS Error: 0.0020376136526465416, ACC: 0.5469112992286682
+2023-08-12 00:24:34,533 - root - INFO - Timestep 3 of 30. V850 ablated. TP RMS Error: 0.0022704305592924356, ACC: 0.45981311798095703
+2023-08-12 00:25:00,120 - root - INFO - Timestep 4 of 30. V850 ablated. TP RMS Error: 0.002027382142841816, ACC: 0.4677804410457611
+2023-08-12 00:25:27,288 - root - INFO - Timestep 5 of 30. V850 ablated. TP RMS Error: 0.002223973860964179, ACC: 0.3821997344493866
+2023-08-12 00:25:53,928 - root - INFO - Timestep 6 of 30. V850 ablated. TP RMS Error: 0.002291671233251691, ACC: 0.35877078771591187
+2023-08-12 00:26:17,828 - root - INFO - Timestep 7 of 30. V850 ablated. TP RMS Error: 0.002296686638146639, ACC: 0.3422415256500244
+2023-08-12 00:26:42,583 - root - INFO - Timestep 8 of 30. V850 ablated. TP RMS Error: 0.0021276031620800495, ACC: 0.3436513841152191
+2023-08-12 00:27:07,690 - root - INFO - Timestep 9 of 30. V850 ablated. TP RMS Error: 0.0021670956630259752, ACC: 0.3241502642631531
+2023-08-12 00:27:33,804 - root - INFO - Timestep 10 of 30. V850 ablated. TP RMS Error: 0.0023914652410894632, ACC: 0.29976779222488403
+2023-08-12 00:28:00,666 - root - INFO - Timestep 11 of 30. V850 ablated. TP RMS Error: 0.0027946042828261852, ACC: 0.2182762324810028
+2023-08-12 00:28:26,999 - root - INFO - Timestep 12 of 30. V850 ablated. TP RMS Error: 0.0027650778647512197, ACC: 0.17829804122447968
+2023-08-12 00:28:53,431 - root - INFO - Timestep 13 of 30. V850 ablated. TP RMS Error: 0.0026075083296746016, ACC: 0.22218957543373108
+2023-08-12 00:29:21,363 - root - INFO - Timestep 14 of 30. V850 ablated. TP RMS Error: 0.0025881642941385508, ACC: 0.2021019458770752
+2023-08-12 00:29:47,857 - root - INFO - Timestep 15 of 30. V850 ablated. TP RMS Error: 0.002704803366214037, ACC: 0.17960898578166962
+2023-08-12 00:30:17,704 - root - INFO - Timestep 16 of 30. V850 ablated. TP RMS Error: 0.0026397111359983683, ACC: 0.1730320006608963
+2023-08-12 00:30:45,945 - root - INFO - Timestep 17 of 30. V850 ablated. TP RMS Error: 0.0027499934658408165, ACC: 0.13958393037319183
+2023-08-12 00:31:11,106 - root - INFO - Timestep 18 of 30. V850 ablated. TP RMS Error: 0.002672202419489622, ACC: 0.1432313323020935
+2023-08-12 00:31:38,309 - root - INFO - Timestep 19 of 30. V850 ablated. TP RMS Error: 0.002592941978946328, ACC: 0.15402205288410187
+2023-08-12 00:32:06,545 - root - INFO - Timestep 20 of 30. V850 ablated. TP RMS Error: 0.0024330029264092445, ACC: 0.13957661390304565
+2023-08-12 00:32:33,661 - root - INFO - Timestep 21 of 30. V850 ablated. TP RMS Error: 0.0023329888936132193, ACC: 0.1341087371110916
+2023-08-12 00:33:02,579 - root - INFO - Timestep 22 of 30. V850 ablated. TP RMS Error: 0.0023554039653390646, ACC: 0.13559967279434204
+2023-08-12 00:33:29,321 - root - INFO - Timestep 23 of 30. V850 ablated. TP RMS Error: 0.002376007381826639, ACC: 0.11330807209014893
+2023-08-12 00:33:54,413 - root - INFO - Timestep 24 of 30. V850 ablated. TP RMS Error: 0.0021430673077702522, ACC: 0.11336851119995117
+2023-08-12 00:34:22,681 - root - INFO - Timestep 25 of 30. V850 ablated. TP RMS Error: 0.002411150373518467, ACC: 0.09994808584451675
+2023-08-12 00:34:51,216 - root - INFO - Timestep 26 of 30. V850 ablated. TP RMS Error: 0.002538893837481737, ACC: 0.12170230597257614
+2023-08-12 00:35:17,883 - root - INFO - Timestep 27 of 30. V850 ablated. TP RMS Error: 0.0026388494297862053, ACC: 0.11127728223800659
+2023-08-12 00:35:45,505 - root - INFO - Timestep 28 of 30. V850 ablated. TP RMS Error: 0.0024516736157238483, ACC: 0.09248968213796616
+2023-08-12 00:36:12,321 - root - INFO - Timestep 29 of 30. V850 ablated. TP RMS Error: 0.0023415423929691315, ACC: 0.11564872413873672
+2023-08-12 00:36:12,608 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-V850_30-timesteps.h5
+2023-08-12 00:36:19,343 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 00:36:19,343 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 00:36:19,343 - root - INFO - Configuration name: precip
+2023-08-12 00:36:19,344 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 00:36:19,344 - root - INFO - out_channels [0]
+2023-08-12 00:36:19,344 - root - INFO - nettype afno
+2023-08-12 00:36:19,344 - root - INFO - nettype_wind afno
+2023-08-12 00:36:19,344 - root - INFO - log_to_wandb True
+2023-08-12 00:36:19,344 - root - INFO - lr 0.00025
+2023-08-12 00:36:19,344 - root - INFO - batch_size 64
+2023-08-12 00:36:19,344 - root - INFO - max_epochs 25
+2023-08-12 00:36:19,344 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 00:36:19,344 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 00:36:19,344 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 00:36:19,344 - root - INFO - precip_eps 1e-05
+2023-08-12 00:36:19,344 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 00:36:19,344 - root - INFO - orography False
+2023-08-12 00:36:19,344 - root - INFO - orography_path None
+2023-08-12 00:36:19,344 - root - INFO - exp_dir ../results
+2023-08-12 00:36:19,344 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 00:36:19,344 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 00:36:19,345 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 00:36:19,345 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 00:36:19,345 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 00:36:19,345 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 00:36:19,345 - root - INFO - loss l2
+2023-08-12 00:36:19,345 - root - INFO - num_data_workers 4
+2023-08-12 00:36:19,345 - root - INFO - dt 1
+2023-08-12 00:36:19,345 - root - INFO - n_history 0
+2023-08-12 00:36:19,345 - root - INFO - prediction_type iterative
+2023-08-12 00:36:19,345 - root - INFO - prediction_length 30
+2023-08-12 00:36:19,345 - root - INFO - n_initial_conditions 5
+2023-08-12 00:36:19,345 - root - INFO - ics_type default
+2023-08-12 00:36:19,345 - root - INFO - save_raw_forecasts True
+2023-08-12 00:36:19,345 - root - INFO - save_channel False
+2023-08-12 00:36:19,346 - root - INFO - masked_acc False
+2023-08-12 00:36:19,346 - root - INFO - maskpath None
+2023-08-12 00:36:19,346 - root - INFO - perturb False
+2023-08-12 00:36:19,346 - root - INFO - add_grid False
+2023-08-12 00:36:19,346 - root - INFO - N_grid_channels 0
+2023-08-12 00:36:19,346 - root - INFO - gridtype sinusoidal
+2023-08-12 00:36:19,346 - root - INFO - roll False
+2023-08-12 00:36:19,346 - root - INFO - num_blocks 8
+2023-08-12 00:36:19,346 - root - INFO - patch_size 8
+2023-08-12 00:36:19,346 - root - INFO - width 56
+2023-08-12 00:36:19,346 - root - INFO - modes 32
+2023-08-12 00:36:19,346 - root - INFO - target default
+2023-08-12 00:36:19,348 - root - INFO - normalization zscore
+2023-08-12 00:36:19,348 - root - INFO - log_to_screen True
+2023-08-12 00:36:19,348 - root - INFO - save_checkpoint True
+2023-08-12 00:36:19,348 - root - INFO - enable_nhwc False
+2023-08-12 00:36:19,348 - root - INFO - optimizer_type FusedAdam
+2023-08-12 00:36:19,348 - root - INFO - crop_size_x None
+2023-08-12 00:36:19,348 - root - INFO - crop_size_y None
+2023-08-12 00:36:19,348 - root - INFO - two_step_training False
+2023-08-12 00:36:19,349 - root - INFO - plot_animations False
+2023-08-12 00:36:19,349 - root - INFO - add_noise False
+2023-08-12 00:36:19,349 - root - INFO - noise_std 0
+2023-08-12 00:36:19,349 - root - INFO - world_size 1
+2023-08-12 00:36:19,349 - root - INFO - global_batch_size 64
+2023-08-12 00:36:19,349 - root - INFO - ablate Z850
+2023-08-12 00:36:19,349 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 00:36:19,349 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:36:19,349 - root - INFO - resuming False
+2023-08-12 00:36:19,349 - root - INFO - local_rank 0
+2023-08-12 00:36:19,349 - root - INFO - ---------------------------------------------------
+2023-08-12 00:36:19,350 - root - INFO - Inference for 1 initial conditions
+2023-08-12 00:36:19,608 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 00:36:19,610 - root - INFO - Number of samples per year: 1460
+2023-08-12 00:36:19,610 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 00:36:19,610 - root - INFO - Delta t: 6 hours
+2023-08-12 00:36:19,610 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 00:36:19,611 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:38:09,080 - root - INFO - Loading validation data
+2023-08-12 00:38:09,228 - root - INFO - Loading validation precip data
+2023-08-12 00:38:09,613 - root - INFO - Initial condition 1 of 1
+2023-08-12 00:40:28,359 - root - INFO - Begin autoregressive inference
+2023-08-12 00:40:52,323 - root - INFO - Timestep 0 of 30. Z850 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 00:41:17,741 - root - INFO - Timestep 1 of 30. Z850 ablated. TP RMS Error: 0.0034271753393113613, ACC: 0.12142021954059601
+2023-08-12 00:41:43,030 - root - INFO - Timestep 2 of 30. Z850 ablated. TP RMS Error: 0.0026325394865125418, ACC: -0.002291816519573331
+2023-08-12 00:42:09,813 - root - INFO - Timestep 3 of 30. Z850 ablated. TP RMS Error: 0.003018566407263279, ACC: 0.0079859783872962
+2023-08-12 00:42:33,806 - root - INFO - Timestep 4 of 30. Z850 ablated. TP RMS Error: 20.193538665771484, ACC: 0.008911591954529285
+2023-08-12 00:42:59,412 - root - INFO - Timestep 5 of 30. Z850 ablated. TP RMS Error: 19518.76171875, ACC: 0.007491523399949074
+2023-08-12 00:43:27,538 - root - INFO - Timestep 6 of 30. Z850 ablated. TP RMS Error: 2527898.25, ACC: 0.0073875305242836475
+2023-08-12 00:43:51,138 - root - INFO - Timestep 7 of 30. Z850 ablated. TP RMS Error: 54407316.0, ACC: 0.004752498120069504
+2023-08-12 00:44:17,398 - root - INFO - Timestep 8 of 30. Z850 ablated. TP RMS Error: 266636688.0, ACC: 0.0011098189279437065
+2023-08-12 00:44:41,461 - root - INFO - Timestep 9 of 30. Z850 ablated. TP RMS Error: 556811776.0, ACC: 0.0032729904633015394
+2023-08-12 00:45:07,190 - root - INFO - Timestep 10 of 30. Z850 ablated. TP RMS Error: 771351744.0, ACC: 0.006389192771166563
+2023-08-12 00:45:31,986 - root - INFO - Timestep 11 of 30. Z850 ablated. TP RMS Error: 900992064.0, ACC: 0.006880464032292366
+2023-08-12 00:45:57,693 - root - INFO - Timestep 12 of 30. Z850 ablated. TP RMS Error: 989863872.0, ACC: 0.005194896832108498
+2023-08-12 00:46:23,091 - root - INFO - Timestep 13 of 30. Z850 ablated. TP RMS Error: 1062862080.0, ACC: 0.0037490283139050007
+2023-08-12 00:46:47,664 - root - INFO - Timestep 14 of 30. Z850 ablated. TP RMS Error: 1127831808.0, ACC: 0.006532127503305674
+2023-08-12 00:47:13,424 - root - INFO - Timestep 15 of 30. Z850 ablated. TP RMS Error: 1186020608.0, ACC: 0.004168303683400154
+2023-08-12 00:47:38,708 - root - INFO - Timestep 16 of 30. Z850 ablated. TP RMS Error: 1236792320.0, ACC: 0.0005953924264758825
+2023-08-12 00:48:04,772 - root - INFO - Timestep 17 of 30. Z850 ablated. TP RMS Error: 1279823360.0, ACC: 0.0018053790554404259
+2023-08-12 00:48:30,813 - root - INFO - Timestep 18 of 30. Z850 ablated. TP RMS Error: 1315238528.0, ACC: 0.003920980263501406
+2023-08-12 00:48:55,382 - root - INFO - Timestep 19 of 30. Z850 ablated. TP RMS Error: 1343681408.0, ACC: 0.0014004830736666918
+2023-08-12 00:49:19,829 - root - INFO - Timestep 20 of 30. Z850 ablated. TP RMS Error: 1366041344.0, ACC: -0.0019641409162431955
+2023-08-12 00:49:45,101 - root - INFO - Timestep 21 of 30. Z850 ablated. TP RMS Error: 1383297920.0, ACC: -0.0005196768906898797
+2023-08-12 00:50:11,764 - root - INFO - Timestep 22 of 30. Z850 ablated. TP RMS Error: 1396409984.0, ACC: 0.005177660379558802
+2023-08-12 00:50:39,463 - root - INFO - Timestep 23 of 30. Z850 ablated. TP RMS Error: 1406240384.0, ACC: 0.002407650463283062
+2023-08-12 00:51:04,151 - root - INFO - Timestep 24 of 30. Z850 ablated. TP RMS Error: 1413528064.0, ACC: -0.0029345520306378603
+2023-08-12 00:51:28,290 - root - INFO - Timestep 25 of 30. Z850 ablated. TP RMS Error: 1418880640.0, ACC: -0.00016029296966735274
+2023-08-12 00:51:52,737 - root - INFO - Timestep 26 of 30. Z850 ablated. TP RMS Error: 1422781056.0, ACC: 0.00368451327085495
+2023-08-12 00:52:18,114 - root - INFO - Timestep 27 of 30. Z850 ablated. TP RMS Error: 1425604224.0, ACC: 0.0036184510681778193
+2023-08-12 00:52:43,384 - root - INFO - Timestep 28 of 30. Z850 ablated. TP RMS Error: 1427636096.0, ACC: 0.0009091568063013256
+2023-08-12 00:53:11,796 - root - INFO - Timestep 29 of 30. Z850 ablated. TP RMS Error: 1429091200.0, ACC: 0.0010652107885107398
+2023-08-12 00:53:12,092 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-Z850_30-timesteps.h5
+2023-08-12 00:53:19,243 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 00:53:19,244 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 00:53:19,244 - root - INFO - Configuration name: precip
+2023-08-12 00:53:19,244 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 00:53:19,244 - root - INFO - out_channels [0]
+2023-08-12 00:53:19,244 - root - INFO - nettype afno
+2023-08-12 00:53:19,244 - root - INFO - nettype_wind afno
+2023-08-12 00:53:19,244 - root - INFO - log_to_wandb True
+2023-08-12 00:53:19,244 - root - INFO - lr 0.00025
+2023-08-12 00:53:19,244 - root - INFO - batch_size 64
+2023-08-12 00:53:19,244 - root - INFO - max_epochs 25
+2023-08-12 00:53:19,244 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 00:53:19,244 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 00:53:19,244 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 00:53:19,244 - root - INFO - precip_eps 1e-05
+2023-08-12 00:53:19,244 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 00:53:19,244 - root - INFO - orography False
+2023-08-12 00:53:19,244 - root - INFO - orography_path None
+2023-08-12 00:53:19,245 - root - INFO - exp_dir ../results
+2023-08-12 00:53:19,245 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 00:53:19,245 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 00:53:19,245 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 00:53:19,245 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 00:53:19,245 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 00:53:19,245 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 00:53:19,245 - root - INFO - loss l2
+2023-08-12 00:53:19,245 - root - INFO - num_data_workers 4
+2023-08-12 00:53:19,245 - root - INFO - dt 1
+2023-08-12 00:53:19,245 - root - INFO - n_history 0
+2023-08-12 00:53:19,245 - root - INFO - prediction_type iterative
+2023-08-12 00:53:19,245 - root - INFO - prediction_length 30
+2023-08-12 00:53:19,245 - root - INFO - n_initial_conditions 5
+2023-08-12 00:53:19,245 - root - INFO - ics_type default
+2023-08-12 00:53:19,245 - root - INFO - save_raw_forecasts True
+2023-08-12 00:53:19,245 - root - INFO - save_channel False
+2023-08-12 00:53:19,245 - root - INFO - masked_acc False
+2023-08-12 00:53:19,245 - root - INFO - maskpath None
+2023-08-12 00:53:19,245 - root - INFO - perturb False
+2023-08-12 00:53:19,245 - root - INFO - add_grid False
+2023-08-12 00:53:19,246 - root - INFO - N_grid_channels 0
+2023-08-12 00:53:19,246 - root - INFO - gridtype sinusoidal
+2023-08-12 00:53:19,246 - root - INFO - roll False
+2023-08-12 00:53:19,246 - root - INFO - num_blocks 8
+2023-08-12 00:53:19,246 - root - INFO - patch_size 8
+2023-08-12 00:53:19,246 - root - INFO - width 56
+2023-08-12 00:53:19,246 - root - INFO - modes 32
+2023-08-12 00:53:19,246 - root - INFO - target default
+2023-08-12 00:53:19,246 - root - INFO - normalization zscore
+2023-08-12 00:53:19,246 - root - INFO - log_to_screen True
+2023-08-12 00:53:19,246 - root - INFO - save_checkpoint True
+2023-08-12 00:53:19,246 - root - INFO - enable_nhwc False
+2023-08-12 00:53:19,246 - root - INFO - optimizer_type FusedAdam
+2023-08-12 00:53:19,246 - root - INFO - crop_size_x None
+2023-08-12 00:53:19,246 - root - INFO - crop_size_y None
+2023-08-12 00:53:19,246 - root - INFO - two_step_training False
+2023-08-12 00:53:19,246 - root - INFO - plot_animations False
+2023-08-12 00:53:19,246 - root - INFO - add_noise False
+2023-08-12 00:53:19,247 - root - INFO - noise_std 0
+2023-08-12 00:53:19,247 - root - INFO - world_size 1
+2023-08-12 00:53:19,247 - root - INFO - global_batch_size 64
+2023-08-12 00:53:19,247 - root - INFO - ablate RH850
+2023-08-12 00:53:19,247 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 00:53:19,247 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:53:19,247 - root - INFO - resuming False
+2023-08-12 00:53:19,247 - root - INFO - local_rank 0
+2023-08-12 00:53:19,247 - root - INFO - ---------------------------------------------------
+2023-08-12 00:53:19,247 - root - INFO - Inference for 1 initial conditions
+2023-08-12 00:53:19,532 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 00:53:19,533 - root - INFO - Number of samples per year: 1460
+2023-08-12 00:53:19,533 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 00:53:19,533 - root - INFO - Delta t: 6 hours
+2023-08-12 00:53:19,534 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 00:53:19,535 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 00:55:01,865 - root - INFO - Loading validation data
+2023-08-12 00:55:02,106 - root - INFO - Loading validation precip data
+2023-08-12 00:55:02,505 - root - INFO - Initial condition 1 of 1
+2023-08-12 00:56:59,070 - root - INFO - Begin autoregressive inference
+2023-08-12 00:57:22,845 - root - INFO - Timestep 0 of 30. RH850 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 00:57:47,300 - root - INFO - Timestep 1 of 30. RH850 ablated. TP RMS Error: 0.0018320202361792326, ACC: 0.698569118976593
+2023-08-12 00:58:14,061 - root - INFO - Timestep 2 of 30. RH850 ablated. TP RMS Error: 0.002007148927077651, ACC: 0.5656033158302307
+2023-08-12 00:58:39,047 - root - INFO - Timestep 3 of 30. RH850 ablated. TP RMS Error: 0.0023720033932477236, ACC: 0.3912292420864105
+2023-08-12 00:59:03,340 - root - INFO - Timestep 4 of 30. RH850 ablated. TP RMS Error: 0.002209212863817811, ACC: 0.35147780179977417
+2023-08-12 00:59:28,240 - root - INFO - Timestep 5 of 30. RH850 ablated. TP RMS Error: 0.0023883108515292406, ACC: 0.267549991607666
+2023-08-12 00:59:53,609 - root - INFO - Timestep 6 of 30. RH850 ablated. TP RMS Error: 0.0024415613152086735, ACC: 0.24944619834423065
+2023-08-12 01:00:19,583 - root - INFO - Timestep 7 of 30. RH850 ablated. TP RMS Error: 0.002469786209985614, ACC: 0.20017941296100616
+2023-08-12 01:00:48,172 - root - INFO - Timestep 8 of 30. RH850 ablated. TP RMS Error: 0.0023524698335677385, ACC: 0.15769027173519135
+2023-08-12 01:01:13,314 - root - INFO - Timestep 9 of 30. RH850 ablated. TP RMS Error: 0.002412420231848955, ACC: 0.12115846574306488
+2023-08-12 01:01:38,131 - root - INFO - Timestep 10 of 30. RH850 ablated. TP RMS Error: 0.0026739847380667925, ACC: 0.08455000817775726
+2023-08-12 01:02:02,402 - root - INFO - Timestep 11 of 30. RH850 ablated. TP RMS Error: 0.0030262931250035763, ACC: 0.0725659504532814
+2023-08-12 01:02:25,566 - root - INFO - Timestep 12 of 30. RH850 ablated. TP RMS Error: 0.003025511046871543, ACC: 0.03506851568818092
+2023-08-12 01:02:48,718 - root - INFO - Timestep 13 of 30. RH850 ablated. TP RMS Error: 0.002947892528027296, ACC: 0.029725387692451477
+2023-08-12 01:03:16,194 - root - INFO - Timestep 14 of 30. RH850 ablated. TP RMS Error: 0.0029729760717600584, ACC: 0.031875889748334885
+2023-08-12 01:03:41,630 - root - INFO - Timestep 15 of 30. RH850 ablated. TP RMS Error: 0.003048879327252507, ACC: 0.04436734691262245
+2023-08-12 01:04:06,652 - root - INFO - Timestep 16 of 30. RH850 ablated. TP RMS Error: 0.0029640577267855406, ACC: 0.05689576640725136
+2023-08-12 01:04:31,592 - root - INFO - Timestep 17 of 30. RH850 ablated. TP RMS Error: 0.0030015057418495417, ACC: 0.04700527340173721
+2023-08-12 01:04:57,212 - root - INFO - Timestep 18 of 30. RH850 ablated. TP RMS Error: 0.0029639138374477625, ACC: 0.04183435067534447
+2023-08-12 01:05:22,901 - root - INFO - Timestep 19 of 30. RH850 ablated. TP RMS Error: 0.00290914298966527, ACC: 0.030415061861276627
+2023-08-12 01:05:48,011 - root - INFO - Timestep 20 of 30. RH850 ablated. TP RMS Error: 0.002696472220122814, ACC: 0.04080716893076897
+2023-08-12 01:06:12,801 - root - INFO - Timestep 21 of 30. RH850 ablated. TP RMS Error: 0.002590443706139922, ACC: 0.042873088270425797
+2023-08-12 01:06:38,724 - root - INFO - Timestep 22 of 30. RH850 ablated. TP RMS Error: 0.00263871718198061, ACC: 0.033524781465530396
+2023-08-12 01:07:01,871 - root - INFO - Timestep 23 of 30. RH850 ablated. TP RMS Error: 0.002666180720552802, ACC: 0.03014543280005455
+2023-08-12 01:07:25,870 - root - INFO - Timestep 24 of 30. RH850 ablated. TP RMS Error: 0.002427036641165614, ACC: 0.058405566960573196
+2023-08-12 01:07:51,248 - root - INFO - Timestep 25 of 30. RH850 ablated. TP RMS Error: 0.0026954852510243654, ACC: 0.05290306732058525
+2023-08-12 01:08:16,458 - root - INFO - Timestep 26 of 30. RH850 ablated. TP RMS Error: 0.4423695206642151, ACC: -8.379360951948911e-05
+2023-08-12 01:08:41,480 - root - INFO - Timestep 27 of 30. RH850 ablated. TP RMS Error: 408.36492919921875, ACC: -0.0004720397701021284
+2023-08-12 01:09:06,607 - root - INFO - Timestep 28 of 30. RH850 ablated. TP RMS Error: 8204.703125, ACC: -0.0005332984728738666
+2023-08-12 01:09:32,094 - root - INFO - Timestep 29 of 30. RH850 ablated. TP RMS Error: 40912.7890625, ACC: -0.0003607630787882954
+2023-08-12 01:09:32,361 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-RH850_30-timesteps.h5
+2023-08-12 01:09:39,659 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 01:09:39,659 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 01:09:39,659 - root - INFO - Configuration name: precip
+2023-08-12 01:09:39,659 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 01:09:39,659 - root - INFO - out_channels [0]
+2023-08-12 01:09:39,659 - root - INFO - nettype afno
+2023-08-12 01:09:39,659 - root - INFO - nettype_wind afno
+2023-08-12 01:09:39,659 - root - INFO - log_to_wandb True
+2023-08-12 01:09:39,659 - root - INFO - lr 0.00025
+2023-08-12 01:09:39,659 - root - INFO - batch_size 64
+2023-08-12 01:09:39,659 - root - INFO - max_epochs 25
+2023-08-12 01:09:39,659 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 01:09:39,659 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 01:09:39,660 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 01:09:39,660 - root - INFO - precip_eps 1e-05
+2023-08-12 01:09:39,660 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 01:09:39,660 - root - INFO - orography False
+2023-08-12 01:09:39,660 - root - INFO - orography_path None
+2023-08-12 01:09:39,660 - root - INFO - exp_dir ../results
+2023-08-12 01:09:39,660 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 01:09:39,660 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 01:09:39,660 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 01:09:39,660 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 01:09:39,660 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 01:09:39,660 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 01:09:39,660 - root - INFO - loss l2
+2023-08-12 01:09:39,660 - root - INFO - num_data_workers 4
+2023-08-12 01:09:39,660 - root - INFO - dt 1
+2023-08-12 01:09:39,660 - root - INFO - n_history 0
+2023-08-12 01:09:39,660 - root - INFO - prediction_type iterative
+2023-08-12 01:09:39,661 - root - INFO - prediction_length 30
+2023-08-12 01:09:39,661 - root - INFO - n_initial_conditions 5
+2023-08-12 01:09:39,661 - root - INFO - ics_type default
+2023-08-12 01:09:39,661 - root - INFO - save_raw_forecasts True
+2023-08-12 01:09:39,661 - root - INFO - save_channel False
+2023-08-12 01:09:39,661 - root - INFO - masked_acc False
+2023-08-12 01:09:39,661 - root - INFO - maskpath None
+2023-08-12 01:09:39,661 - root - INFO - perturb False
+2023-08-12 01:09:39,661 - root - INFO - add_grid False
+2023-08-12 01:09:39,661 - root - INFO - N_grid_channels 0
+2023-08-12 01:09:39,661 - root - INFO - gridtype sinusoidal
+2023-08-12 01:09:39,661 - root - INFO - roll False
+2023-08-12 01:09:39,661 - root - INFO - num_blocks 8
+2023-08-12 01:09:39,661 - root - INFO - patch_size 8
+2023-08-12 01:09:39,661 - root - INFO - width 56
+2023-08-12 01:09:39,661 - root - INFO - modes 32
+2023-08-12 01:09:39,662 - root - INFO - target default
+2023-08-12 01:09:39,662 - root - INFO - normalization zscore
+2023-08-12 01:09:39,662 - root - INFO - log_to_screen True
+2023-08-12 01:09:39,662 - root - INFO - save_checkpoint True
+2023-08-12 01:09:39,662 - root - INFO - enable_nhwc False
+2023-08-12 01:09:39,662 - root - INFO - optimizer_type FusedAdam
+2023-08-12 01:09:39,662 - root - INFO - crop_size_x None
+2023-08-12 01:09:39,662 - root - INFO - crop_size_y None
+2023-08-12 01:09:39,662 - root - INFO - two_step_training False
+2023-08-12 01:09:39,662 - root - INFO - plot_animations False
+2023-08-12 01:09:39,662 - root - INFO - add_noise False
+2023-08-12 01:09:39,662 - root - INFO - noise_std 0
+2023-08-12 01:09:39,662 - root - INFO - world_size 1
+2023-08-12 01:09:39,662 - root - INFO - global_batch_size 64
+2023-08-12 01:09:39,663 - root - INFO - ablate T500
+2023-08-12 01:09:39,663 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 01:09:39,663 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 01:09:39,663 - root - INFO - resuming False
+2023-08-12 01:09:39,663 - root - INFO - local_rank 0
+2023-08-12 01:09:39,663 - root - INFO - ---------------------------------------------------
+2023-08-12 01:09:39,663 - root - INFO - Inference for 1 initial conditions
+2023-08-12 01:09:39,920 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 01:09:39,921 - root - INFO - Number of samples per year: 1460
+2023-08-12 01:09:39,921 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 01:09:39,921 - root - INFO - Delta t: 6 hours
+2023-08-12 01:09:39,921 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 01:09:39,922 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 01:11:31,725 - root - INFO - Loading validation data
+2023-08-12 01:11:31,930 - root - INFO - Loading validation precip data
+2023-08-12 01:11:32,351 - root - INFO - Initial condition 1 of 1
+2023-08-12 01:13:39,720 - root - INFO - Begin autoregressive inference
+2023-08-12 01:14:05,725 - root - INFO - Timestep 0 of 30. T500 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 01:14:31,785 - root - INFO - Timestep 1 of 30. T500 ablated. TP RMS Error: 0.0016484396765008569, ACC: 0.7622612714767456
+2023-08-12 01:14:59,288 - root - INFO - Timestep 2 of 30. T500 ablated. TP RMS Error: 0.0018832498462870717, ACC: 0.6334870457649231
+2023-08-12 01:15:25,196 - root - INFO - Timestep 3 of 30. T500 ablated. TP RMS Error: 0.0022160750813782215, ACC: 0.5063055753707886
+2023-08-12 01:15:50,811 - root - INFO - Timestep 4 of 30. T500 ablated. TP RMS Error: 0.0020575770176947117, ACC: 0.4671580493450165
+2023-08-12 01:16:15,855 - root - INFO - Timestep 5 of 30. T500 ablated. TP RMS Error: 0.002282537752762437, ACC: 0.3599937856197357
+2023-08-12 01:16:38,895 - root - INFO - Timestep 6 of 30. T500 ablated. TP RMS Error: 0.0023911362513899803, ACC: 0.3143143355846405
+2023-08-12 01:17:04,683 - root - INFO - Timestep 7 of 30. T500 ablated. TP RMS Error: 0.0024344983976334333, ACC: 0.2877832055091858
+2023-08-12 01:17:29,118 - root - INFO - Timestep 8 of 30. T500 ablated. TP RMS Error: 0.0023045609705150127, ACC: 0.26306089758872986
+2023-08-12 01:17:53,165 - root - INFO - Timestep 9 of 30. T500 ablated. TP RMS Error: 0.002310418989509344, ACC: 0.2508544623851776
+2023-08-12 01:18:20,104 - root - INFO - Timestep 10 of 30. T500 ablated. TP RMS Error: 0.002557165687903762, ACC: 0.2173694223165512
+2023-08-12 01:18:43,555 - root - INFO - Timestep 11 of 30. T500 ablated. TP RMS Error: 0.002890929812565446, ACC: 0.19700269401073456
+2023-08-12 01:19:07,170 - root - INFO - Timestep 12 of 30. T500 ablated. TP RMS Error: 0.00282411091029644, ACC: 0.17095965147018433
+2023-08-12 01:19:31,420 - root - INFO - Timestep 13 of 30. T500 ablated. TP RMS Error: 0.0027685074601322412, ACC: 0.14711759984493256
+2023-08-12 01:19:53,861 - root - INFO - Timestep 14 of 30. T500 ablated. TP RMS Error: 0.002746263751760125, ACC: 0.1459243893623352
+2023-08-12 01:20:17,723 - root - INFO - Timestep 15 of 30. T500 ablated. TP RMS Error: 0.0027866268064826727, ACC: 0.17567379772663116
+2023-08-12 01:20:43,097 - root - INFO - Timestep 16 of 30. T500 ablated. TP RMS Error: 0.00264761527068913, ACC: 0.1997327208518982
+2023-08-12 01:21:07,705 - root - INFO - Timestep 17 of 30. T500 ablated. TP RMS Error: 0.002822314389050007, ACC: 0.13989293575286865
+2023-08-12 01:21:31,384 - root - INFO - Timestep 18 of 30. T500 ablated. TP RMS Error: 0.0028321631252765656, ACC: 0.0928691029548645
+2023-08-12 01:21:55,085 - root - INFO - Timestep 19 of 30. T500 ablated. TP RMS Error: 0.0030518535058945417, ACC: 0.07593189924955368
+2023-08-12 01:22:19,335 - root - INFO - Timestep 20 of 30. T500 ablated. TP RMS Error: 4.8222246170043945, ACC: 0.0007892166031524539
+2023-08-12 01:22:43,994 - root - INFO - Timestep 21 of 30. T500 ablated. TP RMS Error: 242.79270935058594, ACC: -0.0003512876864988357
+2023-08-12 01:23:07,969 - root - INFO - Timestep 22 of 30. T500 ablated. TP RMS Error: 1517.51171875, ACC: -0.0011275468859821558
+2023-08-12 01:23:32,355 - root - INFO - Timestep 23 of 30. T500 ablated. TP RMS Error: 42117.01953125, ACC: -0.0019997882191091776
+2023-08-12 01:23:57,562 - root - INFO - Timestep 24 of 30. T500 ablated. TP RMS Error: 249747.359375, ACC: -0.0029178226832300425
+2023-08-12 01:24:21,222 - root - INFO - Timestep 25 of 30. T500 ablated. TP RMS Error: 375894.84375, ACC: -0.002843275433406234
+2023-08-12 01:24:45,012 - root - INFO - Timestep 26 of 30. T500 ablated. TP RMS Error: 326339.5625, ACC: -0.0026750662364065647
+2023-08-12 01:25:10,086 - root - INFO - Timestep 27 of 30. T500 ablated. TP RMS Error: 278690.75, ACC: -0.000796911830548197
+2023-08-12 01:25:34,093 - root - INFO - Timestep 28 of 30. T500 ablated. TP RMS Error: 212722.75, ACC: -0.002015531761571765
+2023-08-12 01:25:58,039 - root - INFO - Timestep 29 of 30. T500 ablated. TP RMS Error: 153084.671875, ACC: -0.0019057878525927663
+2023-08-12 01:25:58,384 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-T500_30-timesteps.h5
+2023-08-12 01:26:05,678 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 01:26:05,678 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 01:26:05,678 - root - INFO - Configuration name: precip
+2023-08-12 01:26:05,678 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 01:26:05,678 - root - INFO - out_channels [0]
+2023-08-12 01:26:05,678 - root - INFO - nettype afno
+2023-08-12 01:26:05,678 - root - INFO - nettype_wind afno
+2023-08-12 01:26:05,679 - root - INFO - log_to_wandb True
+2023-08-12 01:26:05,679 - root - INFO - lr 0.00025
+2023-08-12 01:26:05,679 - root - INFO - batch_size 64
+2023-08-12 01:26:05,679 - root - INFO - max_epochs 25
+2023-08-12 01:26:05,679 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 01:26:05,679 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 01:26:05,679 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 01:26:05,679 - root - INFO - precip_eps 1e-05
+2023-08-12 01:26:05,679 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 01:26:05,679 - root - INFO - orography False
+2023-08-12 01:26:05,679 - root - INFO - orography_path None
+2023-08-12 01:26:05,679 - root - INFO - exp_dir ../results
+2023-08-12 01:26:05,679 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 01:26:05,679 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 01:26:05,679 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 01:26:05,679 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 01:26:05,679 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 01:26:05,679 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 01:26:05,679 - root - INFO - loss l2
+2023-08-12 01:26:05,680 - root - INFO - num_data_workers 4
+2023-08-12 01:26:05,680 - root - INFO - dt 1
+2023-08-12 01:26:05,680 - root - INFO - n_history 0
+2023-08-12 01:26:05,680 - root - INFO - prediction_type iterative
+2023-08-12 01:26:05,680 - root - INFO - prediction_length 30
+2023-08-12 01:26:05,680 - root - INFO - n_initial_conditions 5
+2023-08-12 01:26:05,680 - root - INFO - ics_type default
+2023-08-12 01:26:05,680 - root - INFO - save_raw_forecasts True
+2023-08-12 01:26:05,680 - root - INFO - save_channel False
+2023-08-12 01:26:05,680 - root - INFO - masked_acc False
+2023-08-12 01:26:05,680 - root - INFO - maskpath None
+2023-08-12 01:26:05,680 - root - INFO - perturb False
+2023-08-12 01:26:05,680 - root - INFO - add_grid False
+2023-08-12 01:26:05,680 - root - INFO - N_grid_channels 0
+2023-08-12 01:26:05,680 - root - INFO - gridtype sinusoidal
+2023-08-12 01:26:05,680 - root - INFO - roll False
+2023-08-12 01:26:05,680 - root - INFO - num_blocks 8
+2023-08-12 01:26:05,680 - root - INFO - patch_size 8
+2023-08-12 01:26:05,680 - root - INFO - width 56
+2023-08-12 01:26:05,680 - root - INFO - modes 32
+2023-08-12 01:26:05,680 - root - INFO - target default
+2023-08-12 01:26:05,680 - root - INFO - normalization zscore
+2023-08-12 01:26:05,681 - root - INFO - log_to_screen True
+2023-08-12 01:26:05,681 - root - INFO - save_checkpoint True
+2023-08-12 01:26:05,681 - root - INFO - enable_nhwc False
+2023-08-12 01:26:05,681 - root - INFO - optimizer_type FusedAdam
+2023-08-12 01:26:05,681 - root - INFO - crop_size_x None
+2023-08-12 01:26:05,681 - root - INFO - crop_size_y None
+2023-08-12 01:26:05,681 - root - INFO - two_step_training False
+2023-08-12 01:26:05,681 - root - INFO - plot_animations False
+2023-08-12 01:26:05,681 - root - INFO - add_noise False
+2023-08-12 01:26:05,681 - root - INFO - noise_std 0
+2023-08-12 01:26:05,681 - root - INFO - world_size 1
+2023-08-12 01:26:05,681 - root - INFO - global_batch_size 64
+2023-08-12 01:26:05,681 - root - INFO - ablate U500
+2023-08-12 01:26:05,681 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 01:26:05,681 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 01:26:05,681 - root - INFO - resuming False
+2023-08-12 01:26:05,681 - root - INFO - local_rank 0
+2023-08-12 01:26:05,681 - root - INFO - ---------------------------------------------------
+2023-08-12 01:26:05,681 - root - INFO - Inference for 1 initial conditions
+2023-08-12 01:26:05,957 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 01:26:05,959 - root - INFO - Number of samples per year: 1460
+2023-08-12 01:26:05,959 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 01:26:05,959 - root - INFO - Delta t: 6 hours
+2023-08-12 01:26:05,959 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 01:26:05,960 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 01:27:52,701 - root - INFO - Loading validation data
+2023-08-12 01:27:52,863 - root - INFO - Loading validation precip data
+2023-08-12 01:27:53,173 - root - INFO - Initial condition 1 of 1
+2023-08-12 01:30:01,986 - root - INFO - Begin autoregressive inference
+2023-08-12 01:30:31,527 - root - INFO - Timestep 0 of 30. U500 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 01:30:58,761 - root - INFO - Timestep 1 of 30. U500 ablated. TP RMS Error: 0.003982321359217167, ACC: 0.15293897688388824
+2023-08-12 01:31:23,986 - root - INFO - Timestep 2 of 30. U500 ablated. TP RMS Error: 0.0026220190338790417, ACC: -0.020336048677563667
+2023-08-12 01:31:49,983 - root - INFO - Timestep 3 of 30. U500 ablated. TP RMS Error: 0.0034335749223828316, ACC: 0.014223592355847359
+2023-08-12 01:32:13,731 - root - INFO - Timestep 4 of 30. U500 ablated. TP RMS Error: 2.087446689605713, ACC: 0.009836398996412754
+2023-08-12 01:32:38,589 - root - INFO - Timestep 5 of 30. U500 ablated. TP RMS Error: 110.10484313964844, ACC: 0.009092884138226509
+2023-08-12 01:33:05,362 - root - INFO - Timestep 6 of 30. U500 ablated. TP RMS Error: 795.1410522460938, ACC: 0.015299102291464806
+2023-08-12 01:33:31,294 - root - INFO - Timestep 7 of 30. U500 ablated. TP RMS Error: 1828.2110595703125, ACC: 0.012198053300380707
+2023-08-12 01:33:56,997 - root - INFO - Timestep 8 of 30. U500 ablated. TP RMS Error: 2132.1220703125, ACC: -0.0009540223400108516
+2023-08-12 01:34:22,596 - root - INFO - Timestep 9 of 30. U500 ablated. TP RMS Error: 1959.0361328125, ACC: 0.0016379326116293669
+2023-08-12 01:34:48,984 - root - INFO - Timestep 10 of 30. U500 ablated. TP RMS Error: 2052.94921875, ACC: 0.003834517439827323
+2023-08-12 01:35:14,712 - root - INFO - Timestep 11 of 30. U500 ablated. TP RMS Error: 1734.0330810546875, ACC: 0.002458701143041253
+2023-08-12 01:35:40,416 - root - INFO - Timestep 12 of 30. U500 ablated. TP RMS Error: 1052.8123779296875, ACC: 0.001294555957429111
+2023-08-12 01:36:06,106 - root - INFO - Timestep 13 of 30. U500 ablated. TP RMS Error: 626.49951171875, ACC: 0.0005185834015719593
+2023-08-12 01:36:31,626 - root - INFO - Timestep 14 of 30. U500 ablated. TP RMS Error: 401.31866455078125, ACC: 0.0034740266855806112
+2023-08-12 01:36:57,058 - root - INFO - Timestep 15 of 30. U500 ablated. TP RMS Error: 212.19654846191406, ACC: 0.0025885046925395727
+2023-08-12 01:37:23,066 - root - INFO - Timestep 16 of 30. U500 ablated. TP RMS Error: 115.74674224853516, ACC: 0.0003516814613249153
+2023-08-12 01:37:47,295 - root - INFO - Timestep 17 of 30. U500 ablated. TP RMS Error: 80.73809814453125, ACC: 0.0019375605043023825
+2023-08-12 01:38:14,016 - root - INFO - Timestep 18 of 30. U500 ablated. TP RMS Error: 66.64603424072266, ACC: 0.005292868707329035
+2023-08-12 01:38:38,626 - root - INFO - Timestep 19 of 30. U500 ablated. TP RMS Error: 59.21300506591797, ACC: 0.0021232233848422766
+2023-08-12 01:39:04,774 - root - INFO - Timestep 20 of 30. U500 ablated. TP RMS Error: 54.59722137451172, ACC: -0.0025113567244261503
+2023-08-12 01:39:28,737 - root - INFO - Timestep 21 of 30. U500 ablated. TP RMS Error: 51.50355529785156, ACC: -0.000899829319678247
+2023-08-12 01:39:55,413 - root - INFO - Timestep 22 of 30. U500 ablated. TP RMS Error: 49.34748077392578, ACC: 0.006486706435680389
+2023-08-12 01:40:22,847 - root - INFO - Timestep 23 of 30. U500 ablated. TP RMS Error: 47.80984878540039, ACC: 0.003146141767501831
+2023-08-12 01:40:48,456 - root - INFO - Timestep 24 of 30. U500 ablated. TP RMS Error: 46.696502685546875, ACC: -0.0038096101488918066
+2023-08-12 01:41:12,771 - root - INFO - Timestep 25 of 30. U500 ablated. TP RMS Error: 45.88190841674805, ACC: -0.00026220636209473014
+2023-08-12 01:41:39,683 - root - INFO - Timestep 26 of 30. U500 ablated. TP RMS Error: 45.281494140625, ACC: 0.004691872280091047
+2023-08-12 01:42:04,431 - root - INFO - Timestep 27 of 30. U500 ablated. TP RMS Error: 44.83654022216797, ACC: 0.0043944003991782665
+2023-08-12 01:42:29,259 - root - INFO - Timestep 28 of 30. U500 ablated. TP RMS Error: 44.50547409057617, ACC: 0.001041598618030548
+2023-08-12 01:42:55,856 - root - INFO - Timestep 29 of 30. U500 ablated. TP RMS Error: 44.25836944580078, ACC: 0.0013755426043644547
+2023-08-12 01:42:56,128 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-U500_30-timesteps.h5
+2023-08-12 01:43:03,249 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 01:43:03,250 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 01:43:03,250 - root - INFO - Configuration name: precip
+2023-08-12 01:43:03,250 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 01:43:03,251 - root - INFO - out_channels [0]
+2023-08-12 01:43:03,251 - root - INFO - nettype afno
+2023-08-12 01:43:03,251 - root - INFO - nettype_wind afno
+2023-08-12 01:43:03,251 - root - INFO - log_to_wandb True
+2023-08-12 01:43:03,251 - root - INFO - lr 0.00025
+2023-08-12 01:43:03,252 - root - INFO - batch_size 64
+2023-08-12 01:43:03,252 - root - INFO - max_epochs 25
+2023-08-12 01:43:03,252 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 01:43:03,252 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 01:43:03,252 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 01:43:03,253 - root - INFO - precip_eps 1e-05
+2023-08-12 01:43:03,253 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 01:43:03,253 - root - INFO - orography False
+2023-08-12 01:43:03,253 - root - INFO - orography_path None
+2023-08-12 01:43:03,254 - root - INFO - exp_dir ../results
+2023-08-12 01:43:03,254 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 01:43:03,254 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 01:43:03,254 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 01:43:03,255 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 01:43:03,255 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 01:43:03,255 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 01:43:03,255 - root - INFO - loss l2
+2023-08-12 01:43:03,256 - root - INFO - num_data_workers 4
+2023-08-12 01:43:03,256 - root - INFO - dt 1
+2023-08-12 01:43:03,256 - root - INFO - n_history 0
+2023-08-12 01:43:03,256 - root - INFO - prediction_type iterative
+2023-08-12 01:43:03,257 - root - INFO - prediction_length 30
+2023-08-12 01:43:03,257 - root - INFO - n_initial_conditions 5
+2023-08-12 01:43:03,257 - root - INFO - ics_type default
+2023-08-12 01:43:03,257 - root - INFO - save_raw_forecasts True
+2023-08-12 01:43:03,258 - root - INFO - save_channel False
+2023-08-12 01:43:03,258 - root - INFO - masked_acc False
+2023-08-12 01:43:03,258 - root - INFO - maskpath None
+2023-08-12 01:43:03,258 - root - INFO - perturb False
+2023-08-12 01:43:03,259 - root - INFO - add_grid False
+2023-08-12 01:43:03,259 - root - INFO - N_grid_channels 0
+2023-08-12 01:43:03,259 - root - INFO - gridtype sinusoidal
+2023-08-12 01:43:03,259 - root - INFO - roll False
+2023-08-12 01:43:03,260 - root - INFO - num_blocks 8
+2023-08-12 01:43:03,260 - root - INFO - patch_size 8
+2023-08-12 01:43:03,260 - root - INFO - width 56
+2023-08-12 01:43:03,260 - root - INFO - modes 32
+2023-08-12 01:43:03,261 - root - INFO - target default
+2023-08-12 01:43:03,261 - root - INFO - normalization zscore
+2023-08-12 01:43:03,261 - root - INFO - log_to_screen True
+2023-08-12 01:43:03,261 - root - INFO - save_checkpoint True
+2023-08-12 01:43:03,262 - root - INFO - enable_nhwc False
+2023-08-12 01:43:03,262 - root - INFO - optimizer_type FusedAdam
+2023-08-12 01:43:03,262 - root - INFO - crop_size_x None
+2023-08-12 01:43:03,262 - root - INFO - crop_size_y None
+2023-08-12 01:43:03,263 - root - INFO - two_step_training False
+2023-08-12 01:43:03,263 - root - INFO - plot_animations False
+2023-08-12 01:43:03,263 - root - INFO - add_noise False
+2023-08-12 01:43:03,263 - root - INFO - noise_std 0
+2023-08-12 01:43:03,264 - root - INFO - world_size 1
+2023-08-12 01:43:03,264 - root - INFO - global_batch_size 64
+2023-08-12 01:43:03,264 - root - INFO - ablate V500
+2023-08-12 01:43:03,264 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 01:43:03,265 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 01:43:03,265 - root - INFO - resuming False
+2023-08-12 01:43:03,265 - root - INFO - local_rank 0
+2023-08-12 01:43:03,265 - root - INFO - ---------------------------------------------------
+2023-08-12 01:43:03,266 - root - INFO - Inference for 1 initial conditions
+2023-08-12 01:43:03,534 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 01:43:03,536 - root - INFO - Number of samples per year: 1460
+2023-08-12 01:43:03,536 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 01:43:03,536 - root - INFO - Delta t: 6 hours
+2023-08-12 01:43:03,537 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 01:43:03,538 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 01:44:47,794 - root - INFO - Loading validation data
+2023-08-12 01:44:47,930 - root - INFO - Loading validation precip data
+2023-08-12 01:44:48,142 - root - INFO - Initial condition 1 of 1
+2023-08-12 01:46:45,657 - root - INFO - Begin autoregressive inference
+2023-08-12 01:47:13,940 - root - INFO - Timestep 0 of 30. V500 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 01:47:44,277 - root - INFO - Timestep 1 of 30. V500 ablated. TP RMS Error: 0.0071824160404503345, ACC: 0.08961068093776703
+2023-08-12 01:48:14,388 - root - INFO - Timestep 2 of 30. V500 ablated. TP RMS Error: 14.635021209716797, ACC: 0.040572505444288254
+2023-08-12 01:48:41,449 - root - INFO - Timestep 3 of 30. V500 ablated. TP RMS Error: 19049.216796875, ACC: 0.027487244457006454
+2023-08-12 01:49:08,669 - root - INFO - Timestep 4 of 30. V500 ablated. TP RMS Error: 2216851.0, ACC: 0.009533817879855633
+2023-08-12 01:49:35,102 - root - INFO - Timestep 5 of 30. V500 ablated. TP RMS Error: 17637022.0, ACC: 0.00466862041503191
+2023-08-12 01:50:03,682 - root - INFO - Timestep 6 of 30. V500 ablated. TP RMS Error: 22923212.0, ACC: 0.0019754997920244932
+2023-08-12 01:50:34,465 - root - INFO - Timestep 7 of 30. V500 ablated. TP RMS Error: 13629455.0, ACC: 0.001657182932831347
+2023-08-12 01:51:03,962 - root - INFO - Timestep 8 of 30. V500 ablated. TP RMS Error: 2918166.5, ACC: 0.004572515841573477
+2023-08-12 01:51:32,691 - root - INFO - Timestep 9 of 30. V500 ablated. TP RMS Error: 357748.96875, ACC: 0.005526908673346043
+2023-08-12 01:52:03,213 - root - INFO - Timestep 10 of 30. V500 ablated. TP RMS Error: 38294.74609375, ACC: 0.0031752558425068855
+2023-08-12 01:52:33,269 - root - INFO - Timestep 11 of 30. V500 ablated. TP RMS Error: 4795.82177734375, ACC: 0.0050476957112550735
+2023-08-12 01:53:03,748 - root - INFO - Timestep 12 of 30. V500 ablated. TP RMS Error: 908.42138671875, ACC: 0.0076957885175943375
+2023-08-12 01:53:33,404 - root - INFO - Timestep 13 of 30. V500 ablated. TP RMS Error: 302.90325927734375, ACC: 0.006505861412733793
+2023-08-12 01:54:03,639 - root - INFO - Timestep 14 of 30. V500 ablated. TP RMS Error: 158.4580078125, ACC: 0.01136108860373497
+2023-08-12 01:54:32,078 - root - INFO - Timestep 15 of 30. V500 ablated. TP RMS Error: 107.31289672851562, ACC: 0.00892724934965372
+2023-08-12 01:55:00,525 - root - INFO - Timestep 16 of 30. V500 ablated. TP RMS Error: 84.08587646484375, ACC: 0.003199717029929161
+2023-08-12 01:55:33,746 - root - INFO - Timestep 17 of 30. V500 ablated. TP RMS Error: 71.86444091796875, ACC: 0.00397259509190917
+2023-08-12 01:56:05,848 - root - INFO - Timestep 18 of 30. V500 ablated. TP RMS Error: 64.79739379882812, ACC: 0.006503416690975428
+2023-08-12 01:56:35,389 - root - INFO - Timestep 19 of 30. V500 ablated. TP RMS Error: 60.43841552734375, ACC: 0.003019258612766862
+2023-08-12 01:57:04,524 - root - INFO - Timestep 20 of 30. V500 ablated. TP RMS Error: 57.62501525878906, ACC: -0.001669962191954255
+2023-08-12 01:57:33,499 - root - INFO - Timestep 21 of 30. V500 ablated. TP RMS Error: 55.74996566772461, ACC: -0.0003766465524677187
+2023-08-12 01:58:03,764 - root - INFO - Timestep 22 of 30. V500 ablated. TP RMS Error: 54.47137451171875, ACC: 0.006088912487030029
+2023-08-12 01:58:35,165 - root - INFO - Timestep 23 of 30. V500 ablated. TP RMS Error: 53.58523178100586, ACC: 0.0029051650781184435
+2023-08-12 01:59:06,621 - root - INFO - Timestep 24 of 30. V500 ablated. TP RMS Error: 52.96383285522461, ACC: -0.003266089828684926
+2023-08-12 01:59:37,659 - root - INFO - Timestep 25 of 30. V500 ablated. TP RMS Error: 52.524234771728516, ACC: -0.0001607646991033107
+2023-08-12 02:00:10,141 - root - INFO - Timestep 26 of 30. V500 ablated. TP RMS Error: 52.21131134033203, ACC: 0.004148999694734812
+2023-08-12 02:00:43,897 - root - INFO - Timestep 27 of 30. V500 ablated. TP RMS Error: 51.987525939941406, ACC: 0.003973504062741995
+2023-08-12 02:01:14,522 - root - INFO - Timestep 28 of 30. V500 ablated. TP RMS Error: 51.826988220214844, ACC: 0.0009915754199028015
+2023-08-12 02:01:46,949 - root - INFO - Timestep 29 of 30. V500 ablated. TP RMS Error: 51.71149826049805, ACC: 0.0011672317050397396
+2023-08-12 02:01:47,269 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-V500_30-timesteps.h5
+2023-08-12 02:01:54,358 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 02:01:54,359 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 02:01:54,359 - root - INFO - Configuration name: precip
+2023-08-12 02:01:54,359 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 02:01:54,360 - root - INFO - out_channels [0]
+2023-08-12 02:01:54,360 - root - INFO - nettype afno
+2023-08-12 02:01:54,360 - root - INFO - nettype_wind afno
+2023-08-12 02:01:54,360 - root - INFO - log_to_wandb True
+2023-08-12 02:01:54,360 - root - INFO - lr 0.00025
+2023-08-12 02:01:54,360 - root - INFO - batch_size 64
+2023-08-12 02:01:54,360 - root - INFO - max_epochs 25
+2023-08-12 02:01:54,360 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 02:01:54,360 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 02:01:54,360 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 02:01:54,361 - root - INFO - precip_eps 1e-05
+2023-08-12 02:01:54,361 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 02:01:54,361 - root - INFO - orography False
+2023-08-12 02:01:54,361 - root - INFO - orography_path None
+2023-08-12 02:01:54,361 - root - INFO - exp_dir ../results
+2023-08-12 02:01:54,361 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 02:01:54,361 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 02:01:54,361 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 02:01:54,361 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 02:01:54,361 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 02:01:54,361 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 02:01:54,361 - root - INFO - loss l2
+2023-08-12 02:01:54,361 - root - INFO - num_data_workers 4
+2023-08-12 02:01:54,361 - root - INFO - dt 1
+2023-08-12 02:01:54,361 - root - INFO - n_history 0
+2023-08-12 02:01:54,361 - root - INFO - prediction_type iterative
+2023-08-12 02:01:54,361 - root - INFO - prediction_length 30
+2023-08-12 02:01:54,361 - root - INFO - n_initial_conditions 5
+2023-08-12 02:01:54,361 - root - INFO - ics_type default
+2023-08-12 02:01:54,361 - root - INFO - save_raw_forecasts True
+2023-08-12 02:01:54,361 - root - INFO - save_channel False
+2023-08-12 02:01:54,361 - root - INFO - masked_acc False
+2023-08-12 02:01:54,361 - root - INFO - maskpath None
+2023-08-12 02:01:54,361 - root - INFO - perturb False
+2023-08-12 02:01:54,361 - root - INFO - add_grid False
+2023-08-12 02:01:54,361 - root - INFO - N_grid_channels 0
+2023-08-12 02:01:54,361 - root - INFO - gridtype sinusoidal
+2023-08-12 02:01:54,361 - root - INFO - roll False
+2023-08-12 02:01:54,361 - root - INFO - num_blocks 8
+2023-08-12 02:01:54,361 - root - INFO - patch_size 8
+2023-08-12 02:01:54,361 - root - INFO - width 56
+2023-08-12 02:01:54,362 - root - INFO - modes 32
+2023-08-12 02:01:54,362 - root - INFO - target default
+2023-08-12 02:01:54,362 - root - INFO - normalization zscore
+2023-08-12 02:01:54,362 - root - INFO - log_to_screen True
+2023-08-12 02:01:54,362 - root - INFO - save_checkpoint True
+2023-08-12 02:01:54,362 - root - INFO - enable_nhwc False
+2023-08-12 02:01:54,362 - root - INFO - optimizer_type FusedAdam
+2023-08-12 02:01:54,362 - root - INFO - crop_size_x None
+2023-08-12 02:01:54,362 - root - INFO - crop_size_y None
+2023-08-12 02:01:54,362 - root - INFO - two_step_training False
+2023-08-12 02:01:54,362 - root - INFO - plot_animations False
+2023-08-12 02:01:54,362 - root - INFO - add_noise False
+2023-08-12 02:01:54,362 - root - INFO - noise_std 0
+2023-08-12 02:01:54,362 - root - INFO - world_size 1
+2023-08-12 02:01:54,362 - root - INFO - global_batch_size 64
+2023-08-12 02:01:54,362 - root - INFO - ablate Z500
+2023-08-12 02:01:54,362 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 02:01:54,362 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:01:54,362 - root - INFO - resuming False
+2023-08-12 02:01:54,362 - root - INFO - local_rank 0
+2023-08-12 02:01:54,362 - root - INFO - ---------------------------------------------------
+2023-08-12 02:01:54,362 - root - INFO - Inference for 1 initial conditions
+2023-08-12 02:01:54,684 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 02:01:54,685 - root - INFO - Number of samples per year: 1460
+2023-08-12 02:01:54,685 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 02:01:54,685 - root - INFO - Delta t: 6 hours
+2023-08-12 02:01:54,685 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 02:01:54,686 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:03:42,693 - root - INFO - Loading validation data
+2023-08-12 02:03:42,856 - root - INFO - Loading validation precip data
+2023-08-12 02:03:43,099 - root - INFO - Initial condition 1 of 1
+2023-08-12 02:05:51,144 - root - INFO - Begin autoregressive inference
+2023-08-12 02:06:16,606 - root - INFO - Timestep 0 of 30. Z500 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 02:06:42,723 - root - INFO - Timestep 1 of 30. Z500 ablated. TP RMS Error: 0.0014853599714115262, ACC: 0.81706702709198
+2023-08-12 02:07:07,057 - root - INFO - Timestep 2 of 30. Z500 ablated. TP RMS Error: 0.001625928096473217, ACC: 0.7452762126922607
+2023-08-12 02:07:32,869 - root - INFO - Timestep 3 of 30. Z500 ablated. TP RMS Error: 0.0018954112892970443, ACC: 0.6706976294517517
+2023-08-12 02:07:57,772 - root - INFO - Timestep 4 of 30. Z500 ablated. TP RMS Error: 0.0016555592883378267, ACC: 0.6901425719261169
+2023-08-12 02:08:24,012 - root - INFO - Timestep 5 of 30. Z500 ablated. TP RMS Error: 0.0019270910415798426, ACC: 0.5931838154792786
+2023-08-12 02:08:49,363 - root - INFO - Timestep 6 of 30. Z500 ablated. TP RMS Error: 0.0020404669921845198, ACC: 0.5611365437507629
+2023-08-12 02:09:14,997 - root - INFO - Timestep 7 of 30. Z500 ablated. TP RMS Error: 0.0021204636432230473, ACC: 0.5145844221115112
+2023-08-12 02:09:41,231 - root - INFO - Timestep 8 of 30. Z500 ablated. TP RMS Error: 0.002009615069255233, ACC: 0.4985351264476776
+2023-08-12 02:10:08,596 - root - INFO - Timestep 9 of 30. Z500 ablated. TP RMS Error: 0.0019852840341627598, ACC: 0.5050845742225647
+2023-08-12 02:10:34,460 - root - INFO - Timestep 10 of 30. Z500 ablated. TP RMS Error: 0.0022209775634109974, ACC: 0.46906158328056335
+2023-08-12 02:10:59,718 - root - INFO - Timestep 11 of 30. Z500 ablated. TP RMS Error: 0.00253431242890656, ACC: 0.4502527415752411
+2023-08-12 02:11:24,561 - root - INFO - Timestep 12 of 30. Z500 ablated. TP RMS Error: 0.0025512168649584055, ACC: 0.4120182394981384
+2023-08-12 02:11:50,601 - root - INFO - Timestep 13 of 30. Z500 ablated. TP RMS Error: 0.002431400353088975, ACC: 0.4458581507205963
+2023-08-12 02:12:17,309 - root - INFO - Timestep 14 of 30. Z500 ablated. TP RMS Error: 0.002393577480688691, ACC: 0.4561472535133362
+2023-08-12 02:12:42,882 - root - INFO - Timestep 15 of 30. Z500 ablated. TP RMS Error: 0.002579929307103157, ACC: 0.3942573666572571
+2023-08-12 02:13:09,099 - root - INFO - Timestep 16 of 30. Z500 ablated. TP RMS Error: 0.002493025502189994, ACC: 0.3666197955608368
+2023-08-12 02:13:34,923 - root - INFO - Timestep 17 of 30. Z500 ablated. TP RMS Error: 0.002648971974849701, ACC: 0.30447688698768616
+2023-08-12 02:14:00,320 - root - INFO - Timestep 18 of 30. Z500 ablated. TP RMS Error: 0.002687258180230856, ACC: 0.2638687193393707
+2023-08-12 02:14:25,189 - root - INFO - Timestep 19 of 30. Z500 ablated. TP RMS Error: 0.0027060946449637413, ACC: 0.23363767564296722
+2023-08-12 02:14:49,753 - root - INFO - Timestep 20 of 30. Z500 ablated. TP RMS Error: 0.002607970731332898, ACC: 0.18888063728809357
+2023-08-12 02:15:17,085 - root - INFO - Timestep 21 of 30. Z500 ablated. TP RMS Error: 0.0024935551919043064, ACC: 0.18458224833011627
+2023-08-12 02:15:44,283 - root - INFO - Timestep 22 of 30. Z500 ablated. TP RMS Error: 0.0025537919718772173, ACC: 0.18626812100410461
+2023-08-12 02:16:10,657 - root - INFO - Timestep 23 of 30. Z500 ablated. TP RMS Error: 0.0025571773294359446, ACC: 0.18719424307346344
+2023-08-12 02:16:37,120 - root - INFO - Timestep 24 of 30. Z500 ablated. TP RMS Error: 0.00228788610547781, ACC: 0.20130793750286102
+2023-08-12 02:17:03,951 - root - INFO - Timestep 25 of 30. Z500 ablated. TP RMS Error: 0.0026021089870482683, ACC: 0.13178277015686035
+2023-08-12 02:17:29,522 - root - INFO - Timestep 26 of 30. Z500 ablated. TP RMS Error: 0.0027612533885985613, ACC: 0.13304878771305084
+2023-08-12 02:17:55,098 - root - INFO - Timestep 27 of 30. Z500 ablated. TP RMS Error: 0.0028199967928230762, ACC: 0.13570789992809296
+2023-08-12 02:18:21,584 - root - INFO - Timestep 28 of 30. Z500 ablated. TP RMS Error: 0.0025928616523742676, ACC: 0.1305244415998459
+2023-08-12 02:18:46,566 - root - INFO - Timestep 29 of 30. Z500 ablated. TP RMS Error: 0.002534604864194989, ACC: 0.10337642580270767
+2023-08-12 02:18:46,836 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-Z500_30-timesteps.h5
+2023-08-12 02:18:54,137 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 02:18:54,137 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 02:18:54,137 - root - INFO - Configuration name: precip
+2023-08-12 02:18:54,137 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 02:18:54,137 - root - INFO - out_channels [0]
+2023-08-12 02:18:54,137 - root - INFO - nettype afno
+2023-08-12 02:18:54,137 - root - INFO - nettype_wind afno
+2023-08-12 02:18:54,137 - root - INFO - log_to_wandb True
+2023-08-12 02:18:54,137 - root - INFO - lr 0.00025
+2023-08-12 02:18:54,137 - root - INFO - batch_size 64
+2023-08-12 02:18:54,137 - root - INFO - max_epochs 25
+2023-08-12 02:18:54,138 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 02:18:54,138 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 02:18:54,138 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 02:18:54,138 - root - INFO - precip_eps 1e-05
+2023-08-12 02:18:54,138 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 02:18:54,138 - root - INFO - orography False
+2023-08-12 02:18:54,138 - root - INFO - orography_path None
+2023-08-12 02:18:54,138 - root - INFO - exp_dir ../results
+2023-08-12 02:18:54,138 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 02:18:54,138 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 02:18:54,138 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 02:18:54,138 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 02:18:54,138 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 02:18:54,138 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 02:18:54,139 - root - INFO - loss l2
+2023-08-12 02:18:54,139 - root - INFO - num_data_workers 4
+2023-08-12 02:18:54,139 - root - INFO - dt 1
+2023-08-12 02:18:54,139 - root - INFO - n_history 0
+2023-08-12 02:18:54,139 - root - INFO - prediction_type iterative
+2023-08-12 02:18:54,139 - root - INFO - prediction_length 30
+2023-08-12 02:18:54,139 - root - INFO - n_initial_conditions 5
+2023-08-12 02:18:54,139 - root - INFO - ics_type default
+2023-08-12 02:18:54,139 - root - INFO - save_raw_forecasts True
+2023-08-12 02:18:54,139 - root - INFO - save_channel False
+2023-08-12 02:18:54,139 - root - INFO - masked_acc False
+2023-08-12 02:18:54,139 - root - INFO - maskpath None
+2023-08-12 02:18:54,139 - root - INFO - perturb False
+2023-08-12 02:18:54,139 - root - INFO - add_grid False
+2023-08-12 02:18:54,139 - root - INFO - N_grid_channels 0
+2023-08-12 02:18:54,139 - root - INFO - gridtype sinusoidal
+2023-08-12 02:18:54,139 - root - INFO - roll False
+2023-08-12 02:18:54,139 - root - INFO - num_blocks 8
+2023-08-12 02:18:54,139 - root - INFO - patch_size 8
+2023-08-12 02:18:54,139 - root - INFO - width 56
+2023-08-12 02:18:54,139 - root - INFO - modes 32
+2023-08-12 02:18:54,139 - root - INFO - target default
+2023-08-12 02:18:54,139 - root - INFO - normalization zscore
+2023-08-12 02:18:54,139 - root - INFO - log_to_screen True
+2023-08-12 02:18:54,139 - root - INFO - save_checkpoint True
+2023-08-12 02:18:54,140 - root - INFO - enable_nhwc False
+2023-08-12 02:18:54,140 - root - INFO - optimizer_type FusedAdam
+2023-08-12 02:18:54,140 - root - INFO - crop_size_x None
+2023-08-12 02:18:54,140 - root - INFO - crop_size_y None
+2023-08-12 02:18:54,140 - root - INFO - two_step_training False
+2023-08-12 02:18:54,140 - root - INFO - plot_animations False
+2023-08-12 02:18:54,140 - root - INFO - add_noise False
+2023-08-12 02:18:54,140 - root - INFO - noise_std 0
+2023-08-12 02:18:54,140 - root - INFO - world_size 1
+2023-08-12 02:18:54,140 - root - INFO - global_batch_size 64
+2023-08-12 02:18:54,140 - root - INFO - ablate RH500
+2023-08-12 02:18:54,140 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 02:18:54,140 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:18:54,140 - root - INFO - resuming False
+2023-08-12 02:18:54,140 - root - INFO - local_rank 0
+2023-08-12 02:18:54,140 - root - INFO - ---------------------------------------------------
+2023-08-12 02:18:54,141 - root - INFO - Inference for 1 initial conditions
+2023-08-12 02:18:54,378 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 02:18:54,379 - root - INFO - Number of samples per year: 1460
+2023-08-12 02:18:54,379 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 02:18:54,379 - root - INFO - Delta t: 6 hours
+2023-08-12 02:18:54,379 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 02:18:54,380 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:20:40,811 - root - INFO - Loading validation data
+2023-08-12 02:20:40,958 - root - INFO - Loading validation precip data
+2023-08-12 02:20:41,268 - root - INFO - Initial condition 1 of 1
+2023-08-12 02:22:56,600 - root - INFO - Begin autoregressive inference
+2023-08-12 02:23:23,788 - root - INFO - Timestep 0 of 30. RH500 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 02:23:49,736 - root - INFO - Timestep 1 of 30. RH500 ablated. TP RMS Error: 0.0015407390892505646, ACC: 0.7996548414230347
+2023-08-12 02:24:18,579 - root - INFO - Timestep 2 of 30. RH500 ablated. TP RMS Error: 0.0016854951390996575, ACC: 0.7228814959526062
+2023-08-12 02:24:43,980 - root - INFO - Timestep 3 of 30. RH500 ablated. TP RMS Error: 0.0019721786957234144, ACC: 0.6357243657112122
+2023-08-12 02:25:09,666 - root - INFO - Timestep 4 of 30. RH500 ablated. TP RMS Error: 0.0017073707422241569, ACC: 0.6657119989395142
+2023-08-12 02:25:34,708 - root - INFO - Timestep 5 of 30. RH500 ablated. TP RMS Error: 0.0019909939728677273, ACC: 0.5582019686698914
+2023-08-12 02:26:01,487 - root - INFO - Timestep 6 of 30. RH500 ablated. TP RMS Error: 0.0021052747033536434, ACC: 0.5237005352973938
+2023-08-12 02:26:24,584 - root - INFO - Timestep 7 of 30. RH500 ablated. TP RMS Error: 0.0021969208028167486, ACC: 0.4673587679862976
+2023-08-12 02:26:50,318 - root - INFO - Timestep 8 of 30. RH500 ablated. TP RMS Error: 0.002014847006648779, ACC: 0.4804173707962036
+2023-08-12 02:27:17,593 - root - INFO - Timestep 9 of 30. RH500 ablated. TP RMS Error: 0.0020062767434865236, ACC: 0.4871453046798706
+2023-08-12 02:27:42,626 - root - INFO - Timestep 10 of 30. RH500 ablated. TP RMS Error: 0.0022255792282521725, ACC: 0.4543153941631317
+2023-08-12 02:28:09,005 - root - INFO - Timestep 11 of 30. RH500 ablated. TP RMS Error: 0.0026305883657187223, ACC: 0.38644954562187195
+2023-08-12 02:28:36,639 - root - INFO - Timestep 12 of 30. RH500 ablated. TP RMS Error: 0.002637644996866584, ACC: 0.3399151563644409
+2023-08-12 02:29:03,656 - root - INFO - Timestep 13 of 30. RH500 ablated. TP RMS Error: 0.0025809379294514656, ACC: 0.3327581286430359
+2023-08-12 02:29:29,330 - root - INFO - Timestep 14 of 30. RH500 ablated. TP RMS Error: 0.0025558306369930506, ACC: 0.34292343258857727
+2023-08-12 02:29:56,100 - root - INFO - Timestep 15 of 30. RH500 ablated. TP RMS Error: 0.002664622850716114, ACC: 0.33515578508377075
+2023-08-12 02:30:25,388 - root - INFO - Timestep 16 of 30. RH500 ablated. TP RMS Error: 0.0025683087296783924, ACC: 0.329755961894989
+2023-08-12 02:30:52,601 - root - INFO - Timestep 17 of 30. RH500 ablated. TP RMS Error: 0.0025229228194803, ACC: 0.37031933665275574
+2023-08-12 02:31:19,042 - root - INFO - Timestep 18 of 30. RH500 ablated. TP RMS Error: 0.0024583684280514717, ACC: 0.36483150720596313
+2023-08-12 02:31:45,172 - root - INFO - Timestep 19 of 30. RH500 ablated. TP RMS Error: 0.0026029222644865513, ACC: 0.2548133432865143
+2023-08-12 02:32:09,381 - root - INFO - Timestep 20 of 30. RH500 ablated. TP RMS Error: 0.002507537603378296, ACC: 0.2031470388174057
+2023-08-12 02:32:34,447 - root - INFO - Timestep 21 of 30. RH500 ablated. TP RMS Error: 0.002438122406601906, ACC: 0.19665765762329102
+2023-08-12 02:33:01,173 - root - INFO - Timestep 22 of 30. RH500 ablated. TP RMS Error: 0.002503642113879323, ACC: 0.20225992798805237
+2023-08-12 02:33:27,288 - root - INFO - Timestep 23 of 30. RH500 ablated. TP RMS Error: 0.002553920028731227, ACC: 0.18242892622947693
+2023-08-12 02:33:54,248 - root - INFO - Timestep 24 of 30. RH500 ablated. TP RMS Error: 0.0022642051335424185, ACC: 0.2188982218503952
+2023-08-12 02:34:21,857 - root - INFO - Timestep 25 of 30. RH500 ablated. TP RMS Error: 0.002488391939550638, ACC: 0.21789079904556274
+2023-08-12 02:34:50,754 - root - INFO - Timestep 26 of 30. RH500 ablated. TP RMS Error: 0.0026179091073572636, ACC: 0.21731440722942352
+2023-08-12 02:35:17,464 - root - INFO - Timestep 27 of 30. RH500 ablated. TP RMS Error: 0.0027329283766448498, ACC: 0.1826907992362976
+2023-08-12 02:35:45,863 - root - INFO - Timestep 28 of 30. RH500 ablated. TP RMS Error: 0.002492771251127124, ACC: 0.1992432177066803
+2023-08-12 02:36:16,119 - root - INFO - Timestep 29 of 30. RH500 ablated. TP RMS Error: 0.002404119586572051, ACC: 0.2118494063615799
+2023-08-12 02:36:16,391 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-RH500_30-timesteps.h5
+2023-08-12 02:36:23,142 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 02:36:23,142 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 02:36:23,142 - root - INFO - Configuration name: precip
+2023-08-12 02:36:23,142 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 02:36:23,142 - root - INFO - out_channels [0]
+2023-08-12 02:36:23,142 - root - INFO - nettype afno
+2023-08-12 02:36:23,142 - root - INFO - nettype_wind afno
+2023-08-12 02:36:23,142 - root - INFO - log_to_wandb True
+2023-08-12 02:36:23,142 - root - INFO - lr 0.00025
+2023-08-12 02:36:23,142 - root - INFO - batch_size 64
+2023-08-12 02:36:23,143 - root - INFO - max_epochs 25
+2023-08-12 02:36:23,143 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 02:36:23,143 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 02:36:23,143 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 02:36:23,143 - root - INFO - precip_eps 1e-05
+2023-08-12 02:36:23,143 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 02:36:23,143 - root - INFO - orography False
+2023-08-12 02:36:23,143 - root - INFO - orography_path None
+2023-08-12 02:36:23,143 - root - INFO - exp_dir ../results
+2023-08-12 02:36:23,143 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 02:36:23,143 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 02:36:23,143 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 02:36:23,143 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 02:36:23,143 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 02:36:23,143 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 02:36:23,143 - root - INFO - loss l2
+2023-08-12 02:36:23,143 - root - INFO - num_data_workers 4
+2023-08-12 02:36:23,143 - root - INFO - dt 1
+2023-08-12 02:36:23,144 - root - INFO - n_history 0
+2023-08-12 02:36:23,144 - root - INFO - prediction_type iterative
+2023-08-12 02:36:23,144 - root - INFO - prediction_length 30
+2023-08-12 02:36:23,144 - root - INFO - n_initial_conditions 5
+2023-08-12 02:36:23,144 - root - INFO - ics_type default
+2023-08-12 02:36:23,144 - root - INFO - save_raw_forecasts True
+2023-08-12 02:36:23,144 - root - INFO - save_channel False
+2023-08-12 02:36:23,144 - root - INFO - masked_acc False
+2023-08-12 02:36:23,144 - root - INFO - maskpath None
+2023-08-12 02:36:23,144 - root - INFO - perturb False
+2023-08-12 02:36:23,144 - root - INFO - add_grid False
+2023-08-12 02:36:23,144 - root - INFO - N_grid_channels 0
+2023-08-12 02:36:23,144 - root - INFO - gridtype sinusoidal
+2023-08-12 02:36:23,144 - root - INFO - roll False
+2023-08-12 02:36:23,144 - root - INFO - num_blocks 8
+2023-08-12 02:36:23,144 - root - INFO - patch_size 8
+2023-08-12 02:36:23,144 - root - INFO - width 56
+2023-08-12 02:36:23,144 - root - INFO - modes 32
+2023-08-12 02:36:23,144 - root - INFO - target default
+2023-08-12 02:36:23,144 - root - INFO - normalization zscore
+2023-08-12 02:36:23,145 - root - INFO - log_to_screen True
+2023-08-12 02:36:23,145 - root - INFO - save_checkpoint True
+2023-08-12 02:36:23,145 - root - INFO - enable_nhwc False
+2023-08-12 02:36:23,145 - root - INFO - optimizer_type FusedAdam
+2023-08-12 02:36:23,145 - root - INFO - crop_size_x None
+2023-08-12 02:36:23,145 - root - INFO - crop_size_y None
+2023-08-12 02:36:23,145 - root - INFO - two_step_training False
+2023-08-12 02:36:23,145 - root - INFO - plot_animations False
+2023-08-12 02:36:23,145 - root - INFO - add_noise False
+2023-08-12 02:36:23,145 - root - INFO - noise_std 0
+2023-08-12 02:36:23,145 - root - INFO - world_size 1
+2023-08-12 02:36:23,145 - root - INFO - global_batch_size 64
+2023-08-12 02:36:23,145 - root - INFO - ablate Z50
+2023-08-12 02:36:23,145 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 02:36:23,145 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:36:23,145 - root - INFO - resuming False
+2023-08-12 02:36:23,145 - root - INFO - local_rank 0
+2023-08-12 02:36:23,145 - root - INFO - ---------------------------------------------------
+2023-08-12 02:36:23,145 - root - INFO - Inference for 1 initial conditions
+2023-08-12 02:36:23,506 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 02:36:23,507 - root - INFO - Number of samples per year: 1460
+2023-08-12 02:36:23,507 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 02:36:23,507 - root - INFO - Delta t: 6 hours
+2023-08-12 02:36:23,507 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 02:36:23,508 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:38:17,212 - root - INFO - Loading validation data
+2023-08-12 02:38:17,403 - root - INFO - Loading validation precip data
+2023-08-12 02:38:17,703 - root - INFO - Initial condition 1 of 1
+2023-08-12 02:40:28,590 - root - INFO - Begin autoregressive inference
+2023-08-12 02:40:57,408 - root - INFO - Timestep 0 of 30. Z50 ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 02:41:24,184 - root - INFO - Timestep 1 of 30. Z50 ablated. TP RMS Error: 0.0020244745537638664, ACC: 0.6111657619476318
+2023-08-12 02:41:52,866 - root - INFO - Timestep 2 of 30. Z50 ablated. TP RMS Error: 0.002090682275593281, ACC: 0.5117813944816589
+2023-08-12 02:42:17,872 - root - INFO - Timestep 3 of 30. Z50 ablated. TP RMS Error: 0.0022421018220484257, ACC: 0.4810303747653961
+2023-08-12 02:42:46,364 - root - INFO - Timestep 4 of 30. Z50 ablated. TP RMS Error: 0.001986438874155283, ACC: 0.5074180364608765
+2023-08-12 02:43:16,067 - root - INFO - Timestep 5 of 30. Z50 ablated. TP RMS Error: 0.0021565528586506844, ACC: 0.4454081952571869
+2023-08-12 02:43:42,586 - root - INFO - Timestep 6 of 30. Z50 ablated. TP RMS Error: 0.002251011086627841, ACC: 0.41039207577705383
+2023-08-12 02:44:09,185 - root - INFO - Timestep 7 of 30. Z50 ablated. TP RMS Error: 0.0022469391115009785, ACC: 0.40374764800071716
+2023-08-12 02:44:34,800 - root - INFO - Timestep 8 of 30. Z50 ablated. TP RMS Error: 0.0021670523565262556, ACC: 0.3603220582008362
+2023-08-12 02:45:03,522 - root - INFO - Timestep 9 of 30. Z50 ablated. TP RMS Error: 0.00218735309317708, ACC: 0.33819153904914856
+2023-08-12 02:45:34,850 - root - INFO - Timestep 10 of 30. Z50 ablated. TP RMS Error: 0.002449475461617112, ACC: 0.2768726348876953
+2023-08-12 02:46:02,871 - root - INFO - Timestep 11 of 30. Z50 ablated. TP RMS Error: 0.002791238483041525, ACC: 0.2501561641693115
+2023-08-12 02:46:30,687 - root - INFO - Timestep 12 of 30. Z50 ablated. TP RMS Error: 0.0027225783560425043, ACC: 0.2488873153924942
+2023-08-12 02:46:58,269 - root - INFO - Timestep 13 of 30. Z50 ablated. TP RMS Error: 0.0025744133163243532, ACC: 0.2943953275680542
+2023-08-12 02:47:27,061 - root - INFO - Timestep 14 of 30. Z50 ablated. TP RMS Error: 0.0025516964960843325, ACC: 0.29768040776252747
+2023-08-12 02:47:57,254 - root - INFO - Timestep 15 of 30. Z50 ablated. TP RMS Error: 0.0026129751931875944, ACC: 0.3097953796386719
+2023-08-12 02:48:26,196 - root - INFO - Timestep 16 of 30. Z50 ablated. TP RMS Error: 0.0025310565251857042, ACC: 0.29711592197418213
+2023-08-12 02:48:52,986 - root - INFO - Timestep 17 of 30. Z50 ablated. TP RMS Error: 0.0026229708455502987, ACC: 0.2714540660381317
+2023-08-12 02:49:19,507 - root - INFO - Timestep 18 of 30. Z50 ablated. TP RMS Error: 0.0025521214120090008, ACC: 0.2735133767127991
+2023-08-12 02:49:47,229 - root - INFO - Timestep 19 of 30. Z50 ablated. TP RMS Error: 0.0025403485633432865, ACC: 0.2524925172328949
+2023-08-12 02:50:14,806 - root - INFO - Timestep 20 of 30. Z50 ablated. TP RMS Error: 0.0024007356259971857, ACC: 0.2307058423757553
+2023-08-12 02:50:41,781 - root - INFO - Timestep 21 of 30. Z50 ablated. TP RMS Error: 0.002385906409472227, ACC: 0.16411247849464417
+2023-08-12 02:51:07,147 - root - INFO - Timestep 22 of 30. Z50 ablated. TP RMS Error: 0.0024477632250636816, ACC: 0.13611744344234467
+2023-08-12 02:51:33,428 - root - INFO - Timestep 23 of 30. Z50 ablated. TP RMS Error: 0.0024787175934761763, ACC: 0.12028217315673828
+2023-08-12 02:52:00,099 - root - INFO - Timestep 24 of 30. Z50 ablated. TP RMS Error: 0.002209943253546953, ACC: 0.1411067098379135
+2023-08-12 02:52:26,812 - root - INFO - Timestep 25 of 30. Z50 ablated. TP RMS Error: 0.002473299391567707, ACC: 0.10686168074607849
+2023-08-12 02:52:52,282 - root - INFO - Timestep 26 of 30. Z50 ablated. TP RMS Error: 0.0026344030629843473, ACC: 0.08014781028032303
+2023-08-12 02:53:18,995 - root - INFO - Timestep 27 of 30. Z50 ablated. TP RMS Error: 0.002727189566940069, ACC: 0.09689211845397949
+2023-08-12 02:53:45,359 - root - INFO - Timestep 28 of 30. Z50 ablated. TP RMS Error: 0.002519806381314993, ACC: 0.10256452858448029
+2023-08-12 02:54:11,309 - root - INFO - Timestep 29 of 30. Z50 ablated. TP RMS Error: 0.00244320509955287, ACC: 0.08464668691158295
+2023-08-12 02:54:11,584 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-Z50_30-timesteps.h5
+2023-08-12 02:54:19,306 - root - INFO - ------------------ Configuration ------------------
+2023-08-12 02:54:19,306 - root - INFO - Configuration file: /root/FourCastNet/config/AFNO.yaml
+2023-08-12 02:54:19,306 - root - INFO - Configuration name: precip
+2023-08-12 02:54:19,306 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2023-08-12 02:54:19,306 - root - INFO - out_channels [0]
+2023-08-12 02:54:19,306 - root - INFO - nettype afno
+2023-08-12 02:54:19,306 - root - INFO - nettype_wind afno
+2023-08-12 02:54:19,306 - root - INFO - log_to_wandb True
+2023-08-12 02:54:19,307 - root - INFO - lr 0.00025
+2023-08-12 02:54:19,307 - root - INFO - batch_size 64
+2023-08-12 02:54:19,307 - root - INFO - max_epochs 25
+2023-08-12 02:54:19,307 - root - INFO - precip s3://climate-ai-data-science-sandbox-fourcastnet/data/precip/out_of_sample/2018.h5
+2023-08-12 02:54:19,307 - root - INFO - time_means_path_tp s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/precip/time_means.npy
+2023-08-12 02:54:19,307 - root - INFO - model_wind_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/backbone.ckpt
+2023-08-12 02:54:19,307 - root - INFO - precip_eps 1e-05
+2023-08-12 02:54:19,307 - root - INFO - scheduler CosineAnnealingLR
+2023-08-12 02:54:19,307 - root - INFO - orography False
+2023-08-12 02:54:19,307 - root - INFO - orography_path None
+2023-08-12 02:54:19,307 - root - INFO - exp_dir ../results
+2023-08-12 02:54:19,307 - root - INFO - train_data_path /pscratch/sd/s/shas1693/data/era5/train
+2023-08-12 02:54:19,307 - root - INFO - valid_data_path /pscratch/sd/s/shas1693/data/era5/test
+2023-08-12 02:54:19,307 - root - INFO - inf_data_path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5
+2023-08-12 02:54:19,307 - root - INFO - time_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/time_means.npy
+2023-08-12 02:54:19,307 - root - INFO - global_means_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_means.npy
+2023-08-12 02:54:19,308 - root - INFO - global_stds_path s3://climate-ai-data-science-sandbox-fourcastnet/stats_v0/global_stds.npy
+2023-08-12 02:54:19,308 - root - INFO - loss l2
+2023-08-12 02:54:19,308 - root - INFO - num_data_workers 4
+2023-08-12 02:54:19,308 - root - INFO - dt 1
+2023-08-12 02:54:19,308 - root - INFO - n_history 0
+2023-08-12 02:54:19,308 - root - INFO - prediction_type iterative
+2023-08-12 02:54:19,308 - root - INFO - prediction_length 30
+2023-08-12 02:54:19,308 - root - INFO - n_initial_conditions 5
+2023-08-12 02:54:19,308 - root - INFO - ics_type default
+2023-08-12 02:54:19,308 - root - INFO - save_raw_forecasts True
+2023-08-12 02:54:19,308 - root - INFO - save_channel False
+2023-08-12 02:54:19,308 - root - INFO - masked_acc False
+2023-08-12 02:54:19,308 - root - INFO - maskpath None
+2023-08-12 02:54:19,312 - root - INFO - perturb False
+2023-08-12 02:54:19,312 - root - INFO - add_grid False
+2023-08-12 02:54:19,312 - root - INFO - N_grid_channels 0
+2023-08-12 02:54:19,313 - root - INFO - gridtype sinusoidal
+2023-08-12 02:54:19,313 - root - INFO - roll False
+2023-08-12 02:54:19,314 - root - INFO - num_blocks 8
+2023-08-12 02:54:19,314 - root - INFO - patch_size 8
+2023-08-12 02:54:19,314 - root - INFO - width 56
+2023-08-12 02:54:19,315 - root - INFO - modes 32
+2023-08-12 02:54:19,315 - root - INFO - target default
+2023-08-12 02:54:19,315 - root - INFO - normalization zscore
+2023-08-12 02:54:19,316 - root - INFO - log_to_screen True
+2023-08-12 02:54:19,316 - root - INFO - save_checkpoint True
+2023-08-12 02:54:19,316 - root - INFO - enable_nhwc False
+2023-08-12 02:54:19,316 - root - INFO - optimizer_type FusedAdam
+2023-08-12 02:54:19,316 - root - INFO - crop_size_x None
+2023-08-12 02:54:19,316 - root - INFO - crop_size_y None
+2023-08-12 02:54:19,316 - root - INFO - two_step_training False
+2023-08-12 02:54:19,316 - root - INFO - plot_animations False
+2023-08-12 02:54:19,316 - root - INFO - add_noise False
+2023-08-12 02:54:19,316 - root - INFO - noise_std 0
+2023-08-12 02:54:19,316 - root - INFO - world_size 1
+2023-08-12 02:54:19,317 - root - INFO - global_batch_size 64
+2023-08-12 02:54:19,317 - root - INFO - ablate TCWV
+2023-08-12 02:54:19,317 - root - INFO - experiment_dir /root/FourCastNet/override_dir/precip/results
+2023-08-12 02:54:19,318 - root - INFO - best_checkpoint_path s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:54:19,318 - root - INFO - resuming False
+2023-08-12 02:54:19,318 - root - INFO - local_rank 0
+2023-08-12 02:54:19,320 - root - INFO - ---------------------------------------------------
+2023-08-12 02:54:19,321 - root - INFO - Inference for 1 initial conditions
+2023-08-12 02:54:19,647 - root - INFO - Getting file stats from <File-like object S3FileSystem, climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5>
+2023-08-12 02:54:19,648 - root - INFO - Number of samples per year: 1460
+2023-08-12 02:54:19,648 - root - INFO - Found data at path s3://climate-ai-data-science-sandbox-fourcastnet/data/out_of_sample/2018.h5. Number of examples: 1460. Image Shape: 720 x 1440 x 20
+2023-08-12 02:54:19,648 - root - INFO - Delta t: 6 hours
+2023-08-12 02:54:19,648 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2023-08-12 02:54:19,648 - root - INFO - Loading trained model checkpoint from s3://climate-ai-data-science-sandbox-fourcastnet/FCN_weights_v0/precip.ckpt
+2023-08-12 02:55:58,864 - root - INFO - Loading validation data
+2023-08-12 02:55:58,995 - root - INFO - Loading validation precip data
+2023-08-12 02:55:59,240 - root - INFO - Initial condition 1 of 1
+2023-08-12 02:57:54,504 - root - INFO - Begin autoregressive inference
+2023-08-12 02:58:23,415 - root - INFO - Timestep 0 of 30. TCWV ablated. TP RMS Error: 0.0, ACC: 1.0
+2023-08-12 02:58:50,736 - root - INFO - Timestep 1 of 30. TCWV ablated. TP RMS Error: 0.0027228803373873234, ACC: 0.036973871290683746
+2023-08-12 02:59:19,111 - root - INFO - Timestep 2 of 30. TCWV ablated. TP RMS Error: 0.0026641767472028732, ACC: 0.0019457098096609116
+2023-08-12 02:59:46,698 - root - INFO - Timestep 3 of 30. TCWV ablated. TP RMS Error: 0.0027919684071093798, ACC: 0.009669551625847816
+2023-08-12 03:00:17,900 - root - INFO - Timestep 4 of 30. TCWV ablated. TP RMS Error: 0.002557550324127078, ACC: 0.02819153293967247
+2023-08-12 03:00:46,226 - root - INFO - Timestep 5 of 30. TCWV ablated. TP RMS Error: 0.0027187219820916653, ACC: 0.014637606218457222
+2023-08-12 03:01:11,774 - root - INFO - Timestep 6 of 30. TCWV ablated. TP RMS Error: 0.0029975257348269224, ACC: -0.012999280355870724
+2023-08-12 03:01:39,022 - root - INFO - Timestep 7 of 30. TCWV ablated. TP RMS Error: 0.005804675631225109, ACC: -0.0034644107799977064
+2023-08-12 03:02:05,548 - root - INFO - Timestep 8 of 30. TCWV ablated. TP RMS Error: 0.013523544184863567, ACC: 0.001083507901057601
+2023-08-12 03:02:29,585 - root - INFO - Timestep 9 of 30. TCWV ablated. TP RMS Error: 0.031217271462082863, ACC: 0.0016414939891546965
+2023-08-12 03:02:55,670 - root - INFO - Timestep 10 of 30. TCWV ablated. TP RMS Error: 0.023321934044361115, ACC: -0.0002929018228314817
+2023-08-12 03:03:19,873 - root - INFO - Timestep 11 of 30. TCWV ablated. TP RMS Error: 0.008039378561079502, ACC: -0.0037630333099514246
+2023-08-12 03:03:45,865 - root - INFO - Timestep 12 of 30. TCWV ablated. TP RMS Error: 0.006545618642121553, ACC: -0.0019411832327023149
+2023-08-12 03:04:11,383 - root - INFO - Timestep 13 of 30. TCWV ablated. TP RMS Error: 0.007005640771239996, ACC: -0.00033431165502406657
+2023-08-12 03:04:37,628 - root - INFO - Timestep 14 of 30. TCWV ablated. TP RMS Error: 0.008528504520654678, ACC: -0.0038443368393927813
+2023-08-12 03:05:04,051 - root - INFO - Timestep 15 of 30. TCWV ablated. TP RMS Error: 0.010964101180434227, ACC: -0.0007274338277056813
+2023-08-12 03:05:30,856 - root - INFO - Timestep 16 of 30. TCWV ablated. TP RMS Error: 0.014613037928938866, ACC: 0.0013829913223162293
+2023-08-12 03:05:58,735 - root - INFO - Timestep 17 of 30. TCWV ablated. TP RMS Error: 0.021057333797216415, ACC: 0.0011838978389278054
+2023-08-12 03:06:25,211 - root - INFO - Timestep 18 of 30. TCWV ablated. TP RMS Error: 0.032914552837610245, ACC: 0.005751306656748056
+2023-08-12 03:06:49,756 - root - INFO - Timestep 19 of 30. TCWV ablated. TP RMS Error: 0.04765169695019722, ACC: 0.004812691360712051
+2023-08-12 03:07:17,353 - root - INFO - Timestep 20 of 30. TCWV ablated. TP RMS Error: 0.06108361482620239, ACC: -0.0014607508201152086
+2023-08-12 03:07:42,574 - root - INFO - Timestep 21 of 30. TCWV ablated. TP RMS Error: 0.07111227512359619, ACC: -6.1076607380528e-05
+2023-08-12 03:08:10,314 - root - INFO - Timestep 22 of 30. TCWV ablated. TP RMS Error: 0.07767576724290848, ACC: 0.008530852384865284
+2023-08-12 03:08:37,209 - root - INFO - Timestep 23 of 30. TCWV ablated. TP RMS Error: 0.0816359668970108, ACC: 0.0043935165740549564
+2023-08-12 03:09:04,406 - root - INFO - Timestep 24 of 30. TCWV ablated. TP RMS Error: 0.08384774625301361, ACC: -0.0037713986821472645
+2023-08-12 03:09:29,796 - root - INFO - Timestep 25 of 30. TCWV ablated. TP RMS Error: 0.08497035503387451, ACC: 0.000547209579963237
+2023-08-12 03:09:53,910 - root - INFO - Timestep 26 of 30. TCWV ablated. TP RMS Error: 0.08545529097318649, ACC: 0.006031842902302742
+2023-08-12 03:10:22,197 - root - INFO - Timestep 27 of 30. TCWV ablated. TP RMS Error: 0.08561497181653976, ACC: 0.0048056175000965595
+2023-08-12 03:10:48,667 - root - INFO - Timestep 28 of 30. TCWV ablated. TP RMS Error: 0.08561055362224579, ACC: 0.0013936510076746345
+2023-08-12 03:11:12,235 - root - INFO - Timestep 29 of 30. TCWV ablated. TP RMS Error: 0.0855400338768959, ACC: 0.0015413230285048485
+2023-08-12 03:11:12,552 - root - INFO - Saving files at /root/FourCastNet/override_dir/precip/results/tp_ablate-TCWV_30-timesteps.h5
